@@ -1,12 +1,122 @@
-[gd_scene load_steps=2 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=14 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
+[ext_resource type="Texture2D" uid="uid://bff3xwjr4cu4e" path="res://Assets/Tree.png" id="2_h45a8"]
+[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj772"]
+size = Vector2(17, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6hnu"]
+size = Vector2(16, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p208r"]
+size = Vector2(15, 16)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_832ip"]
+normal = Vector2(1, 0)
+distance = 5.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iv1x7"]
+normal = Vector2(0, 1)
+distance = -37.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c51i0"]
+normal = Vector2(0, 1)
+distance = -38.4108
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ifbe8"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ae872"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_emq3q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
+radius = 6.08276
 
 [node name="Game" type="Node2D"]
+
+[node name="TestTree" type="Node" parent="."]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="TestTree"]
+
+[node name="Sprite2D" type="Sprite2D" parent="TestTree/StaticBody2D2"]
+position = Vector2(-48.1875, -27.4063)
+scale = Vector2(0.17625, 0.211875)
+texture = ExtResource("2_h45a8")
+region_enabled = true
+region_rect = Rect2(180, 120, 100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTree/StaticBody2D2"]
+position = Vector2(-47.1875, -27.4063)
+shape = SubResource("RectangleShape2D_pj772")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="TestTree"]
+
+[node name="Sprite2D" type="Sprite2D" parent="TestTree/StaticBody2D3"]
+position = Vector2(208.813, -20.4063)
+scale = Vector2(0.17625, 0.211875)
+texture = ExtResource("2_h45a8")
+region_enabled = true
+region_rect = Rect2(180, 120, 100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTree/StaticBody2D3"]
+position = Vector2(208.813, -20.4062)
+shape = SubResource("RectangleShape2D_t6hnu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="TestTree"]
+
+[node name="Sprite2D" type="Sprite2D" parent="TestTree/StaticBody2D4"]
+position = Vector2(79.8125, 83.5938)
+scale = Vector2(0.17625, 0.211875)
+texture = ExtResource("2_h45a8")
+region_enabled = true
+region_rect = Rect2(180, 120, 100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTree/StaticBody2D4"]
+position = Vector2(79.8125, 83.5938)
+shape = SubResource("RectangleShape2D_p208r")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-112, 25)
+shape = SubResource("WorldBoundaryShape2D_832ip")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-6, -35)
+shape = SubResource("WorldBoundaryShape2D_iv1x7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(180, -33)
+shape = SubResource("WorldBoundaryShape2D_c51i0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(287, 25)
+shape = SubResource("WorldBoundaryShape2D_ifbe8")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(189, 119)
+shape = SubResource("WorldBoundaryShape2D_ae872")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-5, 119)
+shape = SubResource("WorldBoundaryShape2D_emq3q")
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D"]
+points = PackedVector2Array(-106, -71, 288, -71, 289, 120, 102, 118, -108, 119, -107, -66)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_lstff")]
 position = Vector2(58, 37)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(58, 28)
-zoom = Vector2(4, 4)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -9)
+zoom = Vector2(5, 5)
+script = ExtResource("2_k8p62")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1, 5)
+shape = SubResource("CircleShape2D_qbgn0")
