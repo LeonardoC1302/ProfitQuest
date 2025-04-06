@@ -17,6 +17,20 @@ func _process(delta: float) -> void:
 	
 func _physics_process(delta: float) -> void:
 	move_and_slide()
+	direction = Vector2.ZERO
+	if Input.is_action_pressed("ui_right"):
+		direction.x += 1
+	if Input.is_action_pressed("ui_left"):
+		direction.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		direction.y += 1
+	if Input.is_action_pressed("ui_up"):
+		direction.y -= 1
+
+	if direction != Vector2.ZERO:
+		direction = direction.normalized()
+		velocity = direction * 200  # o tu velocidad personalizada
+		move_and_slide()
 
 func SetDirection() -> bool:
 	var new_direction : Vector2 = cardinal_direction
