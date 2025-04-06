@@ -1,116 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=5 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
-[ext_resource type="Texture2D" uid="uid://bff3xwjr4cu4e" path="res://Assets/Tree.png" id="2_h45a8"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj772"]
-size = Vector2(17, 19)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6hnu"]
-size = Vector2(16, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p208r"]
-size = Vector2(15, 16)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_832ip"]
-normal = Vector2(1, 0)
-distance = 5.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iv1x7"]
-normal = Vector2(0, 1)
-distance = -37.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c51i0"]
-normal = Vector2(0, 1)
-distance = -38.4108
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ifbe8"]
-normal = Vector2(-1, 0)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ae872"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_emq3q"]
+[ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
 radius = 6.08276
 
 [node name="Game" type="Node2D"]
 
-[node name="TestTree" type="Node" parent="."]
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="TestTree"]
-
-[node name="Sprite2D" type="Sprite2D" parent="TestTree/StaticBody2D2"]
-position = Vector2(-48.1875, -27.4063)
-scale = Vector2(0.17625, 0.211875)
-texture = ExtResource("2_h45a8")
-region_enabled = true
-region_rect = Rect2(180, 120, 100, 100)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTree/StaticBody2D2"]
-position = Vector2(-47.1875, -27.4063)
-shape = SubResource("RectangleShape2D_pj772")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="TestTree"]
-
-[node name="Sprite2D" type="Sprite2D" parent="TestTree/StaticBody2D3"]
-position = Vector2(208.813, -20.4063)
-scale = Vector2(0.17625, 0.211875)
-texture = ExtResource("2_h45a8")
-region_enabled = true
-region_rect = Rect2(180, 120, 100, 100)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTree/StaticBody2D3"]
-position = Vector2(208.813, -20.4062)
-shape = SubResource("RectangleShape2D_t6hnu")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="TestTree"]
-
-[node name="Sprite2D" type="Sprite2D" parent="TestTree/StaticBody2D4"]
-position = Vector2(79.8125, 83.5938)
-scale = Vector2(0.17625, 0.211875)
-texture = ExtResource("2_h45a8")
-region_enabled = true
-region_rect = Rect2(180, 120, 100, 100)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestTree/StaticBody2D4"]
-position = Vector2(79.8125, 83.5938)
-shape = SubResource("RectangleShape2D_p208r")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-112, 25)
-shape = SubResource("WorldBoundaryShape2D_832ip")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-6, -35)
-shape = SubResource("WorldBoundaryShape2D_iv1x7")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(180, -33)
-shape = SubResource("WorldBoundaryShape2D_c51i0")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(287, 25)
-shape = SubResource("WorldBoundaryShape2D_ifbe8")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(189, 119)
-shape = SubResource("WorldBoundaryShape2D_ae872")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-5, 119)
-shape = SubResource("WorldBoundaryShape2D_emq3q")
-
-[node name="Line2D" type="Line2D" parent="StaticBody2D"]
-points = PackedVector2Array(-106, -71, 288, -71, 289, 120, 102, 118, -108, 119, -107, -66)
-width = 2.0
-default_color = Color(0, 0, 0, 1)
-
 [node name="Player" parent="." instance=ExtResource("1_lstff")]
 position = Vector2(58, 37)
+collision_mask = 16
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -120,3 +21,9 @@ script = ExtResource("2_k8p62")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
 position = Vector2(-1, 5)
 shape = SubResource("CircleShape2D_qbgn0")
+
+[node name="Heladeria_Suelo" parent="." instance=ExtResource("4_nesd1")]
+layer_0/tile_data = PackedInt32Array(-65538, 65537, 1, -2, 65537, 1, 65534, 65537, 1, 131070, 65537, 1, 196606, 65537, 1, -65537, 65537, 1, -1, 65537, 1, 65535, 65537, 1, 131071, 65537, 1, 196607, 65537, 1, -131072, 65537, 1, -65536, 65537, 1, 0, 65537, 1, 65536, 65537, 1, 131072, 65537, 1, -131071, 65537, 1, -65535, 65537, 1, 1, 65537, 1, 65537, 65537, 1, 131073, 65537, 1, -131070, 65537, 1, -65534, 65537, 1, 2, 65537, 1, 65538, 65537, 1, 131074, 65537, 1, -131069, 65537, 1, -65533, 65537, 1, 3, 65537, 1, 65539, 65537, 1, 131075, 65537, 1, -131068, 65537, 1, -65532, 65537, 1, 4, 65537, 1, 65540, 65537, 1, 131076, 65537, 1, -65531, 65537, 1, 5, 65537, 1, 65541, 65537, 1, 131077, 65537, 1, -131067, 65537, 1, -65539, 65537, 1, -3, 65537, 1, 65533, 65537, 1, 131069, 65537, 1, 196605, 65537, 1, 262141, 65537, 1, 262142, 65537, 1, 262143, 65537, 1, 196608, 65537, 1, 196609, 65537, 1, 196610, 65537, 1, 196611, 65537, 1, 196612, 65537, 1, 196613, 65537, 1, 196614, 65537, 1, 131078, 65537, 1, 65542, 65537, 1, 6, 65537, 1, -65530, 65537, 1, -131066, 65537, 1, -65540, 65537, 1, -4, 65537, 1, 65532, 65537, 1, 131068, 65537, 1, 196604, 65537, 1, 262140, 65537, 1, -131065, 65537, 1, -65529, 65537, 1, 7, 65537, 1, 65543, 65537, 1, 131079, 65537, 1, 196615, 65537, 1, 262151, 65537, 1, 262150, 65537, 1, 262149, 65537, 1, 262148, 65537, 1, 262147, 65537, 1, 262146, 65537, 1, 262145, 65537, 1, 262144, 65537, 1, 327679, 65537, 1, 327678, 65537, 1, 327677, 65537, 1, 327676, 65537, 1, 393212, 65537, 1, 393213, 65537, 1, 393214, 65537, 1, 393215, 65537, 1, 327680, 65537, 1, 327681, 65537, 1, 327682, 65537, 1, 327683, 65537, 1, 327684, 65537, 1, 327685, 65537, 1, 327686, 65537, 1, 327687, 65537, 1)
+
+[node name="Heladeria_Paredes" parent="." instance=ExtResource("4_nesd1")]
+layer_0/tile_data = PackedInt32Array(-65537, 65537, 0, -131072, 65537, 3, -131071, 65537, 0, -131070, 65537, 0, -131069, 65537, 0, -131068, 65537, 0, -65540, 1, 0, -131065, 131073, 0, -65539, 65537, 0, -65538, 65537, 0, -131067, 65537, 0, -131066, 65537, 0, -4, 1, 1, 65532, 1, 1, 131068, 1, 1, 196604, 1, 1, 262140, 1, 1, -65529, 131073, 1, 7, 131073, 1, 65543, 131073, 1, 131079, 131073, 1, 196615, 131073, 1, 262151, 131073, 1, 327676, 1, 1, 393212, 1, 2, 327687, 131073, 2, 393213, 65537, 2, 393214, 65537, 2, 393215, 65537, 2, 327680, 65537, 2, 327681, 65537, 2, 327682, 65537, 2, 327683, 65537, 2, 327684, 65537, 4, 327685, 65537, 2, 327686, 65537, 2, -65536, 65537, 5, 0, 65537, 5, 65536, 65537, 6, 262148, 65537, 5, 196612, 65537, 5, 131076, 65537, 3, 131077, 1, 3, 131075, 131073, 3)

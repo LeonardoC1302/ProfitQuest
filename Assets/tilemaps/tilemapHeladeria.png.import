@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di386on16iyho"
-path="res://.godot/imported/characterTemplate.png-7ef9005b0887b906d6d2e27bcc34ac30.ctex"
+uid="uid://c0pmmqkgrt7nc"
+path="res://.godot/imported/tilemapHeladeria.png-01f926f0684e64274ab61dd92fa980f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/characterTemplate.png"
-dest_files=["res://.godot/imported/characterTemplate.png-7ef9005b0887b906d6d2e27bcc34ac30.ctex"]
+source_file="res://Assets/tilemaps/tilemapHeladeria.png"
+dest_files=["res://.godot/imported/tilemapHeladeria.png-01f926f0684e64274ab61dd92fa980f5.ctex"]
 
 [params]
 
