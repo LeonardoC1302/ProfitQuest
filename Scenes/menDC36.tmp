@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhmr52gv3eg76"]
+
+[ext_resource type="Texture2D" uid="uid://bw3gkyywejt6l" path="res://Assets/Logo.png" id="1_ovyjc"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_3yvod"]
+[ext_resource type="Script" path="res://Scripts/Start.gd" id="3_p0n8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7euin"]
+size = Vector2(247.5, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_df12c"]
+size = Vector2(266, 79)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvsqw"]
+bg_color = Color(0.172549, 0.231373, 0.372549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0627451, 0.0901961, 0.188235, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5, -2)
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(-180, -189)
+scale = Vector2(4.59375, 4.15625)
+texture = ExtResource("1_ovyjc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -108.0
+offset_top = -247.0
+offset_right = 392.0
+offset_bottom = -74.0
+theme_override_fonts/font = ExtResource("2_3yvod")
+theme_override_font_sizes/font_size = 65
+text = "Profit
+Quest"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = -200.0
+offset_top = -45.0
+offset_right = 300.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("2_3yvod")
+theme_override_font_sizes/font_size = 40
+text = "Start Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+z_index = 1
+offset_left = -150.0
+offset_top = 80.0
+offset_right = 350.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("2_3yvod")
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="."]
+z_index = 1
+offset_left = -75.0
+offset_top = 205.0
+offset_right = 425.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("2_3yvod")
+theme_override_font_sizes/font_size = 40
+text = "Exit
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-61, -517)
+shape = SubResource("RectangleShape2D_7euin")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+z_index = -1
+offset_left = -512.0
+offset_top = 190.0
+offset_right = 633.0
+offset_bottom = 828.0
+color = Color(0.117647, 0.160784, 0.278431, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(308, -515)
+shape = SubResource("RectangleShape2D_df12c")
+
+[node name="Panel" type="Panel" parent="StaticBody2D/CollisionShape2D2"]
+offset_left = -601.0
+offset_top = 450.0
+offset_right = -15.0
+offset_bottom = 528.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pvsqw")
+script = ExtResource("3_p0n8e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(308, -515)
+shape = SubResource("RectangleShape2D_df12c")
+
+[node name="Panel" type="Panel" parent="StaticBody2D/CollisionShape2D3"]
+offset_left = -601.0
+offset_top = 575.0
+offset_right = -15.0
+offset_bottom = 653.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pvsqw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(308, -515)
+shape = SubResource("RectangleShape2D_df12c")
+
+[node name="Panel" type="Panel" parent="StaticBody2D/CollisionShape2D4"]
+offset_left = -601.0
+offset_top = 700.0
+offset_right = -15.0
+offset_bottom = 778.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pvsqw")

@@ -1,18 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=19 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
 [ext_resource type="Texture2D" uid="uid://vup7tf2wvc6d" path="res://Assets/Counter.png" id="4_ie7lx"]
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
 [ext_resource type="Script" path="res://Scripts/milk.gd" id="4_tq5w1"]
-[ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Milk.png" id="5_4x5y1"]
+[ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="5_4x5y1"]
+[ext_resource type="Texture2D" uid="uid://dshpn7cv3178c" path="res://Assets/boxes.png" id="6_qrjqp"]
 [ext_resource type="Texture2D" uid="uid://rofrvyhubdm6" path="res://Assets/Counter1.png" id="7_hh0bo"]
+[ext_resource type="Texture2D" uid="uid://caqa66antdf5q" path="res://Assets/Ingredients/banana.png" id="8_qgxq8"]
+[ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="9_grx88"]
+[ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="10_lwfi8"]
+[ext_resource type="Texture2D" uid="uid://duv8gsr73m7dq" path="res://Assets/Ingredients/mango.png" id="11_i02pa"]
+[ext_resource type="Texture2D" uid="uid://cu77jkyemoy57" path="res://Assets/Ingredients/watermelon.png" id="12_rs8m4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
 radius = 6.08276
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_41vkv"]
-size = Vector2(16.8571, 16.4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_grqx2"]
 texture = ExtResource("4_ie7lx")
@@ -27,29 +30,17 @@ texture = ExtResource("4_ie7lx")
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.84375, -8, 2.84375, 8, -8, 8, -8, 1.5)
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.03125, -8, 8, -8, 8, 8, -5.28125, 8)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.78125, -8, 8, -8, 8, -6, -4.78125, -4.25)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -3.5625, 8, -1.1875, -8, -5.625)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.25, 8, -8, 8, -6, -8, -2.125)
 3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.84375, -8, 2.84375, 8, -8, 8, -8, 1.5)
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.96875, -8, 3.03125, -4.4375, -8.53125, -6.0625)
 0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.53125, -8, 7.28125, -8, 8, -5.625, 3.21875, -6.4375)
 1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.0625, -8, -3.9375)
 2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.6875, -8, -3.9375)
 3:3/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h5ou"]
-texture = ExtResource("5_4x5y1")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.65625, 8, -0.71875, -7.375, 7.28125, -5.0625, 7.53125, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.40625, 8, -8, 8, -8, -4.625, -1.90625, -0.8125, 1.78125, 2.1875)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.53125, -8, 7.28125, -8, 8, -0.375, -4.40625, -2.0625)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7.5, 2.59375, -8, 2.40625, -0.4375, -8, 0.5625)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd32d"]
 texture = ExtResource("7_hh0bo")
@@ -73,17 +64,36 @@ texture = ExtResource("7_hh0bo")
 2:3/0 = 0
 3:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0laau"]
+texture = ExtResource("6_qrjqp")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 2.5, -1.96875, 2.5625, -1.84375, 8, 8, 8, 8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.875, 3.15625, 2.6875, 3.53125, 8, -8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 2.5, 8, -0.5, -3.75, -0.8125, -3.0625, 8, 8, 8, 8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.25, 3.625, 0.625, 2.9375, 8, -8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.40625, -8, 8, -8, 8, -4.625, -2.59375, -4.8125)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.90625, -8.4375, 3.53125, -8, 3.46875, -4.75, -8, -5.125)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.3125, -8, 8, -8, 8, -4.625, -2.375, -4.5625, -3.6875, -4.8125)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.90625, -8.4375, 2.5625, -8, 2.6875, -4.9375, -8, -5.125)
+
 [sub_resource type="TileSet" id="TileSet_02eip"]
 physics_layer_0/collision_layer = 17
 physics_layer_0/collision_mask = 17
 sources/0 = SubResource("TileSetAtlasSource_grqx2")
-sources/1 = SubResource("TileSetAtlasSource_0h5ou")
 sources/2 = SubResource("TileSetAtlasSource_nd32d")
+sources/3 = SubResource("TileSetAtlasSource_0laau")
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_lstff")]
-z_index = 1
+z_index = 2
 position = Vector2(58, 37)
 collision_layer = 17
 collision_mask = 17
@@ -96,18 +106,6 @@ script = ExtResource("2_k8p62")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
 position = Vector2(-1, 5)
 shape = SubResource("CircleShape2D_qbgn0")
-
-[node name="Milk" type="Sprite2D" parent="."]
-position = Vector2(-89, -48)
-scale = Vector2(0.4375, 0.46875)
-texture = ExtResource("5_4x5y1")
-script = ExtResource("4_tq5w1")
-player_path = NodePath("../Player")
-follow_offset = 10.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk"]
-position = Vector2(1.19209e-06, 4.26667)
-shape = SubResource("RectangleShape2D_41vkv")
 
 [node name="TileMap" type="Node" parent="."]
 
@@ -122,4 +120,39 @@ tile_set = SubResource("TileSet_02eip")
 format = 2
 layer_0/name = "back"
 layer_0/z_index = -1
-layer_0/tile_data = PackedInt32Array(-196615, 65536, 0, -131079, 65536, 1, -65543, 65536, 2, -7, 65536, 3, -196614, 131072, 0, -131078, 131072, 1, -65542, 131072, 2, -6, 131072, 3, -196613, 196608, 0, -131077, 196608, 1, -196616, 0, 0, -131080, 0, 1, -65544, 0, 2, -8, 0, 3, -65541, 196608, 2, -5, 196608, 3, -262132, 65538, 1, -196596, 65538, 2, -131060, 65538, 3, -262131, 131074, 1, -196595, 131074, 2, -131059, 131074, 3, -262130, 196610, 1, -196594, 196610, 2, -131058, 196610, 3, -262133, 2, 1, -196597, 2, 2, -131061, 2, 3, -327666, 196610, 0)
+layer_0/tile_data = PackedInt32Array(-196615, 65536, 0, -131079, 65536, 1, -65543, 65536, 2, -7, 65536, 3, -196614, 131072, 0, -131078, 131072, 1, -65542, 131072, 2, -6, 131072, 3, -196613, 196608, 0, -131077, 196608, 1, -196616, 0, 0, -131080, 0, 1, -65544, 0, 2, -8, 0, 3, -65541, 196608, 2, -5, 196608, 3, -262132, 65538, 1, -196596, 65538, 2, -131060, 65538, 3, -262131, 131074, 1, -196595, 131074, 2, -131059, 131074, 3, -262130, 196610, 1, -196594, 196610, 2, -131058, 196610, 3, -262133, 2, 1, -196597, 2, 2, -131061, 2, 3, -327666, 196610, 0, 393225, 131075, 0, 458761, 131075, 1, 393226, 196611, 0, 458762, 196611, 1, 524301, 3, 0, 589837, 3, 1, 524302, 65539, 0, 589838, 65539, 1)
+
+[node name="Ingredients" type="Node" parent="."]
+
+[node name="Milk" type="Sprite2D" parent="Ingredients"]
+position = Vector2(84, -31)
+scale = Vector2(0.4375, 0.46875)
+texture = ExtResource("5_4x5y1")
+script = ExtResource("4_tq5w1")
+player_path = NodePath("../../Player")
+follow_offset = 10.0
+
+[node name="Banana" type="Sprite2D" parent="Ingredients"]
+position = Vector2(53, -30)
+scale = Vector2(0.5625, 0.65625)
+texture = ExtResource("8_qgxq8")
+
+[node name="Cone" type="Sprite2D" parent="Ingredients"]
+position = Vector2(69, -30)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("9_grx88")
+
+[node name="IceCream" type="Sprite2D" parent="Ingredients"]
+position = Vector2(39, -32)
+scale = Vector2(0.5625, 0.625)
+texture = ExtResource("10_lwfi8")
+
+[node name="Mango" type="Sprite2D" parent="Ingredients"]
+position = Vector2(100, -31)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("11_i02pa")
+
+[node name="Watermelon" type="Sprite2D" parent="Ingredients"]
+position = Vector2(112, -31)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("12_rs8m4")
