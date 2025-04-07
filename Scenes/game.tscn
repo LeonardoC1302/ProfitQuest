@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
-[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
+[ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
 [ext_resource type="Texture2D" uid="uid://vup7tf2wvc6d" path="res://Assets/Counter.png" id="4_ie7lx"]
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
-[ext_resource type="Script" path="res://Scripts/milk.gd" id="4_tq5w1"]
+[ext_resource type="Script" uid="uid://0h8xkta0meey" path="res://Scripts/milk.gd" id="4_tq5w1"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="5_4x5y1"]
 [ext_resource type="Texture2D" uid="uid://dshpn7cv3178c" path="res://Assets/boxes.png" id="6_qrjqp"]
 [ext_resource type="Texture2D" uid="uid://rofrvyhubdm6" path="res://Assets/Counter1.png" id="7_hh0bo"]
