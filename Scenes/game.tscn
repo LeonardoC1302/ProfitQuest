@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=21 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
 [ext_resource type="Script" path="res://Scripts/milk.gd" id="4_tq5w1"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="5_4x5y1"]
+[ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_anpcx"]
 [ext_resource type="Texture2D" uid="uid://dshpn7cv3178c" path="res://Assets/boxes.png" id="6_qrjqp"]
 [ext_resource type="Texture2D" uid="uid://rofrvyhubdm6" path="res://Assets/Counter1.png" id="7_hh0bo"]
 [ext_resource type="Texture2D" uid="uid://caqa66antdf5q" path="res://Assets/Ingredients/banana.png" id="8_qgxq8"]
@@ -41,6 +42,25 @@ texture = ExtResource("4_ie7lx")
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxnxe"]
+texture = ExtResource("5_anpcx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd32d"]
 texture = ExtResource("7_hh0bo")
@@ -89,6 +109,7 @@ physics_layer_0/collision_mask = 17
 sources/0 = SubResource("TileSetAtlasSource_grqx2")
 sources/2 = SubResource("TileSetAtlasSource_nd32d")
 sources/3 = SubResource("TileSetAtlasSource_0laau")
+sources/1 = SubResource("TileSetAtlasSource_jxnxe")
 
 [node name="Game" type="Node2D"]
 
@@ -120,7 +141,7 @@ tile_set = SubResource("TileSet_02eip")
 format = 2
 layer_0/name = "back"
 layer_0/z_index = -1
-layer_0/tile_data = PackedInt32Array(-196615, 65536, 0, -131079, 65536, 1, -65543, 65536, 2, -7, 65536, 3, -196614, 131072, 0, -131078, 131072, 1, -65542, 131072, 2, -6, 131072, 3, -196613, 196608, 0, -131077, 196608, 1, -196616, 0, 0, -131080, 0, 1, -65544, 0, 2, -8, 0, 3, -65541, 196608, 2, -5, 196608, 3, -262132, 65538, 1, -196596, 65538, 2, -131060, 65538, 3, -262131, 131074, 1, -196595, 131074, 2, -131059, 131074, 3, -262130, 196610, 1, -196594, 196610, 2, -131058, 196610, 3, -262133, 2, 1, -196597, 2, 2, -131061, 2, 3, -327666, 196610, 0, 393225, 131075, 0, 458761, 131075, 1, 393226, 196611, 0, 458762, 196611, 1, 524301, 3, 0, 589837, 3, 1, 524302, 65539, 0, 589838, 65539, 1)
+layer_0/tile_data = PackedInt32Array(-196595, 1, 0, -131059, 1, 1, -196594, 65537, 0, -131058, 65537, 1, -196597, 131073, 0, -131061, 131073, 1, -196596, 196609, 0, -131060, 196609, 1, 458765, 262145, 0, 524301, 262145, 1, 458766, 327681, 0, 524302, 327681, 1, -196599, 393217, 0, -131063, 393217, 1, -196598, 458753, 0, -131062, 458753, 1)
 
 [node name="Ingredients" type="Node" parent="."]
 
