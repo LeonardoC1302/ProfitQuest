@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dta0un1sfrygg"]
+[gd_scene load_steps=4 format=3 uid="uid://dta0un1sfrygg"]
 
 [ext_resource type="Script" uid="uid://bf660f76f05l" path="res://Scripts/slot.gd" id="1_vqo0j"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_4h18v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqo0j"]
-bg_color = Color(0.8, 0.8, 0.8, 0.666667)
+bg_color = Color(0.8, 0.8, 0.8, 0.478431)
 corner_detail = 9
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 5
 
 [node name="Slot" type="Control"]
 custom_minimum_size = Vector2(64, 64)
@@ -21,12 +24,14 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(1.00426, 1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_vqo0j")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 1.0
+offset_right = 64.0
+offset_bottom = 62.0
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="."]
@@ -35,6 +40,7 @@ offset_left = 27.0
 offset_top = 41.0
 offset_right = 63.0
 offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_4h18v")
 text = "64"
 horizontal_alignment = 2
 vertical_alignment = 2

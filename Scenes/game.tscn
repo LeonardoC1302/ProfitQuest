@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=22 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
@@ -186,3 +186,4 @@ offset_left = -2.0
 offset_top = 4.5
 offset_right = -2.0
 offset_bottom = 4.5
+scale = Vector2(1.00197, 1)
