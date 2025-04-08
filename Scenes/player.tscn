@@ -1,10 +1,10 @@
 [gd_scene load_steps=32 format=3 uid="uid://drhf3j6kajff4"]
 
 [ext_resource type="Texture2D" uid="uid://di386on16iyho" path="res://Assets/spritesheets/characterTemplate.png" id="1_7c5ol"]
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_ms0f3"]
-[ext_resource type="Script" path="res://Scripts/player_state_machine.gd" id="3_sxbbr"]
-[ext_resource type="Script" path="res://Scripts/state_idle.gd" id="4_046bw"]
-[ext_resource type="Script" path="res://Scripts/state_walk.gd" id="5_kjbo7"]
+[ext_resource type="Script" uid="uid://bdk7hhgiop3gv" path="res://Scripts/player.gd" id="1_ms0f3"]
+[ext_resource type="Script" uid="uid://bsbwitphelmc7" path="res://Scripts/player_state_machine.gd" id="3_sxbbr"]
+[ext_resource type="Script" uid="uid://0djqtmpduqh1" path="res://Scripts/state_idle.gd" id="4_046bw"]
+[ext_resource type="Script" uid="uid://cptkkfsq5uala" path="res://Scripts/state_walk.gd" id="5_kjbo7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lmtaa"]
 radius = 7.0
