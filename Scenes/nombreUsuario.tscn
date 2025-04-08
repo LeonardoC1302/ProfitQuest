@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bb6u41oocrq0l"]
 
-[ext_resource type="Script" uid="uid://dfee3cx8jac6e" path="res://Scripts/control.gd" id="1_rbtb4"]
+[ext_resource type="Script" path="res://Scripts/control.gd" id="1_rbtb4"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_rg7df"]
 
 [node name="NombreUsuario" type="Node2D"]

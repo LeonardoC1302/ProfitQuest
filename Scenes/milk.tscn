@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfssckr65drc"]
+
+[ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="1_5dc3i"]
+[ext_resource type="Script" path="res://Scripts/milk.gd" id="2_yp5rf"]
+
+[node name="Milk" type="Node2D"]
+
+[node name="Milk" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.4375, 0.46875)
+texture = ExtResource("1_5dc3i")
+script = ExtResource("2_yp5rf")

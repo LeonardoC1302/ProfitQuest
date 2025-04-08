@@ -130,18 +130,17 @@ sources/1 = SubResource("TileSetAtlasSource_jxnxe")
 [node name="Dispensers" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dispensers"]
-position = Vector2(138, -34)
 script = ExtResource("1_ovoln")
 spawn_scene = ExtResource("2_1h7i0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Dispensers/StaticBody2D"]
-position = Vector2(1, -4)
+position = Vector2(143, -36)
 texture = ExtResource("5_anpcx")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dispensers/StaticBody2D"]
-position = Vector2(1, -8)
+position = Vector2(143, -44)
 shape = SubResource("RectangleShape2D_2q1mk")
 
 [node name="Player" parent="." instance=ExtResource("1_lstff")]
@@ -177,11 +176,12 @@ layer_0/tile_data = PackedInt32Array(458765, 262145, 0, 524301, 262145, 1, 45876
 [node name="Ingredients" type="Node" parent="."]
 
 [node name="Milk" type="Sprite2D" parent="Ingredients"]
-z_index = 2
 position = Vector2(84, -31)
 scale = Vector2(0.4375, 0.46875)
 texture = ExtResource("5_4x5y1")
 script = ExtResource("4_tq5w1")
+player_path = NodePath("../../Player")
+follow_offset = 10.0
 
 [node name="Banana" type="Sprite2D" parent="Ingredients"]
 position = Vector2(53, -30)
@@ -216,12 +216,3 @@ offset_top = 4.5
 offset_right = -2.0
 offset_bottom = 4.5
 scale = Vector2(1.00197, 1)
-
-[node name="Label" type="Label" parent="."]
-offset_left = -1.0
-offset_top = 78.0
-offset_right = 96.0
-offset_bottom = 153.0
-text = "E - Interact
-Space - Grab
-Q- Drop"
