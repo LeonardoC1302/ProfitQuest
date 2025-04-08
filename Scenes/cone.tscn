@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6gyjbky8d5xu"]
+
+[ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="1_qtjww"]
+[ext_resource type="Script" path="res://Scripts/milk.gd" id="2_xqchl"]
+
+[node name="Cone" type="Node2D"]
+
+[node name="Cone" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_qtjww")
+script = ExtResource("2_xqchl")
