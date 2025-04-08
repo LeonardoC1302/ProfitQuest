@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=20 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="10_lwfi8"]
 [ext_resource type="Texture2D" uid="uid://duv8gsr73m7dq" path="res://Assets/Ingredients/mango.png" id="11_i02pa"]
 [ext_resource type="Texture2D" uid="uid://cu77jkyemoy57" path="res://Assets/Ingredients/watermelon.png" id="12_rs8m4"]
+[ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="14_1phco"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
 radius = 6.08276
@@ -156,3 +157,11 @@ texture = ExtResource("11_i02pa")
 position = Vector2(112, -31)
 scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("12_rs8m4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventario" parent="CanvasLayer" instance=ExtResource("14_1phco")]
+offset_left = -2.0
+offset_top = 4.5
+offset_right = -2.0
+offset_bottom = 4.5

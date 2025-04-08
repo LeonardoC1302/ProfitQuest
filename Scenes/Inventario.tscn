@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw22q06sj5hgj"]
+
+[ext_resource type="Script" uid="uid://chb2sfs1uyr42" path="res://Scripts/inventario.gd" id="1_i5wj1"]
+
+[sub_resource type="Theme" id="Theme_vhrox"]
+
+[node name="Inventario" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -24.0
+offset_right = -576.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_vhrox")
+script = ExtResource("1_i5wj1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+offset_left = -328.0
+offset_top = 200.0
+offset_right = 280.0
+offset_bottom = 300.0
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 13
+theme_override_constants/v_separation = 5
+columns = 9

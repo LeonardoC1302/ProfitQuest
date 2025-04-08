@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dta0un1sfrygg"]
+
+[ext_resource type="Script" uid="uid://bf660f76f05l" path="res://Scripts/slot.gd" id="1_vqo0j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqo0j"]
+bg_color = Color(0.8, 0.8, 0.8, 0.666667)
+corner_detail = 9
+
+[node name="Slot" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqo0j")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vqo0j")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 41.0
+offset_right = 63.0
+offset_bottom = 64.0
+text = "64"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="gui_input" from="Panel" to="." method="_on_panel_gui_input"]
