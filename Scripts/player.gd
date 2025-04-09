@@ -9,7 +9,6 @@ var items_collected := []
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
-
 func _ready() -> void:
 	state_machine.Initialize(self)
 	# Inicializar el array con ceros
@@ -84,5 +83,18 @@ func register_item_drop(item_id: int) -> void:
 			print("No items of ID", item_id, "to drop.")
 	else:
 		print("Item ID out of range:", item_id)
-		
+
+func getCollectedItems():
+	return items_collected
 	
+func resetCollectedItems(itemsMap):
+	var names = []
+	for key in itemsMap:
+		names.append(itemsMap[key]["nombre"])
+	
+	var gameNode = get_tree().get_root().get_node("Game")
+	for child in gameNode.get_children():
+		if child.name in names or child.name.begins_with("@"):
+			child.queue_free()
+	for i in range(MAX_ITEM_ID):
+		items_collected[i] = 0

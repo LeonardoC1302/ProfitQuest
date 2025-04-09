@@ -4,22 +4,21 @@ extends StaticBody2D
 
 var player: CharacterBody2D
 
-func _ready():
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
 	player = get_node_or_null("../../Player")
 	if player == null:
 		print("Player not found!")
 
-func _process(_delta):
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
 	if player and Input.is_action_just_pressed("interact"):
 		var distance = global_position.distance_to(player.global_position)
 		if distance <= spawn_distance:
-			print("Interact (E) pressed near cupboard")
+			print("Interact (E) pressed near cash register")
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
-			# Get items hold by player
-			var items = player.getCollectedItems()
 			if inventario_node:
-				inventario_node.collectItems(items)
-				player.resetCollectedItems(inventario_node.getMap())
-				#inventario_node.process_cupboard_interaction()
+				inventario_node.process_register_interaction()
 			else:
 				print("Inventario node not found!")

@@ -204,16 +204,6 @@ offset_top = 4.5
 offset_right = -2.0
 offset_bottom = 4.5
 scale = Vector2(1.00197, 1)
-itemMap = {
-0: {
-"icono": "res://Assets/Ingredients/Cone.png",
-"nombre": "Cone"
-},
-1: {
-"icono": "res://Assets/Ingredients/Milk.png",
-"nombre": "Milk"
-}
-}
 
 [node name="Instructions" type="Label" parent="."]
 offset_left = -1.0

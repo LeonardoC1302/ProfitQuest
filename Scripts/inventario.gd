@@ -5,6 +5,8 @@ const SLOT_SCENE = preload("res://Scenes/Slot.tscn")
 
 var inventario = []
 
+@export var itemMap = {}
+
 func _ready():
 	print("Current inventario path: ", get_path())
 	inicializar_inventario()
@@ -18,10 +20,11 @@ func inicializar_inventario():
 		inventario.append(null)
 
 func rellenar_inventario_prueba():
+	pass
 	# Example test data
-	inventario[0] = {"nombre": "Banana", "cantidad": 64, "icono": preload("res://Assets/Ingredients/banana.png")}
-	inventario[3] = {"nombre": "Cono", "cantidad": 64, "icono": preload("res://Assets/Ingredients/Cone.png")}
-	inventario[8] = {"nombre": "Mango", "cantidad": 64, "icono": preload("res://Assets/Ingredients/mango.png")}
+	#inventario[0] = {"nombre": "Banana", "cantidad": 64, "icono": preload("res://Assets/Ingredients/banana.png")}
+	#inventario[3] = {"nombre": "Cono", "cantidad": 64, "icono": preload("res://Assets/Ingredients/Cone.png")}
+	#inventario[8] = {"nombre": "Mango", "cantidad": 64, "icono": preload("res://Assets/Ingredients/mango.png")}
 
 func crear_slots():
 	var grid = $CenterContainer/GridContainer
@@ -59,3 +62,30 @@ func process_cupboard_interaction():
 			inventario[i] = new_item
 			break
 	actualizar_interfaz()
+	
+func process_register_interaction():
+	print("Interacted with cash register, selling product...")
+	# De momento solo se va a vender el primer item que tenga en el inventario (solo se quita, aún no está lo de dinero)
+	for i in range(NUM_SLOTS):
+		if inventario[i] != null:
+			inventario[i] = null # De momento solo se borra
+			break
+	actualizar_interfaz()
+	
+func collectItems(items):
+	for item in items.size():
+		var amount = items[item]
+		if amount > 0:
+			var new_item = {"nombre": itemMap[item]['nombre'], "cantidad": amount, "icono" : load(itemMap[item]['icono'])}
+			for i in range(NUM_SLOTS):
+				if inventario[i] != null and inventario[i]['nombre'] == new_item['nombre']:
+					inventario[i]['cantidad'] += new_item['cantidad']
+					break
+				elif inventario[i] == null:
+					inventario[i] = new_item
+					break
+	actualizar_interfaz()
+	
+func getMap():
+	return itemMap
+	
