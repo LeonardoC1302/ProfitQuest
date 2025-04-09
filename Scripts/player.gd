@@ -3,11 +3,19 @@ class_name Player extends CharacterBody2D
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 
+const MAX_ITEM_ID = 100  # Ajustalo según cuántos tipos de ítems vas a usar
+var items_collected := []
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
+
 func _ready() -> void:
 	state_machine.Initialize(self)
+	# Inicializar el array con ceros
+	items_collected.resize(MAX_ITEM_ID)
+	for i in range(MAX_ITEM_ID):
+		items_collected[i] = 0
 	pass
 
 func _process(delta: float) -> void:
@@ -59,3 +67,22 @@ func AnimDirection() -> String:
 		return "up"
 	else:
 		return "side"
+		
+func register_item_pickup(item_id: int) -> void:
+	if item_id >= 0 and item_id < items_collected.size():
+		items_collected[item_id] += 1
+		print("Picked up item ID:", item_id, " | Total:", items_collected[item_id])
+	else:
+		print("Item ID out of range:", item_id)
+		
+func register_item_drop(item_id: int) -> void:
+	if item_id >= 0 and item_id < items_collected.size():
+		if items_collected[item_id] > 0:
+			items_collected[item_id] -= 1
+			print("Dropped item ID:", item_id, " | Remaining:", items_collected[item_id])
+		else:
+			print("No items of ID", item_id, "to drop.")
+	else:
+		print("Item ID out of range:", item_id)
+		
+	

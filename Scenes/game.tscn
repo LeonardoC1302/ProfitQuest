@@ -6,17 +6,17 @@
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
 [ext_resource type="Texture2D" uid="uid://vup7tf2wvc6d" path="res://Assets/Counter.png" id="4_ie7lx"]
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
-[ext_resource type="Script" path="res://Scripts/milk.gd" id="4_tq5w1"]
+[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="4_tq5w1"]
 [ext_resource type="PackedScene" uid="uid://b6gyjbky8d5xu" path="res://Scenes/cone.tscn" id="4_xlqca"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="5_4x5y1"]
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_anpcx"]
 [ext_resource type="Texture2D" uid="uid://dshpn7cv3178c" path="res://Assets/boxes.png" id="6_qrjqp"]
 [ext_resource type="Texture2D" uid="uid://rofrvyhubdm6" path="res://Assets/Counter1.png" id="7_hh0bo"]
-[ext_resource type="Texture2D" uid="uid://caqa66antdf5q" path="res://Assets/Ingredients/Banana.png" id="8_qgxq8"]
+[ext_resource type="Texture2D" uid="uid://caqa66antdf5q" path="res://Assets/Ingredients/banana.png" id="8_qgxq8"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="9_grx88"]
 [ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="10_lwfi8"]
-[ext_resource type="Texture2D" uid="uid://duv8gsr73m7dq" path="res://Assets/Ingredients/Mango.png" id="11_i02pa"]
-[ext_resource type="Texture2D" uid="uid://cu77jkyemoy57" path="res://Assets/Ingredients/Watermelon.png" id="12_rs8m4"]
+[ext_resource type="Texture2D" uid="uid://duv8gsr73m7dq" path="res://Assets/Ingredients/mango.png" id="11_i02pa"]
+[ext_resource type="Texture2D" uid="uid://cu77jkyemoy57" path="res://Assets/Ingredients/watermelon.png" id="12_rs8m4"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="14_1phco"]
 [ext_resource type="Script" path="res://Scripts/cupboard.gd" id="19_o1f2a"]
 [ext_resource type="Texture2D" uid="uid://d0p2s5i240ddo" path="res://Assets/cupboard.png" id="19_yp6l5"]
@@ -215,6 +215,7 @@ position = Vector2(69, -30)
 scale = Vector2(0.65625, 0.59375)
 texture = ExtResource("9_grx88")
 script = ExtResource("4_tq5w1")
+item_id = 0
 
 [node name="IceCream" type="Sprite2D" parent="Ingredients"]
 position = Vector2(39, -32)

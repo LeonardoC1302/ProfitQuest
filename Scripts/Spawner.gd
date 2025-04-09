@@ -16,7 +16,7 @@ func _process(_delta):
 	if player and Input.is_action_just_pressed("interact"):
 		var distance = global_position.distance_to(player.global_position)
 		if distance <= spawn_distance:
-			print("E")
+			#print("E")
 			spawn_object()
 
 func spawn_object():
