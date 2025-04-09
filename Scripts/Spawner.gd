@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var spawn_scene: PackedScene  # Drag your .tscn prefab into this in the Inspector
+@export var spawn_scene: PackedScene  # Drag the .tscn prefab into this in the Inspector
 @export var spawn_distance: float = 20
 
 var player: CharacterBody2D
@@ -14,7 +14,6 @@ func _ready():
 
 func _process(_delta):
 	if player and Input.is_action_just_pressed("interact"):
-		#print("E")
 		var distance = global_position.distance_to(player.global_position)
 		if distance <= spawn_distance:
 			print("E")

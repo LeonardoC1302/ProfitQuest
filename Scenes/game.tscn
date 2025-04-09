@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=29 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="1_ovoln"]
@@ -12,12 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_anpcx"]
 [ext_resource type="Texture2D" uid="uid://dshpn7cv3178c" path="res://Assets/boxes.png" id="6_qrjqp"]
 [ext_resource type="Texture2D" uid="uid://rofrvyhubdm6" path="res://Assets/Counter1.png" id="7_hh0bo"]
-[ext_resource type="Texture2D" uid="uid://caqa66antdf5q" path="res://Assets/Ingredients/banana.png" id="8_qgxq8"]
+[ext_resource type="Texture2D" uid="uid://caqa66antdf5q" path="res://Assets/Ingredients/Banana.png" id="8_qgxq8"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="9_grx88"]
 [ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="10_lwfi8"]
-[ext_resource type="Texture2D" uid="uid://duv8gsr73m7dq" path="res://Assets/Ingredients/mango.png" id="11_i02pa"]
-[ext_resource type="Texture2D" uid="uid://cu77jkyemoy57" path="res://Assets/Ingredients/watermelon.png" id="12_rs8m4"]
+[ext_resource type="Texture2D" uid="uid://duv8gsr73m7dq" path="res://Assets/Ingredients/Mango.png" id="11_i02pa"]
+[ext_resource type="Texture2D" uid="uid://cu77jkyemoy57" path="res://Assets/Ingredients/Watermelon.png" id="12_rs8m4"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="14_1phco"]
+[ext_resource type="Script" path="res://Scripts/cupboard.gd" id="19_o1f2a"]
+[ext_resource type="Texture2D" uid="uid://d0p2s5i240ddo" path="res://Assets/cupboard.png" id="19_yp6l5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(20, 16)
@@ -126,37 +128,40 @@ sources/2 = SubResource("TileSetAtlasSource_nd32d")
 sources/3 = SubResource("TileSetAtlasSource_0laau")
 sources/1 = SubResource("TileSetAtlasSource_jxnxe")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjes8"]
+size = Vector2(32, 18)
+
 [node name="Game" type="Node2D"]
 
 [node name="Dispensers" type="Node" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Dispensers"]
+[node name="MilkDispenser" type="StaticBody2D" parent="Dispensers"]
 position = Vector2(138, -34)
 script = ExtResource("1_ovoln")
 spawn_scene = ExtResource("2_1h7i0")
 
-[node name="Sprite2D" type="Sprite2D" parent="Dispensers/StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Dispensers/MilkDispenser"]
 position = Vector2(1, -4)
 texture = ExtResource("5_anpcx")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dispensers/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dispensers/MilkDispenser"]
 position = Vector2(1, -8)
 shape = SubResource("RectangleShape2D_2q1mk")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Dispensers"]
+[node name="ConeDispenser" type="StaticBody2D" parent="Dispensers"]
 position = Vector2(168, -33)
 script = ExtResource("1_ovoln")
 spawn_scene = ExtResource("4_xlqca")
 
-[node name="Sprite2D" type="Sprite2D" parent="Dispensers/StaticBody2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="Dispensers/ConeDispenser"]
 position = Vector2(1, -4)
 texture = ExtResource("5_anpcx")
 region_enabled = true
 region_rect = Rect2(96, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dispensers/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dispensers/ConeDispenser"]
 position = Vector2(1, -8)
 shape = SubResource("RectangleShape2D_2q1mk")
 
@@ -235,7 +240,7 @@ offset_right = -2.0
 offset_bottom = 4.5
 scale = Vector2(1.00197, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Instructions" type="Label" parent="."]
 offset_left = -1.0
 offset_top = 78.0
 offset_right = 96.0
@@ -243,3 +248,15 @@ offset_bottom = 153.0
 text = "E - Interact
 Space - Grab
 Q- Drop"
+
+[node name="Cupboard" type="StaticBody2D" parent="."]
+position = Vector2(209, -32)
+script = ExtResource("19_o1f2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cupboard"]
+position = Vector2(0, -5)
+texture = ExtResource("19_yp6l5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cupboard"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_hjes8")
