@@ -63,6 +63,17 @@ func process_cupboard_interaction():
 			break
 	actualizar_interfaz()
 	
+func searchRecipe(recipe):
+	var nombres_en_inventario = []
+	for item in inventario:
+		if item != null:
+			nombres_en_inventario.append(item["nombre"])
+
+	for nombre in recipe:
+		if nombre not in nombres_en_inventario:
+			return false
+	return true
+	
 func process_register_interaction():
 	print("Interacted with cash register, selling product...")
 	# De momento solo se va a vender el primer item que tenga en el inventario (solo se quita, aún no está lo de dinero)
@@ -85,7 +96,37 @@ func collectItems(items):
 					inventario[i] = new_item
 					break
 	actualizar_interfaz()
+
+func addItem(item):
+	var added = false
+	var firstNull = null
+	for i in range(NUM_SLOTS):
+		if firstNull == null and inventario[i] == null:
+			firstNull = i
+		if inventario[i] != null and inventario[i]['nombre'] == item['nombre'] :
+			inventario[i]['cantidad'] += item['cantidad']
+			added = true
+			break
+	if not added:
+		inventario[firstNull] = item
+	actualizar_interfaz()
 	
 func getMap():
 	return itemMap
+	
+func getItems():
+	return inventario
+	
+func craftRecipe(recipe, product):
+	if searchRecipe(recipe):
+		for i in range(NUM_SLOTS):
+			if inventario[i] != null and inventario[i]['nombre'] in recipe:
+				if inventario[i]['cantidad'] > 1:
+					inventario[i]['cantidad'] -= 1
+				else:
+					inventario[i] = null
+			
+		addItem(product)
+	else:
+		print("No se tienen todos los ingredientes para craftear")
 	

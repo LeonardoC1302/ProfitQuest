@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var spawn_distance: float = 30
+@export var interact_distance: float = 30
 
 var player: CharacterBody2D
 
@@ -12,7 +12,7 @@ func _ready():
 func _process(_delta):
 	if player and Input.is_action_just_pressed("interact"):
 		var distance = global_position.distance_to(player.global_position)
-		if distance <= spawn_distance:
+		if distance <= interact_distance:
 			print("Interact (E) pressed near cupboard")
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
 			# Get items hold by player
