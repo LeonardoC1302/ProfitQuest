@@ -5,6 +5,8 @@ const SLOT_SCENE = preload("res://Scenes/Slot.tscn")
 
 var inventario = []
 
+@export var itemMap = {}
+
 func _ready():
 	print("Current inventario path: ", get_path())
 	inicializar_inventario()
@@ -18,10 +20,11 @@ func inicializar_inventario():
 		inventario.append(null)
 
 func rellenar_inventario_prueba():
+	pass
 	# Example test data
-	inventario[0] = {"nombre": "Banana", "cantidad": 64, "icono": preload("res://Assets/Ingredients/banana.png")}
-	inventario[3] = {"nombre": "Cono", "cantidad": 64, "icono": preload("res://Assets/Ingredients/Cone.png")}
-	inventario[8] = {"nombre": "Mango", "cantidad": 64, "icono": preload("res://Assets/Ingredients/mango.png")}
+	#inventario[0] = {"nombre": "Banana", "cantidad": 64, "icono": preload("res://Assets/Ingredients/banana.png")}
+	#inventario[3] = {"nombre": "Cono", "cantidad": 64, "icono": preload("res://Assets/Ingredients/Cone.png")}
+	#inventario[8] = {"nombre": "Mango", "cantidad": 64, "icono": preload("res://Assets/Ingredients/mango.png")}
 
 func crear_slots():
 	var grid = $CenterContainer/GridContainer
@@ -59,3 +62,71 @@ func process_cupboard_interaction():
 			inventario[i] = new_item
 			break
 	actualizar_interfaz()
+	
+func searchRecipe(recipe):
+	var nombres_en_inventario = []
+	for item in inventario:
+		if item != null:
+			nombres_en_inventario.append(item["nombre"])
+
+	for nombre in recipe:
+		if nombre not in nombres_en_inventario:
+			return false
+	return true
+	
+func process_register_interaction():
+	print("Interacted with cash register, selling product...")
+	# De momento solo se va a vender el primer item que tenga en el inventario (solo se quita, aún no está lo de dinero)
+	for i in range(NUM_SLOTS):
+		if inventario[i] != null:
+			inventario[i] = null # De momento solo se borra
+			break
+	actualizar_interfaz()
+	
+func collectItems(items):
+	for item in items.size():
+		var amount = items[item]
+		if amount > 0:
+			var new_item = {"nombre": itemMap[item]['nombre'], "cantidad": amount, "icono" : load(itemMap[item]['icono'])}
+			for i in range(NUM_SLOTS):
+				if inventario[i] != null and inventario[i]['nombre'] == new_item['nombre']:
+					inventario[i]['cantidad'] += new_item['cantidad']
+					break
+				elif inventario[i] == null:
+					inventario[i] = new_item
+					break
+	actualizar_interfaz()
+
+func addItem(item):
+	var added = false
+	var firstNull = null
+	for i in range(NUM_SLOTS):
+		if firstNull == null and inventario[i] == null:
+			firstNull = i
+		if inventario[i] != null and inventario[i]['nombre'] == item['nombre'] :
+			inventario[i]['cantidad'] += item['cantidad']
+			added = true
+			break
+	if not added:
+		inventario[firstNull] = item
+	actualizar_interfaz()
+	
+func getMap():
+	return itemMap
+	
+func getItems():
+	return inventario
+	
+func craftRecipe(recipe, product):
+	if searchRecipe(recipe):
+		for i in range(NUM_SLOTS):
+			if inventario[i] != null and inventario[i]['nombre'] in recipe:
+				if inventario[i]['cantidad'] > 1:
+					inventario[i]['cantidad'] -= 1
+				else:
+					inventario[i] = null
+			
+		addItem(product)
+	else:
+		print("No se tienen todos los ingredientes para craftear")
+	
