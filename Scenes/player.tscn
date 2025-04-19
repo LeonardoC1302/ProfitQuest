@@ -219,9 +219,10 @@ shape = SubResource("CircleShape2D_lmtaa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iytrf")
-animation = &"walk_side"
+animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.807519
+frame = 1
+frame_progress = 0.755022
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_sxbbr")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu77jkyemoy57"
-path="res://.godot/imported/Watermelon.png-743dcc4d79882d63963eb8878c4c9e4b.ctex"
+uid="uid://dkkf0brdnbb3t"
+path="res://.godot/imported/characterTemplate-head.png-b3864bf03cd8b48e581158ba0b5a27c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ingredients/Watermelon.png"
-dest_files=["res://.godot/imported/Watermelon.png-743dcc4d79882d63963eb8878c4c9e4b.ctex"]
+source_file="res://Assets/spritesheets/characterTemplate-head.png"
+dest_files=["res://.godot/imported/characterTemplate-head.png-b3864bf03cd8b48e581158ba0b5a27c5.ctex"]
 
 [params]
 
