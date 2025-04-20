@@ -15,10 +15,13 @@ var items_collected := []
 @onready var bodySprite: Sprite2D = $CustomPlayer/Body
 @onready var outlineSprite: Sprite2D = $CustomPlayer/Outline
 @onready var contrastSrpite: Sprite2D = $CustomPlayer/Contrast
+var save_path := "user://player_customization.ini"
+
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
 func _ready() -> void:
 	state_machine.Initialize(self)
+	load_customization()
 	# Inicializar el array con ceros
 	items_collected.resize(MAX_ITEM_ID)
 	for i in range(MAX_ITEM_ID):
@@ -124,3 +127,31 @@ func resetCollectedItems(itemsMap):
 			child.queue_free()
 	for i in range(MAX_ITEM_ID):
 		items_collected[i] = 0
+
+func load_customization():
+	var config_file := ConfigFile.new()
+	var error := config_file.load(save_path)
+	
+	if error:
+		print("Load customization error: ", error)
+		%Player.set_color("Head", Color.BISQUE)
+		%Player.set_color("Eyebrows", Color.CORNSILK)
+		%Player.set_color("Eyes", Color.CYAN)
+		%Player.set_color("Ears", Color.CRIMSON)
+		%Player.set_color("Body", Color.BISQUE)
+		%Player.set_color("Contrast", Color.AQUAMARINE)
+		%Player.set_color("Outline", Color.BLACK)
+		return
+		
+	var headColor = config_file.get_value("Customization", "Head", Color.BISQUE)
+	%Player.set_color("Head", headColor)
+	var eyebrowsColor = config_file.get_value("Customization", "Eyebrows", Color.CORNSILK)
+	%Player.set_color("Eyebrows", eyebrowsColor)
+	var eyesColor = config_file.get_value("Customization", "Eyes", Color.CYAN)
+	%Player.set_color("Eyes", eyesColor)
+	var bodyColor = config_file.get_value("Customization", "Body", Color.BISQUE)
+	%Player.set_color("Body", bodyColor)
+	var contrastColor = config_file.get_value("Customization", "Contrast", Color.AQUAMARINE)
+	%Player.set_color("Contrast", contrastColor)
+	var outlineColor = config_file.get_value("Customization", "Outline", Color.BLACK)
+	%Player.set_color("Outline", outlineColor)

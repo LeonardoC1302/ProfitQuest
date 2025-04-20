@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://btd0s6v535uqv"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_j87cl"]
-[ext_resource type="Script" path="res://Scenes/customization.gd" id="1_jj6bv"]
+[ext_resource type="Script" path="res://Scripts/customization.gd" id="1_jj6bv"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_nx527"]
 
 [node name="Customization" type="Node2D"]
