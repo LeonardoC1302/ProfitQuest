@@ -1,0 +1,148 @@
+[gd_scene load_steps=4 format=3 uid="uid://btd0s6v535uqv"]
+
+[ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_j87cl"]
+[ext_resource type="Script" path="res://Scenes/customization.gd" id="1_jj6bv"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_nx527"]
+
+[node name="Customization" type="Node2D"]
+position = Vector2(38, 538)
+scale = Vector2(0.538195, 0.538195)
+script = ExtResource("1_jj6bv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -76.1806
+offset_top = 185.806
+offset_right = -36.1806
+offset_bottom = 225.806
+scale = Vector2(54.1505, -29.8191)
+color = Color(0.117647, 0.160784, 0.278431, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_j87cl")]
+unique_name_in_owner = true
+position = Vector2(1623, -460)
+scale = Vector2(30, 30)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 155.0
+offset_top = -845.0
+offset_right = 369.0
+offset_bottom = -624.0
+scale = Vector2(4.30016, 3.72779)
+
+[node name="HeadContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Head" type="Label" parent="VBoxContainer/HeadContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Head"
+
+[node name="HeadColorPicker" type="ColorPickerButton" parent="VBoxContainer/HeadContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="EyebrowsContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Eyebrows" type="Label" parent="VBoxContainer/EyebrowsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Eyebrows"
+
+[node name="EyebrowsColorPicker" type="ColorPickerButton" parent="VBoxContainer/EyebrowsContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="EyesContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Eyes" type="Label" parent="VBoxContainer/EyesContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Eyes"
+
+[node name="EyesColorPicker" type="ColorPickerButton" parent="VBoxContainer/EyesContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="EarsContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Ears" type="Label" parent="VBoxContainer/EarsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Ears"
+
+[node name="EarsColorPicker" type="ColorPickerButton" parent="VBoxContainer/EarsContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="BodyContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Body" type="Label" parent="VBoxContainer/BodyContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Body"
+
+[node name="BodyColorPicker" type="ColorPickerButton" parent="VBoxContainer/BodyContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="ContrastContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Contrast" type="Label" parent="VBoxContainer/ContrastContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Contrast"
+
+[node name="ContrastColorPicker" type="ColorPickerButton" parent="VBoxContainer/ContrastContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="OutlineContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Outline" type="Label" parent="VBoxContainer/OutlineContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Outline"
+
+[node name="OutlineColorPicker" type="ColorPickerButton" parent="VBoxContainer/OutlineContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+edit_alpha = false
+
+[node name="SaveButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Save"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nx527")
+text = "Menu"
+
+[connection signal="color_changed" from="VBoxContainer/HeadContainer/HeadColorPicker" to="." method="_on_head_color_picker_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/EyebrowsContainer/EyebrowsColorPicker" to="." method="_on_eyebrows_color_picker_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/EyesContainer/EyesColorPicker" to="." method="_on_eyes_color_picker_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/EarsContainer/EarsColorPicker" to="." method="_on_ears_color_picker_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/BodyContainer/BodyColorPicker" to="." method="_on_body_color_picker_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/ContrastContainer/ContrastColorPicker" to="." method="_on_contrast_color_picker_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/OutlineContainer/OutlineColorPicker" to="." method="_on_outline_color_picker_color_changed"]
+[connection signal="pressed" from="VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

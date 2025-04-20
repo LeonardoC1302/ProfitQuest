@@ -6,7 +6,15 @@ var direction : Vector2 = Vector2.ZERO
 const MAX_ITEM_ID = 100  # Ajustalo según cuántos tipos de ítems vas a usar
 var items_collected := []
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_sprite_2d: AnimationPlayer = $CustomPlayer/AnimationPlayer
+@onready var customPlayer: Node2D = $CustomPlayer
+@onready var headSprite: Sprite2D = $CustomPlayer/Head
+@onready var eyebrowsSprite: Sprite2D = $CustomPlayer/Eyebrows
+@onready var eyesSprite: Sprite2D = $CustomPlayer/Eyes
+@onready var earsSprite: Sprite2D = $CustomPlayer/Ears
+@onready var bodySprite: Sprite2D = $CustomPlayer/Body
+@onready var outlineSprite: Sprite2D = $CustomPlayer/Outline
+@onready var contrastSrpite: Sprite2D = $CustomPlayer/Contrast
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
 func _ready() -> void:
@@ -39,6 +47,23 @@ func _physics_process(delta: float) -> void:
 		velocity = direction * 200  # o tu velocidad personalizada
 		move_and_slide()
 
+func set_color(color_name, color):
+	match color_name:
+		"Head":
+			headSprite.self_modulate = color
+		"Eyebrows":
+			eyebrowsSprite.self_modulate = color
+		"Eyes":
+			eyesSprite.self_modulate = color
+		"Ears":
+			earsSprite.self_modulate = color
+		"Body":
+			bodySprite.self_modulate = color
+		"Contrast":
+			contrastSrpite.self_modulate = color
+		"Outline":	
+			outlineSprite.self_modulate = color
+
 func SetDirection() -> bool:
 	var new_direction : Vector2 = cardinal_direction
 	if direction == Vector2.ZERO:
@@ -52,11 +77,12 @@ func SetDirection() -> bool:
 		return false
 	cardinal_direction = new_direction
 	# Scale to affect child elements
-	animated_sprite_2d.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
+	customPlayer.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
+	#animated_sprite_2d.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
 	
 func UpdateAnimation(state : String) -> void:
-	animated_sprite_2d.play( state + "_" + AnimDirection())
+	animated_sprite_2d.play("character/" + state + "_" + AnimDirection())
 	pass	
 
 func AnimDirection() -> String:

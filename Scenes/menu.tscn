@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhmr52gv3eg76"]
+[gd_scene load_steps=9 format=3 uid="uid://bhmr52gv3eg76"]
 
 [ext_resource type="Texture2D" uid="uid://bw3gkyywejt6l" path="res://Assets/Logo.png" id="1_ovyjc"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_3yvod"]
 [ext_resource type="Script" path="res://Scripts/Start.gd" id="3_p0n8e"]
 [ext_resource type="Script" path="res://Scripts/Exit.gd" id="4_664a6"]
+[ext_resource type="Script" path="res://Scenes/Customize.gd" id="4_ldt6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7euin"]
 size = Vector2(247.5, 148)
@@ -33,7 +34,7 @@ position = Vector2(-180, -189)
 scale = Vector2(4.59375, 4.15625)
 texture = ExtResource("1_ovyjc")
 
-[node name="Label" type="Label" parent="."]
+[node name="Name" type="Label" parent="."]
 offset_left = -108.0
 offset_top = -247.0
 offset_right = 392.0
@@ -44,7 +45,7 @@ text = "Profit
 Quest"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="."]
+[node name="Start" type="Label" parent="."]
 z_index = 1
 offset_left = -200.0
 offset_top = -45.0
@@ -57,16 +58,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="."]
 z_index = 1
-offset_left = -150.0
-offset_top = 80.0
-offset_right = 350.0
-offset_bottom = 253.0
+offset_left = -177.0
+offset_top = 78.0
+offset_right = 323.0
+offset_bottom = 251.0
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_3yvod")
 theme_override_font_sizes/font_size = 40
-text = "Settings"
+text = "Customize"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label4" type="Label" parent="."]
+[node name="Exit" type="Label" parent="."]
 z_index = 1
 offset_left = -75.0
 offset_top = 205.0
@@ -115,6 +117,7 @@ offset_top = 575.0
 offset_right = -15.0
 offset_bottom = 653.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pvsqw")
+script = ExtResource("4_ldt6c")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(308, -515)
