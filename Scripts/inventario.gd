@@ -4,6 +4,7 @@ const NUM_SLOTS = 9
 const SLOT_SCENE = preload("res://Scenes/Slot.tscn")
 
 var inventario = []
+var slot_seleccionado = null
 
 @export var itemMap = {}
 
@@ -37,6 +38,31 @@ func crear_slots():
 		grid.add_child(slot_instance)
 		slot_instance.inventario_ref = self
 		slot_instance.slot_index = i
+		
+func procesar_click(index):
+	if slot_seleccionado == null:
+		if inventario[index] != null:
+			slot_seleccionado = index
+	else:
+		if index == slot_seleccionado:
+			slot_seleccionado = null
+			actualizar_visual_seleccion()
+			return
+
+
+		var temp = inventario[index]
+		inventario[index] = inventario[slot_seleccionado]
+		inventario[slot_seleccionado] = temp
+
+		slot_seleccionado = null
+
+	actualizar_interfaz()
+	actualizar_visual_seleccion()
+	
+func actualizar_visual_seleccion():
+	var slots = $CenterContainer/GridContainer.get_children()
+	for slot in slots:
+		slot.actualizar_visual_seleccionado(slot.slot_index == slot_seleccionado)
 
 func actualizar_interfaz():
 	var slots = $CenterContainer/GridContainer.get_children()
@@ -116,6 +142,15 @@ func getMap():
 	
 func getItems():
 	return inventario
+	
+func getSelectedSlot():
+	return slot_seleccionado
+	
+func deleteItemSlot(itemSlot):
+	slot_seleccionado = null
+	inventario[itemSlot] = null
+	actualizar_interfaz()
+	actualizar_visual_seleccion()
 	
 func craftRecipe(recipe, product):
 	if searchRecipe(recipe):
