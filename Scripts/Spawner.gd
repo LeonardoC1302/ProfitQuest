@@ -2,6 +2,7 @@ extends StaticBody2D
 
 @export var spawn_scene: PackedScene  # Drag the .tscn prefab into this in the Inspector
 @export var spawn_distance: float = 20
+@export var costo: int = 100
 
 var player: CharacterBody2D
 
@@ -21,9 +22,17 @@ func _process(_delta):
 
 func spawn_object():
 	var random_offset = randi_range(-15, 15)
-	if spawn_scene:
-		var instance = spawn_scene.instantiate()
-		get_tree().current_scene.add_child(instance)  # safer than get_parent()
-		instance.global_position = global_position + Vector2(random_offset, 24)
+
+	if spawn_scene and player:
+		if player.presupuesto >= costo:
+			player.presupuesto -= costo
+
+			var instance = spawn_scene.instantiate()
+			get_tree().current_scene.add_child(instance)
+			instance.global_position = global_position + Vector2(random_offset, 24)
+
+			print("Producto creado. Presupuesto restante:", player.presupuesto)
+		else:
+			print("No tenés suficiente presupuesto. Se requieren ", costo)
 	else:
-		print("No spawn_scene assigned.")
+		print("⚠️ No spawn_scene asignado o player no encontrado.")

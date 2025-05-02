@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=23 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_ktwhx"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/crafter.gd" id="8_wjbcv"]
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="13_lnwe8"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="14_1phco"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="15_rtnns"]
 [ext_resource type="Script" path="res://Scripts/cupboard.gd" id="19_o1f2a"]
 [ext_resource type="Texture2D" uid="uid://d0p2s5i240ddo" path="res://Assets/cupboard.png" id="19_yp6l5"]
 
@@ -113,6 +114,7 @@ script = ExtResource("1_ktwhx")
 position = Vector2(199, -33)
 script = ExtResource("1_ovoln")
 spawn_scene = ExtResource("2_1h7i0")
+costo = 120
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/MilkDispenser"]
 position = Vector2(1, -4)
@@ -128,6 +130,7 @@ shape = SubResource("RectangleShape2D_2q1mk")
 position = Vector2(172, -32)
 script = ExtResource("1_ovoln")
 spawn_scene = ExtResource("4_xlqca")
+costo = 75
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/ConeDispenser"]
 position = Vector2(1, -4)
@@ -232,11 +235,17 @@ itemMap = {
 [node name="LevelTimer" parent="CanvasLayer" instance=ExtResource("13_lnwe8")]
 position = Vector2(165, -195)
 
-[node name="Instructions" type="Label" parent="."]
-offset_left = -1.0
-offset_top = 78.0
-offset_right = 96.0
-offset_bottom = 153.0
-text = "E - Interact
-Space - Grab
-Q- Drop"
+[node name="Budget" type="Label" parent="CanvasLayer"]
+z_index = 5
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_bottom = 35.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.1244, 0.0561318, 0.00278891, 1)
+theme_override_colors/font_shadow_color = Color(0.677273, 0.667968, 0.649139, 1)
+theme_override_fonts/font = ExtResource("15_rtnns")
+theme_override_font_sizes/font_size = 20
+text = "Presupuesto: 0"

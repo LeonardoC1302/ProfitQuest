@@ -6,6 +6,8 @@ var direction : Vector2 = Vector2.ZERO
 const MAX_ITEM_ID = 100  # Ajustalo según cuántos tipos de ítems vas a usar
 var items_collected := []
 
+@export var presupuesto := 10000
+
 @onready var animated_sprite_2d: AnimationPlayer = $CustomPlayer/AnimationPlayer
 @onready var customPlayer: Node2D = $CustomPlayer
 @onready var headSprite: Sprite2D = $CustomPlayer/Head
@@ -31,6 +33,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	direction.x = Input.get_action_strength('right') - Input.get_action_strength('left')
 	direction.y = Input.get_action_strength('down') - Input.get_action_strength('up')
+	var budget_label = get_node("/root/Game/CanvasLayer/Budget")
+	budget_label.text = "Presupuesto: " + str(presupuesto)
 	pass
 	
 func _physics_process(delta: float) -> void:
