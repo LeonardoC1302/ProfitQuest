@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqn0u4ik2kql6"]
+
+[ext_resource type="Texture2D" uid="uid://req2m5goq03" path="res://Assets/Ingredients/Egg.png" id="1_1alka"]
+[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_8g6rk"]
+
+[node name="Cone" type="Node2D"]
+
+[node name="Cone" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_1alka")
+script = ExtResource("2_8g6rk")
+item_id = 4

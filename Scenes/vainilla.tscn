@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct51f124wtitx"]
+
+[ext_resource type="Texture2D" uid="uid://chqmsc0scf36" path="res://Assets/Ingredients/Vainilla.png" id="1_jriks"]
+[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_i08y0"]
+
+[node name="Cone" type="Node2D"]
+
+[node name="Cone" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_jriks")
+script = ExtResource("2_i08y0")
+item_id = 3

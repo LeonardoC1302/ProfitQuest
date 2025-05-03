@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=34 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_ktwhx"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
 [ext_resource type="PackedScene" uid="uid://b6gyjbky8d5xu" path="res://Scenes/cone.tscn" id="4_xlqca"]
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_anpcx"]
+[ext_resource type="PackedScene" uid="uid://cqn0u4ik2kql6" path="res://Scenes/egg.tscn" id="5_uiivb"]
+[ext_resource type="PackedScene" uid="uid://ct51f124wtitx" path="res://Scenes/vainilla.tscn" id="6_g5l4i"]
+[ext_resource type="PackedScene" uid="uid://dn504jckduew" path="res://Scenes/sugar.tscn" id="7_8u63h"]
 [ext_resource type="Script" path="res://Scripts/register.gd" id="7_cxkaa"]
 [ext_resource type="Script" path="res://Scripts/crafter.gd" id="8_wjbcv"]
 [ext_resource type="Script" path="res://Scripts/trashcan.gd" id="10_n2pw3"]
@@ -20,6 +23,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(20, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1yan"]
+size = Vector2(20, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in2gw"]
+size = Vector2(20, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f20bn"]
+size = Vector2(20, 16)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjes8"]
 size = Vector2(32, 13)
 
@@ -30,7 +42,7 @@ size = Vector2(12, 10)
 size = Vector2(46, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3su"]
-size = Vector2(17, 24)
+size = Vector2(19, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6cc8"]
 size = Vector2(17.25, 15.5)
@@ -42,7 +54,7 @@ size = Vector2(12, 11)
 size = Vector2(16, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
-radius = 6.08276
+radius = 8.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01mwa"]
 texture = ExtResource("5_anpcx")
@@ -139,6 +151,54 @@ region_rect = Rect2(0, 0, 32, 32)
 position = Vector2(1, -8)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="EggDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(142, -32)
+script = ExtResource("1_ovoln")
+spawn_scene = ExtResource("5_uiivb")
+costo = 120
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/EggDispenser"]
+position = Vector2(1, -4)
+texture = ExtResource("5_anpcx")
+region_enabled = true
+region_rect = Rect2(15, 80, 23, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/EggDispenser"]
+position = Vector2(1, -9.5)
+shape = SubResource("RectangleShape2D_k1yan")
+
+[node name="VainillaDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(112, -32)
+script = ExtResource("1_ovoln")
+spawn_scene = ExtResource("6_g5l4i")
+costo = 120
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/VainillaDispenser"]
+position = Vector2(1, -4)
+texture = ExtResource("5_anpcx")
+region_enabled = true
+region_rect = Rect2(15, 80, 23, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/VainillaDispenser"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_in2gw")
+
+[node name="SugarDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(85, -33)
+script = ExtResource("1_ovoln")
+spawn_scene = ExtResource("7_8u63h")
+costo = 120
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/SugarDispenser"]
+position = Vector2(1, -4)
+texture = ExtResource("5_anpcx")
+region_enabled = true
+region_rect = Rect2(15, 80, 23, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SugarDispenser"]
+position = Vector2(1, -9)
+shape = SubResource("RectangleShape2D_f20bn")
+
 [node name="ConeDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(172, -32)
 script = ExtResource("1_ovoln")
@@ -168,7 +228,7 @@ position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_hjes8")
 
 [node name="Register" type="StaticBody2D" parent="Stations"]
-position = Vector2(92, -38)
+position = Vector2(-71, 90)
 script = ExtResource("7_cxkaa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Register"]
@@ -205,7 +265,7 @@ region_enabled = true
 region_rect = Rect2(112, 101, 20, 27)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/TrashCan"]
-position = Vector2(0.5, 1)
+position = Vector2(-0.5, -5.5)
 shape = SubResource("RectangleShape2D_ra3su")
 
 [node name="Mixer" type="StaticBody2D" parent="Stations"]
@@ -262,7 +322,7 @@ zoom = Vector2(5, 5)
 script = ExtResource("2_k8p62")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1, 5)
+position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_qbgn0")
 
 [node name="TileMap" type="Node" parent="."]
@@ -271,22 +331,22 @@ shape = SubResource("CircleShape2D_qbgn0")
 layer_0/tile_data = PackedInt32Array(-65538, 65537, 1, -2, 65537, 1, 65534, 65537, 1, 131070, 65537, 1, 196606, 65537, 1, -65537, 65537, 1, -1, 65537, 1, 65535, 65537, 1, 131071, 65537, 1, 196607, 65537, 1, -131072, 65537, 1, -65536, 65537, 1, 0, 65537, 1, 65536, 65537, 1, 131072, 65537, 1, -131071, 65537, 1, -65535, 65537, 1, 1, 65537, 1, 65537, 65537, 1, 131073, 65537, 1, -131070, 65537, 1, -65534, 65537, 1, 2, 65537, 1, 65538, 65537, 1, 131074, 65537, 1, -131069, 65537, 1, -65533, 65537, 1, 3, 65537, 1, 65539, 65537, 1, 131075, 65537, 1, -131068, 65537, 1, -65532, 65537, 1, 4, 65537, 1, 65540, 65537, 1, 131076, 65537, 1, -65531, 65537, 1, 5, 65537, 1, 65541, 65537, 1, 131077, 65537, 1, -131067, 65537, 1, -65539, 65537, 1, -3, 65537, 1, 65533, 65537, 1, 131069, 65537, 1, 196605, 65537, 1, 262141, 65537, 1, 262142, 65537, 1, 262143, 65537, 1, 196608, 65537, 1, 196609, 65537, 1, 196610, 65537, 1, 196611, 65537, 1, 196612, 65537, 1, 196613, 65537, 1, 196614, 65537, 1, 131078, 65537, 1, 65542, 65537, 1, 6, 65537, 1, -65530, 65537, 1, -131066, 65537, 1, -65540, 65537, 1, -4, 65537, 1, 65532, 65537, 1, 131068, 65537, 1, 196604, 65537, 1, 262140, 65537, 1, -131065, 65537, 1, -65529, 65537, 1, 7, 65537, 1, 65543, 65537, 1, 131079, 65537, 1, 196615, 65537, 1, 262151, 65537, 1, 262150, 65537, 1, 262149, 65537, 1, 262148, 65537, 1, 262147, 65537, 1, 262146, 65537, 1, 262145, 65537, 1, 262144, 65537, 1, 327679, 65537, 1, 327678, 65537, 1, 327677, 65537, 1, 327676, 65537, 1, 393212, 65537, 1, 393213, 65537, 1, 393214, 65537, 1, 393215, 65537, 1, 327680, 65537, 1, 327681, 65537, 1, 327682, 65537, 1, 327683, 65537, 1, 327684, 65537, 1, 327685, 65537, 1, 327686, 65537, 1, 327687, 65537, 1)
 
 [node name="Heladeria_Paredes" parent="TileMap" instance=ExtResource("4_nesd1")]
-layer_0/tile_data = PackedInt32Array(-65537, 65537, 0, -131071, 65537, 0, -131070, 65537, 0, -131069, 65537, 0, -65540, 1, 0, -131065, 131073, 0, -65539, 65537, 0, -65538, 65537, 0, -131066, 65537, 0, -4, 1, 1, 65532, 1, 1, 131068, 1, 1, 196604, 1, 1, 262140, 1, 1, -65529, 131073, 1, 7, 131073, 1, 65543, 131073, 1, 131079, 131073, 1, 196615, 131073, 1, 262151, 131073, 1, 327676, 1, 1, 393212, 1, 2, 327687, 131073, 2, 393213, 65537, 2, 393214, 65537, 2, 393215, 65537, 2, 327680, 65537, 2, 327681, 65537, 2, 327682, 65537, 2, 327683, 65537, 2, 327684, 65537, 2, 327685, 65537, 2, 327686, 65537, 2, -131067, 65537, 0, -131068, 65537, 0, -131072, 65537, 2)
+layer_0/tile_data = PackedInt32Array(-65537, 65537, 0, -131071, 65537, 0, -131070, 65537, 0, -131069, 65537, 0, -65540, 1, 0, -131065, 131073, 0, -65539, 65537, 0, -65538, 65537, 0, -131066, 65537, 0, -4, 1, 1, 65532, 1, 1, 131068, 1, 1, 196604, 1, 0, 262140, 1, 1, -65529, 131073, 1, 7, 131073, 1, 65543, 131073, 1, 131079, 131073, 1, 196615, 131073, 1, 262151, 131073, 1, 327676, 1, 1, 393212, 1, 2, 327687, 131073, 2, 393213, 65537, 2, 393214, 65537, 2, 393215, 65537, 2, 327680, 65537, 2, 327681, 65537, 2, 327682, 65537, 2, 327683, 65537, 2, 327684, 65537, 2, 327685, 65537, 2, 327686, 65537, 2, -131067, 65537, 0, -131068, 65537, 0, -131072, 65537, 2, 196605, 65537, 2, 196606, 65537, 2, 196607, 1, 3)
 
 [node name="Muebles" type="TileMap" parent="TileMap"]
 tile_set = SubResource("TileSet_02eip")
 format = 2
 layer_0/name = "back"
 layer_0/z_index = -1
-layer_0/tile_data = PackedInt32Array(-196605, 262148, 2, -131069, 262148, 3, -131068, 327684, 3, -196603, 393220, 2, -131067, 393220, 3, -196602, 393220, 2, -131066, 393220, 3, -196601, 393220, 2, -131065, 393220, 3, -196600, 393220, 2, -131064, 393220, 3, -196598, 393220, 2, -131062, 393220, 3, -196597, 458756, 2, -131061, 458756, 3, -196596, 393220, 2, -131060, 393220, 3, -196595, 458756, 2, -131059, 458756, 3, -196594, 524292, 2, -131058, 524292, 3, -196599, 458756, 2, -131063, 458756, 3, -196604, 327684, 2, -196606, 131076, 2, -131070, 131076, 3, -196607, 131076, 2, -131071, 131076, 3, -196608, 131076, 2, -131072, 131076, 3, -131073, 131076, 2, -65537, 131076, 3, -131074, 131076, 2, -65538, 131076, 3, -131075, 131076, 2, -65539, 131076, 3, -131076, 131076, 2, -65540, 131076, 3, -131077, 131076, 2, -65541, 131076, 3, -131078, 131076, 2, -65542, 131076, 3, -131079, 131076, 2, -65543, 131076, 3, -65533, 262148, 4, 3, 262148, 4, -65532, 327684, 4, 4, 327684, 4, 65539, 262148, 4, 65540, 327684, 4, 131075, 262148, 5, 131076, 327684, 5, 196611, 262148, 6, 196612, 327684, 6)
+layer_0/tile_data = PackedInt32Array(-196605, 262148, 2, -131069, 262148, 3, -131068, 327684, 3, -196603, 393220, 2, -131067, 393220, 3, -196602, 393220, 2, -131066, 393220, 3, -196601, 393220, 2, -131065, 393220, 3, -196600, 393220, 2, -131064, 393220, 3, -196598, 393220, 2, -131062, 393220, 3, -196597, 458756, 2, -131061, 458756, 3, -196596, 393220, 2, -131060, 393220, 3, -196595, 458756, 2, -131059, 458756, 3, -196594, 524292, 2, -131058, 524292, 3, -196599, 458756, 2, -131063, 458756, 3, -196604, 327684, 2, -196606, 131076, 2, -131070, 131076, 3, -196607, 131076, 2, -131071, 131076, 3, -196608, 131076, 2, -131072, 131076, 3, -131073, 131076, 2, -65537, 131076, 3, -131074, 131076, 2, -65538, 131076, 3, -131075, 131076, 2, -65539, 131076, 3, -131076, 131076, 2, -65540, 131076, 3, -131077, 131076, 2, -65541, 131076, 3, -131078, 131076, 2, -65542, 131076, 3, -131079, 131076, 2, -65543, 131076, 3, -65533, 262148, 4, 3, 262148, 4, -65532, 327684, 4, 4, 327684, 4, 65539, 262148, 4, 65540, 327684, 4, 131075, 262148, 5, 131076, 327684, 5, 196611, 262148, 6, 196612, 327684, 6, 393209, 65540, 2, 458745, 65540, 3, 393210, 131076, 2, 458746, 131076, 3, 393211, 196612, 2, 458747, 196612, 3, 393212, 458756, 2, 458748, 458756, 3, 393213, 524292, 2, 458749, 524292, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventario" parent="CanvasLayer" instance=ExtResource("14_1phco")]
 offset_left = -2.0
-offset_top = 4.5
+offset_top = 4.0
 offset_right = -2.0
-offset_bottom = 4.5
+offset_bottom = 4.0
 scale = Vector2(1.00197, 1)
 itemMap = {
 0: {
@@ -296,6 +356,18 @@ itemMap = {
 1: {
 "icono": "res://Assets/Ingredients/Milk.png",
 "nombre": "Milk"
+},
+2: {
+"icono": "res://Assets/Ingredients/Sugar.png",
+"nombre": "Sugar"
+},
+3: {
+"icono": "res://Assets/Ingredients/Vainilla.png",
+"nombre": "Vainilla"
+},
+4: {
+"icono": "res://Assets/Ingredients/Egg.png",
+"nombre": "Egg"
 }
 }
 
