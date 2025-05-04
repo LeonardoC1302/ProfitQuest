@@ -5,7 +5,7 @@
 
 [node name="Cone" type="Node2D"]
 
-[node name="Cone" type="Sprite2D" parent="."]
+[node name="Vainilla" type="Sprite2D" parent="."]
 z_index = 2
 scale = Vector2(0.65625, 0.59375)
 texture = ExtResource("1_jriks")

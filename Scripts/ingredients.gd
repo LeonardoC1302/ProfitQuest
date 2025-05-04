@@ -5,9 +5,17 @@ extends Node2D
 @export var follow_offset := Vector2(5, 8)
 @export var follow_speed := 80
 @export var item_id: int = 1  # ID o tag del objeto
+@export var item_unit: String = ""
+
+@export var sell_price: int = 0
 
 var player: Node2D
 var is_following := false
+var data = {}
+
+func set_data(new_data):
+	data = new_data
+	# podés usarlo por ejemplo para mostrar el nombre o ícono si querés
 
 func _ready():
 	player = get_node_or_null("../../Player")

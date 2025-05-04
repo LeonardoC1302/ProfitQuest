@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 						var itemName = items[selected]['nombre']
 						var itemQty = items[selected]['cantidad']
 						#print("Cantidad: ", itemQty, " Ceil: ", ceil(float(itemQty) / 2))
-						if itemName == 'Ice Cream':
+						if itemName == 'iceCream':
 							inventario_node.deleteItemSlot(selected)
 							var product1 = {"nombre": "Cone", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Cone.png")}
 							var product2 = {"nombre": "Milk", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Milk.png")}

@@ -7,6 +7,8 @@ const MAX_ITEM_ID = 100  # Ajustalo según cuántos tipos de ítems vas a usar
 var items_collected := []
 
 @export var presupuesto := 10000
+@export var earnings: int = 0
+
 
 @onready var animated_sprite_2d: AnimationPlayer = $CustomPlayer/AnimationPlayer
 @onready var customPlayer: Node2D = $CustomPlayer
@@ -34,7 +36,9 @@ func _process(delta: float) -> void:
 	direction.x = Input.get_action_strength('right') - Input.get_action_strength('left')
 	direction.y = Input.get_action_strength('down') - Input.get_action_strength('up')
 	var budget_label = get_node("/root/Game/CanvasLayer/Budget")
+	var earning_label = get_node("/root/Game/CanvasLayer/Earnings")
 	budget_label.text = "Presupuesto: " + str(presupuesto)
+	earning_label.text = "Ganancias: " + str(earnings)
 	pass
 	
 func _physics_process(delta: float) -> void:

@@ -8,6 +8,20 @@ var slot_seleccionado = null
 
 @export var itemMap = {}
 
+@export var drop_scene_map = {
+	"Cone": preload("res://Scenes/cone.tscn"),
+	"Milk": preload("res://Scenes/milk.tscn"),
+	"Sugar": preload("res://Scenes/sugar.tscn"),
+	"Egg": preload("res://Scenes/egg.tscn"),
+	"Vainilla": preload("res://Scenes/vainilla.tscn"),
+	"iceCream": preload("res://Scenes/iceCream.tscn")
+}
+
+@export var player: Node2D
+@export var world_2d_node: Node2D
+
+
+
 func _ready():
 	print("Current inventario path: ", get_path())
 	inicializar_inventario()
@@ -39,25 +53,73 @@ func crear_slots():
 		slot_instance.inventario_ref = self
 		slot_instance.slot_index = i
 		
+		
 func procesar_click(index):
 	if slot_seleccionado == null:
+		# Seleccionar el slot si contiene un ítem
 		if inventario[index] != null:
 			slot_seleccionado = index
 	else:
 		if index == slot_seleccionado:
+			# Clic en el mismo slot → dropear
+			var item = inventario[slot_seleccionado]
+			if item != null:
+				inventario[slot_seleccionado] = null
 			slot_seleccionado = null
+			actualizar_interfaz()
 			actualizar_visual_seleccion()
 			return
-
-
-		var temp = inventario[index]
-		inventario[index] = inventario[slot_seleccionado]
-		inventario[slot_seleccionado] = temp
-
-		slot_seleccionado = null
+		else:
+			# Intercambiar entre slots
+			var temp = inventario[index]
+			inventario[index] = inventario[slot_seleccionado]
+			inventario[slot_seleccionado] = temp
+			slot_seleccionado = null
 
 	actualizar_interfaz()
 	actualizar_visual_seleccion()
+	
+func drop_selected_item():
+	if slot_seleccionado != null and inventario[slot_seleccionado] != null:
+		var item_data = inventario[slot_seleccionado]
+		var item_name = item_data["nombre"]
+		print("Intentando dropear:", item_name)
+
+		print("Buscando en drop_scene_map:", item_name)
+		print("Claves disponibles:", drop_scene_map.keys())
+
+		if drop_scene_map.has(item_name):
+			var drop_scene = drop_scene_map[item_name].instantiate()
+			print("Instancia creada:", drop_scene)
+
+			if player and world_2d_node:
+				var drop_offset = Vector2(32, 0)
+				drop_scene.global_position = player.global_position + drop_offset
+				world_2d_node.add_child(drop_scene)
+			else:
+				print("⚠️ No se asignó player o world_2d_node")
+
+			# ✅ Usar cantidad del inventario
+			if item_data["cantidad"] > 1:
+				item_data["cantidad"] -= 1
+			else:
+				inventario[slot_seleccionado] = null
+				slot_seleccionado = null
+
+			actualizar_interfaz()
+			actualizar_visual_seleccion()
+		else:
+			print("No se encontró drop_scene_map para:", item_name)
+	else:
+		print("No hay item seleccionado")
+
+
+
+
+func _input(event):
+	if event.is_action_pressed("drop"):
+		drop_selected_item()
+
 	
 func actualizar_visual_seleccion():
 	var slots = $CenterContainer/GridContainer.get_children()

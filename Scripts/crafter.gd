@@ -25,5 +25,5 @@ func _process(delta: float) -> void:
 
 				# Acá se implementa la receta como tal, se debe validar que se tengan todos los ingredientes antes de quitarlos}
 				var recipe = ['Milk', 'Cone']
-				var product = {"nombre": "Ice Cream", "cantidad": 1, "icono": preload("res://Assets/Ingredients/IceCream.png")}
+				var product = {"nombre": "iceCream", "cantidad": 1, "icono": preload("res://Assets/Ingredients/IceCream.png")}
 				inventario_node.craftRecipe(recipe, product)

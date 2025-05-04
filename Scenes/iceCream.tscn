@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cedbuuidknbew"]
+
+[ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="1_471pc"]
+[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_1pt6m"]
+
+[node name="IceCream" type="Node2D"]
+
+[node name="IceCream" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_471pc")
+script = ExtResource("2_1pt6m")
+item_id = 5
+sell_price = 300

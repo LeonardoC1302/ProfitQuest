@@ -15,10 +15,20 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player and Input.is_action_just_pressed("interact"):
 		var distance = global_position.distance_to(player.global_position)
-		if distance <= spawn_distance:
-			print("Interact (E) pressed near cash register")
+		if spawn_distance >= distance:
+			print("Interact (E) pressed near register")
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
-			if inventario_node:
-				inventario_node.process_register_interaction()
-			else:
-				print("Inventario node not found!")
+			var items = inventario_node.getItems()
+			var selected = inventario_node.getSelectedSlot()
+			var item_node = get_node("/root/Game/Items/IceCream")
+			if selected != null:
+				var itemName = items[selected]['nombre']
+				var itemQty = items[selected]['cantidad']
+				#print("Cantidad: ", itemQty, " Ceil: ", ceil(float(itemQty) / 2))
+				if itemName == 'iceCream':
+					inventario_node.deleteItemSlot(selected)
+					var price = item_node.sell_price
+					player.earnings += price * itemQty
+					print("Ganancias de jugador: ", player.earnings)
+				else:
+					print("No es un producto que se puede vender!!")
