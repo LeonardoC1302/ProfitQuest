@@ -14,7 +14,7 @@ var slot_seleccionado = null
 	"Sugar": preload("res://Scenes/sugar.tscn"),
 	"Egg": preload("res://Scenes/egg.tscn"),
 	"Vainilla": preload("res://Scenes/vainilla.tscn"),
-	"iceCream": preload("res://Scenes/iceCream.tscn")
+	"IceCream": preload("res://Scenes/iceCream.tscn")
 }
 
 @export var player: Node2D
@@ -61,10 +61,6 @@ func procesar_click(index):
 			slot_seleccionado = index
 	else:
 		if index == slot_seleccionado:
-			# Clic en el mismo slot → dropear
-			var item = inventario[slot_seleccionado]
-			if item != null:
-				inventario[slot_seleccionado] = null
 			slot_seleccionado = null
 			actualizar_interfaz()
 			actualizar_visual_seleccion()
@@ -112,9 +108,6 @@ func drop_selected_item():
 			print("No se encontró drop_scene_map para:", item_name)
 	else:
 		print("No hay item seleccionado")
-
-
-
 
 func _input(event):
 	if event.is_action_pressed("drop"):
@@ -191,12 +184,12 @@ func addItem(item):
 	for i in range(NUM_SLOTS):
 		if firstNull == null and inventario[i] == null:
 			firstNull = i
-		if inventario[i] != null and inventario[i]['nombre'] == item['nombre'] :
+		if inventario[i] != null and inventario[i]['nombre'] == item['nombre']:
 			inventario[i]['cantidad'] += item['cantidad']
 			added = true
 			break
-	if not added:
-		inventario[firstNull] = item
+	if not added and firstNull != null:
+		inventario[firstNull] = item.duplicate()
 	actualizar_interfaz()
 	
 func getMap():

@@ -1,7 +1,12 @@
 extends StaticBody2D
 
 @export var interact_distance: float = 30
-@export var recipes = {}
+@export var recipe = []
+@export var product = {
+	"nombre": "", 
+	"cantidad": 1, 
+	"icono": preload("res://Assets/Ingredients/SweetCream.png")
+}
 
 var player: CharacterBody2D
 
@@ -21,9 +26,9 @@ func _process(delta: float) -> void:
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
 			if inventario_node:
 				var items = inventario_node.getItems()
+				#print("Items: ", items)	
 				# Acá implementar algo para seleccionar la receta, de momento va a estar alambrado
 
 				# Acá se implementa la receta como tal, se debe validar que se tengan todos los ingredientes antes de quitarlos}
-				var recipe = ['Milk', 'Cone']
-				var product = {"nombre": "iceCream", "cantidad": 1, "icono": preload("res://Assets/Ingredients/IceCream.png")}
+				#var product = {"nombre": "sweetCream", "cantidad": 1, "icono": preload("res://Assets/Ingredients/SweetCream.png")}
 				inventario_node.craftRecipe(recipe, product)

@@ -28,12 +28,17 @@ func _process(delta: float) -> void:
 						var itemName = items[selected]['nombre']
 						var itemQty = items[selected]['cantidad']
 						#print("Cantidad: ", itemQty, " Ceil: ", ceil(float(itemQty) / 2))
-						if itemName == 'iceCream':
+						if itemName == 'IceCream':
 							inventario_node.deleteItemSlot(selected)
-							var product1 = {"nombre": "Cone", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Cone.png")}
-							var product2 = {"nombre": "Milk", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Milk.png")}
+							var product1 = {"nombre": "Milk", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Milk.png")}
+							var product2 = {"nombre": "Sugar", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Sugar.png")}
+							var product3 = {"nombre": "Egg", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Egg.png")}
+							var product4 = {"nombre": "Vanilla", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Vanilla.png")}
+							
 							inventario_node.addItem(product1)
 							inventario_node.addItem(product2)
+							inventario_node.addItem(product3)
+							inventario_node.addItem(product4)
 							maxUses -= 1
 						else:
 							print("No es un producto crafteable!!")
