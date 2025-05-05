@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=41 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_ktwhx"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
@@ -15,11 +15,8 @@
 [ext_resource type="Script" path="res://Scripts/crafter.gd" id="8_wjbcv"]
 [ext_resource type="Script" path="res://Scripts/trashcan.gd" id="10_n2pw3"]
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="13_lnwe8"]
-[ext_resource type="Texture2D" uid="uid://cmfhvycu4wtb0" path="res://Assets/Ingredients/SweetCream.png" id="13_q1q7f"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="14_1phco"]
-[ext_resource type="Texture2D" uid="uid://cbqm5hmooikog" path="res://Assets/Ingredients/CookedCream.png" id="15_ncqss"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="15_rtnns"]
-[ext_resource type="Texture2D" uid="uid://bt2mt5y6rsww0" path="res://Assets/Ingredients/IceCreamBox.png" id="16_bf6a2"]
 [ext_resource type="Script" path="res://Scripts/cupboard.gd" id="19_o1f2a"]
 [ext_resource type="Texture2D" uid="uid://d0p2s5i240ddo" path="res://Assets/cupboard.png" id="19_yp6l5"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="20_8g7hs"]
@@ -254,18 +251,7 @@ shape = SubResource("RectangleShape2D_eucg2")
 z_index = 3
 position = Vector2(-300, -64)
 script = ExtResource("8_wjbcv")
-recipe = [{
-"name": "Cone",
-"quantity": 2
-}, {
-"name": "IceCreamBox",
-"quantity": 1
-}]
-product = {
-"cantidad": 2,
-"icono": ExtResource("26_e1cw7"),
-"nombre": "IceCream"
-}
+station_name = "ServeStation"
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/ServeStation"]
 texture = ExtResource("5_anpcx")
@@ -293,24 +279,7 @@ shape = SubResource("RectangleShape2D_ra3su")
 z_index = 3
 position = Vector2(-248, -76)
 script = ExtResource("8_wjbcv")
-recipe = [{
-"name": "Milk",
-"quantity": 2
-}, {
-"name": "Egg",
-"quantity": 1
-}, {
-"name": "Sugar",
-"quantity": 1
-}, {
-"name": "Vanilla",
-"quantity": 1
-}]
-product = {
-"cantidad": 1,
-"icono": ExtResource("13_q1q7f"),
-"nombre": "SweetCream"
-}
+station_name = "Mixer"
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Mixer"]
 texture = ExtResource("5_anpcx")
@@ -325,15 +294,7 @@ shape = SubResource("RectangleShape2D_k6cc8")
 z_index = 3
 position = Vector2(-178, 14)
 script = ExtResource("8_wjbcv")
-recipe = [{
-"name": "CookedCream",
-"quantity": 2
-}]
-product = {
-"cantidad": 1,
-"icono": ExtResource("16_bf6a2"),
-"nombre": "IceCreamBox"
-}
+station_name = "Freezer"
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Freezer"]
 texture = ExtResource("5_anpcx")
@@ -348,15 +309,7 @@ shape = SubResource("RectangleShape2D_rrmcj")
 z_index = 3
 position = Vector2(-201, -73)
 script = ExtResource("8_wjbcv")
-recipe = [{
-"name": "SweetCream",
-"quantity": 2
-}]
-product = {
-"cantidad": 1,
-"icono": ExtResource("15_ncqss"),
-"nombre": "CookedCream"
-}
+station_name = "Pot"
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Pot"]
 texture = ExtResource("5_anpcx")

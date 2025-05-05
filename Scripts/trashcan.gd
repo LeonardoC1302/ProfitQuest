@@ -1,46 +1,57 @@
-extends StaticBody2D
+extends Node2D  # o el tipo que uses para tu basurero
 
 @export var interact_distance: float = 30
-@export var recipes = {}
-
 var player: CharacterBody2D
-var maxUses = 3
+var crafting_db
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_node_or_null("../../Player")
 	if player == null:
 		print("Player not found!")
+	
+	# Obtener referencia a la base de datos de crafteo
+	crafting_db = get_node("/root/CraftingDatabase")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if player and Input.is_action_just_pressed("interact"):
 		var distance = global_position.distance_to(player.global_position)
 		if distance <= interact_distance:
-			print("Interact (E) pressed near trash can")
+			print("Interact (E) pressed near trash bin")
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
-			if maxUses > 0:
-				if inventario_node:
-					var items = inventario_node.getItems()
-					var selected = inventario_node.getSelectedSlot()
-					if selected != null:
-						var itemName = items[selected]['nombre']
-						var itemQty = items[selected]['cantidad']
-						#print("Cantidad: ", itemQty, " Ceil: ", ceil(float(itemQty) / 2))
-						if itemName == 'IceCream':
-							inventario_node.deleteItemSlot(selected)
-							var product1 = {"nombre": "Milk", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Milk.png")}
-							var product2 = {"nombre": "Sugar", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Sugar.png")}
-							var product3 = {"nombre": "Egg", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Egg.png")}
-							var product4 = {"nombre": "Vanilla", "cantidad": ceil(float(itemQty) / 2), "icono": preload("res://Assets/Ingredients/Vanilla.png")}
-							
-							inventario_node.addItem(product1)
-							inventario_node.addItem(product2)
-							inventario_node.addItem(product3)
-							inventario_node.addItem(product4)
-							maxUses -= 1
-						else:
-							print("No es un producto crafteable!!")
-			else:
-				print("No quedan usos disponibles!!")
+			if inventario_node:
+				# Asumimos que hay alguna forma de obtener el item seleccionado
+				var selected_item = inventario_node.get_selected_item()
+				if selected_item:
+					recycle_item(selected_item, inventario_node)
+
+func recycle_item(item, inventario_node):
+	var item_name = item["nombre"]
+	
+	# Verificar si el item es un producto conocido
+	if item_name in crafting_db.recipes:
+		print("Reciclando:", item_name)
+		
+		var recipe = crafting_db.recipes[item_name]["recipe"]
+		
+		# Eliminar el item del inventario
+		inventario_node.remove_selected_item()
+		
+		# Devolver el 50% de los materiales (redondeando hacia abajo)
+		for ingredient in recipe:
+			var ingredient_name = ingredient["name"]
+			var return_quantity = int(ingredient["quantity"] * 0.5)  # 50% redondeado hacia abajo
+			
+			if return_quantity > 0:
+				# Obtener el icono del ingrediente desde la base de datos
+				var ingredient_icon = crafting_db.get_ingredient_icon(ingredient_name)
+				
+				# Añadir los materiales recuperados al inventario
+				inventario_node.addItem({
+					"nombre": ingredient_name,
+					"cantidad": return_quantity,
+					"icono": ingredient_icon
+				})
+				
+				print("Devuelto:", ingredient_name, " x ", return_quantity)
+	else:
+		print("Este ítem no se puede reciclar o no está en la base de datos")

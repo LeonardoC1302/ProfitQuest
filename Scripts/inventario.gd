@@ -20,6 +20,8 @@ var slot_seleccionado = null
 @export var player: Node2D
 @export var world_2d_node: Node2D
 
+var crafting_database
+
 
 
 func _ready():
@@ -28,6 +30,7 @@ func _ready():
 	rellenar_inventario_prueba()  # Optional test data
 	crear_slots()
 	actualizar_interfaz()
+	crafting_database = get_node("/root/CraftingDatabase")
 
 func inicializar_inventario():
 	inventario.clear()
@@ -145,10 +148,10 @@ func process_cupboard_interaction():
 	actualizar_interfaz()
 	
 func searchRecipe(recipe):
-	# Create a dictionary to track ingredients in inventory
+	# Crear un diccionario para rastrear los ingredientes en el inventario
 	var inventory_counts = {}
 	
-	# Count all ingredients in inventory
+	# Contar todos los ingredientes en el inventario
 	for i in range(NUM_SLOTS):
 		if inventario[i] != null:
 			var item_name = inventario[i]["nombre"]
@@ -159,13 +162,13 @@ func searchRecipe(recipe):
 			else:
 				inventory_counts[item_name] = item_quantity
 	
-	# Check if we have enough of each ingredient
+	# Verificar si tenemos suficiente de cada ingrediente
 	for ingredient in recipe:
 		var ingredient_name = ingredient["name"]
 		var required_quantity = ingredient["quantity"]
 		
-		if ingredient_name not in inventory_counts or inventory_counts[ingredient_name] < required_quantity:
-			print("Missing ingredient: ", ingredient_name, " (need ", required_quantity, ")")
+		if not ingredient_name in inventory_counts or inventory_counts[ingredient_name] < required_quantity:
+			print("Falta ingrediente: ", ingredient_name, " (necesitas ", required_quantity, ")")
 			return false
 	
 	return true
@@ -216,6 +219,27 @@ func getItems():
 func getSelectedSlot():
 	return slot_seleccionado
 	
+func get_selected_item():
+	if slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS:
+		return inventario[slot_seleccionado]
+	return null
+	
+func remove_selected_item():
+	if slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS and inventario[slot_seleccionado] != null:
+		var item = inventario[slot_seleccionado]
+		
+		# Si hay más de uno, reducir la cantidad
+		if item["cantidad"] > 1:
+			item["cantidad"] -= 1
+		else:
+			# Si solo queda uno, eliminar el ítem
+			inventario[slot_seleccionado] = null
+			
+		# Actualizar la UI
+		actualizar_interfaz()
+		return true
+	return false
+	
 func deleteItemSlot(itemSlot):
 	slot_seleccionado = null
 	inventario[itemSlot] = null
@@ -224,34 +248,78 @@ func deleteItemSlot(itemSlot):
 	
 func craftRecipe(recipe, product):
 	if searchRecipe(recipe):
-		# Remove ingredients from inventory based on required quantities
+		# Eliminar ingredientes del inventario según cantidades requeridas
 		for ingredient in recipe:
 			var ingredient_name = ingredient["name"]
 			var required_quantity = ingredient["quantity"]
 			var remaining_quantity = required_quantity
 			
-			# Continue removing items until we've satisfied the required quantity
+			# Continuar eliminando items hasta satisfacer la cantidad requerida
 			while remaining_quantity > 0:
 				for i in range(NUM_SLOTS):
 					if inventario[i] != null and inventario[i]['nombre'] == ingredient_name:
 						if inventario[i]['cantidad'] > remaining_quantity:
-							# We have more than needed, just reduce the quantity
+							# Tenemos más de lo necesario, solo reducir la cantidad
 							inventario[i]['cantidad'] -= remaining_quantity
 							remaining_quantity = 0
 							break
 						else:
-							# We'll use up this stack completely
+							# Usaremos todo este stack
 							remaining_quantity -= inventario[i]['cantidad']
 							inventario[i] = null
 							break
 				
-				# Safety check - if we can't find any more of this item but still need more
+				# Verificación de seguridad - si no podemos encontrar más de este item pero aún necesitamos más
 				if remaining_quantity > 0:
-					print("Error: Couldn't find enough of ", ingredient_name)
+					print("Error: No se pudo encontrar suficiente de ", ingredient_name)
 					break
 		
-		# Add the crafted product to inventory
+		# Añadir el producto crafteado al inventario
 		addItem(product)
 	else:
 		print("No se tienen todos los ingredientes para craftear")
+
+# Función para reciclar un item y obtener el 50% de sus materiales
+func recycle_item(item_name):
+	if crafting_database.has(item_name) and slot_seleccionado != null:
+		print("Reciclando:", item_name)
+		
+		var recipe = crafting_database[item_name]["recipe"]
+		
+		# Eliminar el item del inventario
+		if inventario[slot_seleccionado]["cantidad"] > 1:
+			inventario[slot_seleccionado]["cantidad"] -= 1
+		else:
+			inventario[slot_seleccionado] = null
+			slot_seleccionado = null
+		
+		# Devolver el 50% de los materiales (redondeando hacia abajo)
+		for ingredient in recipe:
+			var ingredient_name = ingredient["name"]
+			var return_quantity = int(ingredient["quantity"] * 0.5)  # 50% redondeado hacia abajo
+			
+			if return_quantity > 0:
+				# Buscar el icono del ingrediente - esto dependerá de tu estructura
+				var ingredient_icon = null
+				for item_index in itemMap:
+					if itemMap[item_index]["nombre"] == ingredient_name:
+						ingredient_icon = load(itemMap[item_index]["icono"])
+						break
+				
+				# Añadir los materiales recuperados al inventario
+				if ingredient_icon:
+					addItem({
+						"nombre": ingredient_name,
+						"cantidad": return_quantity,
+						"icono": ingredient_icon
+					})
+				
+				print("Devuelto:", ingredient_name, "x", return_quantity)
+		
+		actualizar_interfaz()
+		actualizar_visual_seleccion()
+		return true
+	else:
+		print("Este ítem no se puede reciclar o no está en la base de datos")
+		return false
 	
