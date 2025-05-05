@@ -57,9 +57,13 @@ var recipes = {
 var ingredient_icons = {
 	"Egg": preload("res://Assets/Ingredients/Egg.png"),
 	"Milk": preload("res://Assets/Ingredients/Milk.png"),
-	"Flour": preload("res://Assets/Ingredients/Sugar.png"),
-	"Water": preload("res://Assets/Ingredients/Sugar.png"),
-	"Yeast": preload("res://Assets/Ingredients/Sugar.png"),
+	"Sugar": preload("res://Assets/Ingredients/Sugar.png"),
+	"Cone": preload("res://Assets/Ingredients/Cone.png"),
+	"Vanilla": preload("res://Assets/Ingredients/Vanilla.png"),
+	"SweetCream": preload("res://Assets/Ingredients/SweetCream.png"),
+	"CookedCream": preload("res://Assets/Ingredients/CookedCream.png"),
+	"IceCreamBox": preload("res://Assets/Ingredients/IceCreamBox.png"),
+	"IceCream": preload("res://Assets/Ingredients/IceCream.png"),
 	# Añade más ingredientes aquí
 }
 

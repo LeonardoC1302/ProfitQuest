@@ -42,7 +42,7 @@ func inicializar_inventario():
 func rellenar_inventario_prueba():
 	pass
 	# Example test data
-	#inventario[0] = {"nombre": "Banana", "cantidad": 64, "icono": preload("res://Assets/Ingredients/banana.png")}
+	inventario[0] = {"nombre": "IceCream", "cantidad": 4, "icono": preload("res://Assets/Ingredients/IceCream.png")}
 	#inventario[3] = {"nombre": "Cono", "cantidad": 64, "icono": preload("res://Assets/Ingredients/Cone.png")}
 	#inventario[8] = {"nombre": "Mango", "cantidad": 64, "icono": preload("res://Assets/Ingredients/mango.png")}
 
@@ -222,12 +222,12 @@ func getSelectedSlot():
 	return slot_seleccionado
 	
 func get_selected_item():
-	if slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS:
+	if slot_seleccionado != null and slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS:
 		return inventario[slot_seleccionado]
 	return null
 	
 func remove_selected_item():
-	if slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS and inventario[slot_seleccionado] != null:
+	if slot_seleccionado != null and slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS and inventario[slot_seleccionado] != null:
 		var item = inventario[slot_seleccionado]
 		
 		# Si hay más de uno, reducir la cantidad
@@ -236,6 +236,17 @@ func remove_selected_item():
 		else:
 			# Si solo queda uno, eliminar el ítem
 			inventario[slot_seleccionado] = null
+			
+		# Actualizar la UI
+		actualizar_interfaz()
+		return true
+	return false
+	
+func delete_selected_item():
+	if slot_seleccionado >= 0 and slot_seleccionado < NUM_SLOTS and inventario[slot_seleccionado] != null:
+		var item = inventario[slot_seleccionado]
+		
+		inventario[slot_seleccionado] = null
 			
 		# Actualizar la UI
 		actualizar_interfaz()

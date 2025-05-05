@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 			print("Interact (E) pressed near trash bin")
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
 			if inventario_node:
-				# Asumimos que hay alguna forma de obtener el item seleccionado
+				# Obtener el item seleccionado
 				var selected_item = inventario_node.get_selected_item()
 				if selected_item:
 					recycle_item(selected_item, inventario_node)
@@ -32,26 +32,38 @@ func recycle_item(item, inventario_node):
 		print("Reciclando:", item_name)
 		
 		var recipe = crafting_db.recipes[item_name]["recipe"]
+		var product_quantity = crafting_db.recipes[item_name]["product"]["cantidad"]
 		
-		# Eliminar el item del inventario
-		inventario_node.remove_selected_item()
+		# Calcular cuántas veces se ejecuta la receta por cada unidad del producto
+		var recipe_multiplier = item['cantidad']
+		
+		# Eliminar el item seleccionado del inventario (ya sea reduciendo cantidad o eliminándolo)
+		inventario_node.delete_selected_item()
 		
 		# Devolver el 50% de los materiales (redondeando hacia abajo)
 		for ingredient in recipe:
 			var ingredient_name = ingredient["name"]
-			var return_quantity = int(ingredient["quantity"] * 0.5)  # 50% redondeado hacia abajo
+			
+			# Calcular cuántos ingredientes se usaron para crear 1 unidad del producto
+			var ingredient_per_unit = ingredient["quantity"] * recipe_multiplier
+			
+			# Calcular cuántos ingredientes retornar (50% redondeando hacia abajo)
+			var return_quantity = ceil(ingredient_per_unit * 0.5)
 			
 			if return_quantity > 0:
-				# Obtener el icono del ingrediente desde la base de datos
+				# Obtener el icono del ingrediente desde el CraftingDatabase
 				var ingredient_icon = crafting_db.get_ingredient_icon(ingredient_name)
-				
+
 				# Añadir los materiales recuperados al inventario
-				inventario_node.addItem({
-					"nombre": ingredient_name,
-					"cantidad": return_quantity,
-					"icono": ingredient_icon
-				})
-				
-				print("Devuelto:", ingredient_name, " x ", return_quantity)
+				if ingredient_icon != null:
+					inventario_node.addItem({
+						"nombre": ingredient_name,
+						"cantidad": return_quantity,
+						"icono": ingredient_icon
+					})
+					
+					print("Devuelto:", ingredient_name, " x ", return_quantity)
+				else:
+					print("No se encontró icono para:", ingredient_name)
 	else:
 		print("Este ítem no se puede reciclar o no está en la base de datos")

@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @export var spawn_distance: float = 30
+@export var sellableItems = []
 
 var player: CharacterBody2D
 
@@ -25,7 +26,7 @@ func _process(delta: float) -> void:
 				var itemName = items[selected]['nombre']
 				var itemQty = items[selected]['cantidad']
 				#print("Cantidad: ", itemQty, " Ceil: ", ceil(float(itemQty) / 2))
-				if itemName == 'iceCream':
+				if itemName in sellableItems:
 					inventario_node.deleteItemSlot(selected)
 					var price = item_node.sell_price
 					player.earnings += price * itemQty

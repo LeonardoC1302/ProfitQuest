@@ -239,6 +239,7 @@ shape = SubResource("RectangleShape2D_hjes8")
 [node name="Register" type="StaticBody2D" parent="Stations"]
 position = Vector2(-313, 60)
 script = ExtResource("7_cxkaa")
+sellableItems = ["IceCream"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Register"]
 position = Vector2(0, 0.5)
