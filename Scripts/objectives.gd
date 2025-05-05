@@ -3,9 +3,9 @@ extends Node
 @export var player: NodePath
 @export var timer: NodePath
 
-@export var objetivo_earnings: int = 1000
-@export var objetivo_budget_restante: int = 100
-@export var objetivo_bidget_limite: int = 5000
+@export var objetivo_earnings: int
+@export var objetivo_budget_restante: int
+@export var objetivo_bidget_limite: int
 
 func _ready():
 	pass
