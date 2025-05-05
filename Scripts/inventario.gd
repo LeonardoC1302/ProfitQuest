@@ -42,7 +42,7 @@ func inicializar_inventario():
 func rellenar_inventario_prueba():
 	pass
 	# Example test data
-	inventario[0] = {"nombre": "IceCream", "cantidad": 4, "icono": preload("res://Assets/Ingredients/IceCream.png")}
+	#inventario[0] = {"nombre": "IceCream", "cantidad": 4, "icono": preload("res://Assets/Ingredients/IceCream.png")}
 	#inventario[3] = {"nombre": "Cono", "cantidad": 64, "icono": preload("res://Assets/Ingredients/Cone.png")}
 	#inventario[8] = {"nombre": "Mango", "cantidad": 64, "icono": preload("res://Assets/Ingredients/mango.png")}
 

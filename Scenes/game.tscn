@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="1_ovoln"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
-[ext_resource type="PackedScene" uid="uid://25vkmujqjr3v" path="res://Scenes/iceCreamBox.tscn" id="3_u4hf8"]
+[ext_resource type="PackedScene" uid="uid://dfssckr65drc" path="res://Scenes/milk.tscn" id="3_jm8mx"]
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
 [ext_resource type="PackedScene" uid="uid://b6gyjbky8d5xu" path="res://Scenes/cone.tscn" id="4_xlqca"]
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_anpcx"]
@@ -148,7 +148,7 @@ script = ExtResource("1_ktwhx")
 [node name="MilkDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-43, -63)
 script = ExtResource("1_ovoln")
-spawn_scene = ExtResource("3_u4hf8")
+spawn_scene = ExtResource("3_jm8mx")
 costo = 120
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/MilkDispenser"]
