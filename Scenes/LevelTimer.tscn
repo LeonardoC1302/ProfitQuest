@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbopqpolte0wd"]
 
-[ext_resource type="Script" path="res://Scripts/levelTimer.gd" id="1_ookux"]
+[ext_resource type="Script" uid="uid://ctbgnb5d4ywev" path="res://Scripts/levelTimer.gd" id="1_ookux"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_1t8bp"]
 
 [node name="LevelTimer" type="Node2D"]

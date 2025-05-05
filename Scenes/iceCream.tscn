@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cedbuuidknbew"]
 
 [ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="1_471pc"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_1pt6m"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_1pt6m"]
 
 [node name="IceCream" type="Node2D"]
 

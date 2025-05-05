@@ -538,12 +538,12 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_utvc1"]
 _data = {
-"idle_down": SubResource("Animation_6u1n1"),
-"idle_side": SubResource("Animation_3hu22"),
-"idle_up": SubResource("Animation_igv5k"),
-"walk_down": SubResource("Animation_5qwhc"),
-"walk_side": SubResource("Animation_g4h48"),
-"walk_up": SubResource("Animation_xnrfv")
+&"idle_down": SubResource("Animation_6u1n1"),
+&"idle_side": SubResource("Animation_3hu22"),
+&"idle_up": SubResource("Animation_igv5k"),
+&"walk_down": SubResource("Animation_5qwhc"),
+&"walk_side": SubResource("Animation_g4h48"),
+&"walk_up": SubResource("Animation_xnrfv")
 }
 
 [node name="CustomPlayer" type="Node2D"]

@@ -48,7 +48,7 @@ func recycle_item(item, inventario_node):
 			var ingredient_per_unit = ingredient["quantity"] * recipe_multiplier
 			
 			# Calcular cuántos ingredientes retornar (50% redondeando hacia abajo)
-			var return_quantity = ceil(ingredient_per_unit * 0.5)
+			var return_quantity = int(ceil(ingredient_per_unit * 0.5))
 			
 			if return_quantity > 0:
 				# Obtener el icono del ingrediente desde el CraftingDatabase

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfssckr65drc"]
 
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="1_5dc3i"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_yp5rf"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_yp5rf"]
 
 [node name="Milk" type="Node2D"]
 

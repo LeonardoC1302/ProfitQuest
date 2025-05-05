@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dn504jckduew"]
 
 [ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="1_e7787"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_81278"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_81278"]
 
 [node name="Cone" type="Node2D"]
 
