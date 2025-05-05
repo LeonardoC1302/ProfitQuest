@@ -148,6 +148,8 @@ script = ExtResource("1_ktwhx")
 script = ExtResource("2_d0yx8")
 player = NodePath("../Player")
 timer = NodePath("../CanvasLayer/LevelTimer")
+objetivo_earnings = 1500
+objetivo_budget_restante = 250
 
 [node name="Stations" type="Node" parent="."]
 
@@ -335,6 +337,7 @@ z_index = 2
 position = Vector2(-237, 6)
 collision_layer = 17
 collision_mask = 17
+presupuesto = 12000
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
