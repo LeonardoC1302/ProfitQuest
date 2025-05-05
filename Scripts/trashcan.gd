@@ -66,4 +66,5 @@ func recycle_item(item, inventario_node):
 				else:
 					print("No se encontró icono para:", ingredient_name)
 	else:
-		print("Este ítem no se puede reciclar o no está en la base de datos")
+		inventario_node.delete_selected_item()
+		print("Este ítem no se puede reciclar o no está en la base de datos, se borrará el ítem")

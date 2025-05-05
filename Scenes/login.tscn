@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bb6u41oocrq0l"]
 
-[ext_resource type="Script" uid="uid://dfee3cx8jac6e" path="res://Scripts/control.gd" id="1_hbxdl"]
+[ext_resource type="Script" path="res://Scripts/control.gd" id="1_hbxdl"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_fxa43"]
 
 [node name="Login" type="Node2D"]
@@ -21,6 +21,7 @@ offset_bottom = 658.0
 color = Color(0.117647, 0.160784, 0.278431, 1)
 
 [node name="LineEdit" type="LineEdit" parent="Control/ColorRect" node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 0
 offset_left = 198.0
 offset_top = 276.0
 offset_right = 448.0
@@ -30,6 +31,7 @@ theme_override_fonts/font = ExtResource("2_fxa43")
 alignment = 1
 
 [node name="Button" type="Button" parent="Control/ColorRect"]
+layout_mode = 0
 offset_left = 486.0
 offset_top = 412.0
 offset_right = 638.0
