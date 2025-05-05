@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://25vkmujqjr3v"]
+
+[ext_resource type="Texture2D" uid="uid://bt2mt5y6rsww0" path="res://Assets/Ingredients/IceCreamBox.png" id="1_ahuhg"]
+[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_1ii6i"]
+
+[node name="IceCreamBox" type="Node2D"]
+
+[node name="IceCreamBox" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ahuhg")
+script = ExtResource("2_1ii6i")
+item_id = 8

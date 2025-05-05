@@ -1,10 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://brrydggkfw853"]
+[gd_scene load_steps=41 format=3 uid="uid://brrydggkfw853"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_ktwhx"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_lstff"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="1_ovoln"]
+[ext_resource type="PackedScene" uid="uid://dfssckr65drc" path="res://Scenes/milk.tscn" id="2_1h7i0"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="2_k8p62"]
-[ext_resource type="PackedScene" uid="uid://25vkmujqjr3v" path="res://Scenes/iceCreamBox.tscn" id="3_u4hf8"]
 [ext_resource type="PackedScene" uid="uid://bt31pnyvrqi3q" path="res://Scenes/heladeria.tscn" id="4_nesd1"]
 [ext_resource type="PackedScene" uid="uid://b6gyjbky8d5xu" path="res://Scenes/cone.tscn" id="4_xlqca"]
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_anpcx"]
@@ -26,9 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://chqmsc0scf36" path="res://Assets/Ingredients/Vanilla.png" id="24_byr4f"]
 [ext_resource type="Texture2D" uid="uid://req2m5goq03" path="res://Assets/Ingredients/Egg.png" id="25_37x7n"]
 [ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="26_e1cw7"]
-[ext_resource type="Texture2D" uid="uid://cbqm5hmooikog" path="res://Assets/Ingredients/CookedCream.png" id="27_8xq4s"]
-[ext_resource type="Texture2D" uid="uid://cmfhvycu4wtb0" path="res://Assets/Ingredients/SweetCream.png" id="28_0r4ue"]
-[ext_resource type="Texture2D" uid="uid://bt2mt5y6rsww0" path="res://Assets/Ingredients/IceCreamBox.png" id="29_ftb2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(20, 16)
@@ -148,7 +145,7 @@ script = ExtResource("1_ktwhx")
 [node name="MilkDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-43, -63)
 script = ExtResource("1_ovoln")
-spawn_scene = ExtResource("3_u4hf8")
+spawn_scene = ExtResource("2_1h7i0")
 costo = 120
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/MilkDispenser"]
@@ -388,18 +385,6 @@ itemMap = {
 5: {
 "icono": "res://Assets/Ingredients/IceCream.png",
 "nombre": "IceCream"
-},
-6: {
-"icono": "res://Assets/Ingredients/CookedCream.png",
-"nombre": "CookedCream"
-},
-7: {
-"icono": "res://Assets/Ingredients/SweetCream.png",
-"nombre": "SweetCream"
-},
-8: {
-"icono": "res://Assets/Ingredients/IceCreamBox.png",
-"nombre": "IceCreamBox"
 }
 }
 player = NodePath("../../Player")
@@ -482,26 +467,3 @@ texture = ExtResource("26_e1cw7")
 script = ExtResource("21_2381e")
 item_id = 5
 sell_price = 300
-
-[node name="CookedCream" type="Sprite2D" parent="Items"]
-position = Vector2(-343, 505)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("27_8xq4s")
-script = ExtResource("21_2381e")
-item_id = 6
-sell_price = 300
-
-[node name="SweetCream" type="Sprite2D" parent="Items"]
-position = Vector2(-343, 505)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("28_0r4ue")
-script = ExtResource("21_2381e")
-item_id = 7
-sell_price = 300
-
-[node name="IceCreamBox" type="Sprite2D" parent="Items"]
-position = Vector2(-337, 510)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("29_ftb2p")
-script = ExtResource("21_2381e")
-item_id = 8

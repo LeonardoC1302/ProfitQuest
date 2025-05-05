@@ -13,8 +13,11 @@ var slot_seleccionado = null
 	"Milk": preload("res://Scenes/milk.tscn"),
 	"Sugar": preload("res://Scenes/sugar.tscn"),
 	"Egg": preload("res://Scenes/egg.tscn"),
-	"Vainilla": preload("res://Scenes/vainilla.tscn"),
-	"IceCream": preload("res://Scenes/iceCream.tscn")
+	"Vanilla": preload("res://Scenes/vainilla.tscn"),
+	"IceCream": preload("res://Scenes/iceCream.tscn"),
+	"CookedCream": preload("res://Scenes/cookedCream.tscn"),
+	"SweetCream": preload("res://Scenes/sweetCream.tscn"),
+	"IceCreamBox": preload("res://Scenes/iceCreamBox.tscn"),
 }
 
 @export var player: Node2D
@@ -22,9 +25,8 @@ var slot_seleccionado = null
 
 var crafting_database
 
-
-
 func _ready():
+	print("drop_scene_map at ready:", drop_scene_map)
 	print("Current inventario path: ", get_path())
 	inicializar_inventario()
 	rellenar_inventario_prueba()  # Optional test data
