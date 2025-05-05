@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dta0un1sfrygg"]
 
-[ext_resource type="Script" path="res://Scripts/slot.gd" id="1_vqo0j"]
+[ext_resource type="Script" uid="uid://bf660f76f05l" path="res://Scripts/slot.gd" id="1_vqo0j"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_4h18v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqo0j"]

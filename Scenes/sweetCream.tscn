@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ssaaai83b6hm"]
 
 [ext_resource type="Texture2D" uid="uid://cmfhvycu4wtb0" path="res://Assets/Ingredients/SweetCream.png" id="1_c43rm"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_251ni"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_251ni"]
 
 [node name="SweetCream" type="Node2D"]
 

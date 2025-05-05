@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmg62011amsuk"]
 
 [ext_resource type="Texture2D" uid="uid://cbqm5hmooikog" path="res://Assets/Ingredients/CookedCream.png" id="1_ju1mp"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_aws6l"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_aws6l"]
 
 [node name="CookedCream" type="Node2D"]
 

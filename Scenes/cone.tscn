@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6gyjbky8d5xu"]
 
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="1_qtjww"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="2_xqchl"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_xqchl"]
 
 [node name="Cone" type="Node2D"]
 
