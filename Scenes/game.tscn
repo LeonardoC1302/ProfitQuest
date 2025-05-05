@@ -254,9 +254,15 @@ shape = SubResource("RectangleShape2D_eucg2")
 z_index = 3
 position = Vector2(-300, -64)
 script = ExtResource("8_wjbcv")
-recipe = ["IceCreamBox", "Cone"]
+recipe = [{
+"name": "Cone",
+"quantity": 2
+}, {
+"name": "IceCreamBox",
+"quantity": 1
+}]
 product = {
-"cantidad": 1,
+"cantidad": 2,
 "icono": ExtResource("26_e1cw7"),
 "nombre": "IceCream"
 }
@@ -287,7 +293,19 @@ shape = SubResource("RectangleShape2D_ra3su")
 z_index = 3
 position = Vector2(-248, -76)
 script = ExtResource("8_wjbcv")
-recipe = ["Egg", "Sugar", "Milk", "Vanilla"]
+recipe = [{
+"name": "Milk",
+"quantity": 2
+}, {
+"name": "Egg",
+"quantity": 1
+}, {
+"name": "Sugar",
+"quantity": 1
+}, {
+"name": "Vanilla",
+"quantity": 1
+}]
 product = {
 "cantidad": 1,
 "icono": ExtResource("13_q1q7f"),
@@ -307,7 +325,10 @@ shape = SubResource("RectangleShape2D_k6cc8")
 z_index = 3
 position = Vector2(-178, 14)
 script = ExtResource("8_wjbcv")
-recipe = ["CookedCream"]
+recipe = [{
+"name": "CookedCream",
+"quantity": 2
+}]
 product = {
 "cantidad": 1,
 "icono": ExtResource("16_bf6a2"),
@@ -327,7 +348,10 @@ shape = SubResource("RectangleShape2D_rrmcj")
 z_index = 3
 position = Vector2(-201, -73)
 script = ExtResource("8_wjbcv")
-recipe = ["SweetCream"]
+recipe = [{
+"name": "SweetCream",
+"quantity": 2
+}]
 product = {
 "cantidad": 1,
 "icono": ExtResource("15_ncqss"),

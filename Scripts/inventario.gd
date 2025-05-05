@@ -145,14 +145,29 @@ func process_cupboard_interaction():
 	actualizar_interfaz()
 	
 func searchRecipe(recipe):
-	var nombres_en_inventario = []
-	for item in inventario:
-		if item != null:
-			nombres_en_inventario.append(item["nombre"])
-
-	for nombre in recipe:
-		if nombre not in nombres_en_inventario:
+	# Create a dictionary to track ingredients in inventory
+	var inventory_counts = {}
+	
+	# Count all ingredients in inventory
+	for i in range(NUM_SLOTS):
+		if inventario[i] != null:
+			var item_name = inventario[i]["nombre"]
+			var item_quantity = inventario[i]["cantidad"]
+			
+			if item_name in inventory_counts:
+				inventory_counts[item_name] += item_quantity
+			else:
+				inventory_counts[item_name] = item_quantity
+	
+	# Check if we have enough of each ingredient
+	for ingredient in recipe:
+		var ingredient_name = ingredient["name"]
+		var required_quantity = ingredient["quantity"]
+		
+		if ingredient_name not in inventory_counts or inventory_counts[ingredient_name] < required_quantity:
+			print("Missing ingredient: ", ingredient_name, " (need ", required_quantity, ")")
 			return false
+	
 	return true
 	
 func process_register_interaction():
@@ -209,13 +224,33 @@ func deleteItemSlot(itemSlot):
 	
 func craftRecipe(recipe, product):
 	if searchRecipe(recipe):
-		for i in range(NUM_SLOTS):
-			if inventario[i] != null and inventario[i]['nombre'] in recipe:
-				if inventario[i]['cantidad'] > 1:
-					inventario[i]['cantidad'] -= 1
-				else:
-					inventario[i] = null
+		# Remove ingredients from inventory based on required quantities
+		for ingredient in recipe:
+			var ingredient_name = ingredient["name"]
+			var required_quantity = ingredient["quantity"]
+			var remaining_quantity = required_quantity
 			
+			# Continue removing items until we've satisfied the required quantity
+			while remaining_quantity > 0:
+				for i in range(NUM_SLOTS):
+					if inventario[i] != null and inventario[i]['nombre'] == ingredient_name:
+						if inventario[i]['cantidad'] > remaining_quantity:
+							# We have more than needed, just reduce the quantity
+							inventario[i]['cantidad'] -= remaining_quantity
+							remaining_quantity = 0
+							break
+						else:
+							# We'll use up this stack completely
+							remaining_quantity -= inventario[i]['cantidad']
+							inventario[i] = null
+							break
+				
+				# Safety check - if we can't find any more of this item but still need more
+				if remaining_quantity > 0:
+					print("Error: Couldn't find enough of ", ingredient_name)
+					break
+		
+		# Add the crafted product to inventory
 		addItem(product)
 	else:
 		print("No se tienen todos los ingredientes para craftear")

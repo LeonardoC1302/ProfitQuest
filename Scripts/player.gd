@@ -37,8 +37,9 @@ func _process(delta: float) -> void:
 	direction.y = Input.get_action_strength('down') - Input.get_action_strength('up')
 	var budget_label = get_node("/root/Game/CanvasLayer/Budget")
 	var earning_label = get_node("/root/Game/CanvasLayer/Earnings")
-	budget_label.text = "Presupuesto: " + str(presupuesto)
-	earning_label.text = "Ganancias: " + str(earnings)
+	if budget_label != null and earning_label != null:
+		budget_label.text = "Presupuesto: " + str(presupuesto)
+		earning_label.text = "Ganancias: " + str(earnings)
 	pass
 	
 func _physics_process(delta: float) -> void:
