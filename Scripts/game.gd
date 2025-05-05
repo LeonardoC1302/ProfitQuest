@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 func start_timer():
 	# TODO: Set the timer according to a difficulty, it can be stored in the Autoload 
-	timer.set_timer(240)
+	timer.set_timer(70)
 	

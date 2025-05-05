@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://donli4orntvt1"]
+
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="1_563lt"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_s331j"]
+
+[node name="GamOver" type="Node2D"]
+script = ExtResource("1_s331j")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = -246.0
+offset_top = -201.0
+offset_right = 253.0
+offset_bottom = 2.0
+theme_override_fonts/font = ExtResource("1_563lt")
+theme_override_font_sizes/font_size = 100
+text = "Game
+Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = -396.0
+offset_top = 5.0
+offset_right = 414.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("1_563lt")
+theme_override_font_sizes/font_size = 30
+text = "Presiona cualquier tecla
+para volver al menu inicial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Area2D"]
+offset_left = -623.0
+offset_top = -340.0
+offset_right = 575.0
+offset_bottom = 329.0
+color = Color(0.057569, 0.0185043, 0.00197822, 1)

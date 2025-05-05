@@ -56,7 +56,7 @@ theme_override_font_sizes/font_size = 40
 text = "Start Game"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label3" type="Label" parent="."]
+[node name="Customize" type="Label" parent="."]
 z_index = 1
 offset_left = -177.0
 offset_top = 78.0

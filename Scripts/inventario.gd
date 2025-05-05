@@ -26,7 +26,7 @@ var slot_seleccionado = null
 var crafting_database
 
 func _ready():
-	print("drop_scene_map at ready:", drop_scene_map)
+	#print("drop_scene_map at ready:", drop_scene_map)
 	print("Current inventario path: ", get_path())
 	inicializar_inventario()
 	rellenar_inventario_prueba()  # Optional test data
@@ -86,15 +86,15 @@ func drop_selected_item():
 		var item_name = item_data["nombre"]
 		print("Intentando dropear:", item_name)
 
-		print("Buscando en drop_scene_map:", item_name)
-		print("Claves disponibles:", drop_scene_map.keys())
+		#print("Buscando en drop_scene_map:", item_name)
+		#print("Claves disponibles:", drop_scene_map.keys())
 
 		if drop_scene_map.has(item_name):
 			var drop_scene = drop_scene_map[item_name].instantiate()
 			print("Instancia creada:", drop_scene)
 
 			if player and world_2d_node:
-				var drop_offset = Vector2(32, 0)
+				var drop_offset = Vector2(0, 16)
 				drop_scene.global_position = player.global_position + drop_offset
 				world_2d_node.add_child(drop_scene)
 			else:

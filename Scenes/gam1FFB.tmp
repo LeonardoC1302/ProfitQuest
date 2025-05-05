@@ -146,8 +146,6 @@ script = ExtResource("1_ktwhx")
 
 [node name="ObjetiveChecker" type="Node" parent="."]
 script = ExtResource("2_d0yx8")
-player = NodePath("../Player")
-timer = NodePath("../CanvasLayer/LevelTimer")
 
 [node name="Stations" type="Node" parent="."]
 
@@ -414,13 +412,7 @@ world_2d_node = NodePath("../..")
 
 [node name="LevelTimer" parent="CanvasLayer" instance=ExtResource("13_lnwe8")]
 position = Vector2(165, -195)
-objective = NodePath("../../ObjetiveChecker")
-
-[node name="Instrucctions" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+objetive = NodePath("../../ObjetiveChecker")
 
 [node name="Budget" type="Label" parent="CanvasLayer"]
 z_index = 5

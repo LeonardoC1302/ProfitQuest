@@ -1,0 +1,271 @@
+[gd_scene load_steps=14 format=3 uid="uid://d3kkaj1gdbwwv"]
+
+[ext_resource type="Script" path="res://Scripts/tutorial.gd" id="1_hbk6y"]
+[ext_resource type="Texture2D" uid="uid://cr2buwgvkc3ux" path="res://Assets/ScrollTutorial.png" id="1_lerh7"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_yi5ip"]
+[ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="3_vjq2s"]
+[ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="4_5gnm7"]
+[ext_resource type="Texture2D" uid="uid://chqmsc0scf36" path="res://Assets/Ingredients/Vanilla.png" id="5_oid3x"]
+[ext_resource type="Texture2D" uid="uid://req2m5goq03" path="res://Assets/Ingredients/Egg.png" id="6_5ttke"]
+[ext_resource type="Texture2D" uid="uid://cmfhvycu4wtb0" path="res://Assets/Ingredients/SweetCream.png" id="7_5dcqn"]
+[ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="7_hv3l2"]
+[ext_resource type="Texture2D" uid="uid://cbqm5hmooikog" path="res://Assets/Ingredients/CookedCream.png" id="9_5wuf1"]
+[ext_resource type="Texture2D" uid="uid://bt2mt5y6rsww0" path="res://Assets/Ingredients/IceCreamBox.png" id="10_ymwfr"]
+[ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="11_mofhx"]
+[ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="12_jcqfd"]
+
+[node name="Tutorial" type="Node2D"]
+position = Vector2(4.44992, -2.99997)
+script = ExtResource("1_hbk6y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Scroll" type="Sprite2D" parent="."]
+position = Vector2(-144.45, -18.4992)
+scale = Vector2(12.625, 11.7344)
+texture = ExtResource("1_lerh7")
+
+[node name="Title" type="Label" parent="."]
+offset_left = -245.45
+offset_top = -198.999
+offset_right = -35.4499
+offset_bottom = -168.999
+theme_override_fonts/font = ExtResource("2_yi5ip")
+theme_override_font_sizes/font_size = 30
+text = "Recetas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Number" type="Label" parent="."]
+offset_left = -343.45
+offset_top = -158.999
+offset_right = -303.45
+offset_bottom = -135.999
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("2_yi5ip")
+theme_override_font_sizes/font_size = 20
+text = "1."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number2" type="Label" parent="."]
+offset_left = -342.45
+offset_top = -61.9992
+offset_right = -302.45
+offset_bottom = -38.9992
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("2_yi5ip")
+theme_override_font_sizes/font_size = 20
+text = "2."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number3" type="Label" parent="."]
+offset_left = -124.45
+offset_top = -70.9992
+offset_right = -84.4499
+offset_bottom = -47.9992
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("2_yi5ip")
+theme_override_font_sizes/font_size = 20
+text = "3."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number4" type="Label" parent="."]
+offset_left = -338.45
+offset_top = 50.0008
+offset_right = -298.45
+offset_bottom = 73.0008
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("2_yi5ip")
+theme_override_font_sizes/font_size = 20
+text = "4."
+metadata/_edit_use_anchors_ = true
+
+[node name="Begin" type="Label" parent="."]
+offset_left = 83.5501
+offset_top = -71.0
+offset_right = 593.55
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_yi5ip")
+theme_override_font_sizes/font_size = 30
+text = "Precionar 
+Espacio
+Para Iniciar
+([    ])"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SweetCream" type="Node" parent="."]
+
+[node name="Milk" type="Sprite2D" parent="SweetCream"]
+position = Vector2(-326.2, -102.399)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("3_vjq2s")
+
+[node name="Sugar" type="Sprite2D" parent="SweetCream"]
+position = Vector2(-234.2, -104.399)
+scale = Vector2(2.025, 1.9)
+texture = ExtResource("4_5gnm7")
+
+[node name="Vanilla" type="Sprite2D" parent="SweetCream"]
+position = Vector2(-138.2, -97.3992)
+scale = Vector2(1.61875, 1.68125)
+texture = ExtResource("5_oid3x")
+
+[node name="Egg" type="Sprite2D" parent="SweetCream"]
+position = Vector2(-51.2, -99.3992)
+scale = Vector2(1.5875, 1.525)
+texture = ExtResource("6_5ttke")
+
+[node name="Mixer" type="Sprite2D" parent="SweetCream"]
+position = Vector2(-141, -142.199)
+scale = Vector2(1.91875, 2.31667)
+texture = ExtResource("7_hv3l2")
+region_enabled = true
+region_rect = Rect2(144, 40, 32, 24)
+
+[node name="SweetCream" type="Sprite2D" parent="SweetCream"]
+position = Vector2(37.8, -111.399)
+scale = Vector2(2.54687, 2.625)
+texture = ExtResource("7_5dcqn")
+
+[node name="Label" type="Label" parent="SweetCream"]
+offset_left = -302.2
+offset_top = -116.899
+offset_right = -249.2
+offset_bottom = -93.8992
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="SweetCream"]
+offset_left = -214.2
+offset_top = -116.399
+offset_right = -161.2
+offset_bottom = -93.3992
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="SweetCream"]
+offset_left = -110.2
+offset_top = -115.399
+offset_right = -57.2
+offset_bottom = -92.3992
+scale = Vector2(1.3, 1.3)
+text = "x1 +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="SweetCream"]
+offset_left = -34.2
+offset_top = -116.399
+offset_right = 18.8
+offset_bottom = -93.3992
+scale = Vector2(1.3, 1.3)
+text = "x1 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="CookedCream" type="Node" parent="."]
+
+[node name="SweetCream" type="Sprite2D" parent="CookedCream"]
+position = Vector2(-320, -5.99921)
+scale = Vector2(2.09062, 2.18437)
+texture = ExtResource("7_5dcqn")
+
+[node name="CookedCream" type="Sprite2D" parent="CookedCream"]
+position = Vector2(-217, -6.99921)
+scale = Vector2(2.54687, 2.625)
+texture = ExtResource("9_5wuf1")
+
+[node name="Pot" type="Sprite2D" parent="CookedCream"]
+position = Vector2(-270, -54.9992)
+scale = Vector2(2.10078, 2.00443)
+texture = ExtResource("7_hv3l2")
+region_enabled = true
+region_rect = Rect2(144, 72, 32, 24)
+
+[node name="Label" type="Label" parent="CookedCream"]
+offset_left = -296.55
+offset_top = -10.8398
+offset_right = -243.55
+offset_bottom = 12.1602
+scale = Vector2(1.3, 1.3)
+text = "x2  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="IceCreamBox" type="Node" parent="."]
+
+[node name="CookedCream" type="Sprite2D" parent="IceCreamBox"]
+position = Vector2(-107, -4.99921)
+scale = Vector2(2.09062, 2.18437)
+texture = ExtResource("9_5wuf1")
+
+[node name="IceCreamBox" type="Sprite2D" parent="IceCreamBox"]
+position = Vector2(6, -10.9992)
+scale = Vector2(3.02344, 2.625)
+texture = ExtResource("10_ymwfr")
+
+[node name="Fridge" type="Sprite2D" parent="IceCreamBox"]
+position = Vector2(-50, -49.9992)
+scale = Vector2(2.77519, 2.875)
+texture = ExtResource("7_hv3l2")
+region_enabled = true
+region_rect = Rect2(152, 112, 16, 16)
+
+[node name="Label" type="Label" parent="IceCreamBox"]
+offset_left = -79.0
+offset_top = -10.9992
+offset_right = -26.0
+offset_bottom = 12.0008
+scale = Vector2(1.3, 1.3)
+text = "x2  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="IceCreamCone" type="Node" parent="."]
+
+[node name="Counter" type="Sprite2D" parent="IceCreamCone"]
+position = Vector2(-140, 67.0008)
+scale = Vector2(2.93968, 2.51563)
+texture = ExtResource("7_hv3l2")
+region_enabled = true
+region_rect = Rect2(136, 0, 48, 32)
+
+[node name="IceCreamBox" type="Sprite2D" parent="IceCreamCone"]
+position = Vector2(-250, 132.001)
+scale = Vector2(2.09062, 2.18437)
+texture = ExtResource("10_ymwfr")
+
+[node name="Cone" type="Sprite2D" parent="IceCreamCone"]
+position = Vector2(-139, 147.001)
+scale = Vector2(2.14844, 1.8125)
+texture = ExtResource("11_mofhx")
+
+[node name="IceCreamCone" type="Sprite2D" parent="IceCreamCone"]
+position = Vector2(-38, 139.001)
+scale = Vector2(2.09062, 2.18437)
+texture = ExtResource("12_jcqfd")
+
+[node name="Label" type="Label" parent="IceCreamCone"]
+offset_left = -218.0
+offset_top = 127.001
+offset_right = -165.0
+offset_bottom = 150.001
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="IceCreamCone"]
+offset_left = -114.0
+offset_top = 130.001
+offset_right = -61.0
+offset_bottom = 153.001
+scale = Vector2(1.3, 1.3)
+text = "x2  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="IceCreamCone"]
+offset_left = -13.0
+offset_top = 132.001
+offset_right = 40.0
+offset_bottom = 155.001
+scale = Vector2(1.3, 1.3)
+text = "x2"
+metadata/_edit_use_anchors_ = true

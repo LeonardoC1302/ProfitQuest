@@ -416,12 +416,6 @@ world_2d_node = NodePath("../..")
 position = Vector2(165, -195)
 objective = NodePath("../../ObjetiveChecker")
 
-[node name="Instrucctions" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Budget" type="Label" parent="CanvasLayer"]
 z_index = 5
 anchors_preset = 1
