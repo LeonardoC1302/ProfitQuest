@@ -86,7 +86,7 @@ offset_right = 593.55
 offset_bottom = 58.0
 theme_override_fonts/font = ExtResource("2_yi5ip")
 theme_override_font_sizes/font_size = 30
-text = "Precionar 
+text = "Presionar 
 Espacio
 Para Iniciar
 ([    ])"
