@@ -21,6 +21,7 @@ offset_bottom = 658.0
 color = Color(0.117647, 0.160784, 0.278431, 1)
 
 [node name="LineEdit" type="LineEdit" parent="Control/ColorRect" node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 0
 offset_left = 198.0
 offset_top = 276.0
 offset_right = 448.0
@@ -30,6 +31,7 @@ theme_override_fonts/font = ExtResource("2_fxa43")
 alignment = 1
 
 [node name="Button" type="Button" parent="Control/ColorRect"]
+layout_mode = 0
 offset_left = 486.0
 offset_top = 412.0
 offset_right = 638.0

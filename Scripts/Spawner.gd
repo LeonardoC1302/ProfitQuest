@@ -7,11 +7,9 @@ extends StaticBody2D
 var player: CharacterBody2D
 
 func _ready():
-	# Find the player by path — adjust as needed!
-	player = get_node_or_null("../../Player")
+	player = get_tree().get_current_scene().get_node_or_null("Player")
 	if player == null:
-		print("Player not found!")
-
+		print("Player not found in current scene")
 
 func _process(_delta):
 	if player and Input.is_action_just_pressed("interact"):

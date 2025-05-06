@@ -30,13 +30,13 @@ func _on_button_pressed():
 	
 	if register:
 		if user_data.has(playerName):
-			print("⚠️ Usuario ya existe.")
+			print("Usuario ya existe.")
 		else:
 			user_data[playerName] = password
 			var file_write = FileAccess.open(user_file_path, FileAccess.WRITE)
 			file_write.store_string(JSON.stringify(user_data))
 			file_write.close()
-			print("✅ Usuario registrado con éxito.")
+			print("Usuario registrado con éxito.")
 	else:
 		if user_data.has(playerName) and user_data[playerName] == password:
 			print("Inicio de sesión exitoso.")

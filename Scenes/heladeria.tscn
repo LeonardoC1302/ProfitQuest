@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0pmmqkgrt7nc" path="res://Assets/tilemaps/tilemapHeladeria.png" id="1_kx1ko"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abt1s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dowua"]
 texture = ExtResource("1_kx1ko")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -43,7 +43,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
-sources/1 = SubResource("TileSetAtlasSource_abt1s")
+sources/1 = SubResource("TileSetAtlasSource_dowua")
 
 [node name="Heladeria" type="TileMap"]
 z_index = -1
