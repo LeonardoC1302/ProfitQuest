@@ -4,7 +4,7 @@ extends StaticBody2D
 
 @export var escena_nivel: String = "res://Scenes/tutorial.tscn"
 @export var nivel_id: int = 1
-@export var interact_distance: float = 20
+@export var interact_distance: float = 40
 
 var player_node: CharacterBody2D  # Aquí guardaremos el nodo real
 
