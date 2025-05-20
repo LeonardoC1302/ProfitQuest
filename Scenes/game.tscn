@@ -369,7 +369,7 @@ layer_0/tile_data = PackedInt32Array(-196605, 262148, 2, -131069, 262148, 3, -13
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Inventario" parent="CanvasLayer" node_paths=PackedStringArray("player", "world_2d_node") instance=ExtResource("14_1phco")]
+[node name="Inventario" parent="CanvasLayer" node_paths=PackedStringArray("player", "world_2d_node", "timer") instance=ExtResource("14_1phco")]
 offset_left = -2.0
 offset_top = 4.0
 offset_right = -2.0
@@ -415,6 +415,7 @@ itemMap = {
 }
 player = NodePath("../../Player")
 world_2d_node = NodePath("../..")
+timer = NodePath("../LevelTimer")
 
 [node name="LevelTimer" parent="CanvasLayer" instance=ExtResource("13_lnwe8")]
 position = Vector2(165, -195)

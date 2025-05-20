@@ -14,6 +14,16 @@ func _ready() -> void:
 # Time for the timer in seconds
 func set_timer(time_left: int):
 	timer.start(time_left)
+	
+func subtract_time(time: int) -> void:
+	var remaining = timer.time_left - time
+	timer.stop()
+	
+	if remaining > 0:
+		timer.start(remaining)
+	else:
+		# Si el tiempo restante es 0 o menos, finaliza el juego inmediatamente
+		time_left_to_finish()
 
 func time_left_to_finish():
 	var time_left = timer.time_left
