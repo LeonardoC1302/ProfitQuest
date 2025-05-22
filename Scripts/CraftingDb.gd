@@ -1,6 +1,13 @@
 # Este script podría ser un singleton autoload llamado "CraftingDatabase"
 extends Node
 
+var ingredient_prices = {
+	"Egg": 100,
+	"Milk": 120,
+	"Sugar": 120,
+	"Cone": 75,
+	"Vanilla": 250,
+}
 # Base de datos central de crafteo
 var recipes = {
 	"SweetCream": {

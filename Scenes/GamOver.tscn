@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://donli4orntvt1"]
 
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="1_563lt"]
-[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_s331j"]
+[ext_resource type="Script" uid="uid://dullvaamstryf" path="res://Scripts/game_over.gd" id="1_s331j"]
 
 [node name="GamOver" type="Node2D"]
 script = ExtResource("1_s331j")
