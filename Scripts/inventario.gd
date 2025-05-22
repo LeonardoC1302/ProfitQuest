@@ -22,6 +22,7 @@ var slot_seleccionado = null
 
 @export var player: Node2D
 @export var world_2d_node: Node2D
+@export var timer: Node2D
 
 var crafting_database
 
@@ -290,6 +291,7 @@ func craftRecipe(recipe, product):
 		# Añadir el producto crafteado al inventario
 		addItem(product)
 	else:
+		timer.subtract_time(5)
 		print("No se tienen todos los ingredientes para craftear")
 
 # Función para reciclar un item y obtener el 50% de sus materiales
