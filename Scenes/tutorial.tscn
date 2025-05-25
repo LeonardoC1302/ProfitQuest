@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://d3kkaj1gdbwwv"]
 
-[ext_resource type="Script" uid="uid://cxghuachu3xgb" path="res://Scripts/tutorial.gd" id="1_hbk6y"]
+[ext_resource type="Script" path="res://Scripts/tutorial.gd" id="1_hbk6y"]
 [ext_resource type="Texture2D" uid="uid://cr2buwgvkc3ux" path="res://Assets/ScrollTutorial.png" id="1_lerh7"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_yi5ip"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="3_vjq2s"]
@@ -89,7 +89,8 @@ theme_override_font_sizes/font_size = 30
 text = "Presionar 
 Espacio
 Para Iniciar
-([    ])"
+
+[      ]"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 

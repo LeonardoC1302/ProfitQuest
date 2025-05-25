@@ -3,6 +3,7 @@ extends Node2D  # o el tipo que uses para tu basurero
 @export var interact_distance: float = 30
 var player: CharacterBody2D
 var crafting_db
+var used:bool = false
 
 func _ready() -> void:
 	player = get_node_or_null("../../Player")
@@ -30,6 +31,7 @@ func recycle_item(item, inventario_node):
 	
 	# Verificar si el item es un producto conocido
 	if item_name in crafting_db.recipes:
+		self.used = true
 		print("Reciclando producto:", item_name)
 		
 		var recipe = crafting_db.recipes[item_name]["recipe"]
@@ -59,6 +61,7 @@ func recycle_item(item, inventario_node):
 
 	# Si no es producto, pero sí un ingrediente suelto con precio
 	elif item_name in crafting_db.ingredient_prices:
+		self.used = true
 		print("Reciclando ingrediente suelto:", item_name)
 		
 		# Calcular reembolso: 50% del precio del ingrediente

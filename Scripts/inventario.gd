@@ -248,9 +248,10 @@ func delete_selected_item():
 		var item = inventario[slot_seleccionado]
 		
 		inventario[slot_seleccionado] = null
-			
+		slot_seleccionado = null
 		# Actualizar la UI
 		actualizar_interfaz()
+		actualizar_visual_seleccion()
 		return true
 	return false
 	

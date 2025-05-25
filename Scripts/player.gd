@@ -177,12 +177,14 @@ func end_game():
 func lose_points(points):
 	var final = self.score - points
 	if final <= 0:
+		score_label.text = "Not enough ingredients!\n" + "0pts"
 		self.score = 0
 	else:
+		score_label.text = "Not enough ingredients!\n" + "-%d" % points + "pts"
 		self.score = final
 		
 	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
-	score_label.text = "Not enough ingredients!\n" + "-%d" % points + "pts"
+	
 	score_label.modulate.a = 0.0  # empezar invisible
 
 	# Cancelar tween anterior si existe
@@ -201,12 +203,13 @@ func lose_points(points):
 	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
 	
 func gain_points(points, multiplier):
-	var final = self.score + (points*multiplier)
+	var total = points*multiplier
+	var final = self.score + total
 	
 	self.score = final
 	
 	score_label.add_theme_color_override("font_color", Color(0, 1, 0))  # rojo
-	score_label.text = "+%d" % final + "pts"
+	score_label.text = "+%d" % total + "pts"
 	score_label.modulate.a = 0.0  # empezar invisible
 
 	# Cancelar tween anterior si existe

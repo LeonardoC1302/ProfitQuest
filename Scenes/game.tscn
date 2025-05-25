@@ -151,6 +151,7 @@ player = NodePath("../Player")
 timer = NodePath("../CanvasLayer/LevelTimer")
 objetivo_earnings = 2000
 objetivo_budget = 500
+trash = NodePath("../Stations/TrashCan")
 
 [node name="Stations" type="Node" parent="."]
 
@@ -338,6 +339,7 @@ z_index = 2
 position = Vector2(-237, 6)
 collision_layer = 17
 collision_mask = 17
+presupuesto = 15000
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -502,6 +504,17 @@ presupuesto
 restante entre
 0 y 500"
 
+[node name="Label4" type="Label" parent="CanvasLayer/Objectives"]
+offset_left = 28.0
+offset_top = 336.0
+offset_right = 368.0
+offset_bottom = 425.0
+theme_override_fonts/font = ExtResource("15_rtnns")
+theme_override_font_sizes/font_size = 20
+text = "3. No reciclar ni 
+deshechar ningun
+ingrediente"
+
 [node name="Obj1" type="Panel" parent="CanvasLayer/Objectives"]
 layout_mode = 0
 offset_left = 377.0
@@ -521,6 +534,17 @@ offset_right = 417.0
 offset_bottom = 258.0
 
 [node name="Check" type="Sprite2D" parent="CanvasLayer/Objectives/Obj2"]
+position = Vector2(21, 21)
+scale = Vector2(0.05125, 0.049375)
+texture = ExtResource("21_tm6c1")
+
+[node name="Obj3" type="Panel" parent="CanvasLayer/Objectives"]
+offset_left = 377.0
+offset_top = 356.0
+offset_right = 417.0
+offset_bottom = 396.0
+
+[node name="Check" type="Sprite2D" parent="CanvasLayer/Objectives/Obj3"]
 position = Vector2(21, 21)
 scale = Vector2(0.05125, 0.049375)
 texture = ExtResource("21_tm6c1")
@@ -596,3 +620,13 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("29_ftb2p")
 script = ExtResource("21_2381e")
 item_id = 8
+
+[node name="Instrucciones" type="Label" parent="."]
+offset_left = -144.0
+offset_top = 4.0
+offset_right = -26.0
+offset_bottom = 105.0
+text = "q - drop
+e - interact
+space - grab
+shift - objetives"

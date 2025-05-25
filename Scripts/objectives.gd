@@ -5,10 +5,15 @@ extends Node
 
 @export var objetivo_earnings: int
 @export var objetivo_budget: int
+@export var recycle: bool = true
 #@export var objetivo_bidget_limite: int
 
 @onready var obj1 = get_parent().get_node("CanvasLayer/Objectives/Obj1/Check")
 @onready var obj2 = get_parent().get_node("CanvasLayer/Objectives/Obj2/Check")
+@onready var obj3 = get_parent().get_node("CanvasLayer/Objectives/Obj3/Check")
+
+@export var trash: NodePath
+
 var cumplio_earnings = false
 var cumplio_budget = false
 
@@ -18,6 +23,7 @@ func _ready():
 	obj2.visible = false
 
 func _input(event):
+	var t = get_node_or_null(trash)
 	var excluded_keys = [KEY_W, KEY_A, KEY_S, KEY_D]
 
 	if event is InputEventKey and event.pressed and event.keycode not in excluded_keys:
@@ -35,6 +41,14 @@ func _input(event):
 			obj2.visible = true
 		else:
 			obj2.visible = false
+			
+		if recycle:
+			print("✅ No se ha deshechado ningun ingrediente")
+			obj3.visible = true
+		else:
+			obj3.visible = false
+		
+		self.recycle = !t.used
 			
 func check_objectives1():
 	#se pueden ir agregando objetivos para diferentes niveles
@@ -57,3 +71,5 @@ func assign_points():
 		p.score += 250
 	if cumplio_budget:
 		p.score += 250
+	if recycle:
+		p.score += 200
