@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 					inventario_node.deleteItemSlot(selected)
 					var price = item_node.sell_price
 					player.earnings += price * itemQty
+					player.gain_points(100, itemQty)
 					print("Ganancias de jugador: ", player.earnings)
 				else:
 					print("No es un producto que se puede vender!!")

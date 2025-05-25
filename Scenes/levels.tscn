@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://blinlx1mt2ngl" path="res://Assets/tilemaps/Tileset2.png" id="4_3akqy"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="4_jk88k"]
 [ext_resource type="Texture2D" uid="uid://6ipd2k8uwdss" path="res://Assets/heladeria.png" id="5_jk88k"]
-[ext_resource type="Script" uid="uid://dvqmnmh8bwox6" path="res://Scripts/levels.gd" id="5_p1uqq"]
-[ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="5_uotyi"]
+[ext_resource type="Script" path="res://Scripts/levels.gd" id="5_p1uqq"]
+[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="5_uotyi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1uqq"]
 radius = 8.0

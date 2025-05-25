@@ -3,6 +3,7 @@ extends Node2D
 @onready var label = $Label
 @onready var timer = $Timer
 @export var objective: NodePath
+@export var player: NodePath
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,14 +27,15 @@ func subtract_time(time: int) -> void:
 		time_left_to_finish()
 
 func time_left_to_finish():
+	var p = get_node_or_null(player)
 	var time_left = timer.time_left
 	var minute = floor(time_left / 60)
 	var second = int(time_left) % 60
 	if time_left == 0:
 		var objectives_node = get_node(objective) 
-		objectives_node.check_objectives1()
+		objectives_node.assign_points()
 		set_process(false)
-		get_tree().change_scene_to_file("res://Scenes/GamOver.tscn")
+		p.end_game()
 	return [minute, second]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

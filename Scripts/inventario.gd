@@ -291,7 +291,7 @@ func craftRecipe(recipe, product):
 		# Añadir el producto crafteado al inventario
 		addItem(product)
 	else:
-		timer.subtract_time(5)
+		player.lose_points(50)
 		print("No se tienen todos los ingredientes para craftear")
 
 # Función para reciclar un item y obtener el 50% de sus materiales

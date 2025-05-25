@@ -8,7 +8,7 @@ var items_collected := []
 
 @export var presupuesto := 10000
 @export var earnings: int = 0
-
+@export var score: int = 0
 
 @onready var animated_sprite_2d: AnimationPlayer = $CustomPlayer/AnimationPlayer
 @onready var customPlayer: Node2D = $CustomPlayer
@@ -22,6 +22,11 @@ var items_collected := []
 var save_path := "user://player_customization.ini"
 
 @onready var state_machine: PlayerStateMachine = $StateMachine
+
+@onready var score_label = get_parent().get_node("Player/Score")
+@onready var tween = create_tween()
+
+static var final_score: int = 0
 
 func _ready() -> void:
 	state_machine.Initialize(self)
@@ -164,3 +169,60 @@ func load_customization():
 	%Player.set_color("Contrast", contrastColor)
 	var outlineColor = config_file.get_value("Customization", "Outline", Color.BLACK)
 	%Player.set_color("Outline", outlineColor)
+
+func end_game():
+	self.final_score = self.score
+	get_tree().change_scene_to_file("res://Scenes/GamOver.tscn")
+
+func lose_points(points):
+	var final = self.score - points
+	if final <= 0:
+		self.score = 0
+	else:
+		self.score = final
+		
+	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
+	score_label.text = "Not enough ingredients!\n" + "-%d" % points + "pts"
+	score_label.modulate.a = 0.0  # empezar invisible
+
+	# Cancelar tween anterior si existe
+	if tween and tween.is_running():
+		tween.kill()
+
+	tween = create_tween()
+
+	# Fade in
+	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
+
+	# Esperar
+	tween.tween_interval(0.5)
+
+	# Fade out
+	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
+	
+func gain_points(points, multiplier):
+	var final = self.score + (points*multiplier)
+	
+	self.score = final
+	
+	score_label.add_theme_color_override("font_color", Color(0, 1, 0))  # rojo
+	score_label.text = "+%d" % final + "pts"
+	score_label.modulate.a = 0.0  # empezar invisible
+
+	# Cancelar tween anterior si existe
+	if tween and tween.is_running():
+		tween.kill()
+
+	tween = create_tween()
+
+	# Fade in
+	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
+
+	# Esperar
+	tween.tween_interval(0.5)
+
+	# Fade out
+	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
+	
+	
+	

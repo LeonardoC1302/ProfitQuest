@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://donli4orntvt1"]
 
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="1_563lt"]
-[ext_resource type="Script" uid="uid://dullvaamstryf" path="res://Scripts/game_over.gd" id="1_s331j"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_s331j"]
 
 [node name="GamOver" type="Node2D"]
 script = ExtResource("1_s331j")
@@ -10,10 +10,10 @@ script = ExtResource("1_s331j")
 
 [node name="Label" type="Label" parent="."]
 z_index = 1
-offset_left = -246.0
-offset_top = -201.0
-offset_right = 253.0
-offset_bottom = 2.0
+offset_left = -251.0
+offset_top = -279.0
+offset_right = 248.0
+offset_bottom = -76.0
 theme_override_fonts/font = ExtResource("1_563lt")
 theme_override_font_sizes/font_size = 100
 text = "Game
@@ -23,14 +23,26 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 z_index = 1
-offset_left = -396.0
-offset_top = 5.0
-offset_right = 414.0
-offset_bottom = 208.0
+offset_left = -392.0
+offset_top = -74.0
+offset_right = 418.0
+offset_bottom = 129.0
 theme_override_fonts/font = ExtResource("1_563lt")
 theme_override_font_sizes/font_size = 30
 text = "Presiona cualquier tecla
 para volver al menu inicial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+z_index = 1
+offset_left = -395.0
+offset_top = 95.0
+offset_right = 415.0
+offset_bottom = 298.0
+theme_override_fonts/font = ExtResource("1_563lt")
+theme_override_font_sizes/font_size = 30
+text = "puntaje final: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
