@@ -24,6 +24,8 @@ func _process(delta: float) -> void:
 				var selected_item = inventario_node.get_selected_item()
 				if selected_item:
 					recycle_item(selected_item, inventario_node)
+				else:
+					player.message("No seleccionó\n níngún\n ingrediente\n o producto")
 
 func recycle_item(item, inventario_node):
 	var item_name = item["nombre"]
@@ -32,14 +34,14 @@ func recycle_item(item, inventario_node):
 	# Verificar si el item es un producto conocido
 	if item_name in crafting_db.recipes:
 		self.used = true
-		print("Reciclando producto:", item_name)
+		player.message("Reciclando \nproducto: \n" + item_name)
 		
 		var recipe = crafting_db.recipes[item_name]["recipe"]
 		var recipe_multiplier = cantidad
 		
 		# Eliminar el item seleccionado del inventario
 		inventario_node.delete_selected_item()
-		print("Eliminado del inventario:", item_name, "x", cantidad)
+		#print("Eliminado del inventario:", item_name, "x", cantidad)
 		
 		# Devolver el 50% de los materiales (redondeando hacia arriba)
 		for ingredient in recipe:
@@ -62,7 +64,7 @@ func recycle_item(item, inventario_node):
 	# Si no es producto, pero sí un ingrediente suelto con precio
 	elif item_name in crafting_db.ingredient_prices:
 		self.used = true
-		print("Reciclando ingrediente suelto:", item_name)
+		player.message("Reciclando\n ingrediente\n suelto: " + item_name)
 		
 		# Calcular reembolso: 50% del precio del ingrediente
 		var price = crafting_db.ingredient_prices[item_name]
@@ -72,7 +74,7 @@ func recycle_item(item, inventario_node):
 		if refund > 0:
 			# Eliminar del inventario
 			inventario_node.delete_selected_item()
-			print("Eliminado del inventario:", item_name, "x", cantidad)
+			#print("Eliminado del inventario:", item_name, "x", cantidad)
 			
 			# Dar el dinero al jugador
 			player.presupuesto+=refund
@@ -82,4 +84,4 @@ func recycle_item(item, inventario_node):
 	
 	# No es reciclable
 	else:
-		print("Este ítem no se puede reciclar o no está en la base de datos:", item_name)
+		player.message("Este ítem \n no se puede \n reciclar o no está \n en la base de datos: \n" + item_name)

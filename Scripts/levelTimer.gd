@@ -1,9 +1,10 @@
 extends Node2D
 
-@onready var label = $Label
+
 @onready var timer = $Timer
 @export var objective: NodePath
 @export var player: NodePath
+@export var label: Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,13 +1,10 @@
-extends Panel
+extends Button
 
+@export var target_scene: String = "res://Scenes/customization.tscn"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	# Enable input pickup
-	mouse_filter = Control.MOUSE_FILTER_STOP
+func _ready():
+	# Conecta la señal pressed() si no está conectada desde el editor
+	self.pressed.connect(_on_button_pressed)
 
-
-func _gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		# Load the new scene
-		get_tree().change_scene_to_file("res://Scenes/customization.tscn")
+func _on_button_pressed():
+	get_tree().change_scene_to_file(target_scene)

@@ -1,10 +1,10 @@
-extends Panel
+extends Button
+
+@export var target_scene: String = "res://Scenes/levels.tscn"
 
 func _ready():
-	# Enable input pickup
-	mouse_filter = Control.MOUSE_FILTER_STOP
+	# Conecta la señal pressed() si no está conectada desde el editor
+	self.pressed.connect(_on_button_pressed)
 
-func _gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		# Load the new scene
-		get_tree().change_scene_to_file("res://Scenes/levels.tscn")
+func _on_button_pressed():
+	get_tree().change_scene_to_file(target_scene)

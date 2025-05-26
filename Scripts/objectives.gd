@@ -25,30 +25,31 @@ func _ready():
 func _input(event):
 	var t = get_node_or_null(trash)
 	var excluded_keys = [KEY_W, KEY_A, KEY_S, KEY_D]
+	self.recycle = !t.used
 
 	if event is InputEventKey and event.pressed and event.keycode not in excluded_keys:
 		var p = get_node_or_null(player)
 		check_objectives1()
 
 		if cumplio_earnings:
-			print("✅ Ganancias alcanzadas")
+			#print("✅ Ganancias alcanzadas")
 			obj1.visible = true
 		else:
 			obj1.visible = false
 
 		if cumplio_budget:
-			print("✅ EL presupuesto se encuentra en el rango deseado")
+			#print("✅ EL presupuesto se encuentra en el rango deseado")
 			obj2.visible = true
 		else:
 			obj2.visible = false
 			
 		if recycle:
-			print("✅ No se ha deshechado ningun ingrediente")
+			#print("✅ No se ha deshechado ningun ingrediente")
 			obj3.visible = true
 		else:
 			obj3.visible = false
 		
-		self.recycle = !t.used
+		
 			
 func check_objectives1():
 	#se pueden ir agregando objetivos para diferentes niveles

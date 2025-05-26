@@ -177,10 +177,10 @@ func end_game():
 func lose_points(points):
 	var final = self.score - points
 	if final <= 0:
-		score_label.text = "Not enough ingredients!\n" + "0pts"
+		score_label.text = "Faltan \ningredientes!\n" + "0pts"
 		self.score = 0
 	else:
-		score_label.text = "Not enough ingredients!\n" + "-%d" % points + "pts"
+		score_label.text = "Faltan \ningredientes!\n" + "-%d" % points + "pts"
 		self.score = final
 		
 	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
@@ -222,10 +222,29 @@ func gain_points(points, multiplier):
 	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
 
 	# Esperar
-	tween.tween_interval(0.5)
+	tween.tween_interval(0.6)
 
 	# Fade out
 	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
 	
-	
+func message(message):
+	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
+	score_label.text = message
+		
+	score_label.modulate.a = 0.0  # empezar invisible
+
+	# Cancelar tween anterior si existe
+	if tween and tween.is_running():
+		tween.kill()
+
+	tween = create_tween()
+
+	# Fade in
+	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
+
+	# Esperar
+	tween.tween_interval(0.75)
+
+	# Fade out
+	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
 	

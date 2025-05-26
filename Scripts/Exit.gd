@@ -1,8 +1,7 @@
-extends Panel
+extends Button
 
 func _ready():
-	mouse_filter = Control.MOUSE_FILTER_STOP
+	self.pressed.connect(_on_button_pressed)
 
-func _gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		get_tree().quit()
+func _on_button_pressed():
+	get_tree().quit()

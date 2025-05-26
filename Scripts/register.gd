@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	if player and Input.is_action_just_pressed("interact"):
 		var distance = global_position.distance_to(player.global_position)
 		if spawn_distance >= distance:
-			print("Interact (E) pressed near register")
+			#print("Interact (E) pressed near register")
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
 			var items = inventario_node.getItems()
 			var selected = inventario_node.getSelectedSlot()
@@ -33,4 +33,7 @@ func _process(delta: float) -> void:
 					player.gain_points(100, itemQty)
 					print("Ganancias de jugador: ", player.earnings)
 				else:
-					print("No es un producto que se puede vender!!")
+					player.message("Este producto no \n se puede vender")
+			else:
+				player.message("No seleccionó \n ningún objeto \n para vender")
+				
