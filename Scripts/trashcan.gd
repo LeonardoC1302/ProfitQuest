@@ -13,7 +13,7 @@ func _ready() -> void:
 		print("Player not found!")
 	
 	# Obtener referencia a la base de datos de crafteo
-	crafting_db = get_node("/root/CraftingDatabase")
+	crafting_db = get_node("/root/CraftingDb")
 
 func _process(delta: float) -> void:
 	if player and Input.is_action_just_pressed("interact"):

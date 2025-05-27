@@ -2259,7 +2259,6 @@ region_rect = Rect2(192, 448, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/CuttingStation"]
 position = Vector2(0, 1.52588e-05)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_riph3")
 
 [node name="RiceCooker" type="StaticBody2D" parent="Stations"]

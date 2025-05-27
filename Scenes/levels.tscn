@@ -241,6 +241,7 @@ position = Vector2(-181, -194)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
+nivel_id = 2
 
 [node name="Susheria" type="Sprite2D" parent="Susheria"]
 texture_filter = 1
