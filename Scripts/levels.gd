@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @export var player : NodePath  # Esto sigue bien
 
-@export var escena_nivel: String = "res://Scenes/tutorial.tscn"
+@export var escena_nivel: String = "res://Scenes/level_2.tscn"
 @export var nivel_id: int = 1
 @export var interact_distance: float = 40
 
