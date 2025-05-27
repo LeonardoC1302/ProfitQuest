@@ -15,12 +15,14 @@
 [ext_resource type="Script" uid="uid://dai6c4eoolaw6" path="res://Scripts/trashcan.gd" id="14_sdvun"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="15_u7n0f"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
+[ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="17_qcv4o"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="19_1drwj"]
 [ext_resource type="Texture2D" uid="uid://bnbiruarntl47" path="res://Assets/tilemaps/sushi-interior.png" id="19_otxa6"]
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="20_nnyjd"]
 [ext_resource type="Texture2D" uid="uid://cm7o6qsoqbbx2" path="res://Assets/Check.png" id="21_jesr8"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="22_cuapf"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="24_f6n2b"]
 [ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="25_yxe6e"]
@@ -2409,7 +2411,7 @@ offset_right = 207.0
 offset_bottom = 136.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
-text = "1. Obtener una 
+text = "1. Obtener una
 ganacia de 2000"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Objectives"]
@@ -2420,8 +2422,8 @@ offset_right = 349.0
 offset_bottom = 286.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
-text = "2. Tener un 
-presupuesto 
+text = "2. Tener un
+presupuesto
 restante entre
 0 y 500"
 
@@ -2433,7 +2435,7 @@ offset_right = 368.0
 offset_bottom = 425.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
-text = "3. No reciclar ni 
+text = "3. No reciclar ni
 deshechar ningun
 ingrediente"
 
