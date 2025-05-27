@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bw3gkyywejt6l" path="res://Assets/Logo.png" id="1_ovyjc"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_3yvod"]
-[ext_resource type="Script" path="res://Scripts/Start.gd" id="3_p0n8e"]
-[ext_resource type="Script" path="res://Scripts/Exit.gd" id="4_664a6"]
-[ext_resource type="Script" path="res://Scripts/Customize.gd" id="4_ldt6c"]
+[ext_resource type="Script" uid="uid://ba2su2vpamlvc" path="res://Scripts/Start.gd" id="3_p0n8e"]
+[ext_resource type="Script" uid="uid://cp2s8srhfxolc" path="res://Scripts/Exit.gd" id="4_664a6"]
+[ext_resource type="Script" uid="uid://cy486d0jsq4gd" path="res://Scripts/Customize.gd" id="4_ldt6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7euin"]
 size = Vector2(247.5, 148)

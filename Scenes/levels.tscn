@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=4 uid="uid://cg1pilhlfursy"]
+[gd_scene load_steps=15 format=4 uid="uid://cg1pilhlfursy"]
 
+[ext_resource type="Script" uid="uid://iostx1kdakfs" path="res://Scenes/pauseLevels.gd" id="1_j0k6p"]
+[ext_resource type="Script" uid="uid://d3mkms21tra8r" path="res://Scripts/levels.gd" id="1_p1uqq"]
 [ext_resource type="Texture2D" uid="uid://ccnwrbvy62v38" path="res://Assets/tilemaps/FieldsTileset.png" id="3_uusmb"]
 [ext_resource type="Texture2D" uid="uid://blinlx1mt2ngl" path="res://Assets/tilemaps/Tileset2.png" id="4_3akqy"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="4_jk88k"]
 [ext_resource type="Texture2D" uid="uid://6ipd2k8uwdss" path="res://Assets/heladeria.png" id="5_jk88k"]
-[ext_resource type="Script" path="res://Scripts/levels.gd" id="5_p1uqq"]
-[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="5_uotyi"]
+[ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="5_uotyi"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="7_p1uqq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1uqq"]
 radius = 8.0
@@ -155,7 +157,20 @@ sources/4 = SubResource("TileSetAtlasSource_jk88k")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk88k"]
 size = Vector2(42.0001, 28)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bku7o"]
+bg_color = Color(0.105882, 0.380392, 0.376471, 0.85098)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0842549, 0.298103, 0.274627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Levels" type="Node2D"]
+script = ExtResource("1_j0k6p")
 
 [node name="Player" parent="." instance=ExtResource("4_jk88k")]
 unique_name_in_owner = true
@@ -199,7 +214,7 @@ tile_set = SubResource("TileSet_xgx5e")
 [node name="Heladeria" type="StaticBody2D" parent="."]
 position = Vector2(-328, -197)
 scale = Vector2(0.239583, 0.180556)
-script = ExtResource("5_p1uqq")
+script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
 
 [node name="Heladeria" type="Sprite2D" parent="Heladeria"]
@@ -218,3 +233,75 @@ offset_right = 80.5216
 offset_bottom = -158.076
 theme_override_font_sizes/font_size = 50
 text = "Nivel 1"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="Panel" parent="CanvasLayer"]
+process_mode = 2
+visible = false
+offset_left = 240.0
+offset_top = 118.0
+offset_right = 948.0
+offset_bottom = 486.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Pause"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 711.0
+offset_bottom = 368.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bku7o")
+
+[node name="Label" type="Label" parent="CanvasLayer/Pause"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 19.0
+offset_right = 462.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("7_p1uqq")
+theme_override_font_sizes/font_size = 30
+text = "Pausa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/Pause"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 217.0
+offset_right = 504.0
+offset_bottom = 265.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/Pause/Button3"]
+z_index = 2
+layout_mode = 0
+offset_left = 36.0
+offset_top = 3.0
+offset_right = 253.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("7_p1uqq")
+theme_override_font_sizes/font_size = 20
+text = "Salir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Pause"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 107.0
+offset_right = 500.0
+offset_bottom = 155.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Pause/Button"]
+z_index = 2
+layout_mode = 0
+offset_left = 37.0
+offset_top = 3.0
+offset_right = 254.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("7_p1uqq")
+theme_override_font_sizes/font_size = 20
+text = "Continuar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
