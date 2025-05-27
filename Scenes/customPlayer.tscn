@@ -606,5 +606,5 @@ frame = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"character": SubResource("AnimationLibrary_utvc1")
+&"character": SubResource("AnimationLibrary_utvc1")
 }
