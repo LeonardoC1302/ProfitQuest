@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cg1pilhlfursy"]
+[gd_scene load_steps=16 format=4 uid="uid://cg1pilhlfursy"]
 
 [ext_resource type="Script" uid="uid://iostx1kdakfs" path="res://Scenes/pauseLevels.gd" id="1_j0k6p"]
 [ext_resource type="Script" uid="uid://d3mkms21tra8r" path="res://Scripts/levels.gd" id="1_p1uqq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://6ipd2k8uwdss" path="res://Assets/heladeria.png" id="5_jk88k"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="5_uotyi"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="7_p1uqq"]
+[ext_resource type="Texture2D" uid="uid://bnbiruarntl47" path="res://Assets/tilemaps/sushi-interior.png" id="8_bku7o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1uqq"]
 radius = 8.0
@@ -216,6 +217,7 @@ position = Vector2(-328, -197)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
+escena_nivel = "res://Scenes/tutorial.tscn"
 
 [node name="Heladeria" type="Sprite2D" parent="Heladeria"]
 texture_filter = 1
@@ -233,6 +235,32 @@ offset_right = 80.5216
 offset_bottom = -158.076
 theme_override_font_sizes/font_size = 50
 text = "Nivel 1"
+
+[node name="Susheria" type="StaticBody2D" parent="."]
+position = Vector2(-181, -194)
+scale = Vector2(0.239583, 0.180556)
+script = ExtResource("1_p1uqq")
+player = NodePath("../Player")
+
+[node name="Susheria" type="Sprite2D" parent="Susheria"]
+texture_filter = 1
+scale = Vector2(2.39999, 4.00647)
+texture = ExtResource("8_bku7o")
+region_enabled = true
+region_rect = Rect2(204, 62, 74, 31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Susheria"]
+position = Vector2(-4.17407, -11.077)
+scale = Vector2(4.17392, 5.53845)
+shape = SubResource("RectangleShape2D_jk88k")
+
+[node name="Label" type="Label" parent="Susheria"]
+offset_left = -83.4784
+offset_top = -227.076
+offset_right = 80.5216
+offset_bottom = -158.076
+theme_override_font_sizes/font_size = 50
+text = "Nivel 2"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

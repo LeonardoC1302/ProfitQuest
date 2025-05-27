@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://coa5novqmjp1t"]
+
+[ext_resource type="Texture2D" uid="uid://dkhol3p57q2df" path="res://Assets/Ingredients/sushi_level/ginger.png" id="1_0ty5o"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_0give"]
+
+[node name="Ginger" type="Node2D"]
+
+[node name="Ginger" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_0ty5o")
+script = ExtResource("2_0give")
+item_id = 3

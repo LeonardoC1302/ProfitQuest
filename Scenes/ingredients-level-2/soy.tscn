@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsrlmxd6031g5"]
+
+[ext_resource type="Texture2D" uid="uid://lvfqsofas8o1" path="res://Assets/Ingredients/sushi_level/soy_sauce.png" id="1_4wbgi"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_pld1g"]
+
+[node name="Soy" type="Node2D"]
+
+[node name="Soy" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_4wbgi")
+script = ExtResource("2_pld1g")
+item_id = 2

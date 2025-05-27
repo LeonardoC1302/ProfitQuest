@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://yli3emsqoddg"]
+
+[ext_resource type="Texture2D" uid="uid://7xflvv3s141d" path="res://Assets/Ingredients/sushi_level/fish.png" id="1_7py5a"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_pescu"]
+
+[node name="Fish" type="Node2D"]
+
+[node name="Fish" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_7py5a")
+script = ExtResource("2_pescu")
+item_id = 0

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca3ifol87uxeg"]
+
+[ext_resource type="Texture2D" uid="uid://b0p0pj6c36a0g" path="res://Assets/Ingredients/sushi_level/algae.png" id="1_5ef0j"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_n18ep"]
+
+[node name="Algae" type="Node2D"]
+
+[node name="Algae" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_5ef0j")
+script = ExtResource("2_n18ep")
+item_id = 4

@@ -1,28 +1,27 @@
-[gd_scene load_steps=53 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=47 format=3 uid="uid://cirqsj1estc7o"]
 
-[ext_resource type="Script" path="res://Scripts/game.gd" id="1_imk5p"]
-[ext_resource type="Script" path="res://Scripts/objectives.gd" id="2_ijbqh"]
-[ext_resource type="Script" path="res://Scripts/Spawner.gd" id="3_cld6k"]
-[ext_resource type="PackedScene" uid="uid://dfssckr65drc" path="res://Scenes/milk.tscn" id="4_pw0ko"]
+[ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
+[ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
+[ext_resource type="Script" uid="uid://ccl7sacqcweso" path="res://Scripts/Spawner.gd" id="3_cld6k"]
+[ext_resource type="PackedScene" uid="uid://c45sfh6ostq5h" path="res://Scenes/ingredients-level-2/cucumber.tscn" id="4_kwf64"]
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_y8af2"]
-[ext_resource type="PackedScene" uid="uid://cqn0u4ik2kql6" path="res://Scenes/egg.tscn" id="6_belab"]
-[ext_resource type="PackedScene" uid="uid://ct51f124wtitx" path="res://Scenes/vainilla.tscn" id="7_angy4"]
-[ext_resource type="PackedScene" uid="uid://dn504jckduew" path="res://Scenes/sugar.tscn" id="8_v2gk1"]
-[ext_resource type="PackedScene" uid="uid://b6gyjbky8d5xu" path="res://Scenes/cone.tscn" id="9_4kd54"]
-[ext_resource type="Script" path="res://Scripts/cupboard.gd" id="10_5mymd"]
-[ext_resource type="Texture2D" uid="uid://d0p2s5i240ddo" path="res://Assets/cupboard.png" id="11_nanky"]
-[ext_resource type="Script" path="res://Scripts/register.gd" id="12_mtci8"]
-[ext_resource type="Script" path="res://Scripts/crafter.gd" id="13_lpam2"]
-[ext_resource type="Script" path="res://Scripts/trashcan.gd" id="14_sdvun"]
+[ext_resource type="PackedScene" uid="uid://yli3emsqoddg" path="res://Scenes/ingredients-level-2/fish.tscn" id="6_5s1wx"]
+[ext_resource type="PackedScene" uid="uid://dsrlmxd6031g5" path="res://Scenes/ingredients-level-2/soy.tscn" id="8_kwf64"]
+[ext_resource type="PackedScene" uid="uid://coa5novqmjp1t" path="res://Scenes/ingredients-level-2/ginger.tscn" id="9_kjoi8"]
+[ext_resource type="Script" uid="uid://dwdxobpm2dr6" path="res://Scripts/cupboard.gd" id="10_5mymd"]
+[ext_resource type="PackedScene" uid="uid://ca3ifol87uxeg" path="res://Scenes/ingredients-level-2/algae.tscn" id="10_nuasi"]
+[ext_resource type="PackedScene" uid="uid://dcleg3o42lgt0" path="res://Scenes/ingredients-level-2/rice.tscn" id="11_kwf64"]
+[ext_resource type="Script" uid="uid://blvoohf8436rh" path="res://Scripts/register.gd" id="12_mtci8"]
+[ext_resource type="Script" uid="uid://dai6c4eoolaw6" path="res://Scripts/trashcan.gd" id="14_sdvun"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="15_u7n0f"]
-[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
+[ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="17_qcv4o"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="19_1drwj"]
 [ext_resource type="Texture2D" uid="uid://bnbiruarntl47" path="res://Assets/tilemaps/sushi-interior.png" id="19_otxa6"]
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="20_nnyjd"]
 [ext_resource type="Texture2D" uid="uid://cm7o6qsoqbbx2" path="res://Assets/Check.png" id="21_jesr8"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="22_cuapf"]
-[ext_resource type="Script" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="24_f6n2b"]
 [ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="25_yxe6e"]
 [ext_resource type="Texture2D" uid="uid://chqmsc0scf36" path="res://Assets/Ingredients/Vanilla.png" id="26_2vsst"]
@@ -41,29 +40,14 @@ size = Vector2(20, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in2gw"]
 size = Vector2(20, 17)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f20bn"]
-size = Vector2(20, 16)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjes8"]
 size = Vector2(32, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eucg2"]
-size = Vector2(12, 10)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrtmp"]
-size = Vector2(46, 18)
+size = Vector2(54, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3su"]
 size = Vector2(19, 15)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6cc8"]
-size = Vector2(17.25, 15.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrmcj"]
-size = Vector2(12, 11)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_suhq2"]
-size = Vector2(16, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
 radius = 8.0
@@ -2100,129 +2084,131 @@ trash = NodePath("../Stations/TrashCan")
 
 [node name="Stations" type="Node" parent="."]
 
-[node name="MilkDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-501, -43)
+[node name="CucumberDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-130, -49)
 script = ExtResource("3_cld6k")
-spawn_scene = ExtResource("4_pw0ko")
+spawn_scene = ExtResource("4_kwf64")
 costo = 120
 
-[node name="Sprite2D" type="Sprite2D" parent="Stations/MilkDispenser"]
+[node name="Sprite2D" type="Sprite2D" parent="Stations/CucumberDispenser"]
 position = Vector2(1, -4)
 texture = ExtResource("5_y8af2")
 region_enabled = true
-region_rect = Rect2(0, 0, 32, 32)
+region_rect = Rect2(15, 79, 23, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/MilkDispenser"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/CucumberDispenser"]
 position = Vector2(1, -8)
 shape = SubResource("RectangleShape2D_2q1mk")
 
-[node name="EggDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-558, -42)
+[node name="FishDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-109, -109)
 script = ExtResource("3_cld6k")
-spawn_scene = ExtResource("6_belab")
+spawn_scene = ExtResource("6_5s1wx")
 
-[node name="Sprite2D" type="Sprite2D" parent="Stations/EggDispenser"]
-position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+[node name="Sprite2D" type="Sprite2D" parent="Stations/FishDispenser"]
+position = Vector2(-2, -10)
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(0, 128, 32, 32)
+region_rect = Rect2(193, 169, 30, 48)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/EggDispenser"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/FishDispenser"]
 position = Vector2(1, -9.5)
 shape = SubResource("RectangleShape2D_k1yan")
 
-[node name="VainillaDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-588, -42)
+[node name="SoyDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-81, -49)
 script = ExtResource("3_cld6k")
-spawn_scene = ExtResource("7_angy4")
+spawn_scene = ExtResource("8_kwf64")
 costo = 250
 
-[node name="Sprite2D" type="Sprite2D" parent="Stations/VainillaDispenser"]
+[node name="Sprite2D" type="Sprite2D" parent="Stations/SoyDispenser"]
 position = Vector2(1, -4)
 texture = ExtResource("5_y8af2")
 region_enabled = true
-region_rect = Rect2(64, 128, 32, 32)
+region_rect = Rect2(16, 79, 22, 33)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/VainillaDispenser"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SoyDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
-[node name="SugarDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-615, -43)
+[node name="GingerDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-41, -49)
 script = ExtResource("3_cld6k")
-spawn_scene = ExtResource("8_v2gk1")
-costo = 120
+spawn_scene = ExtResource("9_kjoi8")
+costo = 250
 
-[node name="Sprite2D" type="Sprite2D" parent="Stations/SugarDispenser"]
+[node name="Sprite2D" type="Sprite2D" parent="Stations/GingerDispenser"]
 position = Vector2(1, -4)
 texture = ExtResource("5_y8af2")
 region_enabled = true
-region_rect = Rect2(32, 128, 32, 32)
+region_rect = Rect2(16, 79, 22, 33)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SugarDispenser"]
-position = Vector2(1, -9)
-shape = SubResource("RectangleShape2D_f20bn")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/GingerDispenser"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_in2gw")
 
-[node name="ConeDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-528, -42)
+[node name="AlgaeDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-223, -50)
 script = ExtResource("3_cld6k")
-spawn_scene = ExtResource("9_4kd54")
-costo = 75
+spawn_scene = ExtResource("10_nuasi")
+costo = 250
 
-[node name="Sprite2D" type="Sprite2D" parent="Stations/ConeDispenser"]
+[node name="Sprite2D" type="Sprite2D" parent="Stations/AlgaeDispenser"]
 position = Vector2(1, -4)
 texture = ExtResource("5_y8af2")
 region_enabled = true
-region_rect = Rect2(96, 0, 32, 32)
+region_rect = Rect2(16, 79, 22, 33)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/ConeDispenser"]
-position = Vector2(1, -8)
-shape = SubResource("RectangleShape2D_2q1mk")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/AlgaeDispenser"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_in2gw")
+
+[node name="RiceDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-262, -49)
+script = ExtResource("3_cld6k")
+spawn_scene = ExtResource("11_kwf64")
+costo = 250
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/RiceDispenser"]
+position = Vector2(1, -4)
+texture = ExtResource("5_y8af2")
+region_enabled = true
+region_rect = Rect2(16, 79, 22, 33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/RiceDispenser"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="Cupboard" type="StaticBody2D" parent="Stations"]
-position = Vector2(-466, -42)
+position = Vector2(-48, -110)
 script = ExtResource("10_5mymd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Cupboard"]
-position = Vector2(0, -5)
-texture = ExtResource("11_nanky")
+texture = ExtResource("19_otxa6")
+region_enabled = true
+region_rect = Rect2(416, 96, 32, 35)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Cupboard"]
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_hjes8")
 
 [node name="Register" type="StaticBody2D" parent="Stations"]
-position = Vector2(-771, 80)
+position = Vector2(161, 15)
 script = ExtResource("12_mtci8")
 sellableItems = ["IceCream"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Register"]
 position = Vector2(0, 0.5)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(104, 63, 16, 23)
+region_rect = Rect2(386, 161, 61, 31)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Register"]
-position = Vector2(0, 0.5)
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_eucg2")
 
-[node name="ServeStation" type="StaticBody2D" parent="Stations"]
-z_index = 3
-position = Vector2(-758, -44)
-script = ExtResource("13_lpam2")
-station_name = "ServeStation"
-
-[node name="Sprite2D" type="Sprite2D" parent="Stations/ServeStation"]
-texture = ExtResource("5_y8af2")
-region_enabled = true
-region_rect = Rect2(135, 4, 50, 28)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/ServeStation"]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_lrtmp")
-
 [node name="TrashCan" type="StaticBody2D" parent="Stations"]
-position = Vector2(-810, -44)
+position = Vector2(-213, -109)
 script = ExtResource("14_sdvun")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/TrashCan"]
@@ -2233,50 +2219,6 @@ region_rect = Rect2(112, 101, 20, 27)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/TrashCan"]
 position = Vector2(-0.5, -5.5)
 shape = SubResource("RectangleShape2D_ra3su")
-
-[node name="Mixer" type="StaticBody2D" parent="Stations"]
-z_index = 3
-position = Vector2(-706, -56)
-script = ExtResource("13_lpam2")
-station_name = "Mixer"
-
-[node name="Sprite2D" type="Sprite2D" parent="Stations/Mixer"]
-texture = ExtResource("5_y8af2")
-region_enabled = true
-region_rect = Rect2(148, 42, 25, 22)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Mixer"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_k6cc8")
-
-[node name="Freezer" type="StaticBody2D" parent="Stations"]
-z_index = 3
-position = Vector2(-636, 34)
-script = ExtResource("13_lpam2")
-station_name = "Freezer"
-
-[node name="Sprite2D" type="Sprite2D" parent="Stations/Freezer"]
-texture = ExtResource("5_y8af2")
-region_enabled = true
-region_rect = Rect2(152, 112, 16, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Freezer"]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_rrmcj")
-
-[node name="Pot" type="StaticBody2D" parent="Stations"]
-z_index = 3
-position = Vector2(-659, -53)
-script = ExtResource("13_lpam2")
-station_name = "Pot"
-
-[node name="Sprite2D" type="Sprite2D" parent="Stations/Pot"]
-texture = ExtResource("5_y8af2")
-region_enabled = true
-region_rect = Rect2(148, 78, 24, 18)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Pot"]
-shape = SubResource("RectangleShape2D_suhq2")
 
 [node name="Player" parent="." instance=ExtResource("15_u7n0f")]
 unique_name_in_owner = true
@@ -2313,34 +2255,37 @@ vertical_alignment = 1
 z_index = -1
 tile_set = SubResource("TileSet_xbkdh")
 format = 2
-layer_0/z_index = -1
+layer_0/z_index = -4
 layer_0/tile_data = PackedInt32Array(-131084, 0, 2, -131083, 0, 2, -131082, 0, 2, -131081, 0, 2, -131080, 0, 2, -131079, 0, 2, -131078, 0, 2, -131077, 0, 2, -131076, 0, 2, -131075, 0, 2, -131074, 0, 2, -131073, 0, 2, -196608, 0, 2, -131072, 0, 2, -65537, 0, 2, -65538, 0, 2, -65539, 0, 2, -65540, 0, 2, -65541, 0, 2, -65542, 0, 2, -65543, 0, 2, -65544, 0, 2, -65545, 0, 2, -65546, 0, 2, -65547, 0, 2, -65548, 0, 2, -12, 0, 2, -11, 0, 2, -10, 0, 2, -7, 0, 2, -6, 0, 2, -5, 0, 2, -4, 0, 2, -3, 0, 2, -2, 0, 2, -1, 0, 2, -65536, 0, 2, 0, 0, 2, 65535, 0, 2, 65534, 0, 2, 65533, 0, 2, 65532, 0, 2, 65526, 0, 2, 65525, 0, 2, 65524, 0, 2, 131060, 0, 2, 131061, 0, 2, 131062, 0, 2, 131063, 0, 2, 131069, 0, 2, 131070, 0, 2, 131071, 0, 2, 65536, 0, 2, 131072, 0, 2, 196607, 0, 2, 196606, 0, 2, 196605, 0, 2, 196600, 0, 2, 196599, 0, 2, 196598, 0, 2, 196597, 0, 2, 196596, 0, 2, 262132, 0, 2, 262133, 0, 2, 262134, 0, 2, 262135, 0, 2, 262136, 0, 2, 262137, 0, 2, 262140, 0, 2, 262143, 0, 2, 196608, 0, 2, 262142, 0, 2, 262141, 0, 2, 327679, 0, 2, 262144, 0, 2, 327678, 0, 2, 327677, 0, 2, 327676, 0, 2, 327675, 0, 2, 327674, 0, 2, 327673, 0, 2, 327672, 0, 2, 327671, 0, 2, 327670, 0, 2, 327669, 0, 2, 327668, 0, 2, 393207, 0, 2, 393208, 0, 2, 393209, 0, 2, 393210, 0, 2, 393211, 0, 2, 393212, 0, 2, 393213, 0, 2, 393214, 0, 2, 393215, 0, 2, 327680, 0, 2, 393216, 0, 2, 458752, 0, 2, 524288, 0, 2, 589823, 0, 2, 589822, 0, 2, 589821, 0, 2, 589820, 0, 2, 589819, 0, 2, 589818, 0, 2, 589817, 0, 2, 589816, 0, 2, 589815, 0, 2, 524279, 0, 2, 458743, 0, 2, 458744, 0, 2, 524280, 0, 2, 524281, 0, 2, 458745, 0, 2, 458746, 0, 2, 524282, 0, 2, 458747, 0, 2, 524283, 0, 2, 458748, 0, 2, 524284, 0, 2, 458749, 0, 2, 524285, 0, 2, 458750, 0, 2, 524286, 0, 2, 458751, 0, 2, 524287, 0, 2, 65537, 0, 2, 65538, 0, 2, 65539, 0, 2, 65540, 0, 2, 65541, 0, 2, 131077, 0, 2, 131076, 0, 2, 131075, 0, 2, 131074, 0, 2, 131073, 0, 2, 196609, 0, 2, 196610, 0, 2, 196611, 0, 2, 196612, 0, 2, 196613, 0, 2, 262145, 0, 2, 262146, 0, 2, 262147, 0, 2, 262148, 0, 2, 262149, 0, 2, -8, 0, 2, 65527, 0, 2, -9, 0, 2, 65528, 0, 2)
 
 [node name="Paredes" type="TileMap" parent="TileMap"]
 position = Vector2(0, -1)
 tile_set = SubResource("TileSet_qesu4")
 format = 2
+layer_0/z_index = -3
 layer_0/tile_data = PackedInt32Array(-131085, 0, 6, -65549, 0, 6, -13, 0, 6, 65523, 0, 6, 131059, 0, 6, 196595, 0, 6, 262131, 0, 6, 327667, 0, 6, 393203, 0, 7, 393204, 131072, 8, 393205, 131072, 8, 393206, 65536, 7, 458742, 0, 6, 524278, 0, 6, 589814, 0, 6, 655351, 131072, 8, 655352, 131072, 8, 655353, 131072, 8, 655354, 131072, 8, 655355, 131072, 8, 655356, 131072, 8, 655357, 131072, 8, 655358, 131072, 8, 655359, 131072, 8, 589824, 131072, 8, 655350, 65536, 8, 589825, 196608, 8, 524289, 262144, 6, 458753, 262144, 6, 393217, 262144, 6, 327681, 196608, 7, -131071, 196608, 5, -196607, 262144, 6, -262143, 262144, 6, -196621, 0, 6, -262157, 0, 6, -327693, 0, 5, -327692, 131072, 4, -327691, 131072, 4, -327690, 131072, 4, -327689, 131072, 4, -327688, 131072, 4, -327687, 131072, 4, -327686, 131072, 4, -327685, 131072, 4, -327684, 131072, 4, -327683, 131072, 4, -327682, 131072, 4, -327681, 131072, 4, -393216, 131072, 4, -393215, 196608, 4, -327679, 262144, 6, -262155, 131072, 0, -262154, 131072, 0, -262153, 131072, 0, -262152, 131072, 0, -262151, 131072, 0, -262150, 131072, 0, -262149, 131072, 0, -262148, 131072, 0, -262147, 131072, 0, -262146, 196608, 0, -262145, 262144, 0, -327680, 262144, 0, -262144, 131072, 1, -196609, 131072, 1, -196610, 131072, 1, -196611, 131072, 1, -196612, 131072, 1, -196613, 131072, 1, -196614, 131072, 1, -196615, 131072, 1, -196616, 131072, 1, -196617, 131072, 1, -196618, 131072, 1, -196619, 131072, 1, -196620, 131072, 1, -262156, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, 1, 131072, 1, 2, 131072, 1, 3, 196608, 1, 4, 262144, 1, 5, 262144, 1, -131070, 131072, 4, -131069, 131072, 4, -131068, 131072, 4, -131067, 131072, 4, -131066, 262144, 5, -65530, 262144, 6, 6, 262144, 6, 65542, 262144, 6, 131078, 262144, 6, 327682, 131072, 8, 327683, 131072, 8, 327684, 131072, 8, 327685, 131072, 8, 327686, 196608, 8, 262150, 262144, 6, 196614, 262144, 6, -5, 131072, 4, -6, 131072, 4, -7, 131072, 4, -4, 196608, 4, 65532, 196608, 5, 65533, 262144, 5, 131069, 262144, 6, 196605, 262144, 6, 262141, 262144, 7, 262140, 196608, 7, 327676, 196608, 8, 327675, 131072, 8, 327674, 131072, 8, 327673, 65536, 8, 262137, 65536, 7, 262136, 0, 7, 196600, 65536, 7, 131063, 0, 6, 196599, 0, 7, 65528, 65536, 5, -8, 65536, 4, 65527, 0, 5)
 
 [node name="Muebles" type="TileMap" parent="TileMap"]
 tile_set = SubResource("TileSet_fie61")
 format = 2
-layer_0/tile_data = PackedInt32Array(-196609, 851968, 2, 1, 0, 1, -65535, 0, 0, 4, 786432, 5, 5, 851968, 5, -65532, 786432, 6, -65531, 851968, 6, -262144, 917504, 2, -196610, 851968, 3, -196611, 786432, 2, -196616, 851968, 2, -196617, 917504, 3, -131081, 917504, 4, 458745, 786432, 7, 524281, 786432, 8, 458746, 851968, 7, 458749, 917504, 7, 524285, 917504, 8, 458750, 983040, 7, 524286, 983040, 8, 524282, 851968, 8)
+layer_0/z_index = -2
+layer_0/tile_data = PackedInt32Array(1, 0, 1, -65535, 0, 0, -65532, 786432, 6, -65531, 851968, 6, -262144, 917504, 2, -196611, 786432, 2, -196616, 851968, 2, -196617, 917504, 3, -131081, 917504, 4, 458745, 786432, 7, 524281, 786432, 8, 458746, 851968, 7, 458749, 917504, 7, 524285, 917504, 8, 458750, 983040, 7, 524286, 983040, 8, 524282, 851968, 8, -196609, 851968, 2)
 
 [node name="Detalles" type="TileMap" parent="TileMap"]
 position = Vector2(1, 9)
 tile_set = SubResource("TileSet_50cwy")
 format = 2
+layer_0/z_index = 1
 layer_0/tile_data = PackedInt32Array(-524290, 1835008, 2, -458754, 1835008, 3, -524289, 1900544, 2, -458753, 1900544, 3, -589848, 2359296, 4, -524312, 2359296, 5, -589847, 2424832, 4, -524311, 2424832, 5, -589846, 2490368, 4, -524310, 2490368, 5, -589845, 2555904, 4, -524309, 2555904, 5, -589844, 2621440, 4, -524308, 2621440, 5, -589843, 2686976, 4, -524307, 2686976, 5, -131069, 1703936, 0, -65533, 1703936, 1, -131068, 1769472, 0, -65532, 1769472, 1, -131067, 1835008, 0, -65531, 1835008, 1, -131066, 1900544, 0, -65530, 1900544, 1, -589837, 2097152, 8, -524301, 2097152, 9, -589836, 2162688, 8, -524300, 2162688, 9, -589835, 2228224, 8, -524299, 2228224, 9, -589834, 2293760, 8, -524298, 2293760, 9, -524304, 1703936, 2, -458768, 1703936, 3, -524303, 1769472, 2, -458767, 1769472, 3)
 
 [node name="Detalles2" type="TileMap" parent="TileMap"]
 position = Vector2(-6, 9)
 tile_set = SubResource("TileSet_50cwy")
 format = 2
+layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(851953, 1441792, 6, 917489, 1441792, 7, 851954, 1507328, 6, 917490, 1507328, 7, 851958, 1441792, 8, 917494, 1441792, 9, 851959, 1507328, 8, 917495, 1507328, 9, 851961, 1310720, 6, 917497, 1310720, 7, 851962, 1376256, 6, 917498, 1376256, 7, 851966, 1310720, 8, 917502, 1310720, 9, 851967, 1376256, 8, 917503, 1376256, 9, 851955, 2359296, 14, 917491, 2359296, 15, 851956, 2424832, 14, 917492, 2424832, 15, 851964, 2490368, 14, 917500, 2490368, 15, 851965, 2555904, 14, 917501, 2555904, 15)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Inventario" parent="CanvasLayer" node_paths=PackedStringArray("player", "world_2d_node", "timer") instance=ExtResource("19_1drwj")]
 offset_left = -2.0
@@ -2350,41 +2295,37 @@ offset_bottom = 4.0
 scale = Vector2(1.00197, 1)
 itemMap = {
 0: {
-"icono": "res://Assets/Ingredients/Cone.png",
-"nombre": "Cone"
+"icono": "res://Assets/Ingredients/sushi_level/Fish.png",
+"nombre": "Fish"
 },
 1: {
-"icono": "res://Assets/Ingredients/Milk.png",
-"nombre": "Milk"
+"icono": "res://Assets/Ingredients/sushi_level/Cucumber.png",
+"nombre": "Cucumber"
 },
 2: {
-"icono": "res://Assets/Ingredients/Sugar.png",
-"nombre": "Sugar"
+"icono": "res://Assets/Ingredients/sushi_level/soy_sauce.png",
+"nombre": "Soy"
 },
 3: {
-"icono": "res://Assets/Ingredients/Vanilla.png",
-"nombre": "Vanilla"
+"icono": "res://Assets/Ingredients/sushi_level/ginger.png",
+"nombre": "Ginger"
 },
 4: {
-"icono": "res://Assets/Ingredients/Egg.png",
-"nombre": "Egg"
+"icono": "res://Assets/Ingredients/sushi_level/algae.png",
+"nombre": "Algae"
 },
 5: {
-"icono": "res://Assets/Ingredients/IceCream.png",
-"nombre": "IceCream"
-},
-6: {
-"icono": "res://Assets/Ingredients/CookedCream.png",
-"nombre": "CookedCream"
-},
-7: {
-"icono": "res://Assets/Ingredients/SweetCream.png",
-"nombre": "SweetCream"
-},
-8: {
-"icono": "res://Assets/Ingredients/IceCreamBox.png",
-"nombre": "IceCreamBox"
+"icono": "res://Assets/Ingredients/sushi_level/rice.png",
+"nombre": "Rice"
 }
+}
+drop_scene_map = {
+"Algae": ExtResource("10_nuasi"),
+"Cucumber": ExtResource("4_kwf64"),
+"Fish": ExtResource("6_5s1wx"),
+"Ginger": ExtResource("9_kjoi8"),
+"Rice": ExtResource("11_kwf64"),
+"Soy": ExtResource("8_kwf64")
 }
 player = NodePath("../../Player")
 world_2d_node = NodePath("../..")
@@ -2417,6 +2358,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Budget" type="Label" parent="CanvasLayer"]
+visible = false
 z_index = 5
 offset_left = 3.0
 offset_top = 34.0
@@ -2430,6 +2372,7 @@ theme_override_font_sizes/font_size = 25
 text = "Presupuesto: 0"
 
 [node name="Earnings" type="Label" parent="CanvasLayer"]
+visible = false
 z_index = 5
 offset_right = 240.0
 offset_bottom = 35.0

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcleg3o42lgt0"]
+
+[ext_resource type="Texture2D" uid="uid://jdgxw5s0eyql" path="res://Assets/Ingredients/sushi_level/rice.png" id="1_egbt0"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_cfic7"]
+
+[node name="Rice" type="Node2D"]
+
+[node name="Rice" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_egbt0")
+script = ExtResource("2_cfic7")
+item_id = 5

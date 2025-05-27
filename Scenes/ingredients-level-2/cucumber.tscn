@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c45sfh6ostq5h"]
+
+[ext_resource type="Texture2D" uid="uid://bd08bylcvpq3p" path="res://Assets/Ingredients/sushi_level/cucumber.png" id="1_5lxnh"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_jpuqq"]
+
+[node name="Cucumber" type="Node2D"]
+
+[node name="Cucumber" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_5lxnh")
+script = ExtResource("2_jpuqq")
