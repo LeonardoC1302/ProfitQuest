@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=53 format=3 uid="uid://cirqsj1estc7o"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
@@ -16,12 +16,16 @@
 [ext_resource type="Script" uid="uid://dai6c4eoolaw6" path="res://Scripts/trashcan.gd" id="14_sdvun"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="15_u7n0f"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
+[ext_resource type="Script" uid="uid://cf15u875crbe4" path="res://Scripts/crafter.gd" id="16_vib74"]
+[ext_resource type="Texture2D" uid="uid://7ciwfh7b5dqe" path="res://Assets/Stations/SpriteSheet.png" id="17_m5eas"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="17_qcv4o"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="19_1drwj"]
 [ext_resource type="Texture2D" uid="uid://bnbiruarntl47" path="res://Assets/tilemaps/sushi-interior.png" id="19_otxa6"]
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="20_nnyjd"]
 [ext_resource type="Texture2D" uid="uid://cm7o6qsoqbbx2" path="res://Assets/Check.png" id="21_jesr8"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="22_cuapf"]
+[ext_resource type="PackedScene" uid="uid://0re0e440r3vs" path="res://Scenes/ingredients-level-2/fillet.tscn" id="22_m5eas"]
+[ext_resource type="PackedScene" uid="uid://bbs1fplntud2" path="res://Scenes/ingredients-level-2/cookedRice.tscn" id="23_riph3"]
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="24_f6n2b"]
 [ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="25_yxe6e"]
@@ -49,6 +53,9 @@ size = Vector2(54, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3su"]
 size = Vector2(19, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riph3"]
+size = Vector2(60.6287, 25.5966)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
 radius = 8.0
@@ -2237,6 +2244,48 @@ region_rect = Rect2(112, 101, 20, 27)
 position = Vector2(-0.5, -5.5)
 shape = SubResource("RectangleShape2D_ra3su")
 
+[node name="CuttingStation" type="StaticBody2D" parent="Stations"]
+z_index = 3
+position = Vector2(16, -120)
+scale = Vector2(0.494815, 0.546948)
+script = ExtResource("16_vib74")
+station_name = "CuttingStation"
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/CuttingStation"]
+rotation = 0.266265
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(192, 448, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/CuttingStation"]
+position = Vector2(0, 1.52588e-05)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_riph3")
+
+[node name="RiceCooker" type="StaticBody2D" parent="Stations"]
+z_index = 3
+position = Vector2(-81, -122)
+scale = Vector2(0.494815, 0.546948)
+script = ExtResource("16_vib74")
+station_name = "RiceCooker"
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/RiceCooker"]
+position = Vector2(-12.1257, -1.8283)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(0, 448, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/RiceCooker"]
+position = Vector2(16.1677, -1.8283)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(32, 448, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/RiceCooker"]
+position = Vector2(2.02095, 3.65668)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_riph3")
+
 [node name="Player" parent="." instance=ExtResource("15_u7n0f")]
 unique_name_in_owner = true
 z_index = 2
@@ -2338,11 +2387,21 @@ itemMap = {
 6: {
 "icono": "res://Assets/Ingredients/sushi_level/wasabi.png",
 "nombre": "Wasabi"
+},
+7: {
+"icono": "res://Assets/Ingredients/sushi_level/fillet.png",
+"nombre": "Fillet"
+},
+8: {
+"icono": "res://Assets/Ingredients/sushi_level/cooked_rice.png",
+"nombre": "CookedRice"
 }
 }
 drop_scene_map = {
 "Algae": ExtResource("10_nuasi"),
+"CookedRice": ExtResource("23_riph3"),
 "Cucumber": ExtResource("4_kwf64"),
+"Fillet": ExtResource("22_m5eas"),
 "Fish": ExtResource("6_5s1wx"),
 "Ginger": ExtResource("9_kjoi8"),
 "Rice": ExtResource("11_kwf64"),

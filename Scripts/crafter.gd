@@ -13,7 +13,7 @@ func _ready() -> void:
 		print("Player not found!")
 	
 	# Obtener referencia a la base de datos de crafteo
-	crafting_db = get_node("/root/CraftingDatabase")
+	crafting_db = get_node("/root/CraftingDb")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 			crafting_options()
 
 func crafting_options():
+	print("Crafting DB: ", crafting_db)
 	var available_recipes = crafting_db.get_recipes_for_station(station_name)
 	print("Available recipes for ", station_name, ": ", available_recipes.size())
 	if available_recipes.size() > 0:

@@ -58,6 +58,28 @@ var recipes = {
 			"icono": preload("res://Assets/Ingredients/IceCream.png")
 		}
 	},
+	"Fillet": {
+		"station": "CuttingStation",
+		"recipe": [
+			{"name": "Fish", "quantity": 1}
+		],
+		"product": {
+			"nombre": "Fillet", 
+			"cantidad": 2, 
+			"icono": preload("res://Assets/Ingredients/sushi_level/fillet.png")
+		}
+	},
+	"CookedRice": {
+		"station": "RiceCooker",
+		"recipe": [
+			{"name": "Rice", "quantity": 2}
+		],
+		"product": {
+			"nombre": "CookedRice", 
+			"cantidad": 1, 
+			"icono": preload("res://Assets/Ingredients/sushi_level/cooked_rice.png")
+		}
+	},
 }
 
 # Iconos de ingredientes para reutilización

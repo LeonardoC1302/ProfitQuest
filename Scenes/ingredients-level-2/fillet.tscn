@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://0re0e440r3vs"]
+
+[ext_resource type="Texture2D" uid="uid://bie7r83j170rx" path="res://Assets/Ingredients/sushi_level/fillet.png" id="1_iwkvy"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_3mms1"]
+
+[node name="Fillet" type="Node2D"]
+
+[node name="Fillet" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_iwkvy")
+script = ExtResource("2_3mms1")
+item_id = 7
