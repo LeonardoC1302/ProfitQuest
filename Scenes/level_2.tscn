@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=48 format=3 uid="uid://cirqsj1estc7o"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
@@ -11,10 +11,10 @@
 [ext_resource type="Script" uid="uid://dwdxobpm2dr6" path="res://Scripts/cupboard.gd" id="10_5mymd"]
 [ext_resource type="PackedScene" uid="uid://ca3ifol87uxeg" path="res://Scenes/ingredients-level-2/algae.tscn" id="10_nuasi"]
 [ext_resource type="PackedScene" uid="uid://dcleg3o42lgt0" path="res://Scenes/ingredients-level-2/rice.tscn" id="11_kwf64"]
+[ext_resource type="PackedScene" uid="uid://burjveplf6sam" path="res://Scenes/ingredients-level-2/wasabi.tscn" id="12_5s1wx"]
 [ext_resource type="Script" uid="uid://blvoohf8436rh" path="res://Scripts/register.gd" id="12_mtci8"]
 [ext_resource type="Script" uid="uid://dai6c4eoolaw6" path="res://Scripts/trashcan.gd" id="14_sdvun"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="15_u7n0f"]
-[ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="17_qcv4o"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="19_1drwj"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="20_nnyjd"]
 [ext_resource type="Texture2D" uid="uid://cm7o6qsoqbbx2" path="res://Assets/Check.png" id="21_jesr8"]
 [ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="22_cuapf"]
-[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
 [ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="24_f6n2b"]
 [ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="25_yxe6e"]
@@ -2181,6 +2180,22 @@ region_rect = Rect2(16, 79, 22, 33)
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
+[node name="WasabiDispenser" type="StaticBody2D" parent="Stations"]
+position = Vector2(-311, -49)
+script = ExtResource("3_cld6k")
+spawn_scene = ExtResource("12_5s1wx")
+costo = 250
+
+[node name="Sprite2D" type="Sprite2D" parent="Stations/WasabiDispenser"]
+position = Vector2(1, -4)
+texture = ExtResource("5_y8af2")
+region_enabled = true
+region_rect = Rect2(16, 79, 22, 33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/WasabiDispenser"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_in2gw")
+
 [node name="Cupboard" type="StaticBody2D" parent="Stations"]
 position = Vector2(-48, -110)
 script = ExtResource("10_5mymd")
@@ -2319,6 +2334,10 @@ itemMap = {
 5: {
 "icono": "res://Assets/Ingredients/sushi_level/rice.png",
 "nombre": "Rice"
+},
+6: {
+"icono": "res://Assets/Ingredients/sushi_level/wasabi.png",
+"nombre": "Wasabi"
 }
 }
 drop_scene_map = {

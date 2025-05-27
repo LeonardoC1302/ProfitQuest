@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://burjveplf6sam"]
+
+[ext_resource type="Texture2D" uid="uid://d1ycj0rtr1wpn" path="res://Assets/Ingredients/sushi_level/wasabi.png" id="1_wc16t"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_h5v6f"]
+
+[node name="Wasabi" type="Node2D"]
+
+[node name="Wasabi" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_wc16t")
+script = ExtResource("2_h5v6f")
+item_id = 6
