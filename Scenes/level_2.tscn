@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=57 format=3 uid="uid://cirqsj1estc7o"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
@@ -6,38 +6,39 @@
 [ext_resource type="PackedScene" uid="uid://c45sfh6ostq5h" path="res://Scenes/ingredients-level-2/cucumber.tscn" id="4_kwf64"]
 [ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_y8af2"]
 [ext_resource type="PackedScene" uid="uid://yli3emsqoddg" path="res://Scenes/ingredients-level-2/fish.tscn" id="6_5s1wx"]
+[ext_resource type="Texture2D" uid="uid://bd08bylcvpq3p" path="res://Assets/Ingredients/sushi_level/cucumber.png" id="6_27s1b"]
 [ext_resource type="PackedScene" uid="uid://dsrlmxd6031g5" path="res://Scenes/ingredients-level-2/soy.tscn" id="8_kwf64"]
+[ext_resource type="Texture2D" uid="uid://7xflvv3s141d" path="res://Assets/Ingredients/sushi_level/fish.png" id="8_vib74"]
 [ext_resource type="PackedScene" uid="uid://coa5novqmjp1t" path="res://Scenes/ingredients-level-2/ginger.tscn" id="9_kjoi8"]
 [ext_resource type="Script" uid="uid://dwdxobpm2dr6" path="res://Scripts/cupboard.gd" id="10_5mymd"]
+[ext_resource type="Texture2D" uid="uid://lvfqsofas8o1" path="res://Assets/Ingredients/sushi_level/soy_sauce.png" id="10_m5eas"]
 [ext_resource type="PackedScene" uid="uid://ca3ifol87uxeg" path="res://Scenes/ingredients-level-2/algae.tscn" id="10_nuasi"]
 [ext_resource type="PackedScene" uid="uid://dcleg3o42lgt0" path="res://Scenes/ingredients-level-2/rice.tscn" id="11_kwf64"]
 [ext_resource type="PackedScene" uid="uid://burjveplf6sam" path="res://Scenes/ingredients-level-2/wasabi.tscn" id="12_5s1wx"]
+[ext_resource type="Texture2D" uid="uid://dkhol3p57q2df" path="res://Assets/Ingredients/sushi_level/ginger.png" id="12_dv8yo"]
 [ext_resource type="Script" uid="uid://blvoohf8436rh" path="res://Scripts/register.gd" id="12_mtci8"]
+[ext_resource type="Texture2D" uid="uid://b0p0pj6c36a0g" path="res://Assets/Ingredients/sushi_level/algae.png" id="14_pvfcc"]
 [ext_resource type="Script" uid="uid://dai6c4eoolaw6" path="res://Scripts/trashcan.gd" id="14_sdvun"]
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="15_u7n0f"]
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="16_adk8l"]
 [ext_resource type="Script" uid="uid://cf15u875crbe4" path="res://Scripts/crafter.gd" id="16_vib74"]
+[ext_resource type="Texture2D" uid="uid://jdgxw5s0eyql" path="res://Assets/Ingredients/sushi_level/rice.png" id="16_y1rf3"]
 [ext_resource type="Texture2D" uid="uid://7ciwfh7b5dqe" path="res://Assets/Stations/SpriteSheet.png" id="17_m5eas"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="17_qcv4o"]
+[ext_resource type="Texture2D" uid="uid://d1ycj0rtr1wpn" path="res://Assets/Ingredients/sushi_level/wasabi.png" id="18_j13t8"]
 [ext_resource type="PackedScene" uid="uid://cw22q06sj5hgj" path="res://Scenes/Inventario.tscn" id="19_1drwj"]
 [ext_resource type="Texture2D" uid="uid://bnbiruarntl47" path="res://Assets/tilemaps/sushi-interior.png" id="19_otxa6"]
+[ext_resource type="Texture2D" uid="uid://bjk3yo5ry8o5f" path="res://Assets/Ingredients/sushi_level/shrimp.png" id="20_k8xho"]
 [ext_resource type="PackedScene" uid="uid://cbopqpolte0wd" path="res://Scenes/LevelTimer.tscn" id="20_nnyjd"]
 [ext_resource type="Texture2D" uid="uid://cm7o6qsoqbbx2" path="res://Assets/Check.png" id="21_jesr8"]
-[ext_resource type="Texture2D" uid="uid://dg84u7ujj1c3r" path="res://Assets/Ingredients/Cone.png" id="22_cuapf"]
 [ext_resource type="PackedScene" uid="uid://0re0e440r3vs" path="res://Scenes/ingredients-level-2/fillet.tscn" id="22_m5eas"]
 [ext_resource type="PackedScene" uid="uid://bbs1fplntud2" path="res://Scenes/ingredients-level-2/cookedRice.tscn" id="23_riph3"]
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="23_s1bqo"]
-[ext_resource type="Texture2D" uid="uid://dy5h04f7ysl0m" path="res://Assets/Ingredients/Milk.png" id="24_f6n2b"]
 [ext_resource type="PackedScene" uid="uid://bm0axxl5e7n5h" path="res://Scenes/ingredients-level-2/sashimi.tscn" id="24_vf7mf"]
 [ext_resource type="PackedScene" uid="uid://3kc1g2m6j1hj" path="res://Scenes/ingredients-level-2/shrimp.tscn" id="25_bn6bc"]
-[ext_resource type="Texture2D" uid="uid://d3chsifpaq134" path="res://Assets/Ingredients/Sugar.png" id="25_yxe6e"]
-[ext_resource type="Texture2D" uid="uid://chqmsc0scf36" path="res://Assets/Ingredients/Vanilla.png" id="26_2vsst"]
 [ext_resource type="PackedScene" uid="uid://diapmi68wwncm" path="res://Scenes/ingredients-level-2/sushi.tscn" id="26_da22s"]
-[ext_resource type="Texture2D" uid="uid://req2m5goq03" path="res://Assets/Ingredients/Egg.png" id="27_c6hx5"]
-[ext_resource type="Texture2D" uid="uid://b6frd3qw7t5lq" path="res://Assets/Ingredients/IceCream.png" id="28_jb5sf"]
-[ext_resource type="Texture2D" uid="uid://cbqm5hmooikog" path="res://Assets/Ingredients/CookedCream.png" id="29_rk3qu"]
-[ext_resource type="Texture2D" uid="uid://cmfhvycu4wtb0" path="res://Assets/Ingredients/SweetCream.png" id="30_2r02x"]
-[ext_resource type="Texture2D" uid="uid://bt2mt5y6rsww0" path="res://Assets/Ingredients/IceCreamBox.png" id="31_epow6"]
+[ext_resource type="Texture2D" uid="uid://cp7c7xi2c15gy" path="res://Assets/Ingredients/sushi_level/sushi.png" id="29_5s1wx"]
+[ext_resource type="Texture2D" uid="uid://o63ilrekoj3" path="res://Assets/Ingredients/sushi_level/sashimi.png" id="31_27s1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(20, 16)
@@ -2089,23 +2090,29 @@ script = ExtResource("1_imk5p")
 script = ExtResource("2_ijbqh")
 player = NodePath("../Player")
 timer = NodePath("../CanvasLayer/LevelTimer")
-objetivo_earnings = 2000
-objetivo_budget = 500
+objetivo_earnings = 200000
+objetivo_budget = 4000
 trash = NodePath("../Stations/TrashCan")
 
 [node name="Stations" type="Node" parent="."]
 
 [node name="CucumberDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-130, -49)
+position = Vector2(-439, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("4_kwf64")
-costo = 120
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/CucumberDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(15, 79, 23, 34)
+region_rect = Rect2(416, 64, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/CucumberDispenser"]
+position = Vector2(1, -13)
+rotation = 1.5708
+scale = Vector2(0.666994, 0.751363)
+texture = ExtResource("6_27s1b")
+region_rect = Rect2(416, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/CucumberDispenser"]
 position = Vector2(1, -8)
@@ -2115,108 +2122,150 @@ shape = SubResource("RectangleShape2D_2q1mk")
 position = Vector2(-109, -109)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("6_5s1wx")
+costo = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/FishDispenser"]
 position = Vector2(-2, -10)
 texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(193, 169, 30, 48)
+region_rect = Rect2(192, 160, 32, 64)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/FishDispenser"]
+position = Vector2(-1, -25)
+scale = Vector2(0.757518, 0.737429)
+texture = ExtResource("8_vib74")
+region_rect = Rect2(192, 160, 32, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/FishDispenser"]
 position = Vector2(-2, -11)
 shape = SubResource("RectangleShape2D_k1yan")
 
 [node name="SoyDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-81, -49)
+position = Vector2(-471, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("8_kwf64")
-costo = 250
+costo = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/SoyDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(16, 79, 22, 33)
+region_rect = Rect2(448, 64, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/SoyDispenser"]
+position = Vector2(0, -19)
+scale = Vector2(0.875374, 0.841378)
+texture = ExtResource("10_m5eas")
+region_rect = Rect2(448, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SoyDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="GingerDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-41, -49)
+position = Vector2(-407, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("9_kjoi8")
-costo = 250
+costo = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/GingerDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(16, 79, 22, 33)
+region_rect = Rect2(448, 96, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/GingerDispenser"]
+position = Vector2(1, -14)
+rotation = -0.659166
+scale = Vector2(0.525504, 0.504346)
+texture = ExtResource("12_dv8yo")
+region_rect = Rect2(448, 96, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/GingerDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="AlgaeDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-223, -50)
+position = Vector2(-503, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("10_nuasi")
-costo = 250
+costo = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/AlgaeDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(16, 79, 22, 33)
+region_rect = Rect2(416, 96, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/AlgaeDispenser"]
+position = Vector2(1, -15)
+scale = Vector2(0.606959, 0.640652)
+texture = ExtResource("14_pvfcc")
+region_rect = Rect2(416, 96, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/AlgaeDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="RiceDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-262, -49)
+position = Vector2(-369, -108)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("11_kwf64")
-costo = 250
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/RiceDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(16, 79, 22, 33)
+region_rect = Rect2(448, 64, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/RiceDispenser"]
+position = Vector2(2, -14)
+scale = Vector2(0.784655, 0.723574)
+texture = ExtResource("16_y1rf3")
+region_rect = Rect2(448, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/RiceDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="WasabiDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-311, -49)
+position = Vector2(-337, -108)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("12_5s1wx")
-costo = 250
+costo = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/WasabiDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(16, 79, 22, 33)
+region_rect = Rect2(416, 64, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/WasabiDispenser"]
+position = Vector2(1, -16)
+texture = ExtResource("18_j13t8")
+region_rect = Rect2(416, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/WasabiDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="ShrimpDispenser" type="StaticBody2D" parent="Stations"]
-position = Vector2(-357, -48)
+position = Vector2(-541, 78)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("25_bn6bc")
-costo = 250
+costo = 400
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/ShrimpDispenser"]
 position = Vector2(1, -4)
-texture = ExtResource("5_y8af2")
+texture = ExtResource("19_otxa6")
 region_enabled = true
-region_rect = Rect2(16, 79, 22, 33)
+region_rect = Rect2(192, 160, 32, 64)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/ShrimpDispenser"]
+position = Vector2(2, -19)
+scale = Vector2(0.540753, 0.558879)
+texture = ExtResource("20_k8xho")
+region_rect = Rect2(192, 160, 32, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/ShrimpDispenser"]
 position = Vector2(1, -10)
@@ -2238,7 +2287,7 @@ shape = SubResource("RectangleShape2D_hjes8")
 [node name="Register" type="StaticBody2D" parent="Stations"]
 position = Vector2(161, 15)
 script = ExtResource("12_mtci8")
-sellableItems = ["IceCream"]
+sellableItems = ["Sushi", "Sashimi"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Register"]
 position = Vector2(0, 0.5)
@@ -2246,12 +2295,19 @@ texture = ExtResource("19_otxa6")
 region_enabled = true
 region_rect = Rect2(386, 161, 61, 31)
 
+[node name="Sprite2D2" type="Sprite2D" parent="Stations/Register"]
+position = Vector2(17, -3)
+scale = Vector2(0.591182, 0.477792)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(96, 32, 32, 32)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Register"]
 position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_eucg2")
 
 [node name="TrashCan" type="StaticBody2D" parent="Stations"]
-position = Vector2(-213, -109)
+position = Vector2(-176, -108)
 script = ExtResource("14_sdvun")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/TrashCan"]
@@ -2362,7 +2418,7 @@ z_index = 2
 position = Vector2(-187, -30)
 collision_layer = 17
 collision_mask = 17
-presupuesto = 15000
+presupuesto = 50000
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -2392,27 +2448,27 @@ z_index = -1
 tile_set = SubResource("TileSet_xbkdh")
 format = 2
 layer_0/z_index = -4
-layer_0/tile_data = PackedInt32Array(-131084, 0, 2, -131083, 0, 2, -131082, 0, 2, -131081, 0, 2, -131080, 0, 2, -131079, 0, 2, -131078, 0, 2, -131077, 0, 2, -131076, 0, 2, -131075, 0, 2, -131074, 0, 2, -131073, 0, 2, -196608, 0, 2, -131072, 0, 2, -65537, 0, 2, -65538, 0, 2, -65539, 0, 2, -65540, 0, 2, -65541, 0, 2, -65542, 0, 2, -65543, 0, 2, -65544, 0, 2, -65545, 0, 2, -65546, 0, 2, -65547, 0, 2, -65548, 0, 2, -12, 0, 2, -11, 0, 2, -10, 0, 2, -7, 0, 2, -6, 0, 2, -5, 0, 2, -4, 0, 2, -3, 0, 2, -2, 0, 2, -1, 0, 2, -65536, 0, 2, 0, 0, 2, 65535, 0, 2, 65534, 0, 2, 65533, 0, 2, 65532, 0, 2, 65526, 0, 2, 65525, 0, 2, 65524, 0, 2, 131060, 0, 2, 131061, 0, 2, 131062, 0, 2, 131063, 0, 2, 131069, 0, 2, 131070, 0, 2, 131071, 0, 2, 65536, 0, 2, 131072, 0, 2, 196607, 0, 2, 196606, 0, 2, 196605, 0, 2, 196600, 0, 2, 196599, 0, 2, 196598, 0, 2, 196597, 0, 2, 196596, 0, 2, 262132, 0, 2, 262133, 0, 2, 262134, 0, 2, 262135, 0, 2, 262136, 0, 2, 262137, 0, 2, 262140, 0, 2, 262143, 0, 2, 196608, 0, 2, 262142, 0, 2, 262141, 0, 2, 327679, 0, 2, 262144, 0, 2, 327678, 0, 2, 327677, 0, 2, 327676, 0, 2, 327675, 0, 2, 327674, 0, 2, 327673, 0, 2, 327672, 0, 2, 327671, 0, 2, 327670, 0, 2, 327669, 0, 2, 327668, 0, 2, 393207, 0, 2, 393208, 0, 2, 393209, 0, 2, 393210, 0, 2, 393211, 0, 2, 393212, 0, 2, 393213, 0, 2, 393214, 0, 2, 393215, 0, 2, 327680, 0, 2, 393216, 0, 2, 458752, 0, 2, 524288, 0, 2, 589823, 0, 2, 589822, 0, 2, 589821, 0, 2, 589820, 0, 2, 589819, 0, 2, 589818, 0, 2, 589817, 0, 2, 589816, 0, 2, 589815, 0, 2, 524279, 0, 2, 458743, 0, 2, 458744, 0, 2, 524280, 0, 2, 524281, 0, 2, 458745, 0, 2, 458746, 0, 2, 524282, 0, 2, 458747, 0, 2, 524283, 0, 2, 458748, 0, 2, 524284, 0, 2, 458749, 0, 2, 524285, 0, 2, 458750, 0, 2, 524286, 0, 2, 458751, 0, 2, 524287, 0, 2, 65537, 0, 2, 65538, 0, 2, 65539, 0, 2, 65540, 0, 2, 65541, 0, 2, 131077, 0, 2, 131076, 0, 2, 131075, 0, 2, 131074, 0, 2, 131073, 0, 2, 196609, 0, 2, 196610, 0, 2, 196611, 0, 2, 196612, 0, 2, 196613, 0, 2, 262145, 0, 2, 262146, 0, 2, 262147, 0, 2, 262148, 0, 2, 262149, 0, 2, -8, 0, 2, 65527, 0, 2, -9, 0, 2, 65528, 0, 2)
+layer_0/tile_data = PackedInt32Array(-131084, 0, 2, -131083, 0, 2, -131082, 0, 2, -131081, 0, 2, -131080, 0, 2, -131079, 0, 2, -131078, 0, 2, -131077, 0, 2, -131076, 0, 2, -131075, 0, 2, -131074, 0, 2, -131073, 0, 2, -196608, 0, 2, -131072, 0, 2, -65537, 0, 2, -65538, 0, 2, -65539, 0, 2, -65540, 0, 2, -65541, 0, 2, -65542, 0, 2, -65543, 0, 2, -65544, 0, 2, -65545, 0, 2, -65546, 0, 2, -65547, 0, 2, -65548, 0, 2, -12, 0, 2, -11, 0, 2, -10, 0, 2, -7, 0, 2, -6, 0, 2, -5, 0, 2, -4, 0, 2, -3, 0, 2, -2, 0, 2, -1, 0, 2, -65536, 0, 2, 0, 0, 2, 65535, 0, 2, 65534, 0, 2, 65533, 0, 2, 65532, 0, 2, 65526, 0, 2, 65525, 0, 2, 65524, 0, 2, 131060, 0, 2, 131061, 0, 2, 131062, 0, 2, 131063, 0, 2, 131069, 0, 2, 131070, 0, 2, 131071, 0, 2, 65536, 0, 2, 131072, 0, 2, 196607, 0, 2, 196606, 0, 2, 196605, 0, 2, 196600, 0, 2, 196599, 0, 2, 196598, 0, 2, 196597, 0, 2, 196596, 0, 2, 262132, 0, 2, 262133, 0, 2, 262134, 0, 2, 262135, 0, 2, 262136, 0, 2, 262137, 0, 2, 262140, 0, 2, 262143, 0, 2, 196608, 0, 2, 262142, 0, 2, 262141, 0, 2, 327679, 0, 2, 262144, 0, 2, 327678, 0, 2, 327677, 0, 2, 327676, 0, 2, 327675, 0, 2, 327674, 0, 2, 327673, 0, 2, 327672, 0, 2, 327671, 0, 2, 327670, 0, 2, 327669, 0, 2, 327668, 0, 2, 393207, 0, 2, 393208, 0, 2, 393209, 0, 2, 393210, 0, 2, 393211, 0, 2, 393212, 0, 2, 393213, 0, 2, 393214, 0, 2, 393215, 0, 2, 327680, 0, 2, 393216, 0, 2, 458752, 0, 2, 524288, 0, 2, 589823, 0, 2, 589822, 0, 2, 589821, 0, 2, 589820, 0, 2, 589819, 0, 2, 589818, 0, 2, 589817, 0, 2, 589816, 0, 2, 589815, 0, 2, 524279, 0, 2, 458743, 0, 2, 458744, 0, 2, 524280, 0, 2, 524281, 0, 2, 458745, 0, 2, 458746, 0, 2, 524282, 0, 2, 458747, 0, 2, 524283, 0, 2, 458748, 0, 2, 524284, 0, 2, 458749, 0, 2, 524285, 0, 2, 458750, 0, 2, 524286, 0, 2, 458751, 0, 2, 524287, 0, 2, 65537, 0, 2, 65538, 0, 2, 65539, 0, 2, 65540, 0, 2, 65541, 0, 2, 131077, 0, 2, 131076, 0, 2, 131075, 0, 2, 131074, 0, 2, 131073, 0, 2, 196609, 0, 2, 196610, 0, 2, 196611, 0, 2, 196612, 0, 2, 196613, 0, 2, -8, 0, 2, 65527, 0, 2, -9, 0, 2, 65528, 0, 2, 393204, 0, 2, 393205, 0, 2, 393206, 0, 2, 262127, 0, 2, 262128, 0, 2, 262129, 0, 2, 262130, 0, 2, 262131, 0, 2, 327667, 0, 2, 327666, 0, 2, 327665, 0, 2, 327664, 0, 2, 327663, 0, 2, 393199, 0, 2, 393200, 0, 2, 393201, 0, 2, 393202, 0, 2, 393203, 0, 2, 262125, 0, 2, 262126, 0, 2, 327662, 0, 2, 327661, 0, 2, 393197, 0, 2, 393198, 0, 2)
 
 [node name="Paredes" type="TileMap" parent="TileMap"]
 position = Vector2(0, -1)
 tile_set = SubResource("TileSet_qesu4")
 format = 2
 layer_0/z_index = -3
-layer_0/tile_data = PackedInt32Array(-131085, 0, 6, -65549, 0, 6, -13, 0, 6, 65523, 0, 6, 131059, 0, 6, 196595, 0, 6, 262131, 0, 6, 327667, 0, 6, 393203, 0, 7, 393204, 131072, 8, 393205, 131072, 8, 393206, 65536, 7, 458742, 0, 6, 524278, 0, 6, 589814, 0, 6, 655351, 131072, 8, 655352, 131072, 8, 655353, 131072, 8, 655354, 131072, 8, 655355, 131072, 8, 655356, 131072, 8, 655357, 131072, 8, 655358, 131072, 8, 655359, 131072, 8, 589824, 131072, 8, 655350, 65536, 8, 589825, 196608, 8, 524289, 262144, 6, 458753, 262144, 6, 393217, 262144, 6, 327681, 196608, 7, -131071, 196608, 5, -196607, 262144, 6, -262143, 262144, 6, -196621, 0, 6, -262157, 0, 6, -327693, 0, 5, -327692, 131072, 4, -327691, 131072, 4, -327690, 131072, 4, -327689, 131072, 4, -327688, 131072, 4, -327687, 131072, 4, -327686, 131072, 4, -327685, 131072, 4, -327684, 131072, 4, -327683, 131072, 4, -327682, 131072, 4, -327681, 131072, 4, -393216, 131072, 4, -393215, 196608, 4, -327679, 262144, 6, -262155, 131072, 0, -262154, 131072, 0, -262153, 131072, 0, -262152, 131072, 0, -262151, 131072, 0, -262150, 131072, 0, -262149, 131072, 0, -262148, 131072, 0, -262147, 131072, 0, -262146, 196608, 0, -262145, 262144, 0, -327680, 262144, 0, -262144, 131072, 1, -196609, 131072, 1, -196610, 131072, 1, -196611, 131072, 1, -196612, 131072, 1, -196613, 131072, 1, -196614, 131072, 1, -196615, 131072, 1, -196616, 131072, 1, -196617, 131072, 1, -196618, 131072, 1, -196619, 131072, 1, -196620, 131072, 1, -262156, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, 1, 131072, 1, 2, 131072, 1, 3, 196608, 1, 4, 262144, 1, 5, 262144, 1, -131070, 131072, 4, -131069, 131072, 4, -131068, 131072, 4, -131067, 131072, 4, -131066, 262144, 5, -65530, 262144, 6, 6, 262144, 6, 65542, 262144, 6, 131078, 262144, 6, 327682, 131072, 8, 327683, 131072, 8, 327684, 131072, 8, 327685, 131072, 8, 327686, 196608, 8, 262150, 262144, 6, 196614, 262144, 6, -5, 131072, 4, -6, 131072, 4, -7, 131072, 4, -4, 196608, 4, 65532, 196608, 5, 65533, 262144, 5, 131069, 262144, 6, 196605, 262144, 6, 262141, 262144, 7, 262140, 196608, 7, 327676, 196608, 8, 327675, 131072, 8, 327674, 131072, 8, 327673, 65536, 8, 262137, 65536, 7, 262136, 0, 7, 196600, 65536, 7, 131063, 0, 6, 196599, 0, 7, 65528, 65536, 5, -8, 65536, 4, 65527, 0, 5)
+layer_0/tile_data = PackedInt32Array(-131085, 0, 6, -65549, 0, 6, -13, 0, 6, 458742, 65536, 7, 524278, 0, 6, 589814, 0, 6, 655351, 131072, 8, 655352, 131072, 8, 655353, 131072, 8, 655354, 131072, 8, 655355, 131072, 8, 655356, 131072, 8, 655357, 131072, 8, 655358, 131072, 8, 655359, 131072, 8, 589824, 131072, 8, 655350, 65536, 8, 589825, 196608, 8, 524289, 262144, 6, 458753, 262144, 6, -131071, 196608, 5, -196607, 262144, 6, -262143, 262144, 6, -196621, 0, 6, -262157, 0, 6, -327693, 0, 5, -327692, 131072, 4, -327691, 131072, 4, -327690, 131072, 4, -327689, 131072, 4, -327688, 131072, 4, -327687, 131072, 4, -327686, 131072, 4, -327685, 131072, 4, -327684, 131072, 4, -327683, 131072, 4, -327682, 131072, 4, -327681, 131072, 4, -393216, 131072, 4, -393215, 196608, 4, -327679, 262144, 6, -262155, 131072, 0, -262154, 131072, 0, -262153, 131072, 0, -262152, 131072, 0, -262151, 131072, 0, -262150, 131072, 0, -262149, 131072, 0, -262148, 131072, 0, -262147, 131072, 0, -262146, 196608, 0, -262145, 262144, 0, -327680, 262144, 0, -262144, 131072, 1, -196609, 131072, 1, -196610, 131072, 1, -196611, 131072, 1, -196612, 131072, 1, -196613, 131072, 1, -196614, 131072, 1, -196615, 131072, 1, -196616, 131072, 1, -196617, 131072, 1, -196618, 131072, 1, -196619, 131072, 1, -196620, 131072, 1, -262156, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, 1, 131072, 1, 2, 131072, 1, 3, 196608, 1, 4, 262144, 1, 5, 262144, 1, -131070, 131072, 4, -131069, 131072, 4, -131068, 131072, 4, -131067, 131072, 4, -131066, 262144, 5, -65530, 262144, 6, 6, 262144, 6, 65542, 262144, 6, 131078, 262144, 6, 262150, 262144, 7, 196614, 262144, 6, -5, 131072, 4, -6, 131072, 4, -7, 131072, 4, -4, 196608, 4, 65532, 196608, 5, 65533, 262144, 5, 131069, 262144, 6, 196605, 262144, 6, 262141, 262144, 7, 262140, 196608, 7, 327676, 196608, 8, 327675, 131072, 8, 327674, 131072, 8, 327673, 65536, 8, 262137, 65536, 7, 262136, 0, 7, 196600, 65536, 7, 131063, 0, 6, 196599, 0, 7, 65528, 65536, 5, -8, 65536, 4, 65527, 0, 5, 458739, 131072, 8, 458741, 131072, 8, 458740, 131072, 8, 65523, 65536, 5, 131057, 131072, 0, 196593, 131072, 1, 131058, 196608, 0, 196594, 196608, 1, 131059, 262144, 0, 196595, 262144, 1, 131056, 131072, 0, 196592, 131072, 1, 131055, 131072, 0, 196591, 131072, 1, 65522, 131072, 4, 65521, 131072, 4, 65520, 131072, 4, 65519, 131072, 4, 458735, 131072, 8, 458736, 131072, 8, 458737, 131072, 8, 458738, 131072, 8, 131054, 131072, 0, 196590, 131072, 1, 131053, 131072, 0, 196589, 131072, 1, 131052, 0, 6, 196588, 0, 6, 262124, 0, 6, 327660, 0, 6, 393196, 0, 6, 458732, 0, 7, 458733, 131072, 8, 458734, 131072, 8, 65518, 131072, 4, 65517, 131072, 4, 65516, 65536, 4, 262145, 196608, 7, 262146, 131072, 8, 262147, 131072, 8, 262148, 131072, 8, 262149, 131072, 8, 393217, 262144, 6, 327681, 262144, 6)
 
 [node name="Muebles" type="TileMap" parent="TileMap"]
 tile_set = SubResource("TileSet_fie61")
 format = 2
 layer_0/z_index = -2
-layer_0/tile_data = PackedInt32Array(1, 0, 1, -65535, 0, 0, -65532, 786432, 6, -65531, 851968, 6, -262144, 917504, 2, -196611, 786432, 2, -196616, 851968, 2, -196617, 917504, 3, -131081, 917504, 4, 458745, 786432, 7, 524281, 786432, 8, 458746, 851968, 7, 458749, 917504, 7, 524285, 917504, 8, 458750, 983040, 7, 524286, 983040, 8, 524282, 851968, 8, -196609, 851968, 2, -196618, 917504, 2)
+layer_0/tile_data = PackedInt32Array(1, 0, 1, -65535, 0, 0, -65532, 786432, 6, -65531, 851968, 6, -262144, 917504, 2, -196611, 786432, 2, -196616, 851968, 2, -196617, 917504, 3, -131081, 917504, 4, 458745, 786432, 7, 524281, 786432, 8, 458746, 851968, 7, 458749, 917504, 7, 524285, 917504, 8, 458750, 983040, 7, 524286, 983040, 8, 524282, 851968, 8, -196609, 851968, 2, -196618, 917504, 2, 131059, 65536, 0, 196595, 65536, 1, 196612, 655360, 5, 196613, 720896, 5, 196610, 655360, 5, 196611, 720896, 5, 3, 655360, 0)
 
 [node name="Detalles" type="TileMap" parent="TileMap"]
 position = Vector2(1, 9)
 tile_set = SubResource("TileSet_50cwy")
 format = 2
 layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(-524290, 1835008, 2, -458754, 1835008, 3, -524289, 1900544, 2, -458753, 1900544, 3, -589847, 2490368, 6, -524311, 2490368, 7, -589846, 2555904, 6, -524310, 2555904, 7, -131069, 1703936, 0, -65533, 1703936, 1, -131068, 1769472, 0, -65532, 1769472, 1, -131067, 1835008, 0, -65531, 1835008, 1, -131066, 1900544, 0, -65530, 1900544, 1, -589837, 2097152, 8, -524301, 2097152, 9, -589836, 2162688, 8, -524300, 2162688, 9, -589835, 2228224, 8, -524299, 2228224, 9, -589834, 2293760, 8, -524298, 2293760, 9, -524304, 1703936, 2, -458768, 1703936, 3, -524303, 1769472, 2, -458767, 1769472, 3)
+layer_0/tile_data = PackedInt32Array(-524290, 1835008, 2, -458754, 1835008, 3, -524289, 1900544, 2, -458753, 1900544, 3, -131069, 1703936, 0, -65533, 1703936, 1, -131068, 1769472, 0, -65532, 1769472, 1, -131067, 1835008, 0, -65531, 1835008, 1, -131066, 1900544, 0, -65530, 1900544, 1, -589837, 2097152, 8, -524301, 2097152, 9, -589836, 2162688, 8, -524300, 2162688, 9, -589835, 2228224, 8, -524299, 2228224, 9, -589834, 2293760, 8, -524298, 2293760, 9, -524304, 1703936, 2, -458768, 1703936, 3, -524303, 1769472, 2, -458767, 1769472, 3, 196576, 1572864, 12, 196582, 1769472, 12, 196577, 1638400, 12, 196578, 1638400, 12, 196579, 1638400, 12, 196580, 1638400, 12, 196581, 1638400, 12, 196571, 2490368, 6, 262107, 2490368, 7, 196572, 2555904, 6, 262108, 2555904, 7, 327643, 1441792, 0, 393179, 1441792, 1, 327644, 1507328, 0, 393180, 1507328, 1, -589848, 1572864, 12, -589847, 1703936, 12, -589846, 1638400, 12, -589845, 1703936, 12, -589844, 1638400, 12, -589843, 1703936, 12, -589842, 1638400, 12, -589841, 1703936, 12, -589840, 1638400, 12, -589839, 1703936, 12, -589832, 1638400, 12, -589831, 1703936, 12, -589830, 1638400, 12, -589829, 1703936, 12, -589828, 1638400, 12, -589827, 1703936, 12, -589826, 1638400, 12, -589825, 1703936, 12, -655360, 1638400, 12, -655359, 1769472, 12, -589833, 1572864, 12, -589838, 1769472, 12)
 
 [node name="Detalles2" type="TileMap" parent="TileMap"]
 position = Vector2(-6, 9)
@@ -2523,6 +2579,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Budget" type="Label" parent="CanvasLayer"]
+visible = false
 z_index = 5
 offset_left = 3.0
 offset_top = 34.0
@@ -2536,6 +2593,7 @@ theme_override_font_sizes/font_size = 25
 text = "Presupuesto: 0"
 
 [node name="Earnings" type="Label" parent="CanvasLayer"]
+visible = false
 z_index = 5
 offset_right = 240.0
 offset_bottom = 35.0
@@ -2547,7 +2605,6 @@ theme_override_font_sizes/font_size = 25
 text = "Ganancias: 0"
 
 [node name="Objectives" type="Panel" parent="CanvasLayer"]
-visible = false
 z_index = 8
 offset_left = 617.0
 offset_top = 12.0
@@ -2573,7 +2630,7 @@ offset_bottom = 136.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
 text = "1. Obtener una
-ganacia de 2000"
+ganacia de 200000"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Objectives"]
 layout_mode = 0
@@ -2586,7 +2643,7 @@ theme_override_font_sizes/font_size = 20
 text = "2. Tener un
 presupuesto
 restante entre
-0 y 500"
+0 y 4000"
 
 [node name="Label4" type="Label" parent="CanvasLayer/Objectives"]
 layout_mode = 0
@@ -2594,6 +2651,7 @@ offset_left = 28.0
 offset_top = 336.0
 offset_right = 368.0
 offset_bottom = 425.0
+scale = Vector2(1, 0.934572)
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
 text = "3. No reciclar ni
@@ -2725,75 +2783,21 @@ vertical_alignment = 1
 
 [node name="Items" type="Node" parent="."]
 
-[node name="Cone" type="Sprite2D" parent="Items"]
-z_index = 2
-position = Vector2(-339.5, 505.5)
-scale = Vector2(0.65625, 0.59375)
-texture = ExtResource("22_cuapf")
-script = ExtResource("23_s1bqo")
-item_id = 0
-
-[node name="Milk" type="Sprite2D" parent="Items"]
-z_index = 2
-position = Vector2(-339.5, 505.5)
-scale = Vector2(0.4375, 0.46875)
-texture = ExtResource("24_f6n2b")
-script = ExtResource("23_s1bqo")
-
-[node name="Sugar" type="Sprite2D" parent="Items"]
-z_index = 2
-position = Vector2(-339.5, 505.5)
-scale = Vector2(0.65625, 0.59375)
-texture = ExtResource("25_yxe6e")
-script = ExtResource("23_s1bqo")
-item_id = 2
-
-[node name="Vainilla" type="Sprite2D" parent="Items"]
-z_index = 2
-position = Vector2(-339.5, 505.5)
-scale = Vector2(0.65625, 0.59375)
-texture = ExtResource("26_2vsst")
-script = ExtResource("23_s1bqo")
-item_id = 3
-
-[node name="Egg" type="Sprite2D" parent="Items"]
-z_index = 2
-position = Vector2(-339.5, 505.5)
-scale = Vector2(0.65625, 0.59375)
-texture = ExtResource("27_c6hx5")
-script = ExtResource("23_s1bqo")
-item_id = 4
-
-[node name="IceCream" type="Sprite2D" parent="Items"]
-position = Vector2(-338.5, 505.5)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("28_jb5sf")
-script = ExtResource("23_s1bqo")
-item_id = 5
-sell_price = 300
-
-[node name="CookedCream" type="Sprite2D" parent="Items"]
-position = Vector2(-343, 505)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("29_rk3qu")
-script = ExtResource("23_s1bqo")
-item_id = 6
-sell_price = 300
-
-[node name="SweetCream" type="Sprite2D" parent="Items"]
-position = Vector2(-343, 505)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("30_2r02x")
-script = ExtResource("23_s1bqo")
-item_id = 7
-sell_price = 300
-
-[node name="IceCreamBox" type="Sprite2D" parent="Items"]
+[node name="Sushi" type="Sprite2D" parent="Items"]
 position = Vector2(-337, 510)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("31_epow6")
+texture = ExtResource("29_5s1wx")
 script = ExtResource("23_s1bqo")
-item_id = 8
+item_id = 10
+sell_price = 5000
+
+[node name="Sashimi" type="Sprite2D" parent="Items"]
+position = Vector2(-337, 510)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("31_27s1b")
+script = ExtResource("23_s1bqo")
+item_id = 9
+sell_price = 4500
 
 [node name="Instrucciones" type="Label" parent="."]
 visible = false

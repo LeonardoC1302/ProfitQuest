@@ -84,9 +84,9 @@ var recipes = {
 		"station": "SashimiBoard",
 		"recipe": [
 			{"name": "Fillet", "quantity": 2},
-			{"name": "Shrimp", "quantity": 2},
-			{"name": "Soy", "quantity": 2},
-			{"name": "Ginger", "quantity": 2},
+			{"name": "Shrimp", "quantity": 1},
+			{"name": "Soy", "quantity": 1},
+			{"name": "Ginger", "quantity": 1},
 			{"name": "Wasabi", "quantity": 1},
 		],
 		"product": {
@@ -98,10 +98,10 @@ var recipes = {
 	"Sushi": {
 		"station": "SushiBoard",
 		"recipe": [
-			{"name": "CookedRice", "quantity": 5},
-			{"name": "Algae", "quantity": 1},
+			{"name": "CookedRice", "quantity": 6},
+			{"name": "Algae", "quantity": 2},
 			{"name": "Fillet", "quantity": 4},
-			{"name": "Cucumber", "quantity": 2},
+			{"name": "Cucumber", "quantity": 3},
 			{"name": "Soy", "quantity": 3},
 		],
 		"product": {
