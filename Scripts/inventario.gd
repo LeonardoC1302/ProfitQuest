@@ -1,6 +1,6 @@
 extends Control
 
-const NUM_SLOTS = 9
+const NUM_SLOTS = 11
 const SLOT_SCENE = preload("res://Scenes/Slot.tscn")
 
 var inventario = []

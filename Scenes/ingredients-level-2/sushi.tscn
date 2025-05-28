@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://diapmi68wwncm"]
+
+[ext_resource type="Texture2D" uid="uid://cp7c7xi2c15gy" path="res://Assets/Ingredients/sushi_level/sushi.png" id="1_8dd47"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_a8dw0"]
+
+[node name="Sushi" type="Node2D"]
+
+[node name="Sushi" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_8dd47")
+script = ExtResource("2_a8dw0")
+item_id = 11

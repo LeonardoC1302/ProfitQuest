@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://3kc1g2m6j1hj"]
+
+[ext_resource type="Texture2D" uid="uid://bjk3yo5ry8o5f" path="res://Assets/Ingredients/sushi_level/shrimp.png" id="1_004si"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_4nt86"]
+
+[node name="Shrimp" type="Node2D"]
+
+[node name="Shrimp" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_004si")
+script = ExtResource("2_4nt86")
+item_id = 10

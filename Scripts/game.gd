@@ -27,7 +27,7 @@ func _input(event):
 
 func start_timer():
 	# TODO: Set the timer according to a difficulty, it can be stored in the Autoload 
-	timer.set_timer(120)
+	timer.set_timer(180)
 	
 func pause_game():
 	get_tree().paused = true

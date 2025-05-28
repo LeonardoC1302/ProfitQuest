@@ -80,6 +80,36 @@ var recipes = {
 			"icono": preload("res://Assets/Ingredients/sushi_level/cooked_rice.png")
 		}
 	},
+	"Sashimi": {
+		"station": "SashimiBoard",
+		"recipe": [
+			{"name": "Fillet", "quantity": 2},
+			{"name": "Shrimp", "quantity": 2},
+			{"name": "Soy", "quantity": 2},
+			{"name": "Ginger", "quantity": 2},
+			{"name": "Wasabi", "quantity": 1},
+		],
+		"product": {
+			"nombre": "Sashimi", 
+			"cantidad": 2, 
+			"icono": preload("res://Assets/Ingredients/sushi_level/sashimi.png")
+		}
+	},
+	"Sushi": {
+		"station": "SushiBoard",
+		"recipe": [
+			{"name": "CookedRice", "quantity": 5},
+			{"name": "Algae", "quantity": 1},
+			{"name": "Fillet", "quantity": 4},
+			{"name": "Cucumber", "quantity": 2},
+			{"name": "Soy", "quantity": 3},
+		],
+		"product": {
+			"nombre": "Sushi", 
+			"cantidad": 5, 
+			"icono": preload("res://Assets/Ingredients/sushi_level/sushi.png")
+		}
+	},
 }
 
 # Iconos de ingredientes para reutilización

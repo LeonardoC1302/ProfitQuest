@@ -33,14 +33,14 @@ script = ExtResource("1_i5wj1")
 show_behind_parent = true
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
-offset_left = -328.0
+offset_left = -430.0
 offset_top = 200.0
-offset_right = 280.0
+offset_right = 470.135
 offset_bottom = 300.0
 mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="CenterContainer"]
-custom_minimum_size = Vector2(700, 100)
+custom_minimum_size = Vector2(900.135, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_i5wj1")
 
@@ -50,4 +50,4 @@ mouse_filter = 2
 theme = SubResource("Theme_06qbx")
 theme_override_constants/h_separation = 13
 theme_override_constants/v_separation = 5
-columns = 9
+columns = 11
