@@ -2612,7 +2612,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Budget" type="Label" parent="CanvasLayer"]
-visible = false
 z_index = 5
 offset_left = 3.0
 offset_top = 34.0
@@ -2626,7 +2625,6 @@ theme_override_font_sizes/font_size = 25
 text = "Presupuesto: 0"
 
 [node name="Earnings" type="Label" parent="CanvasLayer"]
-visible = false
 z_index = 5
 offset_right = 240.0
 offset_bottom = 35.0
