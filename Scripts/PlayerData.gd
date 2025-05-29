@@ -52,7 +52,6 @@ func save_customization_to_user():
 func save_player_progress(player: Node):
 	data["presupuesto"] = player.presupuesto
 	data["earnings"] = player.earnings
-	data["score"] = player.score
 
 	var file = FileAccess.open("user://usuarios.json", FileAccess.READ)
 	var all_users = JSON.parse_string(file.get_as_text())
@@ -63,3 +62,29 @@ func save_player_progress(player: Node):
 		var file_write = FileAccess.open("user://usuarios.json", FileAccess.WRITE)
 		file_write.store_string(JSON.stringify(all_users))
 		file_write.close()
+		
+func save_level_score(lvl_id: int, score: int, player: Node):
+	if data.has("progress") == false:
+		data["progress"] = {}
+	
+	data["progress"][str(lvl_id)] = {"score": score}
+	save_player_progress(player)
+
+func is_level_unlocked(lvl_id: int, required_score: int) -> bool:
+	if lvl_id == 1:
+		return true
+
+	if not data.has("progress"):
+		print("No hay progreso guardado")
+		return false
+
+	var prev_lvl_id = str(lvl_id - 1)
+	if data["progress"].has(prev_lvl_id):
+		var raw_score = data["progress"][prev_lvl_id].get("score", 0)
+		var prev_score = float(raw_score)
+		print("Score del nivel %s: %.2f (se requiere %d)" % [prev_lvl_id, prev_score, required_score])
+
+		return prev_score >= required_score
+
+	print("No hay datos del nivel anterior (%s)" % prev_lvl_id)
+	return false
