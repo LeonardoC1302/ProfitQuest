@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbujq012glmvs"]
+
+[ext_resource type="Texture2D" uid="uid://i5i6ddqwdedv" path="res://Assets/Ingredients/fast_food_level/oil.png" id="1_owj0i"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_2g2wx"]
+
+[node name="Oil" type="Node2D"]
+
+[node name="Oil" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_owj0i")
+script = ExtResource("2_2g2wx")
+item_id = 8

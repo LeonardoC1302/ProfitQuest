@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://wgcodcmausr7"]
+
+[ext_resource type="Texture2D" uid="uid://b18dqu6d3psvt" path="res://Assets/Ingredients/fast_food_level/pizza.png" id="1_hswto"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_p0io6"]
+
+[node name="Pizza" type="Node2D"]
+
+[node name="Pizza" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_hswto")
+script = ExtResource("2_p0io6")
+item_id = 15

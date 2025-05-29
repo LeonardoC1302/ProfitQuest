@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dldqpvue12ikn"]
+
+[ext_resource type="Texture2D" uid="uid://begm8gtlt6w63" path="res://Assets/Ingredients/fast_food_level/flour.png" id="1_reg2p"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_ax4px"]
+
+[node name="Flour" type="Node2D"]
+
+[node name="Flour" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_reg2p")
+script = ExtResource("2_ax4px")
+item_id = 5

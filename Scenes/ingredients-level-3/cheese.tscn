@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://7pdeug7qxw3m"]
+
+[ext_resource type="Texture2D" uid="uid://cnox5xnnkuqec" path="res://Assets/Ingredients/fast_food_level/cheese.png" id="1_5uehp"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_vnp07"]
+
+[node name="Cheese" type="Node2D"]
+
+[node name="Cheese" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_5uehp")
+script = ExtResource("2_vnp07")
+item_id = 2

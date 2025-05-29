@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://byj11hjvpldml"]
+
+[ext_resource type="Texture2D" uid="uid://dx5icyn66gxj6" path="res://Assets/Ingredients/fast_food_level/raw_beef.png" id="1_e3ogo"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_rdebf"]
+
+[node name="Beef" type="Node2D"]
+
+[node name="Beef" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_e3ogo")
+script = ExtResource("2_rdebf")
+item_id = 0

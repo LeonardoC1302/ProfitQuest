@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj10st7me4hd2"]
+
+[ext_resource type="Texture2D" uid="uid://baoiuoxptu8ua" path="res://Assets/Ingredients/fast_food_level/tomato.png" id="1_g22qa"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_0mg5p"]
+
+[node name="Tomato" type="Node2D"]
+
+[node name="Tomato" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_g22qa")
+script = ExtResource("2_0mg5p")
+item_id = 4

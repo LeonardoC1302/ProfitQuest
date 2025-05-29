@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://nrxj37j4tv8n"]
+
+[ext_resource type="Texture2D" uid="uid://y18sfmovssaj" path="res://Assets/Ingredients/fast_food_level/lettuce.png" id="1_1nng8"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_1kbnm"]
+
+[node name="Lettuce" type="Node2D"]
+
+[node name="Lettuce" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_1nng8")
+script = ExtResource("2_1kbnm")
+item_id = 3

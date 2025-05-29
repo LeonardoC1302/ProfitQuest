@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwh0ixv8w438e"]
+
+[ext_resource type="Texture2D" uid="uid://bylgmdh1ocmk8" path="res://Assets/Ingredients/fast_food_level/fries.png" id="1_sq1q2"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_fq30e"]
+
+[node name="Fries" type="Node2D"]
+
+[node name="Fries" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_sq1q2")
+script = ExtResource("2_fq30e")
+item_id = 17

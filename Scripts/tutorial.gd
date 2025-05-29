@@ -7,4 +7,4 @@ func _ready() -> void:
 
 func _input(event):
 	if event.is_action_pressed("grab"):
-		get_tree().change_scene_to_file("res://Scenes/game.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Levels/game.tscn")

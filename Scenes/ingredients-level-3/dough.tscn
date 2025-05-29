@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkk6un1mxou5a"]
+
+[ext_resource type="Texture2D" uid="uid://btyjoix0ptd8p" path="res://Assets/Ingredients/fast_food_level/dough.png" id="1_lsisy"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_v1j2n"]
+
+[node name="Dough" type="Node2D"]
+
+[node name="Dough" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_lsisy")
+script = ExtResource("2_v1j2n")
+item_id = 11

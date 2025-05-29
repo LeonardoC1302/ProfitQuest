@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2nty58g348he"]
+
+[ext_resource type="Texture2D" uid="uid://r86tmmj0tndp" path="res://Assets/Ingredients/fast_food_level/potato.png" id="1_2sfd8"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_ykm7h"]
+
+[node name="Potato" type="Node2D"]
+
+[node name="Potato" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_2sfd8")
+script = ExtResource("2_ykm7h")
+item_id = 7
