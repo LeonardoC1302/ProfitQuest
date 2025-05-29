@@ -180,9 +180,6 @@ position = Vector2(-333, -149)
 collision_layer = 17
 collision_mask = 17
 presupuesto = 12000
-earnings = 0
-score = 0
-game = NodePath("")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -246,7 +243,8 @@ position = Vector2(-181, -194)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
-required_score = 500
+escena_nivel = "res://Scenes/Levels/level_2.tscn"
+required_score = 200
 
 [node name="Susheria" type="Sprite2D" parent="Susheria"]
 texture_filter = 1
@@ -274,7 +272,8 @@ scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
 escena_nivel = "res://Scenes/Levels/level_3.tscn"
-nivel_id = 2
+nivel_id = 3
+required_score = 300
 
 [node name="LosPollosHermanos" type="Sprite2D" parent="LosPollosHermanos"]
 texture_filter = 1

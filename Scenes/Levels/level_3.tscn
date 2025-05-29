@@ -1648,7 +1648,7 @@ shape = SubResource("RectangleShape2D_hjes8")
 
 [node name="Register" type="StaticBody2D" parent="Stations"]
 z_index = 1
-position = Vector2(-194, -82)
+position = Vector2(-194, -81)
 script = ExtResource("22_nouab")
 sellableItems = ["Burger", "Pizza", "Hotdog", "Fries"]
 
