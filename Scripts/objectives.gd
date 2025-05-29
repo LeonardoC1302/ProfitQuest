@@ -73,4 +73,4 @@ func assign_points():
 	if cumplio_budget:
 		p.score += 250
 	if recycle:
-		p.score += 200
+		p.score += 50

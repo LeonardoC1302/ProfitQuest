@@ -2118,6 +2118,8 @@ corner_radius_bottom_left = 5
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_imk5p")
+current_lvl = 2
+stars = [1000, 2000, 3000]
 
 [node name="ObjetiveChecker" type="Node" parent="."]
 script = ExtResource("2_ijbqh")
@@ -2452,6 +2454,7 @@ position = Vector2(-187, -30)
 collision_layer = 17
 collision_mask = 17
 presupuesto = 50000
+game = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -2636,6 +2639,7 @@ theme_override_font_sizes/font_size = 25
 text = "Ganancias: 0"
 
 [node name="Objectives" type="Panel" parent="CanvasLayer"]
+visible = false
 z_index = 8
 offset_left = 617.0
 offset_top = 12.0
@@ -2661,7 +2665,8 @@ offset_bottom = 136.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
 text = "1. Obtener una
-ganacia de 200000"
+ganacia de 200000
++250pts"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Objectives"]
 layout_mode = 0
@@ -2674,7 +2679,8 @@ theme_override_font_sizes/font_size = 20
 text = "2. Tener un
 presupuesto
 restante entre
-0 y 4000"
+0 y 4000
++250pts"
 
 [node name="Label4" type="Label" parent="CanvasLayer/Objectives"]
 layout_mode = 0
@@ -2687,7 +2693,8 @@ theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
 text = "3. No reciclar ni
 deshechar ningun
-ingrediente"
+ingrediente
++50pts"
 
 [node name="Obj1" type="Panel" parent="CanvasLayer/Objectives"]
 layout_mode = 0
@@ -2802,13 +2809,13 @@ offset_bottom = 144.0
 [node name="Label" type="Label" parent="CanvasLayer/Pause/Button"]
 z_index = 2
 layout_mode = 0
-offset_left = 46.0
-offset_top = 78.0
-offset_right = 263.0
-offset_bottom = 124.0
+offset_left = 42.0
+offset_top = 81.0
+offset_right = 259.0
+offset_bottom = 127.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
-text = "Reiniciar"
+text = "Volver"
 horizontal_alignment = 1
 vertical_alignment = 1
 

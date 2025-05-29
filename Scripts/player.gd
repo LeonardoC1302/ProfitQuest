@@ -9,6 +9,7 @@ var items_collected := []
 @export var presupuesto := 10000
 @export var earnings: int = 0
 @export var score: int = 0
+@export var game: NodePath
 
 @onready var animated_sprite_2d: AnimationPlayer = $CustomPlayer/AnimationPlayer
 @onready var customPlayer: Node2D = $CustomPlayer
@@ -27,6 +28,9 @@ var save_path := "user://player_customization.ini"
 @onready var tween = create_tween()
 
 static var final_score: int = 0
+static var current_lvl: int = 0
+static var evaluation: Array = []
+
 
 func _ready() -> void:
 	state_machine.Initialize(self)
@@ -171,7 +175,10 @@ func load_customization():
 	%Player.set_color("Outline", outlineColor)
 
 func end_game():
+	var g = get_node_or_null(game)
+	self.current_lvl = g.current_lvl
 	self.final_score = self.score
+	self.evaluation = g.stars
 	get_tree().change_scene_to_file("res://Scenes/GamOver.tscn")
 
 func lose_points(points):

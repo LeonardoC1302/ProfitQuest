@@ -81,4 +81,4 @@ func recycle_item(item, inventario_node):
 			print("No hay valor de reciclaje para:", item_name)
 
 	else:
-		player.message("Este ítem \n no se puede \n reciclar o no está \n en la base de datos: \n" + item_name)
+		player.message("Este ítem \n no se puede \n reciclar o\n no está \n en la\n base de datos: \n" + item_name)

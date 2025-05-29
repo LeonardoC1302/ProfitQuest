@@ -4,6 +4,9 @@ extends Node2D
 @onready var menu_panel = $CanvasLayer/Objectives
 @onready var pause_menu = $CanvasLayer/Pause
 
+@export var current_lvl: int
+@export var stars: Array
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pause_menu.visible = false
