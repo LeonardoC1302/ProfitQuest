@@ -2,14 +2,26 @@
 extends Node
 
 var ingredient_prices = {
+	# Level 1
 	"Egg": 100,
 	"Milk": 120,
 	"Sugar": 120,
 	"Cone": 75,
 	"Vanilla": 250,
+	
+	# Level 2
+	"Fish": 300,
+	"Rice": 100,
+	"Shrimp": 400,
+	"Soy": 200,
+	"Ginger": 200,
+	"Wasabi": 500,
+	"Algae": 300,
+	"Cucumber": 100,
 }
 # Base de datos central de crafteo
 var recipes = {
+	# Level 1
 	"SweetCream": {
 		"station": "Mixer",
 		"recipe": [
@@ -58,6 +70,8 @@ var recipes = {
 			"icono": preload("res://Assets/Ingredients/IceCream.png")
 		}
 	},
+	
+	# Level 2
 	"Fillet": {
 		"station": "CuttingStation",
 		"recipe": [
@@ -110,10 +124,13 @@ var recipes = {
 			"icono": preload("res://Assets/Ingredients/sushi_level/sushi.png")
 		}
 	},
+	
+	# Level 3
 }
 
 # Iconos de ingredientes para reutilización
 var ingredient_icons = {
+	# Level 1
 	"Egg": preload("res://Assets/Ingredients/Egg.png"),
 	"Milk": preload("res://Assets/Ingredients/Milk.png"),
 	"Sugar": preload("res://Assets/Ingredients/Sugar.png"),
@@ -123,6 +140,23 @@ var ingredient_icons = {
 	"CookedCream": preload("res://Assets/Ingredients/CookedCream.png"),
 	"IceCreamBox": preload("res://Assets/Ingredients/IceCreamBox.png"),
 	"IceCream": preload("res://Assets/Ingredients/IceCream.png"),
+	
+	# Level 2
+	"Fish": preload("res://Assets/Ingredients/sushi_level/fish.png"),
+	"Rice": preload("res://Assets/Ingredients/sushi_level/rice.png"),
+	"Shrimp": preload("res://Assets/Ingredients/sushi_level/shrimp.png"),
+	"Soy": preload("res://Assets/Ingredients/sushi_level/soy_sauce.png"),
+	"Ginger": preload("res://Assets/Ingredients/sushi_level/ginger.png"),
+	"Wasabi": preload("res://Assets/Ingredients/sushi_level/wasabi.png"),
+	"Algae": preload("res://Assets/Ingredients/sushi_level/algae.png"),
+	"Cucumber": preload("res://Assets/Ingredients/sushi_level/cucumber.png"),
+	"Fillet": preload("res://Assets/Ingredients/sushi_level/fillet.png"),
+	"CookedRice": preload("res://Assets/Ingredients/sushi_level/cooked_rice.png"),
+	"Sashimi": preload("res://Assets/Ingredients/sushi_level/sashimi.png"),
+	"Sushi": preload("res://Assets/Ingredients/sushi_level/sushi.png"),
+	
+	# Level 3
+	
 	# Añade más ingredientes aquí
 }
 
