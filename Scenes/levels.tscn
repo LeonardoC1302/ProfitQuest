@@ -180,6 +180,9 @@ position = Vector2(-333, -149)
 collision_layer = 17
 collision_mask = 17
 presupuesto = 12000
+earnings = 0
+score = 0
+game = NodePath("")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -218,6 +221,8 @@ scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
 escena_nivel = "res://Scenes/tutorial.tscn"
+nivel_id = 1
+required_score = 0
 
 [node name="Heladeria" type="Sprite2D" parent="Heladeria"]
 texture_filter = 1
@@ -241,7 +246,7 @@ position = Vector2(-181, -194)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
-nivel_id = 2
+required_score = 500
 
 [node name="Susheria" type="Sprite2D" parent="Susheria"]
 texture_filter = 1

@@ -36,8 +36,8 @@ func _on_button_pressed():
 				"data": {
 					"presupuesto": 10000,
 					"earnings": 0,
-					"score": 0,
-					"customization": {}
+					"customization": {},
+					"progress": { "1": {"score": 0} }
 				}
 			}
 			var file_write = FileAccess.open(user_file_path, FileAccess.WRITE)

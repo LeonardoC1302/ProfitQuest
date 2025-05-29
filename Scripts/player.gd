@@ -178,7 +178,12 @@ func end_game():
 	var g = get_node_or_null(game)
 	self.current_lvl = g.current_lvl
 	self.final_score = self.score
-	self.evaluation = g.stars
+	self.evaluation = g.stars  # Asumimos que las estrellas ya reflejan el rendimiento
+
+	PlayerData.save_level_score(current_lvl, self.score, self)
+	
+	PlayerData.save_player_progress(self)
+
 	get_tree().change_scene_to_file("res://Scenes/GamOver.tscn")
 
 func lose_points(points):
