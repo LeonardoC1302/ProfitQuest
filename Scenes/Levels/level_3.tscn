@@ -1445,7 +1445,7 @@ corner_radius_bottom_left = 5
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_phqt5")
-current_lvl = 2
+current_lvl = 3
 stars = [1000, 2000, 3000]
 
 [node name="ObjetiveChecker" type="Node" parent="."]

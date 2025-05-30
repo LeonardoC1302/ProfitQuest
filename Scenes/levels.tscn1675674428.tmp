@@ -190,18 +190,6 @@ script = ExtResource("5_uotyi")
 position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_p1uqq")
 
-[node name="Score" type="Label" parent="Player"]
-z_index = 8
-offset_left = 9.0
-offset_top = -24.0
-offset_right = 49.0
-offset_bottom = -1.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_p1uqq")
-theme_override_font_sizes/font_size = 6
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 position = Vector2(39, -38)
@@ -232,6 +220,7 @@ player = NodePath("../Player")
 escena_nivel = "res://Scenes/tutorial.tscn"
 nivel_id = 1
 required_score = 0
+interact_distance = null
 
 [node name="Heladeria" type="Sprite2D" parent="Heladeria"]
 texture_filter = 1
@@ -256,7 +245,9 @@ scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
 escena_nivel = "res://Scenes/Levels/level_2.tscn"
+nivel_id = null
 required_score = 500
+interact_distance = null
 
 [node name="Susheria" type="Sprite2D" parent="Susheria"]
 texture_filter = 1
@@ -286,6 +277,7 @@ player = NodePath("../Player")
 escena_nivel = "res://Scenes/Levels/level_3.tscn"
 nivel_id = 3
 required_score = 1000
+interact_distance = null
 
 [node name="LosPollosHermanos" type="Sprite2D" parent="LosPollosHermanos"]
 texture_filter = 1

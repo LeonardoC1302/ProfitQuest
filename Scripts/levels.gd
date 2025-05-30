@@ -22,6 +22,8 @@ func _process(_delta):
 			if PlayerData.is_level_unlocked(nivel_id, required_score):
 				entrar_al_nivel()
 			else:
+				player_node.message("Nivel %d bloqueado.\n Se requieren\n %d puntos\n en el nivel\n anterior." % [nivel_id, required_score]
+)
 				print("🔒 Nivel ", nivel_id, " bloqueado. Se requieren ", required_score, " puntos en el nivel anterior.")
 
 func entrar_al_nivel():
