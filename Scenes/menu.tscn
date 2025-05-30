@@ -71,10 +71,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Customize" type="Label" parent="."]
 z_index = 1
-offset_left = -177.0
-offset_top = 78.0
-offset_right = 323.0
-offset_bottom = 251.0
+offset_left = -174.0
+offset_top = 49.0
+offset_right = 326.0
+offset_bottom = 222.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_3yvod")
 theme_override_font_sizes/font_size = 40
@@ -83,13 +83,25 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Exit" type="Label" parent="."]
 z_index = 1
-offset_left = -75.0
-offset_top = 205.0
-offset_right = 425.0
-offset_bottom = 378.0
+offset_left = -69.0
+offset_top = 239.0
+offset_right = 431.0
+offset_bottom = 412.0
 theme_override_fonts/font = ExtResource("2_3yvod")
 theme_override_font_sizes/font_size = 40
 text = "Exit
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Leaderboard" type="Label" parent="."]
+z_index = 1
+offset_left = -227.0
+offset_top = 145.0
+offset_right = 273.0
+offset_bottom = 318.0
+theme_override_fonts/font = ExtResource("2_3yvod")
+theme_override_font_sizes/font_size = 40
+text = "Leaderboard
 "
 metadata/_edit_use_anchors_ = true
 
@@ -104,9 +116,10 @@ z_index = -1
 offset_left = -587.0
 offset_top = 131.0
 offset_right = 631.0
-offset_bottom = 860.0
+offset_bottom = 1034.0
 scale = Vector2(1.05, 1.05)
 color = Color(0.117647, 0.160784, 0.278431, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="ButtonStart" type="Button" parent="Attributes"]
 offset_left = -300.0
@@ -120,9 +133,9 @@ script = ExtResource("3_p0n8e")
 
 [node name="ButtonCustomize" type="Button" parent="Attributes"]
 offset_left = -300.0
-offset_top = 60.0
+offset_top = 31.0
 offset_right = 287.0
-offset_bottom = 136.0
+offset_bottom = 107.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_1if2e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wvstj")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e5oww")
@@ -130,12 +143,22 @@ script = ExtResource("4_ldt6c")
 
 [node name="ButtonExit" type="Button" parent="Attributes"]
 offset_left = -300.0
-offset_top = 185.0
+offset_top = 219.0
 offset_right = 287.0
-offset_bottom = 261.0
+offset_bottom = 295.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_1if2e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wvstj")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e5oww")
 script = ExtResource("4_664a6")
 
+[node name="ButtonLeaderboard" type="Button" parent="Attributes"]
+offset_left = -300.0
+offset_top = 124.0
+offset_right = 287.0
+offset_bottom = 200.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_1if2e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wvstj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e5oww")
+
 [connection signal="pressed" from="Attributes/ButtonStart" to="Attributes/ButtonStart" method="_on_pressed"]
+[connection signal="pressed" from="Attributes/ButtonLeaderboard" to="Attributes/ButtonStart" method="_on_button_leaderboard_pressed"]

@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkp5ng4886qj0"]
+
+[ext_resource type="Script" uid="uid://bammew7cylig2" path="res://Scripts/leaderboard.gd" id="1_udga5"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_c6wcd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qaei5"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldouh"]
+bg_color = Color(0.279122, 0.36041, 0.55389, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.0627451, 0.0901961, 0.188235, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67k4m"]
+bg_color = Color(0.172549, 0.231373, 0.372549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.0627451, 0.0901961, 0.188235, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 10
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_udga5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 1173.0
+offset_bottom = 658.0
+color = Color(0.117647, 0.160784, 0.278431, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063
+anchor_top = 0.032
+anchor_right = 0.947
+anchor_bottom = 0.723
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6wcd")
+theme_override_font_sizes/font_size = 35
+text = "🏆 Leaderboard 🏆"
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c6wcd")
+current_tab = 0
+
+[node name="Level 1" type="VBoxContainer" parent="ColorRect/VBoxContainer/TabContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_tab_index = 0
+
+[node name="Level 2" type="VBoxContainer" parent="ColorRect/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Level 3" type="VBoxContainer" parent="ColorRect/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Exit" type="Label" parent="ColorRect"]
+z_index = 1
+offset_left = 537.0
+offset_top = 533.0
+offset_right = 1037.0
+offset_bottom = 706.0
+theme_override_fonts/font = ExtResource("2_c6wcd")
+theme_override_font_sizes/font_size = 40
+text = "Exit
+"
+
+[node name="ButtonExit" type="Button" parent="ColorRect"]
+offset_left = 306.0
+offset_top = 513.0
+offset_right = 893.0
+offset_bottom = 589.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_qaei5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ldouh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_67k4m")
+
+[connection signal="pressed" from="ColorRect/ButtonExit" to="." method="_on_button_exit_pressed"]
