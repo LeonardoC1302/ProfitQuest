@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://06tswy25qyd8"]
+
+[ext_resource type="Texture2D" uid="uid://bjynnwxu2ih74" path="res://Assets/Ingredients/fast_food_level/hotdog.png" id="1_0em3p"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_45iew"]
+
+[node name="Hotdog" type="Node2D"]
+
+[node name="Hotdog" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_0em3p")
+script = ExtResource("2_45iew")
+item_id = 16

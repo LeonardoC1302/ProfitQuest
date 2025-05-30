@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwludscxasgtt"]
+
+[ext_resource type="Texture2D" uid="uid://ce0a41s8l8lap" path="res://Assets/Ingredients/fast_food_level/cooked_sausage.png" id="1_wgn3l"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_qcycc"]
+
+[node name="CookedSausage" type="Node2D"]
+
+[node name="CookedSausage" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_wgn3l")
+script = ExtResource("2_qcycc")
+item_id = 13

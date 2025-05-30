@@ -71,7 +71,7 @@ func save_level_score(lvl_id: int, score: int, player: Node):
 	save_player_progress(player)
 
 func is_level_unlocked(lvl_id: int, required_score: int) -> bool:
-	if lvl_id == 1:
+	if lvl_id == 1 or lvl_id == 2 or lvl_id == 3:
 		return true
 
 	if not data.has("progress"):

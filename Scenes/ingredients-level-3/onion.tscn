@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://gl5tkks3013m"]
+
+[ext_resource type="Texture2D" uid="uid://4wqscj0w6215" path="res://Assets/Ingredients/fast_food_level/onion.png" id="1_p2qyr"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_o0gjx"]
+
+[node name="Onion" type="Node2D"]
+
+[node name="Onion" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-1, 0)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_p2qyr")
+script = ExtResource("2_o0gjx")
+item_id = 9

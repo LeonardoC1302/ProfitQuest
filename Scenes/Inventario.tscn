@@ -35,7 +35,7 @@ custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 offset_left = -430.0
 offset_top = 200.0
-offset_right = 470.135
+offset_right = 570.135
 offset_bottom = 300.0
 mouse_filter = 2
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0kunr8x85ma3"]
+
+[ext_resource type="Texture2D" uid="uid://dddyh1t17boj1" path="res://Assets/Ingredients/fast_food_level/sauce.png" id="1_5gdmv"]
+[ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_v6k2v"]
+
+[node name="Sauce" type="Node2D"]
+
+[node name="Sauce" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 1)
+scale = Vector2(0.65625, 0.59375)
+texture = ExtResource("1_5gdmv")
+script = ExtResource("2_v6k2v")
+item_id = 10

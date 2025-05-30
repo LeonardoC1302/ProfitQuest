@@ -18,6 +18,20 @@ var ingredient_prices = {
 	"Wasabi": 500,
 	"Algae": 300,
 	"Cucumber": 100,
+	
+	# Level 3
+	"Beef": 250,
+	"Bread": 80,
+	"Cheese": 120,
+	"Lettuce": 60,
+	"Tomato": 70,
+	"Flour": 90,
+	"Sausage": 200,
+	"Potato": 100,
+	"Oil": 150,
+	"Onion": 50,
+	"Sauce": 110,
+	
 }
 # Base de datos central de crafteo
 var recipes = {
@@ -126,6 +140,96 @@ var recipes = {
 	},
 	
 	# Level 3
+	"Dough": {
+		"station": "MixingStation",
+		"recipe": [
+			{"name": "Flour", "quantity": 2},
+			{"name": "Oil", "quantity": 1},
+		],
+		"product": {
+			"nombre": "Dough", 
+			"cantidad": 1, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/dough.png")
+		}
+	},
+	"CookedBeef": {
+		"station": "Grill",
+		"recipe": [
+			{"name": "Beef", "quantity": 1},
+		],
+		"product": {
+			"nombre": "CookedBeef", 
+			"cantidad": 1, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/cooked_beef.png")
+		}
+	},
+	"CookedSausage": {
+		"station": "Pan",
+		"recipe": [
+			{"name": "Sausage", "quantity": 1},
+		],
+		"product": {
+			"nombre": "CookedSausage", 
+			"cantidad": 1, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/cooked_sausage.png")
+		}
+	},
+	"Burger": {
+		"station": "BurgerBoard",
+		"recipe": [
+			{"name": "Bread", "quantity": 2},
+			{"name": "CookedBeef", "quantity": 1},
+			{"name": "Cheese", "quantity": 1},
+			{"name": "Lettuce", "quantity": 2},
+			{"name": "Tomato", "quantity": 1},
+			{"name": "Sauce", "quantity": 1}
+		],
+		"product": {
+			"nombre": "Burger", 
+			"cantidad": 3, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/burger.png")
+		}
+	},
+	"Pizza": {
+		"station": "Oven",
+		"recipe": [
+			{"name": "Dough", "quantity": 1},
+			{"name": "Cheese", "quantity": 2},
+			{"name": "Tomato", "quantity": 1},
+			{"name": "Sauce", "quantity": 1}
+		],
+		"product": {
+			"nombre": "Pizza", 
+			"cantidad": 4, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/pizza.png")
+		}
+	},
+	"Hotdog": {
+		"station": "HotdogStation",
+		"recipe": [
+			{"name": "Bread", "quantity": 1},
+			{"name": "CookedSausage", "quantity": 1},
+			{"name": "Onion", "quantity": 1},
+			{"name": "Sauce", "quantity": 1}
+		],
+		"product": {
+			"nombre": "Hotdog", 
+			"cantidad": 2, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/hotdog.png")
+		}
+	},
+	"Fries": {
+		"station": "Fryer",
+		"recipe": [
+			{"name": "Potato", "quantity": 3},
+			{"name": "Oil", "quantity": 2},
+		],
+		"product": {
+			"nombre": "Fries", 
+			"cantidad": 4, 
+			"icono": preload("res://Assets/Ingredients/fast_food_level/fries.png")
+		}
+	},
 }
 
 # Iconos de ingredientes para reutilización
