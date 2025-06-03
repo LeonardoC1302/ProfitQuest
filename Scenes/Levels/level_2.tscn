@@ -2125,9 +2125,11 @@ current_lvl = 2
 stars = [1000, 2000, 3000]
 
 [node name="Arrow" type="Sprite2D" parent="."]
+visible = false
 z_index = 3
-position = Vector2(-50, -149)
-scale = Vector2(0.133036, 0.0866072)
+position = Vector2(-47, -75)
+rotation = 3.14159
+scale = Vector2(0.0175033, 0.0155118)
 texture = ExtResource("30_c0rmi")
 
 [node name="ObjetiveChecker" type="Node" parent="."]
@@ -2588,7 +2590,7 @@ theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 11
 
 [node name="Cupboard" type="StaticBody2D" parent="Stations"]
-position = Vector2(-48, -110)
+position = Vector2(-48, -111)
 script = ExtResource("10_5mymd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/Cupboard"]

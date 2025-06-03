@@ -2867,14 +2867,17 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="Game" type="Node2D"]
+position = Vector2(-2, 1)
 script = ExtResource("1_phqt5")
 current_lvl = 3
 stars = [1000, 2000, 3000]
 
 [node name="Arrow" type="Sprite2D" parent="."]
+visible = false
 z_index = 4
-position = Vector2(-330, -435)
-scale = Vector2(0.0830357, 0.0589286)
+position = Vector2(-328, -371)
+rotation = 3.14159
+scale = Vector2(0.0162649, 0.0159972)
 texture = ExtResource("39_8vpvy")
 
 [node name="ObjetiveChecker" type="Node" parent="."]
