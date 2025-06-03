@@ -21,10 +21,10 @@ func _process(delta: float) -> void:
 			var inventario_node = get_node("/root/Game/CanvasLayer/Inventario")
 			var items = inventario_node.getItems()
 			var selected = inventario_node.getSelectedSlot()
-			var item_node = get_node("/root/Game/Items/IceCream")
 			if selected != null:
 				var itemName = items[selected]['nombre']
 				var itemQty = items[selected]['cantidad']
+				var item_node = get_node("/root/Game/Items/" + itemName)
 				#print("Cantidad: ", itemQty, " Ceil: ", ceil(float(itemQty) / 2))
 				if itemName in sellableItems:
 					inventario_node.deleteItemSlot(selected)
