@@ -31,6 +31,7 @@ func _process(delta):
 	# Pickup
 	if Input.is_action_just_pressed("grab") and not is_following and distance <= pickup_distance:
 		player.register_item_pickup(item_id)
+		player.hold = true
 		is_following = true
 
 	# Drop
@@ -38,6 +39,7 @@ func _process(delta):
 		is_following = false
 		var random_offset = randi_range(-15, 15)
 		global_position = player.global_position + Vector2(random_offset, 10)
+		player.hold = false
 		player.register_item_drop(item_id)
 		
 

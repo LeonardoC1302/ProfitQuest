@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=59 format=3 uid="uid://cirqsj1estc7o"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://3kc1g2m6j1hj" path="res://Scenes/ingredients-level-2/shrimp.tscn" id="25_bn6bc"]
 [ext_resource type="PackedScene" uid="uid://diapmi68wwncm" path="res://Scenes/ingredients-level-2/sushi.tscn" id="26_da22s"]
 [ext_resource type="Texture2D" uid="uid://cp7c7xi2c15gy" path="res://Assets/Ingredients/sushi_level/sushi.png" id="29_5s1wx"]
+[ext_resource type="Texture2D" uid="uid://ci2ksok7rx2a" path="res://Assets/Arrow.png" id="30_c0rmi"]
 [ext_resource type="Texture2D" uid="uid://o63ilrekoj3" path="res://Assets/Ingredients/sushi_level/sashimi.png" id="31_27s1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
@@ -2123,6 +2124,12 @@ script = ExtResource("1_imk5p")
 current_lvl = 2
 stars = [1000, 2000, 3000]
 
+[node name="Arrow" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-50, -149)
+scale = Vector2(0.133036, 0.0866072)
+texture = ExtResource("30_c0rmi")
+
 [node name="ObjetiveChecker" type="Node" parent="."]
 script = ExtResource("2_ijbqh")
 player = NodePath("../Player")
@@ -2750,6 +2757,9 @@ theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="Player"]
+wait_time = 0.4
 
 [node name="TileMap" type="Node" parent="."]
 

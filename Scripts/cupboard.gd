@@ -18,6 +18,7 @@ func _process(_delta):
 			# Get items hold by player
 			var items = player.getCollectedItems()
 			if inventario_node:
+				player.hold = false
 				inventario_node.collectItems(items)
 				player.resetCollectedItems(inventario_node.getMap())
 				#inventario_node.process_cupboard_interaction()

@@ -173,6 +173,10 @@ corner_radius_bottom_left = 5
 [node name="Levels" type="Node2D"]
 script = ExtResource("1_j0k6p")
 
+[node name="Arrow" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(-333, -149)
+
 [node name="Player" parent="." instance=ExtResource("4_jk88k")]
 unique_name_in_owner = true
 z_index = 2
@@ -201,6 +205,9 @@ theme_override_fonts/font = ExtResource("7_p1uqq")
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="Player"]
+wait_time = 0.4
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

@@ -31,9 +31,16 @@ static var final_score: int = 0
 static var current_lvl: int = 0
 static var evaluation: Array = []
 
+@onready var arrow = get_parent().get_node("Arrow")
+@onready var blink_timer = $BlinkTimer
+
+var hold := false  
 
 func _ready() -> void:
 	state_machine.Initialize(self)
+	arrow.visible = false
+	blink_timer.wait_time = 0.4
+	blink_timer.timeout.connect(_on_blink_timer_timeout)
 	load_customization()
 	# Inicializar el array con ceros
 	items_collected.resize(MAX_ITEM_ID)
@@ -49,7 +56,22 @@ func _process(delta: float) -> void:
 	if budget_label != null and earning_label != null:
 		budget_label.text = "Presupuesto: " + str(presupuesto)
 		earning_label.text = "Ganancias: " + str(earnings)
-	pass
+	
+	if blink_timer && arrow:
+		if hold and not blink_timer.is_stopped():
+			return
+		elif hold:
+			blink_timer.start()
+			arrow.visible = true  # asegura que se vea al comenzar
+		elif not hold:
+			arrow.visible = false
+			blink_timer.stop()
+
+func _on_blink_timer_timeout():
+	if hold:
+		arrow.visible = !arrow.visible
+	
+
 	
 func _physics_process(delta: float) -> void:
 	move_and_slide()

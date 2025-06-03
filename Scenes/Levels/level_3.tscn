@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bvo701aiv8lrr"]
+[gd_scene load_steps=82 format=3 uid="uid://bvo701aiv8lrr"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_phqt5"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_lxa11"]
@@ -52,10 +52,13 @@
 [ext_resource type="Texture2D" uid="uid://cm7o6qsoqbbx2" path="res://Assets/Check.png" id="36_i40np"]
 [ext_resource type="Texture2D" uid="uid://cp7c7xi2c15gy" path="res://Assets/Ingredients/sushi_level/sushi.png" id="37_yt71f"]
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="38_wnkws"]
+[ext_resource type="Texture2D" uid="uid://ci2ksok7rx2a" path="res://Assets/Arrow.png" id="39_8vpvy"]
 [ext_resource type="Texture2D" uid="uid://o63ilrekoj3" path="res://Assets/Ingredients/sushi_level/sashimi.png" id="39_a0ri7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w08o"]
 size = Vector2(25, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrckn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(23, 10.5)
@@ -2868,6 +2871,12 @@ script = ExtResource("1_phqt5")
 current_lvl = 3
 stars = [1000, 2000, 3000]
 
+[node name="Arrow" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(-330, -435)
+scale = Vector2(0.0830357, 0.0589286)
+texture = ExtResource("39_8vpvy")
+
 [node name="ObjetiveChecker" type="Node" parent="."]
 script = ExtResource("2_lxa11")
 player = NodePath("../Player")
@@ -2901,6 +2910,40 @@ region_rect = Rect2(0, 672, 32, 64)
 position = Vector2(1.5, -7)
 shape = SubResource("RectangleShape2D_1w08o")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/BeefDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/BeefDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/BeefDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/BeefDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
+
 [node name="BreadDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
 position = Vector2(193, -395)
@@ -2927,6 +2970,40 @@ region_rect = Rect2(16, 912, 16, 32)
 z_index = 1
 position = Vector2(1, -10.5)
 shape = SubResource("RectangleShape2D_2q1mk")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/BreadDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/BreadDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/BreadDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/BreadDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
 
 [node name="CheeseDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
@@ -2955,6 +3032,40 @@ z_index = 1
 position = Vector2(1, -10.75)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/CheeseDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/CheeseDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/CheeseDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/CheeseDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
+
 [node name="LettuceDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
 position = Vector2(143, -395)
@@ -2981,6 +3092,40 @@ region_rect = Rect2(16, 912, 16, 32)
 z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/LettuceDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/LettuceDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/LettuceDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/LettuceDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
 
 [node name="TomatoDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
@@ -3009,6 +3154,40 @@ z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/TomatoDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/TomatoDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/TomatoDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/TomatoDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
+
 [node name="FlourDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
 position = Vector2(93, -395)
@@ -3035,6 +3214,40 @@ region_rect = Rect2(16, 912, 16, 32)
 z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/FlourDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/FlourDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/FlourDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/FlourDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
 
 [node name="SausageDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
@@ -3063,6 +3276,40 @@ z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/SausageDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/SausageDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/SausageDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/SausageDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
+
 [node name="PotatoDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
 position = Vector2(218, -394)
@@ -3079,6 +3326,40 @@ region_rect = Rect2(128, 608, 32, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/PotatoDispenser"]
 position = Vector2(0.5, -10)
 shape = SubResource("RectangleShape2D_jm8x4")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/PotatoDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/PotatoDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/PotatoDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/PotatoDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
 
 [node name="OilDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
@@ -3107,6 +3388,40 @@ z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/OilDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/OilDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/OilDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/OilDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
+
 [node name="OnionDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
 position = Vector2(18, -395)
@@ -3134,6 +3449,40 @@ z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/OnionDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/OnionDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/OnionDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/OnionDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
+
 [node name="SauceDispenser" type="StaticBody2D" parent="Stations"]
 z_index = 1
 position = Vector2(-7, -395)
@@ -3160,6 +3509,40 @@ region_rect = Rect2(16, 912, 16, 32)
 z_index = 1
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_2q1mk")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/SauceDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/SauceDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mrckn")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/SauceDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/SauceDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 11
 
 [node name="Cupboard" type="StaticBody2D" parent="Stations"]
 z_index = 1
@@ -3457,6 +3840,9 @@ theme_override_fonts/font = ExtResource("29_a8jnp")
 theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="Player"]
+wait_time = 0.4
 
 [node name="TileMap" type="Node" parent="."]
 
