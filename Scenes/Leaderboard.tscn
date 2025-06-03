@@ -33,6 +33,7 @@ corner_detail = 10
 
 [node name="Control" type="Control"]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -88,6 +89,7 @@ metadata/_tab_index = 2
 
 [node name="Exit" type="Label" parent="ColorRect"]
 z_index = 1
+layout_mode = 0
 offset_left = 537.0
 offset_top = 533.0
 offset_right = 1037.0
@@ -98,6 +100,7 @@ text = "Exit
 "
 
 [node name="ButtonExit" type="Button" parent="ColorRect"]
+layout_mode = 0
 offset_left = 306.0
 offset_top = 513.0
 offset_right = 893.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=58 format=3 uid="uid://cirqsj1estc7o"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
@@ -42,6 +42,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(20, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d4lf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1yan"]
 size = Vector2(26, 16)
@@ -2153,6 +2155,40 @@ region_rect = Rect2(416, 64, 32, 32)
 position = Vector2(1, -8)
 shape = SubResource("RectangleShape2D_2q1mk")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/CucumberDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/CucumberDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/CucumberDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/CucumberDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
+
 [node name="FishDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-109, -109)
 script = ExtResource("3_cld6k")
@@ -2175,6 +2211,40 @@ region_rect = Rect2(192, 160, 32, 64)
 position = Vector2(-2, -11)
 shape = SubResource("RectangleShape2D_k1yan")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/FishDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/FishDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/FishDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/FishDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
+
 [node name="SoyDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-471, 86)
 script = ExtResource("3_cld6k")
@@ -2196,6 +2266,40 @@ region_rect = Rect2(448, 64, 32, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SoyDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/SoyDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/SoyDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/SoyDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/SoyDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
 
 [node name="GingerDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-407, 86)
@@ -2220,6 +2324,40 @@ region_rect = Rect2(448, 96, 32, 32)
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/GingerDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/GingerDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/GingerDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/GingerDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
+
 [node name="AlgaeDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-503, 86)
 script = ExtResource("3_cld6k")
@@ -2242,6 +2380,40 @@ region_rect = Rect2(416, 96, 32, 32)
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/AlgaeDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/AlgaeDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/AlgaeDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/AlgaeDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
+
 [node name="RiceDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-369, -108)
 script = ExtResource("3_cld6k")
@@ -2262,6 +2434,40 @@ region_rect = Rect2(448, 64, 32, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/RiceDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/RiceDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/RiceDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/RiceDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/RiceDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
 
 [node name="WasabiDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-337, -108)
@@ -2284,6 +2490,40 @@ region_rect = Rect2(416, 64, 32, 32)
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
 
+[node name="info_panel" type="CanvasLayer" parent="Stations/WasabiDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/WasabiDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/WasabiDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/WasabiDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
+
 [node name="ShrimpDispenser" type="StaticBody2D" parent="Stations"]
 position = Vector2(-541, 78)
 script = ExtResource("3_cld6k")
@@ -2305,6 +2545,40 @@ region_rect = Rect2(192, 160, 32, 64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/ShrimpDispenser"]
 position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_in2gw")
+
+[node name="info_panel" type="CanvasLayer" parent="Stations/ShrimpDispenser"]
+
+[node name="Panel" type="Panel" parent="Stations/ShrimpDispenser/info_panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_left = 0.688
+anchor_top = 0.477
+anchor_right = 0.699
+anchor_bottom = 0.477
+offset_left = -260.416
+offset_top = -156.548
+offset_right = -160.416
+offset_bottom = -96.548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d4lf")
+
+[node name="TextureRect" type="TextureRect" parent="Stations/ShrimpDispenser/info_panel/Panel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+offset_left = 25.0
+offset_right = 65.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Stations/ShrimpDispenser/info_panel/Panel"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 11
 
 [node name="Cupboard" type="StaticBody2D" parent="Stations"]
 position = Vector2(-48, -110)
