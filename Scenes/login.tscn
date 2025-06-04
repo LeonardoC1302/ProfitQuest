@@ -95,5 +95,38 @@ localize_numeral_system = false
 theme_override_fonts/font = ExtResource("2_fxa43")
 text = "Iniciar sesión"
 
+[node name="MensajeLabel" type="Label" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 481.0
+offset_right = 1126.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("2_fxa43")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 87.0
+offset_right = 1120.0
+offset_bottom = 142.0
+theme_override_fonts/font = ExtResource("2_fxa43")
+text = "Inicio de sesión"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 581.0
+offset_right = 1127.0
+offset_bottom = 604.0
+theme_override_fonts/font = ExtResource("2_fxa43")
+text = "Pulsar para cambiar a registrarse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Control/ColorRect/Button" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/Button2" to="Control" method="_on_button_2_pressed"]

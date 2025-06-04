@@ -64,11 +64,22 @@ func save_player_progress(player: Node):
 		file_write.close()
 		
 func save_level_score(lvl_id: int, score: int, player: Node):
-	if data.has("progress") == false:
+	if not data.has("progress"):
 		data["progress"] = {}
-	
-	data["progress"][str(lvl_id)] = {"score": score}
-	save_player_progress(player)
+
+	var lvl_key := str(lvl_id)
+
+	# Obtener score anterior si existe
+	var previous_score := 0
+	if data["progress"].has(lvl_key):
+		previous_score = int(data["progress"][lvl_key].get("score", 0))
+
+	# Solo actualizar si el nuevo score es mayor
+	if score > previous_score:
+		data["progress"][lvl_key] = {"score": score}
+		save_player_progress(player)
+	else:
+		print("⚠️ Score menor o igual al anterior, no se actualiza.")
 
 func is_level_unlocked(lvl_id: int, required_score: int) -> bool:
 	if lvl_id == 1:
