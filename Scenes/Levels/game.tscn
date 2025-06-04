@@ -1247,7 +1247,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("26_e1cw7")
 script = ExtResource("21_2381e")
 item_id = 5
-sell_price = 300
+sell_price = 2000
 
 [node name="CookedCream" type="Sprite2D" parent="Items"]
 position = Vector2(-343, 505)
@@ -1289,6 +1289,6 @@ objetos del inventario"
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Manual/exit" to="." method="_on_exit_pressed"]
