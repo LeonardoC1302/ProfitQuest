@@ -409,5 +409,18 @@ text = "Continuar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Instrucciones" type="Label" parent="."]
+offset_left = -287.0
+offset_top = -132.0
+offset_right = -152.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 12
+text = "q - soltar
+e - interactuar
+espacio - agarrar
+shift - objetivos
+esc - pausa
+click - seleccionar"
+
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
