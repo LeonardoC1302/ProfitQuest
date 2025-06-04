@@ -95,5 +95,16 @@ localize_numeral_system = false
 theme_override_fonts/font = ExtResource("2_fxa43")
 text = "Iniciar sesión"
 
+[node name="MensajeLabel" type="Label" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 481.0
+offset_right = 1126.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("2_fxa43")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [connection signal="pressed" from="Control/ColorRect/Button" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/Button2" to="Control" method="_on_button_2_pressed"]
