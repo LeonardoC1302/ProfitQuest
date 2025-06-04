@@ -3015,8 +3015,8 @@ texture = ExtResource("39_8vpvy")
 script = ExtResource("2_lxa11")
 player = NodePath("../Player")
 timer = NodePath("../CanvasLayer/LevelTimer")
-objetivo_earnings = 250000
-objetivo_budget = 5000
+objetivo_earnings = 25000
+objetivo_budget = 2500
 trash = NodePath("../Stations/TrashCan")
 
 [node name="Stations" type="Node" parent="."]
@@ -4197,7 +4197,7 @@ offset_bottom = 136.0
 theme_override_fonts/font = ExtResource("29_a8jnp")
 theme_override_font_sizes/font_size = 20
 text = "1. Obtener una
-ganacia de 200000
+ganacia de 25000
 +250pts"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Objectives"]
@@ -4211,7 +4211,7 @@ theme_override_font_sizes/font_size = 20
 text = "2. Tener un
 presupuesto
 restante entre
-0 y 4000
+0 y 3000
 +250pts"
 
 [node name="Label4" type="Label" parent="CanvasLayer/Objectives"]

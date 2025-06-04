@@ -260,7 +260,24 @@ var ingredient_icons = {
 	"Sushi": preload("res://Assets/Ingredients/sushi_level/sushi.png"),
 	
 	# Level 3
-	
+	"Beef": preload("res://Assets/Ingredients/fast_food_level/raw_beef.png"),
+	"Bread": preload("res://Assets/Ingredients/fast_food_level/bread.png"),
+	"Cheese": preload("res://Assets/Ingredients/fast_food_level/cheese.png"),
+	"Lettuce": preload("res://Assets/Ingredients/fast_food_level/lettuce.png"),
+	"Tomato": preload("res://Assets/Ingredients/fast_food_level/tomato.png"),
+	"Flour": preload("res://Assets/Ingredients/fast_food_level/flour.png"),
+	"Sausage": preload("res://Assets/Ingredients/fast_food_level/raw_sausage.png"),
+	"Potato": preload("res://Assets/Ingredients/fast_food_level/potato.png"),
+	"Oil": preload("res://Assets/Ingredients/fast_food_level/oil.png"),
+	"Onion": preload("res://Assets/Ingredients/fast_food_level/onion.png"),
+	"Sauce": preload("res://Assets/Ingredients/fast_food_level/sauce.png"),
+	"Dough": preload("res://Assets/Ingredients/fast_food_level/dough.png"),
+	"CookedBeef": preload("res://Assets/Ingredients/fast_food_level/cooked_beef.png"),
+	"CookedSausage": preload("res://Assets/Ingredients/fast_food_level/cooked_sausage.png"),
+	"Burger": preload("res://Assets/Ingredients/fast_food_level/burger.png"),
+	"Pizza": preload("res://Assets/Ingredients/fast_food_level/pizza.png"),
+	"Hotdog": preload("res://Assets/Ingredients/fast_food_level/hotdog.png"),
+	"Fries": preload("res://Assets/Ingredients/fast_food_level/fries.png"),
 	# Añade más ingredientes aquí
 }
 
