@@ -79,6 +79,10 @@ func _on_button_pressed():
 func _on_button_2_pressed() -> void:
 	register = !register
 	if register:
+		$ColorRect/Label3.text = "Registro"
 		$ColorRect/Button2.text = "Registrarse"
+		$ColorRect/Label4.text = "Pulsar para cambiar a iniciar sesión"
 	else:
+		$ColorRect/Label3.text = "Inicio de sesión"
 		$ColorRect/Button2.text = "Iniciar sesión"
+		$ColorRect/Label4.text = "Pulsar para cambiar a registrarse"
