@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhmr52gv3eg76"]
+[gd_scene load_steps=11 format=3 uid="uid://bhmr52gv3eg76"]
 
 [ext_resource type="Texture2D" uid="uid://bw3gkyywejt6l" path="res://Assets/Logo.png" id="1_ovyjc"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_3yvod"]
+[ext_resource type="Script" uid="uid://c2rufyohw5jjg" path="res://Scripts/cerrar_sesion.gd" id="2_jsrd8"]
 [ext_resource type="Script" uid="uid://ba2su2vpamlvc" path="res://Scripts/Start.gd" id="3_p0n8e"]
 [ext_resource type="Script" uid="uid://cp2s8srhfxolc" path="res://Scripts/Exit.gd" id="4_664a6"]
 [ext_resource type="Script" uid="uid://cy486d0jsq4gd" path="res://Scripts/Customize.gd" id="4_ldt6c"]
@@ -113,13 +114,28 @@ shape = SubResource("RectangleShape2D_7euin")
 
 [node name="ColorRect" type="ColorRect" parent="Attributes/CollisionShape2D"]
 z_index = -1
-offset_left = -587.0
-offset_top = 131.0
-offset_right = 631.0
-offset_bottom = 1034.0
+offset_left = -588.0
+offset_top = 153.0
+offset_right = 630.0
+offset_bottom = 1056.0
 scale = Vector2(1.05, 1.05)
 color = Color(0.117647, 0.160784, 0.278431, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="Cerrar Sesion" type="Button" parent="Attributes"]
+z_index = 2
+offset_left = 385.0
+offset_top = -292.0
+offset_right = 527.0
+offset_bottom = -223.0
+theme_override_fonts/font = ExtResource("2_3yvod")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxFlat_1if2e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wvstj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e5oww")
+text = "Cerrar Sesión"
+icon_alignment = 1
+script = ExtResource("2_jsrd8")
 
 [node name="ButtonStart" type="Button" parent="Attributes"]
 offset_left = -300.0
@@ -160,5 +176,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_1if2e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wvstj")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e5oww")
 
+[connection signal="pressed" from="Attributes/Cerrar Sesion" to="Attributes/Cerrar Sesion" method="_on_pressed"]
 [connection signal="pressed" from="Attributes/ButtonStart" to="Attributes/ButtonStart" method="_on_pressed"]
 [connection signal="pressed" from="Attributes/ButtonLeaderboard" to="Attributes/ButtonStart" method="_on_button_leaderboard_pressed"]

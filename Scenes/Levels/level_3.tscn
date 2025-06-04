@@ -4352,6 +4352,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button4" type="Button" parent="CanvasLayer/Pause"]
+layout_mode = 0
 offset_left = 217.0
 offset_top = 218.0
 offset_right = 504.0
@@ -4379,6 +4380,7 @@ offset_bottom = 40.0
 
 [node name="exit4" type="Button" parent="CanvasLayer/Manual"]
 z_index = 2
+layout_mode = 0
 offset_left = 1038.0
 offset_top = 166.0
 offset_right = 1076.0
@@ -4401,6 +4403,7 @@ icon_alignment = 1
 
 [node name="exit3" type="Button" parent="CanvasLayer/Manual"]
 z_index = 2
+layout_mode = 0
 offset_left = 556.0
 offset_top = 99.0
 offset_right = 594.0
