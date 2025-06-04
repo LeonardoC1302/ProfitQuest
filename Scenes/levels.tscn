@@ -165,7 +165,7 @@ size = Vector2(41.5, 23)
 size = Vector2(236.87, 110.769)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2875"]
-size = Vector2(108.522, 126.692)
+size = Vector2(154.435, 121.846)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bku7o"]
 bg_color = Color(0.105882, 0.380392, 0.376471, 0.85098)
@@ -337,7 +337,7 @@ theme_override_font_sizes/font_size = 50
 text = "Nivel 3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LosPollosHermanos"]
-position = Vector2(8.34772, 63.346)
+position = Vector2(6.26086, 22.1538)
 shape = SubResource("RectangleShape2D_x2875")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

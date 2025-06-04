@@ -181,6 +181,7 @@ text = "x3  +"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="FrechFries"]
+z_index = 10
 offset_left = 16.0
 offset_top = -118.0
 offset_right = 69.0
@@ -190,6 +191,7 @@ text = "x2  ="
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="FrechFries"]
+z_index = 10
 offset_left = 102.0
 offset_top = -119.0
 offset_right = 155.0
@@ -571,7 +573,7 @@ text = "x1  +"
 metadata/_edit_use_anchors_ = true
 
 [node name="Circle2" type="Sprite2D" parent="."]
-position = Vector2(-87.4499, -3.00003)
+position = Vector2(-84.4499, -3.00003)
 scale = Vector2(0.155699, 0.142723)
 texture = ExtResource("25_jhrlv")
 
