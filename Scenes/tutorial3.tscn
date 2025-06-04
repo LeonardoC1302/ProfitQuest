@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dwj4rg616pvgm"]
+[gd_scene load_steps=26 format=3 uid="uid://dwj4rg616pvgm"]
 
 [ext_resource type="Script" uid="uid://c3r8fshoerab2" path="res://Scripts/tutorial3.gd" id="1_xul3c"]
 [ext_resource type="Texture2D" uid="uid://cr2buwgvkc3ux" path="res://Assets/ScrollTutorial.png" id="2_tw7ti"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://y18sfmovssaj" path="res://Assets/Ingredients/fast_food_level/lettuce.png" id="20_jhrlv"]
 [ext_resource type="Texture2D" uid="uid://baoiuoxptu8ua" path="res://Assets/Ingredients/fast_food_level/tomato.png" id="21_m8t20"]
 [ext_resource type="Texture2D" uid="uid://b18dqu6d3psvt" path="res://Assets/Ingredients/fast_food_level/pizza.png" id="24_m8t20"]
+[ext_resource type="Texture2D" uid="uid://cdqyul14hwp2q" path="res://Assets/Circle.png" id="25_jhrlv"]
 
 [node name="Tutorial" type="Node2D"]
 position = Vector2(4.44992, -2.99997)
@@ -568,3 +569,23 @@ offset_bottom = -136.506
 scale = Vector2(1.3, 1.3)
 text = "x1  +"
 metadata/_edit_use_anchors_ = true
+
+[node name="Circle2" type="Sprite2D" parent="."]
+position = Vector2(-87.4499, -3.00003)
+scale = Vector2(0.155699, 0.142723)
+texture = ExtResource("25_jhrlv")
+
+[node name="Circle" type="Sprite2D" parent="."]
+position = Vector2(-112.45, 142)
+scale = Vector2(0.177734, 0.167969)
+texture = ExtResource("25_jhrlv")
+
+[node name="Circle4" type="Sprite2D" parent="."]
+position = Vector2(324.55, 16)
+scale = Vector2(0.130308, 0.131584)
+texture = ExtResource("25_jhrlv")
+
+[node name="Circle3" type="Sprite2D" parent="."]
+position = Vector2(347.55, -137)
+scale = Vector2(0.112305, 0.113281)
+texture = ExtResource("25_jhrlv")
