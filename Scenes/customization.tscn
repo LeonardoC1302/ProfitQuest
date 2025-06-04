@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://btd0s6v535uqv"]
+[gd_scene load_steps=5 format=3 uid="uid://btd0s6v535uqv"]
 
 [ext_resource type="PackedScene" uid="uid://drhf3j6kajff4" path="res://Scenes/player.tscn" id="1_j87cl"]
 [ext_resource type="Script" uid="uid://cxqtgke4cefct" path="res://Scripts/customization.gd" id="1_jj6bv"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="2_nx527"]
+[ext_resource type="Texture2D" uid="uid://ci2ksok7rx2a" path="res://Assets/Arrow.png" id="4_item3"]
 
 [node name="Customization" type="Node2D"]
 position = Vector2(38, 538)
@@ -21,6 +22,9 @@ color = Color(0.117647, 0.160784, 0.278431, 1)
 unique_name_in_owner = true
 position = Vector2(1623, -460)
 scale = Vector2(30, 30)
+
+[node name="BlinkTimer" type="Timer" parent="Player"]
+wait_time = 0.4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 155.0
@@ -136,6 +140,14 @@ text = "Save"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_nx527")
 text = "Menu"
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(-8, -35)
+rotation = 3.14159
+scale = Vector2(0.0122071, 0.0106191)
+texture = ExtResource("4_item3")
 
 [connection signal="color_changed" from="VBoxContainer/HeadContainer/HeadColorPicker" to="." method="_on_head_color_picker_color_changed"]
 [connection signal="color_changed" from="VBoxContainer/EyebrowsContainer/EyebrowsColorPicker" to="." method="_on_eyebrows_color_picker_color_changed"]

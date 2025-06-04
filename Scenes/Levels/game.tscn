@@ -183,8 +183,9 @@ current_lvl = 1
 stars = [500, 1000, 1500]
 
 [node name="Arrow" type="Sprite2D" parent="."]
+visible = false
 z_index = 2
-position = Vector2(-9, -38)
+position = Vector2(-8, -35)
 rotation = 3.14159
 scale = Vector2(0.0122071, 0.0106191)
 texture = ExtResource("18_kv0vm")
