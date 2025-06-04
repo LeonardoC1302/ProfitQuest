@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cirqsj1estc7o"]
+[gd_scene load_steps=67 format=3 uid="uid://cirqsj1estc7o"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_imk5p"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_ijbqh"]
@@ -40,6 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://cp7c7xi2c15gy" path="res://Assets/Ingredients/sushi_level/sushi.png" id="29_5s1wx"]
 [ext_resource type="Texture2D" uid="uid://ci2ksok7rx2a" path="res://Assets/Arrow.png" id="30_c0rmi"]
 [ext_resource type="Texture2D" uid="uid://o63ilrekoj3" path="res://Assets/Ingredients/sushi_level/sashimi.png" id="31_27s1b"]
+[ext_resource type="Texture2D" uid="uid://cr2buwgvkc3ux" path="res://Assets/ScrollTutorial.png" id="38_8jijy"]
+[ext_resource type="Texture2D" uid="uid://bie7r83j170rx" path="res://Assets/Ingredients/sushi_level/fillet.png" id="39_vybpq"]
+[ext_resource type="Texture2D" uid="uid://bml0f36y14ojm" path="res://Assets/Ingredients/sushi_level/cooked_rice.png" id="40_txe2d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q1mk"]
 size = Vector2(20, 16)
@@ -2119,6 +2122,21 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jijy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vybpq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txe2d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqb48"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhmb4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_imk5p")
 current_lvl = 2
@@ -2802,9 +2820,9 @@ layer_0/tile_data = PackedInt32Array(851953, 1441792, 6, 917489, 1441792, 7, 851
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventario" parent="CanvasLayer" node_paths=PackedStringArray("player", "world_2d_node", "timer") instance=ExtResource("19_1drwj")]
-offset_left = -2.0
+offset_left = -68.0
 offset_top = 4.0
-offset_right = -2.0
+offset_right = -68.0
 offset_bottom = 4.0
 scale = Vector2(1.00197, 1)
 itemMap = {
@@ -3048,62 +3066,431 @@ vertical_alignment = 1
 [node name="Button3" type="Button" parent="CanvasLayer/Pause"]
 layout_mode = 0
 offset_left = 217.0
-offset_top = 245.0
+offset_top = 282.0
 offset_right = 504.0
-offset_bottom = 293.0
+offset_bottom = 330.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Pause/Button3"]
 z_index = 2
 layout_mode = 0
-offset_left = 35.0
-offset_top = -146.0
-offset_right = 252.0
-offset_bottom = -100.0
-theme_override_fonts/font = ExtResource("17_qcv4o")
-theme_override_font_sizes/font_size = 20
-text = "Continuar"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button2" type="Button" parent="CanvasLayer/Pause"]
-layout_mode = 0
-offset_left = 215.0
-offset_top = 172.0
-offset_right = 502.0
-offset_bottom = 220.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Pause/Button2"]
-z_index = 2
-layout_mode = 0
-offset_left = 38.0
-offset_top = 76.0
-offset_right = 255.0
-offset_bottom = 122.0
+offset_left = 36.0
+offset_top = 3.0
+offset_right = 253.0
+offset_bottom = 49.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
 text = "Salir"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/Pause"]
+[node name="Button2" type="Button" parent="CanvasLayer/Pause"]
 layout_mode = 0
 offset_left = 215.0
-offset_top = 96.0
+offset_top = 154.0
 offset_right = 502.0
-offset_bottom = 144.0
+offset_bottom = 202.0
 
-[node name="Label" type="Label" parent="CanvasLayer/Pause/Button"]
+[node name="Label" type="Label" parent="CanvasLayer/Pause/Button2"]
 z_index = 2
 layout_mode = 0
 offset_left = 42.0
-offset_top = 81.0
+offset_top = 5.0
 offset_right = 259.0
-offset_bottom = 127.0
+offset_bottom = 51.0
 theme_override_fonts/font = ExtResource("17_qcv4o")
 theme_override_font_sizes/font_size = 20
 text = "Volver"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Pause"]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 93.0
+offset_right = 502.0
+offset_bottom = 141.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Pause/Button"]
+z_index = 2
+layout_mode = 0
+offset_left = 37.0
+offset_top = 3.0
+offset_right = 254.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 20
+text = "Continuar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Pause"]
+offset_left = 217.0
+offset_top = 218.0
+offset_right = 504.0
+offset_bottom = 266.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Pause/Button4"]
+z_index = 2
+layout_mode = 0
+offset_left = 37.0
+offset_top = 3.0
+offset_right = 254.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 20
+text = "Recetas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Manual" type="Panel" parent="CanvasLayer"]
+process_mode = 2
+visible = false
+z_index = 5
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Scroll" type="Sprite2D" parent="CanvasLayer/Manual"]
+position = Vector2(579, 298.501)
+scale = Vector2(12.625, 11.7344)
+texture = ExtResource("38_8jijy")
+
+[node name="Title" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.0863
+anchor_top = 7.925
+anchor_right = 18.0863
+anchor_bottom = 7.925
+offset_left = -245.45
+offset_top = -198.999
+offset_right = -35.4499
+offset_bottom = -168.999
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 30
+text = "Recetas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Number" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.0863
+anchor_top = 7.925
+anchor_right = 18.0863
+anchor_bottom = 7.925
+offset_left = -344.45
+offset_top = -149.0
+offset_right = -304.45
+offset_bottom = -126.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 20
+text = "1."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number2" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.0863
+anchor_top = 7.925
+anchor_right = 18.0863
+anchor_bottom = 7.925
+offset_left = -97.4499
+offset_top = -144.0
+offset_right = -57.4499
+offset_bottom = -121.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 20
+text = "2."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number3" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.0863
+anchor_top = 7.925
+anchor_right = 18.0863
+anchor_bottom = 7.925
+offset_left = -340.45
+offset_top = -52.0
+offset_right = -300.45
+offset_bottom = -29.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 20
+text = "3."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number4" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.0863
+anchor_top = 7.925
+anchor_right = 18.0863
+anchor_bottom = 7.925
+offset_left = -338.45
+offset_top = 50.0008
+offset_right = -298.45
+offset_bottom = 73.0008
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 20
+text = "4."
+metadata/_edit_use_anchors_ = true
+
+[node name="Fillets" type="Node2D" parent="CanvasLayer/Manual"]
+
+[node name="Fish" type="Sprite2D" parent="CanvasLayer/Manual/Fillets"]
+position = Vector2(422.45, 218)
+scale = Vector2(1.93125, 1.65)
+texture = ExtResource("8_vib74")
+
+[node name="Cutting" type="Sprite2D" parent="CanvasLayer/Manual/Fillets"]
+position = Vector2(468.75, 170.85)
+scale = Vector2(2.29375, 1.84583)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(192, 448, 32, 32)
+
+[node name="Fillet" type="Sprite2D" parent="CanvasLayer/Manual/Fillets"]
+position = Vector2(538.45, 216)
+scale = Vector2(1.52969, 1.51878)
+texture = ExtResource("39_vybpq")
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/Fillets"]
+offset_left = 569.45
+offset_top = 204.0
+offset_right = 622.45
+offset_bottom = 227.0
+scale = Vector2(1.3, 1.3)
+text = "x2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Manual/Fillets"]
+offset_left = 457.45
+offset_top = 204.0
+offset_right = 510.45
+offset_bottom = 227.0
+scale = Vector2(1.3, 1.3)
+text = "x1 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="CookedRice" type="Node2D" parent="CanvasLayer/Manual"]
+
+[node name="Rice" type="Sprite2D" parent="CanvasLayer/Manual/CookedRice"]
+z_index = 2
+position = Vector2(652.45, 225)
+scale = Vector2(2.07812, 2.1248)
+texture = ExtResource("16_y1rf3")
+
+[node name="CookedRice" type="Sprite2D" parent="CanvasLayer/Manual/CookedRice"]
+position = Vector2(760.45, 229)
+scale = Vector2(2.54687, 2.625)
+texture = ExtResource("40_txe2d")
+
+[node name="Pot" type="Sprite2D" parent="CanvasLayer/Manual/CookedRice"]
+position = Vector2(732.45, 174)
+scale = Vector2(2.10078, 2.00443)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(0, 448, 64, 32)
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/CookedRice"]
+offset_left = 683.45
+offset_top = 211.0
+offset_right = 736.45
+offset_bottom = 234.0
+scale = Vector2(1.3, 1.3)
+text = "x2  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Sashimi" type="Node2D" parent="CanvasLayer/Manual"]
+
+[node name="Fillet" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(380.45, 319)
+scale = Vector2(1.26563, 1.40547)
+texture = ExtResource("39_vybpq")
+
+[node name="Sashimi" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(790.45, 318)
+scale = Vector2(1.50586, 1.39063)
+texture = ExtResource("31_27s1b")
+
+[node name="SashimiBoard" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(466.45, 266)
+scale = Vector2(2.15478, 2.1875)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(224, 448, 32, 24)
+
+[node name="Shrimp" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(472.45, 315)
+scale = Vector2(1.53125, 1.62343)
+texture = ExtResource("20_k8xho")
+
+[node name="Soy" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(549.45, 305)
+scale = Vector2(2.35938, 2.37422)
+texture = ExtResource("10_m5eas")
+
+[node name="Wasabi" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(711.433, 309.298)
+scale = Vector2(1.81354, 2.0811)
+texture = ExtResource("18_j13t8")
+
+[node name="Ginger" type="Sprite2D" parent="CanvasLayer/Manual/Sashimi"]
+position = Vector2(630.45, 320)
+scale = Vector2(0.964844, 1.14043)
+texture = ExtResource("12_dv8yo")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Manual/Sashimi"]
+offset_left = 646.45
+offset_top = 304.0
+offset_right = 699.45
+offset_bottom = 327.0
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Manual/Sashimi"]
+offset_left = 492.45
+offset_top = 304.0
+offset_right = 545.45
+offset_bottom = 327.0
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/Sashimi"]
+offset_left = 404.45
+offset_top = 304.0
+offset_right = 457.45
+offset_bottom = 327.0
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Manual/Sashimi"]
+offset_left = 569.45
+offset_top = 303.0
+offset_right = 622.45
+offset_bottom = 326.0
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="CanvasLayer/Manual/Sashimi"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 726.45
+offset_top = 303.0
+offset_right = 771.386
+offset_bottom = 326.0
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Sushi" type="Node2D" parent="CanvasLayer/Manual"]
+
+[node name="SushiBoard" type="Sprite2D" parent="CanvasLayer/Manual/Sushi"]
+position = Vector2(467.45, 382)
+scale = Vector2(2.43859, 2.57031)
+texture = ExtResource("17_m5eas")
+region_enabled = true
+region_rect = Rect2(352, 320, 32, 32)
+
+[node name="Algae" type="Sprite2D" parent="CanvasLayer/Manual/Sushi"]
+position = Vector2(382.45, 449)
+scale = Vector2(1.51406, 1.52968)
+texture = ExtResource("14_pvfcc")
+
+[node name="Fillet" type="Sprite2D" parent="CanvasLayer/Manual/Sushi"]
+position = Vector2(493.45, 448)
+scale = Vector2(1.60547, 1.40625)
+texture = ExtResource("39_vybpq")
+
+[node name="Cucumber" type="Sprite2D" parent="CanvasLayer/Manual/Sushi"]
+position = Vector2(593.45, 447)
+scale = Vector2(2.09062, 2.18437)
+texture = ExtResource("6_27s1b")
+
+[node name="Soy" type="Sprite2D" parent="CanvasLayer/Manual/Sushi"]
+position = Vector2(672.45, 436)
+scale = Vector2(2.22227, 2.4293)
+texture = ExtResource("10_m5eas")
+
+[node name="Sushi" type="Sprite2D" parent="CanvasLayer/Manual/Sushi"]
+position = Vector2(757.45, 450)
+scale = Vector2(1.51406, 1.52968)
+texture = ExtResource("29_5s1wx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/Sushi"]
+offset_left = 411.45
+offset_top = 434.0
+offset_right = 464.45
+offset_bottom = 457.0
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Manual/Sushi"]
+offset_left = 527.45
+offset_top = 435.0
+offset_right = 580.45
+offset_bottom = 458.0
+scale = Vector2(1.3, 1.3)
+text = "x4  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Manual/Sushi"]
+offset_left = 619.45
+offset_top = 435.0
+offset_right = 672.45
+offset_bottom = 458.0
+scale = Vector2(1.3, 1.3)
+text = "x3 +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="CanvasLayer/Manual/Sushi"]
+offset_left = 771.45
+offset_top = 435.0
+offset_right = 824.45
+offset_bottom = 458.0
+scale = Vector2(1.3, 1.3)
+text = "x5"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="CanvasLayer/Manual/Sushi"]
+offset_left = 694.45
+offset_top = 435.0
+offset_right = 747.45
+offset_bottom = 458.0
+scale = Vector2(1.3, 1.3)
+text = "x3 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="exit2" type="Button" parent="CanvasLayer/Manual"]
+z_index = 2
+layout_mode = 0
+offset_left = 768.0
+offset_top = 101.0
+offset_right = 806.0
+offset_bottom = 139.0
+theme_override_colors/font_hover_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/font_hover_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_hover_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/font_pressed_color = Color(0.513726, 0.156863, 0.211765, 1)
+theme_override_fonts/font = ExtResource("17_qcv4o")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_8jijy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vybpq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_txe2d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sqb48")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vhmb4")
+text = "x"
+icon_alignment = 1
 
 [node name="Items" type="Node" parent="."]
 
@@ -3139,3 +3526,5 @@ click - seleccionar"
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Manual/exit2" to="." method="_on_exit_2_pressed"]

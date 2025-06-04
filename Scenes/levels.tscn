@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cg1pilhlfursy"]
+[gd_scene load_steps=21 format=4 uid="uid://cg1pilhlfursy"]
 
 [ext_resource type="Script" uid="uid://iostx1kdakfs" path="res://Scenes/pauseLevels.gd" id="1_j0k6p"]
 [ext_resource type="Script" uid="uid://d3mkms21tra8r" path="res://Scripts/levels.gd" id="1_p1uqq"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://b7nfl3mv22d8" path="res://Scripts/camera_2d.gd" id="5_uotyi"]
 [ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="7_p1uqq"]
 [ext_resource type="Texture2D" uid="uid://bnbiruarntl47" path="res://Assets/tilemaps/sushi-interior.png" id="8_bku7o"]
+[ext_resource type="Texture2D" uid="uid://cp7c7xi2c15gy" path="res://Assets/Ingredients/sushi_level/sushi.png" id="9_dlt5w"]
+[ext_resource type="Texture2D" uid="uid://o63ilrekoj3" path="res://Assets/Ingredients/sushi_level/sashimi.png" id="10_8glue"]
+[ext_resource type="Texture2D" uid="uid://c4nxau7dlai" path="res://Assets/Ingredients/fast_food_level/burger.png" id="12_8glue"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1uqq"]
 radius = 8.0
@@ -156,7 +159,13 @@ sources/3 = SubResource("TileSetAtlasSource_uusmb")
 sources/4 = SubResource("TileSetAtlasSource_jk88k")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk88k"]
-size = Vector2(40, 26)
+size = Vector2(41.5, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4big3"]
+size = Vector2(236.87, 110.769)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2875"]
+size = Vector2(108.522, 126.692)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bku7o"]
 bg_color = Color(0.105882, 0.380392, 0.376471, 0.85098)
@@ -233,7 +242,7 @@ tile_map_data = PackedByteArray("AADy/wYABAAAAAUAAADy/wUABAAAAAQAAADz/wUABAABAAA
 tile_set = SubResource("TileSet_xgx5e")
 
 [node name="Heladeria" type="StaticBody2D" parent="."]
-position = Vector2(-328, -197)
+position = Vector2(-328, -210)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
@@ -243,18 +252,19 @@ required_score = 0
 
 [node name="Heladeria" type="Sprite2D" parent="Heladeria"]
 texture_filter = 1
+position = Vector2(4.17392, 60.9229)
 texture = ExtResource("5_jk88k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heladeria"]
-position = Vector2(-4.17407, -11.077)
+position = Vector2(1.04346, 52.6154)
 scale = Vector2(4.17392, 5.53845)
 shape = SubResource("RectangleShape2D_jk88k")
 
 [node name="Label" type="Label" parent="Heladeria"]
-offset_left = -83.4784
-offset_top = -227.076
-offset_right = 80.5216
-offset_bottom = -158.076
+offset_left = -79.3045
+offset_top = -160.615
+offset_right = 85.6955
+offset_bottom = -91.615
 theme_override_font_sizes/font_size = 50
 text = "Nivel 1"
 
@@ -263,57 +273,72 @@ position = Vector2(-181, -194)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
-escena_nivel = "res://Scenes/Levels/level_2.tscn"
+escena_nivel = "res://Scenes/tutorial2.tscn"
 required_score = 500
+
+[node name="sushi" type="Sprite2D" parent="Susheria"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-4.17392, -49.846)
+scale = Vector2(2.39999, 4.00647)
+texture = ExtResource("9_dlt5w")
+region_rect = Rect2(416, 96, 64, 32)
+
+[node name="sashimi" type="Sprite2D" parent="Susheria"]
+z_index = 2
+texture_filter = 1
+position = Vector2(112.696, -33.2307)
+scale = Vector2(2.24347, 2.52246)
+texture = ExtResource("10_8glue")
+region_rect = Rect2(416, 96, 64, 32)
 
 [node name="Susheria" type="Sprite2D" parent="Susheria"]
 texture_filter = 1
-scale = Vector2(2.39999, 4.00647)
+position = Vector2(50.0871, 22.1538)
+scale = Vector2(4.04348, 6.57691)
 texture = ExtResource("8_bku7o")
 region_enabled = true
-region_rect = Rect2(204, 62, 74, 31)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Susheria"]
-position = Vector2(4.17389, -16.6153)
-scale = Vector2(4.17392, 5.53845)
-shape = SubResource("RectangleShape2D_jk88k")
+region_rect = Rect2(416, 96, 64, 32)
 
 [node name="Label" type="Label" parent="Susheria"]
-offset_left = -83.4784
-offset_top = -227.076
-offset_right = 80.5216
-offset_bottom = -158.076
+offset_left = -37.5653
+offset_top = -182.769
+offset_right = 127.435
+offset_bottom = -113.769
 theme_override_font_sizes/font_size = 50
 text = "Nivel 2"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Susheria"]
+position = Vector2(52.6957, -22.1538)
+shape = SubResource("RectangleShape2D_4big3")
+
 [node name="LosPollosHermanos" type="StaticBody2D" parent="."]
-position = Vector2(-88, -118)
+position = Vector2(-234, 42)
 scale = Vector2(0.239583, 0.180556)
 script = ExtResource("1_p1uqq")
 player = NodePath("../Player")
-escena_nivel = "res://Scenes/Levels/level_3.tscn"
+escena_nivel = "res://Scenes/tutorial3.tscn"
 nivel_id = 3
 required_score = 1000
 
 [node name="LosPollosHermanos" type="Sprite2D" parent="LosPollosHermanos"]
 texture_filter = 1
-scale = Vector2(2.39999, 4.00647)
-texture = ExtResource("8_bku7o")
-region_enabled = true
+position = Vector2(12.5218, 33.2307)
+scale = Vector2(6.28696, 10.6571)
+texture = ExtResource("12_8glue")
 region_rect = Rect2(204, 62, 74, 31)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LosPollosHermanos"]
-position = Vector2(8.10623e-06, -22.1538)
-scale = Vector2(4.17392, 5.53845)
-shape = SubResource("RectangleShape2D_jk88k")
-
 [node name="Label" type="Label" parent="LosPollosHermanos"]
-offset_left = -83.4784
-offset_top = -227.076
-offset_right = 80.5216
-offset_bottom = -158.076
+offset_left = -79.0
+offset_top = -138.0
+offset_right = 88.0
+offset_bottom = -58.0
 theme_override_font_sizes/font_size = 50
 text = "Nivel 3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LosPollosHermanos"]
+position = Vector2(8.34772, 63.346)
+shape = SubResource("RectangleShape2D_x2875")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

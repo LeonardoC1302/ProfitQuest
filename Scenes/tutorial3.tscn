@@ -1,0 +1,570 @@
+[gd_scene load_steps=25 format=3 uid="uid://dwj4rg616pvgm"]
+
+[ext_resource type="Script" uid="uid://c3r8fshoerab2" path="res://Scripts/tutorial3.gd" id="1_xul3c"]
+[ext_resource type="Texture2D" uid="uid://cr2buwgvkc3ux" path="res://Assets/ScrollTutorial.png" id="2_tw7ti"]
+[ext_resource type="FontFile" uid="uid://c0yopc1wdpo3t" path="res://Assets/PressStart2P-Regular.ttf" id="3_rgofp"]
+[ext_resource type="Texture2D" uid="uid://begm8gtlt6w63" path="res://Assets/Ingredients/fast_food_level/flour.png" id="4_5anmj"]
+[ext_resource type="Texture2D" uid="uid://r86tmmj0tndp" path="res://Assets/Ingredients/fast_food_level/potato.png" id="4_s7sab"]
+[ext_resource type="Texture2D" uid="uid://7ciwfh7b5dqe" path="res://Assets/Stations/SpriteSheet.png" id="5_3ld8w"]
+[ext_resource type="Texture2D" uid="uid://cro65ilg23e0g" path="res://Assets/tilemaps/decoracionHeladeria.png" id="5_s7sab"]
+[ext_resource type="Texture2D" uid="uid://bylgmdh1ocmk8" path="res://Assets/Ingredients/fast_food_level/fries.png" id="5_xul3c"]
+[ext_resource type="Texture2D" uid="uid://i5i6ddqwdedv" path="res://Assets/Ingredients/fast_food_level/oil.png" id="6_xul3c"]
+[ext_resource type="Texture2D" uid="uid://btyjoix0ptd8p" path="res://Assets/Ingredients/fast_food_level/dough.png" id="7_jhrlv"]
+[ext_resource type="Texture2D" uid="uid://bvw656kbbml2g" path="res://Assets/Ingredients/fast_food_level/raw_sausage.png" id="8_m8t20"]
+[ext_resource type="Texture2D" uid="uid://ce0a41s8l8lap" path="res://Assets/Ingredients/fast_food_level/cooked_sausage.png" id="9_himnm"]
+[ext_resource type="Texture2D" uid="uid://dx5icyn66gxj6" path="res://Assets/Ingredients/fast_food_level/raw_beef.png" id="11_8mlcv"]
+[ext_resource type="Texture2D" uid="uid://bu3x4jw11ll1u" path="res://Assets/Ingredients/fast_food_level/cooked_beef.png" id="12_htpv5"]
+[ext_resource type="Texture2D" uid="uid://c06gub6hgm2qn" path="res://Assets/tilemaps/interior-FF.png" id="13_f5khl"]
+[ext_resource type="Texture2D" uid="uid://cd6y2xdh1ratt" path="res://Assets/Ingredients/fast_food_level/bread.png" id="16_k2sqm"]
+[ext_resource type="Texture2D" uid="uid://dddyh1t17boj1" path="res://Assets/Ingredients/fast_food_level/sauce.png" id="17_5anmj"]
+[ext_resource type="Texture2D" uid="uid://c4nxau7dlai" path="res://Assets/Ingredients/fast_food_level/burger.png" id="18_s7sab"]
+[ext_resource type="Texture2D" uid="uid://4wqscj0w6215" path="res://Assets/Ingredients/fast_food_level/onion.png" id="18_xul3c"]
+[ext_resource type="Texture2D" uid="uid://bjynnwxu2ih74" path="res://Assets/Ingredients/fast_food_level/hotdog.png" id="19_jhrlv"]
+[ext_resource type="Texture2D" uid="uid://cnox5xnnkuqec" path="res://Assets/Ingredients/fast_food_level/cheese.png" id="19_xul3c"]
+[ext_resource type="Texture2D" uid="uid://y18sfmovssaj" path="res://Assets/Ingredients/fast_food_level/lettuce.png" id="20_jhrlv"]
+[ext_resource type="Texture2D" uid="uid://baoiuoxptu8ua" path="res://Assets/Ingredients/fast_food_level/tomato.png" id="21_m8t20"]
+[ext_resource type="Texture2D" uid="uid://b18dqu6d3psvt" path="res://Assets/Ingredients/fast_food_level/pizza.png" id="24_m8t20"]
+
+[node name="Tutorial" type="Node2D"]
+position = Vector2(4.44992, -2.99997)
+script = ExtResource("1_xul3c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Scroll" type="Sprite2D" parent="."]
+position = Vector2(-242.45, -29.4992)
+scale = Vector2(12.625, 11.7344)
+texture = ExtResource("2_tw7ti")
+
+[node name="Scroll2" type="Sprite2D" parent="."]
+position = Vector2(294.55, -106)
+scale = Vector2(9.63302, 7.95831)
+texture = ExtResource("2_tw7ti")
+
+[node name="Title" type="Label" parent="."]
+offset_left = -344.45
+offset_top = -219.0
+offset_right = -134.45
+offset_bottom = -189.0
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 30
+text = "Recetas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Number" type="Label" parent="."]
+offset_left = -442.45
+offset_top = -160.0
+offset_right = -402.45
+offset_bottom = -137.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "1."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number2" type="Label" parent="."]
+offset_left = -195.45
+offset_top = -155.0
+offset_right = -155.45
+offset_bottom = -132.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "2."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number3" type="Label" parent="."]
+offset_left = -433.45
+offset_top = -56.0
+offset_right = -393.45
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "3."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number4" type="Label" parent="."]
+offset_left = -256.45
+offset_top = -60.0001
+offset_right = -216.45
+offset_bottom = -37.0001
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "4."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number5" type="Label" parent="."]
+offset_left = -437.45
+offset_top = 35.0
+offset_right = -397.45
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "5."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number6" type="Label" parent="."]
+offset_left = 148.55
+offset_top = -226.0
+offset_right = 188.55
+offset_bottom = -203.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "6."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number7" type="Label" parent="."]
+offset_left = 147.55
+offset_top = -80.0
+offset_right = 187.55
+offset_bottom = -57.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 20
+text = "7."
+metadata/_edit_use_anchors_ = true
+
+[node name="Begin" type="Label" parent="."]
+offset_left = 54.5501
+offset_top = 142.0
+offset_right = 564.55
+offset_bottom = 304.0
+theme_override_fonts/font = ExtResource("3_rgofp")
+theme_override_font_sizes/font_size = 30
+text = "Presionar 
+Espacio
+Para Iniciar
+
+[      ]"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="FrechFries" type="Node2D" parent="."]
+position = Vector2(-165.45, 101)
+
+[node name="Potato" type="Sprite2D" parent="FrechFries"]
+z_index = 2
+position = Vector2(-85, -106)
+scale = Vector2(1.23828, 1.39058)
+texture = ExtResource("4_s7sab")
+
+[node name="French Fries" type="Sprite2D" parent="FrechFries"]
+position = Vector2(82, -108)
+scale = Vector2(1.57422, 1.625)
+texture = ExtResource("5_xul3c")
+
+[node name="Fryer" type="Sprite2D" parent="FrechFries"]
+position = Vector2(-7, -144)
+scale = Vector2(1.73789, 1.67721)
+texture = ExtResource("5_3ld8w")
+region_enabled = true
+region_rect = Rect2(128, 392, 32, 24)
+
+[node name="Oil" type="Sprite2D" parent="FrechFries"]
+z_index = 2
+position = Vector2(-2.31248, -107.749)
+scale = Vector2(1.26953, 1.29683)
+texture = ExtResource("6_xul3c")
+
+[node name="Label" type="Label" parent="FrechFries"]
+offset_left = -64.0
+offset_top = -118.0
+offset_right = -11.0
+offset_bottom = -95.0
+scale = Vector2(1.3, 1.3)
+text = "x3  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="FrechFries"]
+offset_left = 16.0
+offset_top = -118.0
+offset_right = 69.0
+offset_bottom = -95.0
+scale = Vector2(1.3, 1.3)
+text = "x2  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="FrechFries"]
+offset_left = 102.0
+offset_top = -119.0
+offset_right = 155.0
+offset_bottom = -96.0
+scale = Vector2(1.3, 1.3)
+text = "x4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dough" type="Node2D" parent="."]
+position = Vector2(-98, -11)
+
+[node name="Flour" type="Sprite2D" parent="Dough"]
+position = Vector2(-322.45, -98)
+scale = Vector2(1.93125, 1.65)
+texture = ExtResource("4_5anmj")
+
+[node name="Mixing" type="Sprite2D" parent="Dough"]
+position = Vector2(-272.45, -140)
+scale = Vector2(2.29375, 1.84583)
+texture = ExtResource("5_s7sab")
+region_enabled = true
+region_rect = Rect2(144, 40, 32, 24)
+
+[node name="Oil" type="Sprite2D" parent="Dough"]
+position = Vector2(-238.45, -91)
+scale = Vector2(1.52969, 1.51878)
+texture = ExtResource("6_xul3c")
+
+[node name="Dough" type="Sprite2D" parent="Dough"]
+position = Vector2(-158.45, -89)
+scale = Vector2(1.52969, 1.51878)
+texture = ExtResource("7_jhrlv")
+
+[node name="Label" type="Label" parent="Dough"]
+offset_left = -224.45
+offset_top = -106.0
+offset_right = -171.45
+offset_bottom = -83.0
+scale = Vector2(1.3, 1.3)
+text = "x1 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Dough"]
+offset_left = -293.45
+offset_top = -107.0
+offset_right = -240.45
+offset_bottom = -84.0
+scale = Vector2(1.3, 1.3)
+text = "x2 +"
+metadata/_edit_use_anchors_ = true
+
+[node name="CookedSausage" type="Node2D" parent="."]
+position = Vector2(-357.45, 93.9999)
+
+[node name="Sausage" type="Sprite2D" parent="CookedSausage"]
+z_index = 2
+position = Vector2(-58.5, -99.6645)
+scale = Vector2(1.15625, 1.34375)
+texture = ExtResource("8_m8t20")
+
+[node name="CookedSausage" type="Sprite2D" parent="CookedSausage"]
+position = Vector2(46, -100.165)
+scale = Vector2(1.24219, 1.23443)
+texture = ExtResource("9_himnm")
+
+[node name="Pan" type="Sprite2D" parent="CookedSausage"]
+position = Vector2(19, -134.165)
+scale = Vector2(1.73789, 1.67721)
+texture = ExtResource("5_3ld8w")
+region_enabled = true
+region_rect = Rect2(160, 416, 32, 32)
+
+[node name="Label" type="Label" parent="CookedSausage"]
+offset_left = -29.0
+offset_top = -116.165
+offset_right = 24.0
+offset_bottom = -93.1645
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="CookedBeef" type="Node2D" parent="."]
+position = Vector2(-98, -11)
+
+[node name="Beef" type="Sprite2D" parent="CookedBeef"]
+z_index = 2
+position = Vector2(-77, -91)
+scale = Vector2(1.60156, 1.71865)
+texture = ExtResource("11_8mlcv")
+
+[node name="CookedBeef" type="Sprite2D" parent="CookedBeef"]
+position = Vector2(29, -90)
+scale = Vector2(1.71094, 1.8125)
+texture = ExtResource("12_htpv5")
+
+[node name="Grill" type="Sprite2D" parent="CookedBeef"]
+position = Vector2(-4.80624, -148.456)
+scale = Vector2(1.73789, 1.67721)
+texture = ExtResource("13_f5khl")
+region_enabled = true
+region_rect = Rect2(64, 1088, 32, 40)
+
+[node name="Label" type="Label" parent="CookedBeef"]
+offset_left = -45.0
+offset_top = -106.0
+offset_right = 8.0
+offset_bottom = -83.0
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="HotDog" type="Node2D" parent="."]
+position = Vector2(-196, -22.0001)
+
+[node name="Bread" type="Sprite2D" parent="HotDog"]
+position = Vector2(405.05, -155.187)
+scale = Vector2(1.09375, 1.12422)
+texture = ExtResource("16_k2sqm")
+
+[node name="Sauce" type="Sprite2D" parent="HotDog"]
+position = Vector2(426.55, -115)
+scale = Vector2(1.45459, 1.26953)
+texture = ExtResource("17_5anmj")
+
+[node name="HotDogStation" type="Sprite2D" parent="HotDog"]
+position = Vector2(422.991, -186.406)
+scale = Vector2(2.34747, 1.86719)
+texture = ExtResource("5_3ld8w")
+region_enabled = true
+region_rect = Rect2(416, 456, 32, 24)
+
+[node name="Sausage" type="Sprite2D" parent="HotDog"]
+position = Vector2(494.05, -155.187)
+scale = Vector2(1.07031, 1.15507)
+texture = ExtResource("9_himnm")
+
+[node name="Onion" type="Sprite2D" parent="HotDog"]
+position = Vector2(574.05, -157.187)
+scale = Vector2(1.17188, 1.06172)
+texture = ExtResource("18_xul3c")
+
+[node name="HotDog" type="Sprite2D" parent="HotDog"]
+position = Vector2(541.55, -114)
+scale = Vector2(1.82813, 1.74961)
+texture = ExtResource("19_jhrlv")
+
+[node name="Label2" type="Label" parent="HotDog"]
+offset_left = 514.05
+offset_top = -171.187
+offset_right = 567.05
+offset_bottom = -148.187
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="HotDog"]
+offset_left = 427.05
+offset_top = -170.187
+offset_right = 480.05
+offset_bottom = -147.187
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="HotDog"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 460.55
+offset_top = -130.0
+offset_right = 505.486
+offset_bottom = -107.0
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Hambruger" type="Node2D" parent="."]
+position = Vector2(-87.4499, 6.99997)
+
+[node name="Bread" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-305.45, 86.4875)
+scale = Vector2(1.26563, 1.40547)
+texture = ExtResource("16_k2sqm")
+
+[node name="Sauce" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-128, 130)
+scale = Vector2(1.09668, 1.10157)
+texture = ExtResource("17_5anmj")
+
+[node name="BurgerBoard" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-264.331, 38.8125)
+scale = Vector2(2.13245, 1.73438)
+texture = ExtResource("5_3ld8w")
+region_enabled = true
+region_rect = Rect2(224, 448, 32, 24)
+
+[node name="MiniBurger" type="Sprite2D" parent="Hambruger"]
+z_index = 5
+position = Vector2(-266.331, 37.8125)
+scale = Vector2(0.694946, 0.859375)
+texture = ExtResource("18_s7sab")
+region_rect = Rect2(224, 448, 32, 24)
+
+[node name="Beef" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-205.45, 86.4875)
+scale = Vector2(1.07031, 1.15507)
+texture = ExtResource("12_htpv5")
+
+[node name="Cheese" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-114.45, 86.4875)
+scale = Vector2(1.17188, 1.06172)
+texture = ExtResource("19_xul3c")
+
+[node name="Burger" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-22, 132)
+scale = Vector2(1.9279, 1.78125)
+texture = ExtResource("18_s7sab")
+
+[node name="Lettuce" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-301, 131.461)
+scale = Vector2(1.13724, 1.10286)
+texture = ExtResource("20_jhrlv")
+
+[node name="Tomato" type="Sprite2D" parent="Hambruger"]
+position = Vector2(-214, 131.461)
+scale = Vector2(0.964844, 1.14043)
+texture = ExtResource("21_m8t20")
+
+[node name="Label5" type="Label" parent="Hambruger"]
+offset_left = -281.0
+offset_top = 116.461
+offset_right = -228.0
+offset_bottom = 139.461
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Hambruger"]
+offset_left = -181.45
+offset_top = 70.4875
+offset_right = -128.45
+offset_bottom = 93.4875
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Hambruger"]
+offset_left = -274.45
+offset_top = 71.4875
+offset_right = -221.45
+offset_bottom = 94.4875
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="Hambruger"]
+offset_left = -337.0
+offset_top = 116.461
+offset_right = -284.0
+offset_bottom = 139.461
+scale = Vector2(1.3, 1.3)
+text = "+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Hambruger"]
+offset_left = -86.4499
+offset_top = 71.4875
+offset_right = -33.4499
+offset_bottom = 94.4875
+scale = Vector2(1.3, 1.3)
+text = "x1 "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="Hambruger"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = -106.0
+offset_top = 117.0
+offset_right = -61.064
+offset_bottom = 140.0
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Hambruger"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = -194.0
+offset_top = 115.461
+offset_right = -149.064
+offset_bottom = 138.461
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pizza" type="Node2D" parent="."]
+position = Vector2(-203.45, 116)
+
+[node name="Dough" type="Sprite2D" parent="Pizza"]
+position = Vector2(369, -144)
+scale = Vector2(1.45313, 1.40586)
+texture = ExtResource("7_jhrlv")
+
+[node name="Sauce" type="Sprite2D" parent="Pizza"]
+position = Vector2(557.25, -144.506)
+scale = Vector2(1.28552, 1.10352)
+texture = ExtResource("17_5anmj")
+
+[node name="Oven" type="Sprite2D" parent="Pizza"]
+position = Vector2(431, -187)
+scale = Vector2(2.29874, 2.51693)
+texture = ExtResource("5_3ld8w")
+region_enabled = true
+region_rect = Rect2(32, 328, 32, 24)
+
+[node name="Tomato" type="Sprite2D" parent="Pizza"]
+position = Vector2(460.25, -142.506)
+scale = Vector2(1.07031, 1.15507)
+texture = ExtResource("21_m8t20")
+
+[node name="Cheese" type="Sprite2D" parent="Pizza"]
+position = Vector2(432, -100)
+scale = Vector2(1.24176, 1.21841)
+texture = ExtResource("19_xul3c")
+
+[node name="Pizza" type="Sprite2D" parent="Pizza"]
+position = Vector2(526, -102)
+scale = Vector2(1.82813, 1.74961)
+texture = ExtResource("24_m8t20")
+
+[node name="Label2" type="Label" parent="Pizza"]
+offset_left = 481.25
+offset_top = -159.506
+offset_right = 534.25
+offset_bottom = -136.506
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Pizza"]
+offset_left = 391.25
+offset_top = -158.506
+offset_right = 444.25
+offset_bottom = -135.506
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label9" type="Label" parent="Pizza"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 558.0
+offset_top = -115.0
+offset_right = 602.936
+offset_bottom = -92.0
+scale = Vector2(1.3, 1.3)
+text = "x4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label8" type="Label" parent="Pizza"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 460.0
+offset_top = -117.0
+offset_right = 504.936
+offset_bottom = -94.0
+scale = Vector2(1.3, 1.3)
+text = "x2 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="Pizza"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 588.25
+offset_top = -159.506
+offset_right = 633.186
+offset_bottom = -136.506
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true

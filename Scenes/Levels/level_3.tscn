@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://bvo701aiv8lrr"]
+[gd_scene load_steps=92 format=3 uid="uid://bvo701aiv8lrr"]
 
 [ext_resource type="Script" uid="uid://b2k8fpjdvc7ps" path="res://Scripts/game.gd" id="1_phqt5"]
 [ext_resource type="Script" uid="uid://bfmhuvchynnjx" path="res://Scripts/objectives.gd" id="2_lxa11"]
@@ -54,6 +54,11 @@
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="38_wnkws"]
 [ext_resource type="Texture2D" uid="uid://ci2ksok7rx2a" path="res://Assets/Arrow.png" id="39_8vpvy"]
 [ext_resource type="Texture2D" uid="uid://o63ilrekoj3" path="res://Assets/Ingredients/sushi_level/sashimi.png" id="39_a0ri7"]
+[ext_resource type="Texture2D" uid="uid://cr2buwgvkc3ux" path="res://Assets/ScrollTutorial.png" id="52_nu7ih"]
+[ext_resource type="Texture2D" uid="uid://r86tmmj0tndp" path="res://Assets/Ingredients/fast_food_level/potato.png" id="53_nouab"]
+[ext_resource type="Texture2D" uid="uid://btyjoix0ptd8p" path="res://Assets/Ingredients/fast_food_level/dough.png" id="54_1w08o"]
+[ext_resource type="Texture2D" uid="uid://ce0a41s8l8lap" path="res://Assets/Ingredients/fast_food_level/cooked_sausage.png" id="55_jm8x4"]
+[ext_resource type="Texture2D" uid="uid://bu3x4jw11ll1u" path="res://Assets/Ingredients/fast_food_level/cooked_beef.png" id="56_m052b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1w08o"]
 size = Vector2(25, 16)
@@ -70,19 +75,19 @@ size = Vector2(19, 8)
 size = Vector2(27, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vpvy"]
-size = Vector2(48, 51)
+size = Vector2(47, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_woqpr"]
-size = Vector2(18, 27)
+size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwvey"]
-size = Vector2(18, 27)
+size = Vector2(18, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fqnp"]
-size = Vector2(18, 27)
+size = Vector2(17, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3su"]
-size = Vector2(19, 15)
+size = Vector2(14, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64nan"]
 size = Vector2(64.6706, 20.1116)
@@ -2977,16 +2982,31 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vpvy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woqpr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwvey"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fqnp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r2vf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Game" type="Node2D"]
 position = Vector2(-2, 1)
 script = ExtResource("1_phqt5")
 current_lvl = 3
-stars = [1000, 2000, 3000]
+stars = [1500, 2750, 4000]
 
 [node name="Arrow" type="Sprite2D" parent="."]
 visible = false
 z_index = 4
-position = Vector2(-328, -371)
+position = Vector2(-335, -369)
 rotation = 3.14159
 scale = Vector2(0.0162649, 0.0159972)
 texture = ExtResource("39_8vpvy")
@@ -2995,8 +3015,8 @@ texture = ExtResource("39_8vpvy")
 script = ExtResource("2_lxa11")
 player = NodePath("../Player")
 timer = NodePath("../CanvasLayer/LevelTimer")
-objetivo_earnings = 200000
-objetivo_budget = 4000
+objetivo_earnings = 250000
+objetivo_budget = 5000
 trash = NodePath("../Stations/TrashCan")
 
 [node name="Stations" type="Node" parent="."]
@@ -3695,7 +3715,7 @@ region_rect = Rect2(80, 160, 64, 48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Register"]
 z_index = 1
-position = Vector2(0, -6)
+position = Vector2(-0.5, -9)
 shape = SubResource("RectangleShape2D_8vpvy")
 
 [node name="Register2" type="StaticBody2D" parent="Stations"]
@@ -3721,7 +3741,7 @@ region_rect = Rect2(16, 528, 16, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Register2"]
 z_index = 1
-position = Vector2(2, -1.5)
+position = Vector2(2, -6)
 shape = SubResource("RectangleShape2D_woqpr")
 
 [node name="Register3" type="StaticBody2D" parent="Stations"]
@@ -3748,7 +3768,7 @@ region_rect = Rect2(112, 528, 16, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Register3"]
 z_index = 1
-position = Vector2(2, -1.5)
+position = Vector2(2, -5)
 shape = SubResource("RectangleShape2D_dwvey")
 
 [node name="Register4" type="StaticBody2D" parent="Stations"]
@@ -3773,20 +3793,23 @@ region_rect = Rect2(80, 528, 16, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Register4"]
 z_index = 1
-position = Vector2(0, -2)
+position = Vector2(-0.5, -6.5)
 shape = SubResource("RectangleShape2D_8fqnp")
 
 [node name="TrashCan" type="StaticBody2D" parent="Stations"]
-position = Vector2(-599, -41)
+z_index = 1
+position = Vector2(209, -343)
 script = ExtResource("24_jm8x4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/TrashCan"]
+position = Vector2(-2.5, 4.25)
+scale = Vector2(0.75, 0.685185)
 texture = ExtResource("25_m052b")
 region_enabled = true
 region_rect = Rect2(112, 101, 20, 27)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/TrashCan"]
-position = Vector2(-0.5, -5.5)
+position = Vector2(-3, 1)
 shape = SubResource("RectangleShape2D_ra3su")
 
 [node name="MixingStation" type="StaticBody2D" parent="Stations"]
@@ -3994,9 +4017,9 @@ region_rect = Rect2(48, 0, 16, 32)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventario" parent="CanvasLayer" node_paths=PackedStringArray("player", "world_2d_node", "timer") instance=ExtResource("30_ut31q")]
-offset_left = -2.0
+offset_left = -62.0
 offset_top = 4.0
-offset_right = -2.0
+offset_right = -62.0
 offset_bottom = 4.0
 scale = Vector2(1.00197, 1)
 itemMap = {
@@ -4271,40 +4294,40 @@ vertical_alignment = 1
 [node name="Button3" type="Button" parent="CanvasLayer/Pause"]
 layout_mode = 0
 offset_left = 217.0
-offset_top = 245.0
+offset_top = 281.0
 offset_right = 504.0
-offset_bottom = 293.0
+offset_bottom = 329.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Pause/Button3"]
 z_index = 2
 layout_mode = 0
-offset_left = 35.0
-offset_top = -146.0
-offset_right = 252.0
-offset_bottom = -100.0
+offset_left = 36.0
+offset_top = 3.0
+offset_right = 253.0
+offset_bottom = 49.0
 theme_override_fonts/font = ExtResource("29_a8jnp")
 theme_override_font_sizes/font_size = 20
-text = "Continuar"
+text = "Salir"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button2" type="Button" parent="CanvasLayer/Pause"]
 layout_mode = 0
 offset_left = 215.0
-offset_top = 172.0
+offset_top = 161.0
 offset_right = 502.0
-offset_bottom = 220.0
+offset_bottom = 209.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Pause/Button2"]
 z_index = 2
 layout_mode = 0
-offset_left = 38.0
-offset_top = 76.0
-offset_right = 255.0
-offset_bottom = 122.0
+offset_left = 42.0
+offset_top = 5.0
+offset_right = 259.0
+offset_bottom = 51.0
 theme_override_fonts/font = ExtResource("29_a8jnp")
 theme_override_font_sizes/font_size = 20
-text = "Salir"
+text = "Volver"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -4315,18 +4338,659 @@ offset_top = 96.0
 offset_right = 502.0
 offset_bottom = 144.0
 
-[node name="Label" type="Label" parent="CanvasLayer/Pause/Button"]
+[node name="Label2" type="Label" parent="CanvasLayer/Pause/Button"]
 z_index = 2
 layout_mode = 0
-offset_left = 42.0
-offset_top = 81.0
-offset_right = 259.0
-offset_bottom = 127.0
+offset_left = 37.0
+offset_top = 3.0
+offset_right = 254.0
+offset_bottom = 49.0
 theme_override_fonts/font = ExtResource("29_a8jnp")
 theme_override_font_sizes/font_size = 20
-text = "Volver"
+text = "Continuar"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer/Pause"]
+offset_left = 217.0
+offset_top = 218.0
+offset_right = 504.0
+offset_bottom = 266.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Pause/Button4"]
+z_index = 2
+layout_mode = 0
+offset_left = 37.0
+offset_top = 3.0
+offset_right = 254.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "Recetas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Manual" type="Panel" parent="CanvasLayer"]
+process_mode = 2
+visible = false
+z_index = 8
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="exit4" type="Button" parent="CanvasLayer/Manual"]
+z_index = 2
+offset_left = 1038.0
+offset_top = 166.0
+offset_right = 1076.0
+offset_bottom = 204.0
+theme_override_colors/font_hover_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/font_hover_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_hover_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/font_pressed_color = Color(0.513726, 0.156863, 0.211765, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_8vpvy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_woqpr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dwvey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8fqnp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1r2vf")
+text = "x"
+icon_alignment = 1
+
+[node name="exit3" type="Button" parent="CanvasLayer/Manual"]
+z_index = 2
+offset_left = 556.0
+offset_top = 99.0
+offset_right = 594.0
+offset_bottom = 137.0
+theme_override_colors/font_hover_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/font_hover_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_hover_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/icon_pressed_color = Color(0.647059, 0.215686, 0.278431, 1)
+theme_override_colors/font_pressed_color = Color(0.513726, 0.156863, 0.211765, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_8vpvy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_woqpr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dwvey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8fqnp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1r2vf")
+text = "x"
+icon_alignment = 1
+
+[node name="Scroll" type="Sprite2D" parent="CanvasLayer/Manual"]
+position = Vector2(377, 291.501)
+scale = Vector2(12.625, 11.7344)
+texture = ExtResource("52_nu7ih")
+
+[node name="Scroll2" type="Sprite2D" parent="CanvasLayer/Manual"]
+position = Vector2(915, 300.666)
+scale = Vector2(9.63302, 7.95831)
+texture = ExtResource("52_nu7ih")
+
+[node name="Title" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.4862
+anchor_top = 8.025
+anchor_right = 15.4862
+anchor_bottom = 8.025
+offset_left = -344.45
+offset_top = -219.0
+offset_right = -134.45
+offset_bottom = -189.0
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 30
+text = "Recetas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Number" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.4862
+anchor_top = 8.025
+anchor_right = 15.4862
+anchor_bottom = 8.025
+offset_left = -442.45
+offset_top = -160.0
+offset_right = -402.45
+offset_bottom = -137.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "1."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number2" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.4862
+anchor_top = 8.025
+anchor_right = 15.4862
+anchor_bottom = 8.025
+offset_left = -195.45
+offset_top = -155.0
+offset_right = -155.45
+offset_bottom = -132.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "2."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number3" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.4862
+anchor_top = 8.025
+anchor_right = 15.4862
+anchor_bottom = 8.025
+offset_left = -433.45
+offset_top = -56.0
+offset_right = -393.45
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "3."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number4" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.4862
+anchor_top = 8.025
+anchor_right = 15.4862
+anchor_bottom = 8.025
+offset_left = -256.45
+offset_top = -60.0001
+offset_right = -216.45
+offset_bottom = -37.0001
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "4."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number5" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.4862
+anchor_top = 8.025
+anchor_right = 15.4862
+anchor_bottom = 8.025
+offset_left = -437.45
+offset_top = 35.0
+offset_right = -397.45
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "5."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number6" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.5112
+anchor_top = 10.1666
+anchor_right = 15.5112
+anchor_bottom = 10.1666
+offset_left = 148.55
+offset_top = -226.0
+offset_right = 188.55
+offset_bottom = -203.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "6."
+metadata/_edit_use_anchors_ = true
+
+[node name="Number7" type="Label" parent="CanvasLayer/Manual"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.5112
+anchor_top = 10.1666
+anchor_right = 15.5112
+anchor_bottom = 10.1666
+offset_left = 147.55
+offset_top = -80.0
+offset_right = 187.55
+offset_bottom = -57.0
+theme_override_colors/font_color = Color(0.605376, 0.405878, 0.11668, 1)
+theme_override_fonts/font = ExtResource("29_a8jnp")
+theme_override_font_sizes/font_size = 20
+text = "7."
+metadata/_edit_use_anchors_ = true
+
+[node name="FrechFries" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(454, 422)
+
+[node name="Potato" type="Sprite2D" parent="CanvasLayer/Manual/FrechFries"]
+z_index = 2
+position = Vector2(-85, -106)
+scale = Vector2(1.23828, 1.39058)
+texture = ExtResource("53_nouab")
+
+[node name="French Fries" type="Sprite2D" parent="CanvasLayer/Manual/FrechFries"]
+position = Vector2(82, -108)
+scale = Vector2(1.57422, 1.625)
+texture = ExtResource("30_mrckn")
+
+[node name="Fryer" type="Sprite2D" parent="CanvasLayer/Manual/FrechFries"]
+position = Vector2(-7, -144)
+scale = Vector2(1.73789, 1.67721)
+texture = ExtResource("23_1w08o")
+region_enabled = true
+region_rect = Rect2(128, 392, 32, 24)
+
+[node name="Oil" type="Sprite2D" parent="CanvasLayer/Manual/FrechFries"]
+z_index = 2
+position = Vector2(-2.31248, -107.749)
+scale = Vector2(1.26953, 1.29683)
+texture = ExtResource("22_1r2vf")
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/FrechFries"]
+offset_left = -64.0
+offset_top = -118.0
+offset_right = -11.0
+offset_bottom = -95.0
+scale = Vector2(1.3, 1.3)
+text = "x3  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Manual/FrechFries"]
+offset_left = 16.0
+offset_top = -118.0
+offset_right = 69.0
+offset_bottom = -95.0
+scale = Vector2(1.3, 1.3)
+text = "x2  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Manual/FrechFries"]
+offset_left = 102.0
+offset_top = -119.0
+offset_right = 155.0
+offset_bottom = -96.0
+scale = Vector2(1.3, 1.3)
+text = "x4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dough" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(521.45, 310)
+
+[node name="Flour" type="Sprite2D" parent="CanvasLayer/Manual/Dough"]
+position = Vector2(-322.45, -98)
+scale = Vector2(1.93125, 1.65)
+texture = ExtResource("17_dwvey")
+
+[node name="Mixing" type="Sprite2D" parent="CanvasLayer/Manual/Dough"]
+position = Vector2(-272.45, -140)
+scale = Vector2(2.29375, 1.84583)
+texture = ExtResource("25_m052b")
+region_enabled = true
+region_rect = Rect2(144, 40, 32, 24)
+
+[node name="Oil" type="Sprite2D" parent="CanvasLayer/Manual/Dough"]
+position = Vector2(-238.45, -91)
+scale = Vector2(1.52969, 1.51878)
+texture = ExtResource("22_1r2vf")
+
+[node name="Dough" type="Sprite2D" parent="CanvasLayer/Manual/Dough"]
+position = Vector2(-158.45, -89)
+scale = Vector2(1.52969, 1.51878)
+texture = ExtResource("54_1w08o")
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/Dough"]
+offset_left = -224.45
+offset_top = -106.0
+offset_right = -171.45
+offset_bottom = -83.0
+scale = Vector2(1.3, 1.3)
+text = "x1 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Manual/Dough"]
+offset_left = -293.45
+offset_top = -107.0
+offset_right = -240.45
+offset_bottom = -84.0
+scale = Vector2(1.3, 1.3)
+text = "x2 +"
+metadata/_edit_use_anchors_ = true
+
+[node name="CookedSausage" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(262, 415)
+
+[node name="Sausage" type="Sprite2D" parent="CanvasLayer/Manual/CookedSausage"]
+z_index = 2
+position = Vector2(-58.5, -99.6645)
+scale = Vector2(1.15625, 1.34375)
+texture = ExtResource("19_8fqnp")
+
+[node name="CookedSausage" type="Sprite2D" parent="CanvasLayer/Manual/CookedSausage"]
+position = Vector2(46, -100.165)
+scale = Vector2(1.24219, 1.23443)
+texture = ExtResource("55_jm8x4")
+
+[node name="Pan" type="Sprite2D" parent="CanvasLayer/Manual/CookedSausage"]
+position = Vector2(19, -134.165)
+scale = Vector2(1.73789, 1.67721)
+texture = ExtResource("23_1w08o")
+region_enabled = true
+region_rect = Rect2(160, 416, 32, 32)
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/CookedSausage"]
+offset_left = -29.0
+offset_top = -116.165
+offset_right = 24.0
+offset_bottom = -93.1645
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="CookedBeef" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(521.45, 310)
+
+[node name="Beef" type="Sprite2D" parent="CanvasLayer/Manual/CookedBeef"]
+z_index = 2
+position = Vector2(-77, -91)
+scale = Vector2(1.60156, 1.71865)
+texture = ExtResource("6_foeou")
+
+[node name="CookedBeef" type="Sprite2D" parent="CanvasLayer/Manual/CookedBeef"]
+position = Vector2(29, -90)
+scale = Vector2(1.71094, 1.8125)
+texture = ExtResource("56_m052b")
+
+[node name="Grill" type="Sprite2D" parent="CanvasLayer/Manual/CookedBeef"]
+position = Vector2(-4.80624, -148.456)
+scale = Vector2(1.73789, 1.67721)
+texture = ExtResource("17_isixn")
+region_enabled = true
+region_rect = Rect2(64, 1088, 32, 40)
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/CookedBeef"]
+offset_left = -45.0
+offset_top = -106.0
+offset_right = 8.0
+offset_bottom = -83.0
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Hambruger" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(532, 328)
+
+[node name="Bread" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-305.45, 86.4875)
+scale = Vector2(1.26563, 1.40547)
+texture = ExtResource("9_idgyp")
+
+[node name="Sauce" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-128, 130)
+scale = Vector2(1.09668, 1.10157)
+texture = ExtResource("26_nouab")
+
+[node name="BurgerBoard" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-264.331, 38.8125)
+scale = Vector2(2.13245, 1.73438)
+texture = ExtResource("23_1w08o")
+region_enabled = true
+region_rect = Rect2(224, 448, 32, 24)
+
+[node name="MiniBurger" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+z_index = 5
+position = Vector2(-266.331, 37.8125)
+scale = Vector2(0.694946, 0.859375)
+texture = ExtResource("24_foeou")
+region_rect = Rect2(224, 448, 32, 24)
+
+[node name="Beef" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-205.45, 86.4875)
+scale = Vector2(1.07031, 1.15507)
+texture = ExtResource("56_m052b")
+
+[node name="Cheese" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-114.45, 86.4875)
+scale = Vector2(1.17188, 1.06172)
+texture = ExtResource("11_so1w0")
+
+[node name="Burger" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-22, 132)
+scale = Vector2(1.9279, 1.78125)
+texture = ExtResource("24_foeou")
+
+[node name="Lettuce" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-301, 131.461)
+scale = Vector2(1.13724, 1.10286)
+texture = ExtResource("13_mrckn")
+
+[node name="Tomato" type="Sprite2D" parent="CanvasLayer/Manual/Hambruger"]
+position = Vector2(-214, 131.461)
+scale = Vector2(0.964844, 1.14043)
+texture = ExtResource("15_woqpr")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+offset_left = -281.0
+offset_top = 116.461
+offset_right = -228.0
+offset_bottom = 139.461
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+offset_left = -181.45
+offset_top = 70.4875
+offset_right = -128.45
+offset_bottom = 93.4875
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+offset_left = -274.45
+offset_top = 71.4875
+offset_right = -221.45
+offset_bottom = 94.4875
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+offset_left = -337.0
+offset_top = 116.461
+offset_right = -284.0
+offset_bottom = 139.461
+scale = Vector2(1.3, 1.3)
+text = "+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+offset_left = -86.4499
+offset_top = 71.4875
+offset_right = -33.4499
+offset_bottom = 94.4875
+scale = Vector2(1.3, 1.3)
+text = "x1 "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = -106.0
+offset_top = 117.0
+offset_right = -61.064
+offset_bottom = 140.0
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="CanvasLayer/Manual/Hambruger"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = -194.0
+offset_top = 115.461
+offset_right = -149.064
+offset_bottom = 138.461
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="HotDog" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(424.45, 384.666)
+
+[node name="Bread" type="Sprite2D" parent="CanvasLayer/Manual/HotDog"]
+position = Vector2(405.05, -155.187)
+scale = Vector2(1.09375, 1.12422)
+texture = ExtResource("9_idgyp")
+
+[node name="Sauce" type="Sprite2D" parent="CanvasLayer/Manual/HotDog"]
+position = Vector2(426.55, -115)
+scale = Vector2(1.45459, 1.26953)
+texture = ExtResource("26_nouab")
+
+[node name="HotDogStation" type="Sprite2D" parent="CanvasLayer/Manual/HotDog"]
+position = Vector2(422.991, -186.406)
+scale = Vector2(2.34747, 1.86719)
+texture = ExtResource("23_1w08o")
+region_enabled = true
+region_rect = Rect2(416, 456, 32, 24)
+
+[node name="Sausage" type="Sprite2D" parent="CanvasLayer/Manual/HotDog"]
+position = Vector2(494.05, -155.187)
+scale = Vector2(1.07031, 1.15507)
+texture = ExtResource("55_jm8x4")
+
+[node name="Onion" type="Sprite2D" parent="CanvasLayer/Manual/HotDog"]
+position = Vector2(574.05, -157.187)
+scale = Vector2(1.17188, 1.06172)
+texture = ExtResource("24_nu7ih")
+
+[node name="HotDog" type="Sprite2D" parent="CanvasLayer/Manual/HotDog"]
+position = Vector2(541.55, -114)
+scale = Vector2(1.82813, 1.74961)
+texture = ExtResource("31_mrckn")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Manual/HotDog"]
+offset_left = 514.05
+offset_top = -171.187
+offset_right = 567.05
+offset_bottom = -148.187
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/HotDog"]
+offset_left = 427.05
+offset_top = -170.187
+offset_right = 480.05
+offset_bottom = -147.187
+scale = Vector2(1.3, 1.3)
+text = "x2  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="CanvasLayer/Manual/HotDog"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 460.55
+offset_top = -130.0
+offset_right = 505.486
+offset_bottom = -107.0
+scale = Vector2(1.3, 1.3)
+text = "x1  ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Pizza" type="Node2D" parent="CanvasLayer/Manual"]
+position = Vector2(417, 522.666)
+
+[node name="Dough" type="Sprite2D" parent="CanvasLayer/Manual/Pizza"]
+position = Vector2(369, -144)
+scale = Vector2(1.45313, 1.40586)
+texture = ExtResource("54_1w08o")
+
+[node name="Sauce" type="Sprite2D" parent="CanvasLayer/Manual/Pizza"]
+position = Vector2(557.25, -144.506)
+scale = Vector2(1.28552, 1.10352)
+texture = ExtResource("26_nouab")
+
+[node name="Oven" type="Sprite2D" parent="CanvasLayer/Manual/Pizza"]
+position = Vector2(431, -187)
+scale = Vector2(2.29874, 2.51693)
+texture = ExtResource("23_1w08o")
+region_enabled = true
+region_rect = Rect2(32, 328, 32, 24)
+
+[node name="Tomato" type="Sprite2D" parent="CanvasLayer/Manual/Pizza"]
+position = Vector2(460.25, -142.506)
+scale = Vector2(1.07031, 1.15507)
+texture = ExtResource("15_woqpr")
+
+[node name="Cheese" type="Sprite2D" parent="CanvasLayer/Manual/Pizza"]
+position = Vector2(432, -100)
+scale = Vector2(1.24176, 1.21841)
+texture = ExtResource("11_so1w0")
+
+[node name="Pizza" type="Sprite2D" parent="CanvasLayer/Manual/Pizza"]
+position = Vector2(526, -102)
+scale = Vector2(1.82813, 1.74961)
+texture = ExtResource("29_tvkqm")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Manual/Pizza"]
+offset_left = 481.25
+offset_top = -159.506
+offset_right = 534.25
+offset_bottom = -136.506
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Manual/Pizza"]
+offset_left = 391.25
+offset_top = -158.506
+offset_right = 444.25
+offset_bottom = -135.506
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label9" type="Label" parent="CanvasLayer/Manual/Pizza"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 558.0
+offset_top = -115.0
+offset_right = 602.936
+offset_bottom = -92.0
+scale = Vector2(1.3, 1.3)
+text = "x4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label8" type="Label" parent="CanvasLayer/Manual/Pizza"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 460.0
+offset_top = -117.0
+offset_right = 504.936
+offset_bottom = -94.0
+scale = Vector2(1.3, 1.3)
+text = "x2 ="
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="CanvasLayer/Manual/Pizza"]
+anchors_preset = -1
+anchor_right = 0.007
+offset_left = 588.25
+offset_top = -159.506
+offset_right = 633.186
+offset_bottom = -136.506
+scale = Vector2(1.3, 1.3)
+text = "x1  +"
+metadata/_edit_use_anchors_ = true
 
 [node name="Items" type="Node" parent="."]
 
@@ -4378,3 +5042,6 @@ click - seleccionar"
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Manual/exit4" to="." method="_on_exit_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Manual/exit3" to="." method="_on_exit_3_pressed"]

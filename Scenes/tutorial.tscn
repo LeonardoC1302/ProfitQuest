@@ -26,10 +26,10 @@ scale = Vector2(12.625, 11.7344)
 texture = ExtResource("1_lerh7")
 
 [node name="Title" type="Label" parent="."]
-offset_left = -245.45
-offset_top = -198.999
-offset_right = -35.4499
-offset_bottom = -168.999
+offset_left = -250.45
+offset_top = -206.0
+offset_right = -40.4498
+offset_bottom = -176.0
 theme_override_fonts/font = ExtResource("2_yi5ip")
 theme_override_font_sizes/font_size = 30
 text = "Recetas"
@@ -117,7 +117,7 @@ scale = Vector2(1.5875, 1.525)
 texture = ExtResource("6_5ttke")
 
 [node name="Mixer" type="Sprite2D" parent="SweetCream"]
-position = Vector2(-141, -142.199)
+position = Vector2(-265, -152)
 scale = Vector2(1.91875, 2.31667)
 texture = ExtResource("7_hv3l2")
 region_enabled = true
@@ -223,50 +223,50 @@ metadata/_edit_use_anchors_ = true
 [node name="IceCreamCone" type="Node" parent="."]
 
 [node name="Counter" type="Sprite2D" parent="IceCreamCone"]
-position = Vector2(-140, 67.0008)
+position = Vector2(-218, 64)
 scale = Vector2(2.93968, 2.51563)
 texture = ExtResource("7_hv3l2")
 region_enabled = true
 region_rect = Rect2(136, 0, 48, 32)
 
 [node name="IceCreamBox" type="Sprite2D" parent="IceCreamCone"]
-position = Vector2(-250, 132.001)
+position = Vector2(-307.55, 134.95)
 scale = Vector2(2.09062, 2.18437)
 texture = ExtResource("10_ymwfr")
 
 [node name="Cone" type="Sprite2D" parent="IceCreamCone"]
-position = Vector2(-139, 147.001)
+position = Vector2(-196.55, 149.95)
 scale = Vector2(2.14844, 1.8125)
 texture = ExtResource("11_mofhx")
 
 [node name="IceCreamCone" type="Sprite2D" parent="IceCreamCone"]
-position = Vector2(-38, 139.001)
+position = Vector2(-95.5501, 141.95)
 scale = Vector2(2.09062, 2.18437)
 texture = ExtResource("12_jcqfd")
 
 [node name="Label" type="Label" parent="IceCreamCone"]
-offset_left = -218.0
-offset_top = 127.001
-offset_right = -165.0
-offset_bottom = 150.001
+offset_left = -275.55
+offset_top = 129.95
+offset_right = -222.55
+offset_bottom = 152.95
 scale = Vector2(1.3, 1.3)
 text = "x1  +"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="IceCreamCone"]
-offset_left = -114.0
-offset_top = 130.001
-offset_right = -61.0
-offset_bottom = 153.001
+offset_left = -171.55
+offset_top = 132.95
+offset_right = -118.55
+offset_bottom = 155.95
 scale = Vector2(1.3, 1.3)
 text = "x2  ="
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="IceCreamCone"]
-offset_left = -13.0
-offset_top = 132.001
-offset_right = 40.0
-offset_bottom = 155.001
+offset_left = -70.5501
+offset_top = 134.95
+offset_right = -17.5501
+offset_bottom = 157.95
 scale = Vector2(1.3, 1.3)
 text = "x2"
 metadata/_edit_use_anchors_ = true
