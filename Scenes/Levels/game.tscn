@@ -1283,7 +1283,8 @@ e - interactuar
 espacio - agarrar
 shift - objetivos
 esc - pausa
-click - seleccionar"
+click - seleccionar
+objetos del inventario"
 
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button2" to="." method="_on_button_2_pressed"]
