@@ -451,15 +451,26 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Instrucciones" type="Label" parent="."]
-offset_left = -311.0
-offset_top = -162.0
-offset_right = -161.0
-offset_bottom = -9.0
+offset_left = -372.0
+offset_top = -95.0
+offset_right = -222.0
+offset_bottom = 58.0
 theme_override_font_sizes/font_size = 12
 text = "
 e - interactuar con niveles
 esc - pausa
 "
+
+[node name="Instrucciones2" type="Label" parent="."]
+offset_left = -287.0
+offset_top = -206.0
+offset_right = -137.0
+offset_bottom = -53.0
+theme_override_font_sizes/font_size = 12
+text = "usar: 
+----w----
+a---s---d
+para moverse"
 
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]

@@ -2165,6 +2165,7 @@ trash = NodePath("../Stations/TrashCan")
 position = Vector2(-439, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("4_kwf64")
+spawn_distance = 17.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/CucumberDispenser"]
 position = Vector2(1, -4)
@@ -2180,7 +2181,7 @@ texture = ExtResource("6_27s1b")
 region_rect = Rect2(416, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/CucumberDispenser"]
-position = Vector2(1, -8)
+position = Vector2(1, -10)
 shape = SubResource("RectangleShape2D_2q1mk")
 
 [node name="info_panel" type="CanvasLayer" parent="Stations/CucumberDispenser"]
@@ -2221,6 +2222,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-109, -109)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("6_5s1wx")
+spawn_distance = 17.0
 costo = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/FishDispenser"]
@@ -2236,7 +2238,7 @@ texture = ExtResource("8_vib74")
 region_rect = Rect2(192, 160, 32, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/FishDispenser"]
-position = Vector2(-2, -11)
+position = Vector2(-3, -12)
 shape = SubResource("RectangleShape2D_k1yan")
 
 [node name="info_panel" type="CanvasLayer" parent="Stations/FishDispenser"]
@@ -2277,6 +2279,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-471, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("8_kwf64")
+spawn_distance = 17.0
 costo = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/SoyDispenser"]
@@ -2333,6 +2336,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-407, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("9_kjoi8")
+spawn_distance = 17.0
 costo = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/GingerDispenser"]
@@ -2390,6 +2394,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-503, 86)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("10_nuasi")
+spawn_distance = 17.0
 costo = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/AlgaeDispenser"]
@@ -2446,6 +2451,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-369, -108)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("11_kwf64")
+spawn_distance = 17.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/RiceDispenser"]
 position = Vector2(1, -4)
@@ -2460,7 +2466,7 @@ texture = ExtResource("16_y1rf3")
 region_rect = Rect2(448, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/RiceDispenser"]
-position = Vector2(1, -10)
+position = Vector2(1, -12)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="info_panel" type="CanvasLayer" parent="Stations/RiceDispenser"]
@@ -2501,6 +2507,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-337, -108)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("12_5s1wx")
+spawn_distance = 17.0
 costo = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/WasabiDispenser"]
@@ -2515,7 +2522,7 @@ texture = ExtResource("18_j13t8")
 region_rect = Rect2(416, 64, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/WasabiDispenser"]
-position = Vector2(1, -10)
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_in2gw")
 
 [node name="info_panel" type="CanvasLayer" parent="Stations/WasabiDispenser"]
@@ -2556,6 +2563,7 @@ theme_override_font_sizes/font_size = 11
 position = Vector2(-541, 78)
 script = ExtResource("3_cld6k")
 spawn_scene = ExtResource("25_bn6bc")
+spawn_distance = 21.0
 costo = 400
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/ShrimpDispenser"]
@@ -2618,7 +2626,7 @@ region_enabled = true
 region_rect = Rect2(416, 96, 32, 35)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Cupboard"]
-position = Vector2(0, -7.5)
+position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_hjes8")
 
 [node name="Register" type="StaticBody2D" parent="Stations"]
@@ -2718,7 +2726,7 @@ region_enabled = true
 region_rect = Rect2(128, 448, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SashimiBoard"]
-position = Vector2(2.02095, 3.65668)
+position = Vector2(2.02095, 9.14163)
 scale = Vector2(0.999999, 1)
 shape = SubResource("RectangleShape2D_riph3")
 
@@ -2745,7 +2753,7 @@ region_enabled = true
 region_rect = Rect2(320, 384, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/SushiBoard"]
-position = Vector2(2.02095, 3.65668)
+position = Vector2(4.04191, 9.14163)
 scale = Vector2(0.999999, 1)
 shape = SubResource("RectangleShape2D_riph3")
 
@@ -2887,7 +2895,8 @@ drop_scene_map = {
 "Sashimi": ExtResource("24_vf7mf"),
 "Shrimp": ExtResource("25_bn6bc"),
 "Soy": ExtResource("8_kwf64"),
-"Sushi": ExtResource("26_da22s")
+"Sushi": ExtResource("26_da22s"),
+"Wasabi": ExtResource("12_5s1wx")
 }
 player = NodePath("../../Player")
 world_2d_node = NodePath("../..")
@@ -3039,6 +3048,7 @@ texture = ExtResource("21_jesr8")
 
 [node name="Pause" type="Panel" parent="CanvasLayer"]
 process_mode = 2
+visible = false
 offset_left = 240.0
 offset_top = 118.0
 offset_right = 948.0

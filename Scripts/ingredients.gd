@@ -1,5 +1,6 @@
 extends Node2D
 
+
 @export var player_path: NodePath
 @export var pickup_distance := 16.0
 @export var follow_offset := Vector2(5, 8)
@@ -9,8 +10,9 @@ extends Node2D
 
 @export var sell_price: int = 0
 
+var cupboard: Node2D
 var player: Node2D
-var is_following := false
+var is_following:= false
 var data = {}
 
 func set_data(new_data):
@@ -42,8 +44,15 @@ func _process(delta):
 		player.hold = false
 		player.register_item_drop(item_id)
 		
-
 	# Smooth follow if picked up
 	if is_following:
 		var target_pos = player.global_position + follow_offset
 		global_position = global_position.lerp(target_pos, follow_speed * delta)
+		
+	cupboard = get_node_or_null("../../Stations/Cupboard")
+	if cupboard == null:
+		return
+
+	var distance2 = player.global_position.distance_to(cupboard.global_position)
+	if distance2 <= cupboard.interact_distance and Input.is_action_just_pressed("interact") and self.is_following:
+		self.queue_free()

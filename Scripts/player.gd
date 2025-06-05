@@ -157,6 +157,7 @@ func getCollectedItems():
 	return items_collected
 	
 func resetCollectedItems(itemsMap):
+	'''
 	var names = []
 	for key in itemsMap:
 		names.append(itemsMap[key]["nombre"])
@@ -164,7 +165,9 @@ func resetCollectedItems(itemsMap):
 	var gameNode = get_tree().get_root().get_node("Game")
 	for child in gameNode.get_children():
 		if child.name in names or child.name.begins_with("@"):
-			child.queue_free()
+			if "is_following" in child:
+				child.queue_free()
+	'''
 	for i in range(MAX_ITEM_ID):
 		items_collected[i] = 0
 

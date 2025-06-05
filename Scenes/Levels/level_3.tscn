@@ -109,7 +109,7 @@ size = Vector2(33.9107, 10.2807)
 size = Vector2(64.6706, 20.1116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jysd"]
-size = Vector2(76.7964, 60.3348)
+size = Vector2(72.7545, 45.7082)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbgn0"]
 radius = 8.0
@@ -3955,7 +3955,7 @@ region_enabled = true
 region_rect = Rect2(128, 384, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stations/Fryer"]
-position = Vector2(6.10352e-05, 10.0558)
+position = Vector2(0, 4.5708)
 shape = SubResource("RectangleShape2D_3jysd")
 
 [node name="Player" parent="." instance=ExtResource("27_6ew87")]
@@ -4276,6 +4276,7 @@ texture = ExtResource("36_i40np")
 
 [node name="Pause" type="Panel" parent="CanvasLayer"]
 process_mode = 2
+visible = false
 offset_left = 240.0
 offset_top = 118.0
 offset_right = 948.0

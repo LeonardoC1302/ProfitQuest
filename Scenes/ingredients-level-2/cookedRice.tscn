@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbs1fplntud2"]
 
-[ext_resource type="Texture2D" uid="uid://bie7r83j170rx" path="res://Assets/Ingredients/sushi_level/fillet.png" id="1_7f144"]
+[ext_resource type="Texture2D" uid="uid://bml0f36y14ojm" path="res://Assets/Ingredients/sushi_level/cooked_rice.png" id="1_7f144"]
 [ext_resource type="Script" uid="uid://dnke7eha8xktt" path="res://Scripts/ingredients.gd" id="2_gr67s"]
 
 [node name="CookedRice" type="Node2D"]
