@@ -24,14 +24,14 @@ var save_path := "user://player_customization.ini"
 
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
-@onready var score_label = get_parent().get_node("Player/Score")
+@onready var score_label = get_parent().get_node_or_null("Player/Score")
 @onready var tween = create_tween()
 
 static var final_score: int = 0
 static var current_lvl: int = 0
 static var evaluation: Array = []
 
-@onready var arrow = get_parent().get_node("Arrow")
+@onready var arrow = get_parent().get_node_or_null("Arrow")
 @onready var blink_timer = $BlinkTimer
 
 var hold := false  
@@ -51,11 +51,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	direction.x = Input.get_action_strength('right') - Input.get_action_strength('left')
 	direction.y = Input.get_action_strength('down') - Input.get_action_strength('up')
-	var budget_label = get_node("/root/Game/CanvasLayer/Budget")
-	var earning_label = get_node("/root/Game/CanvasLayer/Earnings")
-	if budget_label != null and earning_label != null:
-		budget_label.text = "Presupuesto: " + str(presupuesto)
-		earning_label.text = "Ganancias: " + str(earnings)
+	if get_tree().get_root().get_node_or_null("Game/CanvasLayer/Budget") != null:
+		var budget_label = get_tree().get_root().get_node("Game/CanvasLayer/Budget")
+		var earning_label = get_tree().get_root().get_node("Game/CanvasLayer/Earnings")
+		if budget_label != null and earning_label != null:
+			budget_label.text = "Presupuesto: " + str(presupuesto)
+			earning_label.text = "Ganancias: " + str(earnings)
 	
 	if blink_timer && arrow:
 		if hold and not blink_timer.is_stopped():
@@ -213,74 +214,77 @@ func end_game():
 
 func lose_points(points):
 	var final = self.score - points
-	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
-	if final <= 0:
-		score_label.text = "Faltan \ningredientes!\n" + "0pts"
-		self.score = 0
-	else:
-		score_label.text = "Faltan \ningredientes!\n" + "-%d" % points + "pts"
-		self.score = final
-	
-	score_label.modulate.a = 0.0  # empezar invisible
+	if score_label != null:
+		if final <= 0:
+			score_label.text = "Faltan \ningredientes!\n" + "0pts"
+			self.score = 0
+		else:
+			score_label.text = "Faltan \ningredientes!\n" + "-%d" % points + "pts"
+			self.score = final
+			
+		score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
+		
+		score_label.modulate.a = 0.0  # empezar invisible
 
-	# Cancelar tween anterior si existe
-	if tween and tween.is_running():
-		tween.kill()
+		# Cancelar tween anterior si existe
+		if tween and tween.is_running():
+			tween.kill()
 
-	tween = create_tween()
+		tween = create_tween()
 
-	# Fade in
-	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
+		# Fade in
+		tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
 
-	# Esperar
-	tween.tween_interval(0.5)
+		# Esperar
+		tween.tween_interval(0.5)
 
-	# Fade out
-	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
+		# Fade out
+		tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
 	
 func gain_points(points, multiplier):
 	var total = points*multiplier
 	var final = self.score + total
 	
 	self.score = final
-	
-	score_label.add_theme_color_override("font_color", Color(0, 1, 0))  # rojo
-	score_label.text = "+%d" % total + "pts"
-	score_label.modulate.a = 0.0  # empezar invisible
+	if score_label != null:
+		score_label.add_theme_color_override("font_color", Color(0, 1, 0))  # rojo
+		score_label.text = "+%d" % total + "pts"
+		score_label.modulate.a = 0.0  # empezar invisible
 
-	# Cancelar tween anterior si existe
-	if tween and tween.is_running():
-		tween.kill()
+		# Cancelar tween anterior si existe
+		if tween and tween.is_running():
+			tween.kill()
 
-	tween = create_tween()
+		tween = create_tween()
 
-	# Fade in
-	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
+		# Fade in
+		tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
 
-	# Esperar
-	tween.tween_interval(0.6)
+		# Esperar
+		tween.tween_interval(0.6)
 
-	# Fade out
-	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
+		# Fade out
+		tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
 	
 func message(message):
-	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
-	score_label.text = message
-		
-	score_label.modulate.a = 0.0  # empezar invisible
+	if score_label != null:
+		score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
+		score_label.text = message
+			
+		score_label.modulate.a = 0.0  # empezar invisible
 
-	# Cancelar tween anterior si existe
-	if tween and tween.is_running():
-		tween.kill()
+		# Cancelar tween anterior si existe
+		if tween and tween.is_running():
+			tween.kill()
 
-	tween = create_tween()
+		tween = create_tween()
 
-	# Fade in
-	tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
+		# Fade in
+		tween.tween_property(score_label, "modulate:a", 1.0, 0.3)
 
-	# Esperar
-	tween.tween_interval(0.75)
+		# Esperar
+		tween.tween_interval(0.75)
 
-	# Fade out
-	tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
+		# Fade out
+		tween.tween_property(score_label, "modulate:a", 0.0, 0.5)
 	

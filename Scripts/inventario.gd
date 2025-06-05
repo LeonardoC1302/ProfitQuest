@@ -33,7 +33,7 @@ func _ready():
 	rellenar_inventario_prueba()  # Optional test data
 	crear_slots()
 	actualizar_interfaz()
-	crafting_database = get_node("/root/CraftingDatabase")
+	crafting_database = get_node_or_null("/root/CraftingDatabase")
 
 func inicializar_inventario():
 	inventario.clear()
@@ -139,16 +139,6 @@ func actualizar_interfaz():
 			icon.texture = null
 			label.text = ""
 
-# New function that updates the inventory when the player interacts with the cupboard.
-func process_cupboard_interaction():
-	print("Interacted with cupboard: updating inventory")
-	# Example logic: add a new item if there is an empty slot.
-	var new_item = {"nombre": "Mango", "cantidad": 10, "icono": preload("res://Assets/Ingredients/Mango.png")}
-	for i in range(NUM_SLOTS):
-		if inventario[i] == null:
-			inventario[i] = new_item
-			break
-	actualizar_interfaz()
 	
 func searchRecipe(recipe):
 	# Crear un diccionario para rastrear los ingredientes en el inventario
