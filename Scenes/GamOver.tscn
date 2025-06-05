@@ -96,13 +96,13 @@ texture = ExtResource("2_jmn08")
 
 [node name="Label2" type="Label" parent="."]
 z_index = 1
-offset_left = -403.0
-offset_top = 34.0
-offset_right = 407.0
-offset_bottom = 237.0
+offset_left = -399.0
+offset_top = 38.0
+offset_right = 411.0
+offset_bottom = 241.0
 theme_override_fonts/font = ExtResource("1_563lt")
 theme_override_font_sizes/font_size = 30
-text = "Presiona cualquier tecla
+text = "Presiona espacio
 para volver al mapa "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -121,10 +121,10 @@ vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="."]
 z_index = 1
-offset_left = -398.0
-offset_top = -65.0
-offset_right = 412.0
-offset_bottom = 138.0
+offset_left = -433.0
+offset_top = -66.0
+offset_right = 377.0
+offset_bottom = 137.0
 theme_override_fonts/font = ExtResource("1_563lt")
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1

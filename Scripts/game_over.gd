@@ -33,5 +33,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event):
-	if event is InputEventKey and event.pressed:
+	if event is InputEventKey and event.is_action_pressed("grab"):
 		get_tree().change_scene_to_file("res://Scenes/levels.tscn")
