@@ -213,14 +213,13 @@ func end_game():
 
 func lose_points(points):
 	var final = self.score - points
+	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
 	if final <= 0:
 		score_label.text = "Faltan \ningredientes!\n" + "0pts"
 		self.score = 0
 	else:
 		score_label.text = "Faltan \ningredientes!\n" + "-%d" % points + "pts"
 		self.score = final
-		
-	score_label.add_theme_color_override("font_color", Color(1, 0, 0))  # rojo
 	
 	score_label.modulate.a = 0.0  # empezar invisible
 

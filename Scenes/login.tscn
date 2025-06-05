@@ -5,6 +5,13 @@
 
 [node name="Login" type="Node2D"]
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -326.0
+offset_top = -227.0
+offset_right = 1408.0
+offset_bottom = 896.0
+color = Color(0.117647, 0.160784, 0.278431, 1)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -14,10 +21,10 @@ script = ExtResource("1_hbxdl")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 4.0
-offset_right = 1174.0
-offset_bottom = 658.0
+offset_left = 6.0
+offset_top = -4.0
+offset_right = 1186.0
+offset_bottom = 650.0
 color = Color(0.117647, 0.160784, 0.278431, 1)
 
 [node name="LineEdit" type="LineEdit" parent="Control/ColorRect" node_paths=PackedStringArray("shortcut_context")]
