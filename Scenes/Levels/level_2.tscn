@@ -3039,7 +3039,6 @@ texture = ExtResource("21_jesr8")
 
 [node name="Pause" type="Panel" parent="CanvasLayer"]
 process_mode = 2
-visible = false
 offset_left = 240.0
 offset_top = 118.0
 offset_right = 948.0
@@ -3087,9 +3086,9 @@ vertical_alignment = 1
 [node name="Button2" type="Button" parent="CanvasLayer/Pause"]
 layout_mode = 0
 offset_left = 215.0
-offset_top = 154.0
+offset_top = 217.0
 offset_right = 502.0
-offset_bottom = 202.0
+offset_bottom = 265.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Pause/Button2"]
 z_index = 2
@@ -3127,9 +3126,9 @@ vertical_alignment = 1
 [node name="Button4" type="Button" parent="CanvasLayer/Pause"]
 layout_mode = 0
 offset_left = 217.0
-offset_top = 218.0
+offset_top = 154.0
 offset_right = 504.0
-offset_bottom = 266.0
+offset_bottom = 202.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Pause/Button4"]
 z_index = 2

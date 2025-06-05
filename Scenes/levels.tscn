@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cg1pilhlfursy"]
+[gd_scene load_steps=25 format=4 uid="uid://cg1pilhlfursy"]
 
 [ext_resource type="Script" uid="uid://iostx1kdakfs" path="res://Scenes/pauseLevels.gd" id="1_j0k6p"]
 [ext_resource type="Script" uid="uid://d3mkms21tra8r" path="res://Scripts/levels.gd" id="1_p1uqq"]
@@ -166,6 +166,18 @@ size = Vector2(236.87, 110.769)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2875"]
 size = Vector2(154.435, 121.846)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iolxa"]
+size = Vector2(11.5, 397)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8glue"]
+size = Vector2(63.4818, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byaam"]
+size = Vector2(621, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88fv2"]
+size = Vector2(12, 394)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bku7o"]
 bg_color = Color(0.105882, 0.380392, 0.376471, 0.85098)
@@ -340,6 +352,35 @@ text = "Nivel 3"
 position = Vector2(6.26086, 22.1538)
 shape = SubResource("RectangleShape2D_x2875")
 
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+position = Vector2(-333, -149)
+
+[node name="Border3" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(-63.75, 81.5)
+shape = SubResource("RectangleShape2D_iolxa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+
+[node name="Border1" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(-89, 132)
+scale = Vector2(9.82357, 0.655172)
+shape = SubResource("RectangleShape2D_8glue")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+
+[node name="Border2" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
+position = Vector2(-89, -264)
+shape = SubResource("RectangleShape2D_byaam")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+position = Vector2(-396.75, -67.5)
+
+[node name="Border4" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(614.75, -6.5)
+shape = SubResource("RectangleShape2D_88fv2")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause" type="Panel" parent="CanvasLayer"]
@@ -410,18 +451,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Instrucciones" type="Label" parent="."]
-offset_left = -287.0
-offset_top = -132.0
-offset_right = -152.0
-offset_bottom = 21.0
+offset_left = -311.0
+offset_top = -162.0
+offset_right = -161.0
+offset_bottom = -9.0
 theme_override_font_sizes/font_size = 12
-text = "q - soltar
-e - interactuar
-espacio - agarrar
-shift - objetivos
+text = "
+e - interactuar con niveles
 esc - pausa
-click - seleccionar
-objetos del inventario"
+"
 
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
