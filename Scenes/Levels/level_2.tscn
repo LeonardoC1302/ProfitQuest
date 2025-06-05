@@ -2836,11 +2836,11 @@ offset_bottom = 4.0
 scale = Vector2(1.00197, 1)
 itemMap = {
 0: {
-"icono": "res://Assets/Ingredients/sushi_level/Fish.png",
+"icono": "res://Assets/Ingredients/sushi_level/fish.png",
 "nombre": "Fish"
 },
 1: {
-"icono": "res://Assets/Ingredients/sushi_level/Cucumber.png",
+"icono": "res://Assets/Ingredients/sushi_level/cucumber.png",
 "nombre": "Cucumber"
 },
 2: {
