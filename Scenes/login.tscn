@@ -100,7 +100,7 @@ offset_right = 678.0
 offset_bottom = 579.0
 localize_numeral_system = false
 theme_override_fonts/font = ExtResource("2_fxa43")
-text = "Iniciar sesión"
+text = "Registrarse"
 
 [node name="MensajeLabel" type="Label" parent="Control/ColorRect"]
 layout_mode = 0
@@ -126,12 +126,12 @@ vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="Control/ColorRect"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 581.0
-offset_right = 1127.0
-offset_bottom = 604.0
+offset_left = 15.0
+offset_top = 521.0
+offset_right = 1126.0
+offset_bottom = 544.0
 theme_override_fonts/font = ExtResource("2_fxa43")
-text = "Pulsar para cambiar a registrarse"
+text = "Pulsar el botón para registrarse"
 horizontal_alignment = 1
 vertical_alignment = 1
 

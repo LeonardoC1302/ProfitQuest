@@ -478,7 +478,7 @@ shape = SubResource("RectangleShape2D_eucg2")
 
 [node name="ServeStation" type="StaticBody2D" parent="Stations"]
 z_index = 3
-position = Vector2(-300, -64)
+position = Vector2(-329, -78)
 script = ExtResource("8_wjbcv")
 station_name = "ServeStation"
 
@@ -492,7 +492,7 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_lrtmp")
 
 [node name="TrashCan" type="StaticBody2D" parent="Stations"]
-position = Vector2(-352, -64)
+position = Vector2(-342, 14)
 script = ExtResource("10_n2pw3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Stations/TrashCan"]
@@ -506,7 +506,7 @@ shape = SubResource("RectangleShape2D_ra3su")
 
 [node name="Mixer" type="StaticBody2D" parent="Stations"]
 z_index = 3
-position = Vector2(-248, -76)
+position = Vector2(-280, -75)
 script = ExtResource("8_wjbcv")
 station_name = "Mixer"
 
@@ -521,7 +521,7 @@ shape = SubResource("RectangleShape2D_k6cc8")
 
 [node name="Freezer" type="StaticBody2D" parent="Stations"]
 z_index = 3
-position = Vector2(-178, 14)
+position = Vector2(-201, -73)
 script = ExtResource("8_wjbcv")
 station_name = "Freezer"
 
@@ -536,7 +536,7 @@ shape = SubResource("RectangleShape2D_rrmcj")
 
 [node name="Pot" type="StaticBody2D" parent="Stations"]
 z_index = 3
-position = Vector2(-201, -73)
+position = Vector2(-240, -73)
 script = ExtResource("8_wjbcv")
 station_name = "Pot"
 
@@ -1273,22 +1273,54 @@ script = ExtResource("21_2381e")
 item_id = 8
 
 [node name="Instrucciones" type="Label" parent="."]
-offset_left = -132.0
-offset_top = -33.0
-offset_right = 3.0
-offset_bottom = 120.0
+offset_left = -150.0
+offset_top = -40.0
+offset_right = -15.0
+offset_bottom = 137.0
 theme_override_font_sizes/font_size = 12
-text = "q - soltar
-e - interactuar
+text = "e - interactuar
 espacio - agarrar
-shift - objetivos
-esc - pausa
+q - soltar
 click - seleccionar
-objetos del inventario"
+objetos del inventario
+
+shift - objetivos
+esc - pausa/menu
+"
+
+[node name="Label_Stations" type="Label" parent="."]
+offset_left = -319.0
+offset_top = -55.0
+offset_right = -188.0
+offset_bottom = -32.0
+theme_override_font_sizes/font_size = 10
+text = "Estaciones de Manufactura"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_Register" type="Label" parent="."]
+offset_left = -355.0
+offset_top = 69.0
+offset_right = -268.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 10
+text = "Espacio de Ventas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_Trash" type="Label" parent="."]
+offset_left = -376.0
+offset_top = -18.0
+offset_right = -305.0
+offset_bottom = 5.0
+theme_override_font_sizes/font_size = 10
+text = "Basurero"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Manual/exit" to="." method="_on_exit_pressed"]
