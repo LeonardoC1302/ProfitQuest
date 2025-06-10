@@ -181,6 +181,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 script = ExtResource("1_ktwhx")
 current_lvl = 1
 stars = [500, 1000, 1500]
+metadata/_edit_horizontal_guides_ = [-117.0]
 
 [node name="Arrow" type="Sprite2D" parent="."]
 visible = false
@@ -555,6 +556,7 @@ position = Vector2(-237, 6)
 collision_layer = 17
 collision_mask = 17
 presupuesto = 15000
+score = 500
 game = NodePath("..")
 
 [node name="Score" type="Label" parent="Player"]
@@ -1321,6 +1323,6 @@ vertical_alignment = 1
 [connection signal="pressed" from="CanvasLayer/Pause/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/Button4" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Manual/exit" to="." method="_on_exit_pressed"]
